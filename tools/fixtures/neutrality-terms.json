@@ -1,0 +1,190 @@
+{
+  "format": 1,
+  "purpose": "AGN-07 release check: named vendors, AI runtimes, host features and files, operating systems, shell and interpreter products, package managers, repository providers, consumer organizations and persons. Producer-only; never distributed.",
+  "terms": [
+    "OpenAI",
+    "Anthropic",
+    "Claude",
+    "Codex",
+    "ChatGPT",
+    "Gemini",
+    "Copilot",
+    "Windsurf",
+    "Mistral",
+    "Llama",
+    "CLAUDE.md",
+    "AGENTS.md",
+    "GEMINI.md",
+    "cursorrules",
+    "copilot-instructions",
+    "Windows",
+    "macOS",
+    "Linux",
+    "Ubuntu",
+    "Debian",
+    "PowerShell",
+    "pwsh",
+    "Bash",
+    "zsh",
+    "cmd.exe",
+    "cygwin",
+    "cygpath",
+    "jq",
+    "Node.js",
+    "Deno",
+    "Python",
+    "npm",
+    "pnpm",
+    "yarn",
+    "winget",
+    "Homebrew",
+    "GitHub",
+    "GitLab",
+    "Bitbucket",
+    "Gitea",
+    "Microsoft",
+    "Google",
+    "Amazon",
+    "AWS",
+    "Azure",
+    "dabotto",
+    "Vasapollo",
+    "hook",
+    "hooks",
+    "CEL",
+    "MCP",
+    "SessionStart",
+    "UserPromptSubmit"
+  ],
+  "canonical_locators": [
+    "https://github.com/organizationorchestrationprotocol/oop.git",
+    "https://github.com/organizationorchestrationprotocol/oop",
+    "github.com/organizationorchestrationprotocol"
+  ],
+  "mechanism_terms": [
+    "hook",
+    "hooks"
+  ],
+  "probes": {
+    "shell": "PowerShell",
+    "runtime": "Claude",
+    "external_literal": "node:perf_hooks"
+  },
+  "literal_exceptions": [
+    {
+      "reason": "Exact runtime module import selected by the producer measurement implementation.",
+      "files": [
+        "tools/accept-release.mjs",
+        "tools/benchmark.mjs",
+        "tools/enforcement-benchmark.mjs"
+      ],
+      "values": [
+        "node:perf_hooks"
+      ]
+    },
+    {
+      "reason": "Exact selected workflow location referenced by producer configuration and its tests.",
+      "files": [
+        "tools/acceptance-inputs.mjs",
+        "tools/current-state.mjs",
+        "tools/producer-safety.test.mjs",
+        "tools/maintainer-workflow.test.mjs"
+      ],
+      "values": [
+        ".github/workflows/producer-tests.yml",
+        "../.github/workflows/producer-tests.yml"
+      ]
+    },
+    {
+      "reason": "Native executable paths used by isolated producer tests on the actual execution host.",
+      "files": [
+        "tools/bootstrap-language.test.mjs",
+        "tools/maintainer-workflow.test.mjs"
+      ],
+      "values": [
+        "C:/Windows/System32/OpenSSH/ssh-keygen.exe",
+        "C:/Program Files/Git/bin/bash.exe",
+        "/bin/bash"
+      ]
+    },
+    {
+      "reason": "Actual platform identifier used to model filesystem semantics in producer fixtures.",
+      "files": [
+        "tools/runtime-coordination.test.mjs",
+        "tools/runtime-rendering.test.mjs"
+      ],
+      "values": [
+        "linux"
+      ]
+    }
+  ],
+  "fragment_exceptions": [
+    {
+      "reason": "Exact selected runner identifier and service-provided event property in executable producer configuration.",
+      "files": [
+        ".github/workflows/producer-tests.yml"
+      ],
+      "values": [
+        "runs-on: ubuntu-24.04",
+        "github.event.repository.private"
+      ]
+    },
+    {
+      "reason": "Exact executable configuration expressions verified by producer negative controls.",
+      "files": [
+        "tools/maintainer-workflow.test.mjs"
+      ],
+      "values": [
+        "runs-on: ubuntu-24\\.04",
+        "github.event.repository.private",
+        "npm\\s+(install|ci)",
+        "process.platform==='win32'?'C:/Program Files/Git/bin/bash.exe':'/bin/bash'",
+        "new URL('../.github/workflows/producer-tests.yml',import.meta.url)"
+      ]
+    },
+    {
+      "reason": "Exact legal copyright attribution.",
+      "files": [
+        "NOTICE"
+      ],
+      "values": [
+        "Copyright 2026 Marco Vasapollo"
+      ]
+    },
+    {
+      "reason": "Exact canonical author attribution and contact.",
+      "files": [
+        "PROTOCOL.md"
+      ],
+      "values": [
+        "**Author:** Ing. Marco Vasapollo — [marco.vasapollo@outlook.com](mailto:marco.vasapollo@outlook.com)"
+      ]
+    },
+    {
+      "reason": "Exact documented legal attribution.",
+      "files": [
+        "README.md"
+      ],
+      "values": [
+        "copyright 2026 Marco Vasapollo"
+      ]
+    },
+    {
+      "files": [
+        "examples/native-context-adapter.cjs",
+        "tools/context-controller.test.mjs"
+      ],
+      "values": [
+        "Claude Code",
+        "https://code.claude.com/docs/en/hooks",
+        "\"hooks\"",
+        "hook_event_name",
+        "'SessionStart'",
+        "'UserPromptSubmit'",
+        "SessionStart:",
+        "UserPromptSubmit:"
+      ],
+      "reason": "Concrete usage example and its executable transport test only."
+    }
+  ]
+}

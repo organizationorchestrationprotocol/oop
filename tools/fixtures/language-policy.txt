@@ -1,0 +1,5 @@
+The user may write in any language. Every AI MUST reason internally in English and author requested files and documents in English unless the user explicitly requests another language for that content.
+
+Every AI MUST respond in the user’s effective language preference for the receiving runtime, unless explicitly instructed otherwise. Determine it through authorized, read-only inspection of available profile, application, or runtime settings, including persisted overrides, following established precedence. Use supported capabilities without dependence on a particular tool, vendor, or technology. Before declaring the preference unavailable, inspect accessible relevant sources; distinguish uninspected, inaccessible, absent, and conflicting settings. Never infer the preference from conversation language, location, or unrelated locale settings. If unresolved, explain the limitation and request an explicit response language.
+
+Preserve other-language content when necessary, including code, quotations, and errors. Exceptions do not change configured preferences. Private reasoning cannot be independently verified; verification covers observable authored content only.

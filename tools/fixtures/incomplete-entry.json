@@ -1,0 +1,10 @@
+{
+  "status": "fixture",
+  "installable": false,
+  "coverage_complete": false,
+  "publication_commit": null,
+  "unresolved": [
+    "complete_semantic_export"
+  ],
+  "purpose": "Deliberately incomplete producer fixture; never an installation entry."
+}
