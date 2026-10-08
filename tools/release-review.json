@@ -1,0 +1,1562 @@
+{
+  "format": 1,
+  "source_identity": "sha256:d78da43259ca7055f761ff6c822e1085c79536137690a32a20f0f5620426d848",
+  "review": {
+    "basis": "Complete semantic reading of PROTOCOL.md followed by explicit allocation; line spans only locate reviewed clauses. No heading-to-module or keyword inference.",
+    "preservation": "50 complete clauses preserved verbatim; 6 reviewed changes for install-only bootstrap and deferred scoped assurance; all 56 clause IDs, 37 modules and 64 facets retained.",
+    "formalization": "Structured boundaries refer to complete semantic clauses. They do not decide semantic judgments or manufacture facts. Formal bootstrap guards are necessary checks, not sufficient authorization.",
+    "coreRationale": "Precedence, authority, proportionality, language, consumer exclusions, state separation and evidence invariants apply across routes. Entry/context/workspace add current identity and availability; conditional business modules remain on demand.",
+    "dependencyRationale": "Dependencies are conservative prerequisites from reviewed meaning. Effectful branches add action/security/execution facets even when a request initially seems informational. Context assembly never grants authority. Organizational modeling also selects impact: its structural decision requires the symmetric applicability clause in OOP-impact-propagation. This adds no authority, ticket or organization-type selector; unchanged G0 information/local-write routes stay lightweight. Material coordination selects execution through its actual action facets, alongside CI/change/impact context.",
+    "limitations": [
+      "Semantic review performed by the producing AI; no independent human/second-model approval claimed.",
+      "No runtime adapter, provider enrollment or consumer installation executed by this package."
+    ],
+    "current_content": "Reviewed current content independent of prior Git graph; longitudinal comparisons require separate attributable evidence."
+  },
+  "spans": [
+    {
+      "id": "OOP-mandate-authority",
+      "start": 1,
+      "end": 85,
+      "module": "core",
+      "content_identity": "sha256:ea9e417a94465df1cf2eaf722d235183f2afedb00c937021a9fe25979775c52a"
+    },
+    {
+      "id": "OOP-enforcement-autonomy",
+      "start": 86,
+      "end": 173,
+      "module": "core",
+      "content_identity": "sha256:7fee2ecc0172f87c8b35727a84c4195357a59d026256786e3305739e5e566372"
+    },
+    {
+      "id": "OOP-delegate-governance",
+      "start": 174,
+      "end": 177,
+      "module": "delegation",
+      "content_identity": "sha256:a84e9889b010f12174b7ad688966b0da5b43e7a9023b584637d3e740729283c0"
+    },
+    {
+      "id": "OOP-transitions-routing",
+      "start": 178,
+      "end": 252,
+      "module": "core",
+      "content_identity": "sha256:acecb4073269a911786e46319f1147315e72a8b8611a7efbcc1770e0a60bbf39"
+    },
+    {
+      "id": "OOP-technology-neutrality",
+      "start": 253,
+      "end": 295,
+      "module": "core",
+      "content_identity": "sha256:95515e7e499f06a9a1df329ffebf5b7f597bf3ce6253cec58c7595d08d6c66a5"
+    },
+    {
+      "id": "OOP-canonical-language",
+      "start": 296,
+      "end": 388,
+      "module": "core",
+      "content_identity": "sha256:e17a6a190523ddfa9aa9cab140e2578afe38d3c56a36ec85e863e9bc9d287617"
+    },
+    {
+      "id": "OOP-localized-presentation",
+      "start": 389,
+      "end": 430,
+      "module": "core",
+      "content_identity": "sha256:decb2286cc17b743f6f90e1fb994e298a6ae09aded0fc95d98a2fc97cd5ee134"
+    },
+    {
+      "id": "OOP-private-boundary",
+      "start": 431,
+      "end": 487,
+      "module": "workspace",
+      "content_identity": "sha256:f60ac52b04f4e33f70b33afd2ae9e4df74c37ce77fda677e2d42d790fa29fba2"
+    },
+    {
+      "id": "OOP-shared-coordination",
+      "start": 488,
+      "end": 522,
+      "module": "shared-context",
+      "content_identity": "sha256:1462037e78e8652f8faae04cfb0c45b97a41ace28f52e6da48eb820f7c21df81"
+    },
+    {
+      "id": "OOP-persistent-activation",
+      "start": 523,
+      "end": 577,
+      "module": "activation",
+      "content_identity": "sha256:d51ceec30a01bda012222051b36343e640b230f42c07b9b395ef8a4acf4643d8"
+    },
+    {
+      "id": "OOP-consumer-exclusions",
+      "start": 578,
+      "end": 585,
+      "module": "core",
+      "content_identity": "sha256:0aabbd1d0c052922c0d05935a95698ea46e418ebdf38d8dca017a8e29a64014a"
+    },
+    {
+      "id": "OOP-runtime-adoption",
+      "start": 586,
+      "end": 672,
+      "module": "adoption",
+      "content_identity": "sha256:21c75b98c179091f56a239a2f260eed6a45899a69dd7ae0b5ff995bb8be9d032"
+    },
+    {
+      "id": "OOP-migration-distribution",
+      "start": 673,
+      "end": 694,
+      "module": "migration-distribution",
+      "content_identity": "sha256:581deb4c5ccbca78e333eb04f691484d56a715e7a2894122fe7f50c6cd455f7a"
+    },
+    {
+      "id": "OOP-capability-lifecycle",
+      "start": 695,
+      "end": 816,
+      "module": "capabilities",
+      "content_identity": "sha256:63dd625b438960f26c75a2468af768ebe0d39ffaa5e25c9284986d0ec0229545"
+    },
+    {
+      "id": "OOP-free-first",
+      "start": 817,
+      "end": 990,
+      "module": "cost",
+      "content_identity": "sha256:d982969e4492e17d2d1f9001b80e9bdf18e7ae2efbdac1f25b23114abcbaebc3"
+    },
+    {
+      "id": "OOP-repository-bootstrap",
+      "start": 991,
+      "end": 1042,
+      "module": "repository",
+      "content_identity": "sha256:e1a64c68345fbe37621fee794ee2b8afe6ee16ee23c1e2d93f0dfda7713a2d15"
+    },
+    {
+      "id": "OOP-scoped-credentials",
+      "start": 1043,
+      "end": 1095,
+      "module": "security",
+      "content_identity": "sha256:9b8c403868a0fde0c8a2a758347be9a8f87841f3bca076fb300d6b8c43e2ea1e"
+    },
+    {
+      "id": "OOP-canonical-operations",
+      "start": 1096,
+      "end": 1150,
+      "module": "operations",
+      "content_identity": "sha256:9061f5324011e21f1102da483dd3e055980d2ed5108f5fff69dc093892c488ce"
+    },
+    {
+      "id": "OOP-organizational-migration",
+      "start": 1151,
+      "end": 1213,
+      "module": "migration",
+      "content_identity": "sha256:88202d8d1f50115946b613437296165aad71b7fb813fd1dcac8a4cc55039aa30"
+    },
+    {
+      "id": "OOP-organizational-model",
+      "start": 1214,
+      "end": 1362,
+      "module": "model",
+      "content_identity": "sha256:e4aacc5f9e462e3107eb44a4dd5501a0c9ef62731e099d59a1b9117dd52e5a98"
+    },
+    {
+      "id": "OOP-repository-inventory",
+      "start": 1363,
+      "end": 1391,
+      "module": "inventory",
+      "content_identity": "sha256:33e56341484a5d7b7bb1de17e2a102311f87d473516da0dedc9768cb6eeb45cf"
+    },
+    {
+      "id": "OOP-request-discovery",
+      "start": 1392,
+      "end": 1494,
+      "module": "intake",
+      "content_identity": "sha256:09bf56201e307d65ba87d754f248c49d481ad1410a50f2dd56e2a924289c0cb8"
+    },
+    {
+      "id": "OOP-ticket-lifecycle",
+      "start": 1495,
+      "end": 1653,
+      "module": "tickets",
+      "content_identity": "sha256:42c0a486938b80e69f192fb2e0cae581a259564fb6594777983e2c5f17e08a1e"
+    },
+    {
+      "id": "OOP-continuity-reserve",
+      "start": 1654,
+      "end": 1715,
+      "module": "continuity",
+      "content_identity": "sha256:179ad734aa0348a6e450a0d2bb3c6d721beeca7183def61c831793af713e0484"
+    },
+    {
+      "id": "OOP-portable-transfer",
+      "start": 1716,
+      "end": 1882,
+      "module": "handoff",
+      "content_identity": "sha256:2dc7972ee6a8718a950d53c69f1f91515e7c46535d16041560e4e1a09c4e1741"
+    },
+    {
+      "id": "OOP-destination-intake",
+      "start": 1883,
+      "end": 1933,
+      "module": "destination",
+      "content_identity": "sha256:82f85be6c3b990c8314731838985430225ecd7badabaa3c8de8af8061d33d1aa"
+    },
+    {
+      "id": "OOP-sensitive-transfer",
+      "start": 1934,
+      "end": 2055,
+      "module": "secret-transfer",
+      "content_identity": "sha256:a596fec1af41180dc002157a48c91a5e6d9ed41dc635c87f791d570d2505c2b7"
+    },
+    {
+      "id": "OOP-handoff-durability",
+      "start": 2056,
+      "end": 2209,
+      "module": "handoff",
+      "content_identity": "sha256:3286993cf40c1333f38b8e3d5fd37514ca03cef3f8bd5c99361cf94cfc65b2ba"
+    },
+    {
+      "id": "OOP-asynchronous-recovery",
+      "start": 2210,
+      "end": 2246,
+      "module": "recovery",
+      "content_identity": "sha256:521812dcbab75868801cbd3ba2d425a82c2637f189dbacde4246d4f439f21df4"
+    },
+    {
+      "id": "OOP-state-separation",
+      "start": 2247,
+      "end": 2282,
+      "module": "core",
+      "content_identity": "sha256:6b74016bd17eaecd303c2612fc084f462cb2c1258385a4c55dcc413a0abb8f94"
+    },
+    {
+      "id": "OOP-decision-history",
+      "start": 2283,
+      "end": 2302,
+      "module": "decisions",
+      "content_identity": "sha256:f3272555bdf4433055fb94b7bff9bc9f8859e253be5b06224ba0038ccccdb124"
+    },
+    {
+      "id": "OOP-human-prerequisite",
+      "start": 2303,
+      "end": 2332,
+      "module": "human",
+      "content_identity": "sha256:f2a3ba118504325722fdd3df503dd469d2f9bdc3437a0a4d2f0317818f77ad56"
+    },
+    {
+      "id": "OOP-physical-organization",
+      "start": 2333,
+      "end": 2368,
+      "module": "physical",
+      "content_identity": "sha256:e5a1b6739cab2fbbdaec9cbe4067ad5ee4c7aae3b596cb50f11217cdea392f73"
+    },
+    {
+      "id": "OOP-impact-propagation",
+      "start": 2369,
+      "end": 2515,
+      "module": "impact",
+      "content_identity": "sha256:a7c1812c0645457bf6e0b780a4871ab02d3260bcac4f5ce7710a122a725828d7"
+    },
+    {
+      "id": "OOP-proportionate-evolution",
+      "start": 2516,
+      "end": 2533,
+      "module": "impact",
+      "content_identity": "sha256:da235e1c92906e97c91ed06e5e7dd2076479fdc367421a97b7b0348b8813c4d7"
+    },
+    {
+      "id": "OOP-reviewable-changes",
+      "start": 2534,
+      "end": 2623,
+      "module": "changes",
+      "content_identity": "sha256:46357f8721d99d739c241176e4542c122afa02b4ac2313efb0af99d1e30bc9ee"
+    },
+    {
+      "id": "OOP-organizational-coordination",
+      "start": 2624,
+      "end": 2627,
+      "module": "coordination",
+      "content_identity": "sha256:53c3b66d55f53429597515697f7de42e6332854f97e8a7dfe87ce86c794f70bb"
+    },
+    {
+      "id": "OOP-effect-verification",
+      "start": 2628,
+      "end": 2657,
+      "module": "execution",
+      "content_identity": "sha256:e0ad495802b4b17b2805141fce6aee185470ada43f8953e9553d89ef7ef79c2e"
+    },
+    {
+      "id": "OOP-semantic-ci",
+      "start": 2658,
+      "end": 2714,
+      "module": "ci",
+      "content_identity": "sha256:b9fc433b89ee1e396b683cd19841c8427ebaeb63ee55b0a78720fd3ea9c0c2ed"
+    },
+    {
+      "id": "OOP-controlled-delivery",
+      "start": 2715,
+      "end": 2815,
+      "module": "delivery",
+      "content_identity": "sha256:b4317ee5877bbef6e909dd80fdea87e23242a4e4b1617207c6581f87b920347c"
+    },
+    {
+      "id": "OOP-temporal-history",
+      "start": 2816,
+      "end": 2879,
+      "module": "history",
+      "content_identity": "sha256:9f65a0b1d303d48b0435cc656e2ac3361406453d92dd325c58a565894292bfca"
+    },
+    {
+      "id": "OOP-external-projections",
+      "start": 2880,
+      "end": 2908,
+      "module": "interfaces",
+      "content_identity": "sha256:4603261b9d26f159e3c5611024335f1b73405bf11aee34e06896a5bac23f1dca"
+    },
+    {
+      "id": "OOP-evidence-reuse",
+      "start": 2909,
+      "end": 2933,
+      "module": "core",
+      "content_identity": "sha256:f5cd4566fa3f3ac546d2f703efd809f0f1851748444cfb5461808d402a87907f"
+    },
+    {
+      "id": "OOP-producer-publication",
+      "start": 2934,
+      "end": 2937,
+      "module": "producer",
+      "content_identity": "sha256:f038b05e1ba1e4a09273c17a06b46e203d9182eb871c48a47ac55ec15c98216f"
+    },
+    {
+      "id": "OOP-producer-acceptance",
+      "start": 2938,
+      "end": 3004,
+      "module": "producer",
+      "content_identity": "sha256:bbe0225c883ae8afe4d85ab430fca1f87d70cc4bdfd3435c7fd39453e5f1eada"
+    },
+    {
+      "id": "OOP-interaction-entry",
+      "start": 3005,
+      "end": 3034,
+      "module": "entry",
+      "content_identity": "sha256:c3ad53485ac6b10b4e1bf80d4f5f3883ff3f0acc907ffcc7539f3416b7ca6b19"
+    },
+    {
+      "id": "OOP-full-install",
+      "start": 3035,
+      "end": 3072,
+      "module": "bootstrap",
+      "content_identity": "sha256:a0fc9b2da9953efe8f8fb1eace627e57542d454effd1c35fafe5b50277ffaf53"
+    },
+    {
+      "id": "OOP-bootstrap-system",
+      "start": 3073,
+      "end": 3101,
+      "module": "bootstrap",
+      "content_identity": "sha256:d9ccfbd2f141457fc329b4607a7b746e25e2d880976524433efadf641991d4a4"
+    },
+    {
+      "id": "OOP-bootstrap-attestation",
+      "start": 3102,
+      "end": 3107,
+      "module": "bootstrap",
+      "content_identity": "sha256:2ffcd8321e2a8811775c5bdccd97b2cc853285b6853f6ca3d0b8ceb4c4574458"
+    },
+    {
+      "id": "OOP-validity-refresh",
+      "start": 3108,
+      "end": 3117,
+      "module": "entry",
+      "content_identity": "sha256:8528d888f0d6efea24244eeba1c1a907c753b87444454331920f22c330e257dc"
+    },
+    {
+      "id": "OOP-available-context",
+      "start": 3118,
+      "end": 3133,
+      "module": "context",
+      "content_identity": "sha256:0279b188264b6b524faf4ad32b01839321af083f7e030be9023ec452d5d140c9"
+    },
+    {
+      "id": "OOP-bootstrap-communication",
+      "start": 3134,
+      "end": 3147,
+      "module": "bootstrap",
+      "content_identity": "sha256:1579497bf5f4cdf12fa55d77a9603c338de12b95d625e57e0d3c561af1d6af20"
+    },
+    {
+      "id": "OOP-minimum-entry",
+      "start": 3148,
+      "end": 3160,
+      "module": "entry",
+      "content_identity": "sha256:63a7420afaba601778e0234e17d8a5a2854177ac93b30e2a78f19c19880d33c8"
+    },
+    {
+      "id": "OOP-continuation-entry",
+      "start": 3161,
+      "end": 3164,
+      "module": "destination",
+      "content_identity": "sha256:d758cca419d6366cc00c5daf79c614a6a74314d8ed29fb5ec501b5b326bb4c96"
+    },
+    {
+      "id": "OOP-progressive-entry",
+      "start": 3165,
+      "end": 3180,
+      "module": "entry",
+      "content_identity": "sha256:6a3b466998dd6e2822f8e6a33e329fb36f84270d2a91e11384d74461ac51d46c"
+    },
+    {
+      "id": "OOP-portable-final-invariants",
+      "start": 3181,
+      "end": 3233,
+      "module": "core",
+      "content_identity": "sha256:33777bd6ca291b89d8f4e07c05aa0ef9b33284ae60355eccb2799750d480932e"
+    }
+  ],
+  "modules": [
+    {
+      "id": "core",
+      "purpose": "Canonical precedence, governance, authority, language, evidence and portable continuity invariants.",
+      "dependencies": [],
+      "facets": [
+        "information",
+        "interaction"
+      ]
+    },
+    {
+      "id": "workspace",
+      "purpose": "Current-project private identity, protection, ownership and state isolation.",
+      "dependencies": [
+        "core"
+      ],
+      "facets": [
+        "workspace_identity",
+        "workspace_switch",
+        "private_write"
+      ]
+    },
+    {
+      "id": "shared-context",
+      "purpose": "Scoped private hints, supersession and conflict-safe shared coordination.",
+      "dependencies": [
+        "workspace"
+      ],
+      "facets": [
+        "shared_context"
+      ]
+    },
+    {
+      "id": "activation",
+      "purpose": "Bindings, thin owned activation adapters and version-neutral global discovery.",
+      "dependencies": [
+        "workspace"
+      ],
+      "facets": [
+        "activation",
+        "full_install"
+      ]
+    },
+    {
+      "id": "capabilities",
+      "purpose": "Strongest available lifecycle coverage, reuse, stabilization and actual installed probes.",
+      "dependencies": [
+        "activation"
+      ],
+      "facets": [
+        "capability_change",
+        "full_install",
+        "installed_probe"
+      ]
+    },
+    {
+      "id": "cost",
+      "purpose": "Free-first selection and justified paid exceptions.",
+      "dependencies": [
+        "core"
+      ],
+      "facets": [
+        "facility_selection",
+        "paid_dependency"
+      ]
+    },
+    {
+      "id": "repository",
+      "purpose": "Provider-neutral scoped discovery, creation, canonical binding and access.",
+      "dependencies": [
+        "workspace",
+        "cost"
+      ],
+      "facets": [
+        "repository_access",
+        "repository_create",
+        "git_commit",
+        "git_publish"
+      ]
+    },
+    {
+      "id": "security",
+      "purpose": "Project-authorized identity, controlled invocation, enrollment and separate access/signing proofs.",
+      "dependencies": [
+        "workspace",
+        "cost"
+      ],
+      "facets": [
+        "identity_sensitive",
+        "credential_change",
+        "sensitive_effect",
+        "git_commit",
+        "git_publish"
+      ]
+    },
+    {
+      "id": "model",
+      "purpose": "Organizational canonical representation, external sources of record and dependency graph.",
+      "dependencies": [
+        "core"
+      ],
+      "facets": [
+        "organizational_model"
+      ]
+    },
+    {
+      "id": "operations",
+      "purpose": "Project canonical operations, foundational intake and publication.",
+      "dependencies": [
+        "repository",
+        "security",
+        "model"
+      ],
+      "facets": [
+        "canonical_read",
+        "canonical_write",
+        "full_install"
+      ]
+    },
+    {
+      "id": "inventory",
+      "purpose": "Relevant repository inventory and retrieval.",
+      "dependencies": [
+        "operations"
+      ],
+      "facets": [
+        "inventory_change"
+      ]
+    },
+    {
+      "id": "intake",
+      "purpose": "Effective-scope discovery and proportionate clarification.",
+      "dependencies": [
+        "core"
+      ],
+      "facets": [
+        "request_intake",
+        "scope_uncertainty"
+      ]
+    },
+    {
+      "id": "impact",
+      "purpose": "Effective scope, causal propagation and proportionate new organizational capabilities.",
+      "dependencies": [
+        "model",
+        "intake"
+      ],
+      "facets": [
+        "managed_change",
+        "scope_expansion",
+        "organizational_evolution",
+        "organizational_model"
+      ]
+    },
+    {
+      "id": "tickets",
+      "purpose": "Managed work, transition guards, durability, notifications and completion.",
+      "dependencies": [
+        "operations",
+        "impact",
+        "history"
+      ],
+      "facets": [
+        "ticket_mutation",
+        "durable_work",
+        "managed_change"
+      ]
+    },
+    {
+      "id": "changes",
+      "purpose": "Reviewable change sets, authorized desired state, application and verification.",
+      "dependencies": [
+        "tickets"
+      ],
+      "facets": [
+        "change_set",
+        "managed_change"
+      ]
+    },
+    {
+      "id": "coordination",
+      "purpose": "Material cross-domain coordination during planning and authorized execution; no inferred authority.",
+      "dependencies": [
+        "core"
+      ],
+      "facets": [
+        "managed_change",
+        "change_set",
+        "semantic_propagation"
+      ]
+    },
+    {
+      "id": "execution",
+      "purpose": "Intended, attempted, observed, applied and verified effects; informed recovery/retry.",
+      "dependencies": [
+        "core",
+        "coordination"
+      ],
+      "facets": [
+        "material_effect",
+        "verification",
+        "retry",
+        "external_effect",
+        "git_commit",
+        "git_publish"
+      ]
+    },
+    {
+      "id": "migration",
+      "purpose": "Shared organizational transformation, read/write compatibility, ownership and concurrency.",
+      "dependencies": [
+        "operations",
+        "changes",
+        "execution"
+      ],
+      "facets": [
+        "version_sensitive",
+        "organizational_migration",
+        "due_update"
+      ]
+    },
+    {
+      "id": "migration-distribution",
+      "purpose": "Optional OOP ancestry and rewrite-safe three-scope technical migration distribution.",
+      "dependencies": [
+        "migration"
+      ],
+      "facets": [
+        "due_update",
+        "adoption_change",
+        "technical_migration"
+      ]
+    },
+    {
+      "id": "adoption",
+      "purpose": "Bounded source freshness, independent runtime checkpoints and optional ordered migration/current-state reconciliation.",
+      "dependencies": [
+        "capabilities",
+        "migration",
+        "migration-distribution"
+      ],
+      "facets": [
+        "due_update",
+        "adoption_change",
+        "full_install"
+      ]
+    },
+    {
+      "id": "continuity",
+      "purpose": "Budget signals, reliable <=15% reserve and destination-independent preparation.",
+      "dependencies": [
+        "core"
+      ],
+      "facets": [
+        "continuity_reserve",
+        "handoff"
+      ]
+    },
+    {
+      "id": "handoff",
+      "purpose": "Portable baseline, access continuity and separately evidenced transfer phases.",
+      "dependencies": [
+        "continuity",
+        "tickets",
+        "repository",
+        "security",
+        "adoption"
+      ],
+      "facets": [
+        "handoff"
+      ]
+    },
+    {
+      "id": "destination",
+      "purpose": "Independent destination intake, resource filtering and source/target firewall.",
+      "dependencies": [
+        "handoff"
+      ],
+      "facets": [
+        "destination_entry"
+      ]
+    },
+    {
+      "id": "secret-transfer",
+      "purpose": "Separate necessary authorized secret transfer; reuse and safe acquisition first.",
+      "dependencies": [
+        "security",
+        "handoff"
+      ],
+      "facets": [
+        "secret_transfer"
+      ]
+    },
+    {
+      "id": "recovery",
+      "purpose": "Resumable activity and verified context reconstruction after interruption.",
+      "dependencies": [
+        "core",
+        "workspace",
+        "context"
+      ],
+      "facets": [
+        "context_loss",
+        "interrupted_setup",
+        "recovery"
+      ]
+    },
+    {
+      "id": "decisions",
+      "purpose": "Durable significant decisions, rationale and related work.",
+      "dependencies": [
+        "operations",
+        "history"
+      ],
+      "facets": [
+        "decision_record"
+      ]
+    },
+    {
+      "id": "human",
+      "purpose": "Actual human-only dependency and automatic verified resumption.",
+      "dependencies": [
+        "core"
+      ],
+      "facets": [
+        "human_dependency"
+      ]
+    },
+    {
+      "id": "physical",
+      "purpose": "Physical-world responsibilities, constraints and observable completion.",
+      "dependencies": [
+        "impact"
+      ],
+      "facets": [
+        "physical_effect"
+      ]
+    },
+    {
+      "id": "ci",
+      "purpose": "Risk-proportionate consistency checks and semantic compilation.",
+      "dependencies": [
+        "changes",
+        "cost"
+      ],
+      "facets": [
+        "change_set",
+        "semantic_propagation"
+      ]
+    },
+    {
+      "id": "delivery",
+      "purpose": "Controlled application, risk gates, compensation and drift.",
+      "dependencies": [
+        "changes",
+        "execution",
+        "ci",
+        "cost"
+      ],
+      "facets": [
+        "deployment",
+        "external_effect",
+        "compensation",
+        "drift"
+      ]
+    },
+    {
+      "id": "history",
+      "purpose": "Causal, non-fabricated temporal reconstruction with evidence reuse.",
+      "dependencies": [
+        "core"
+      ],
+      "facets": [
+        "history_query",
+        "material_event"
+      ]
+    },
+    {
+      "id": "interfaces",
+      "purpose": "Tool-independent external projections over canonical English state.",
+      "dependencies": [
+        "model"
+      ],
+      "facets": [
+        "external_interface"
+      ]
+    },
+    {
+      "id": "producer",
+      "purpose": "Maintainer-only release acceptance, regression, traceability and authorized publication.",
+      "dependencies": [
+        "core"
+      ],
+      "facets": [
+        "oop_maintenance"
+      ]
+    },
+    {
+      "id": "context",
+      "purpose": "Current available action context, selective rehydration and retirement.",
+      "dependencies": [
+        "core"
+      ],
+      "facets": [
+        "context_loss",
+        "route_change",
+        "interaction"
+      ]
+    },
+    {
+      "id": "entry",
+      "purpose": "Conversation and per-message gates plus progressive minimum context.",
+      "dependencies": [
+        "workspace",
+        "context"
+      ],
+      "facets": [
+        "interaction",
+        "information"
+      ]
+    },
+    {
+      "id": "bootstrap",
+      "purpose": "Full BOOT-01–13 procedure, system obligations, scoped attestation and user communication.",
+      "dependencies": [
+        "entry",
+        "activation",
+        "adoption",
+        "operations",
+        "capabilities",
+        "human"
+      ],
+      "facets": [
+        "full_install",
+        "interrupted_setup"
+      ]
+    },
+    {
+      "id": "delegation",
+      "purpose": "Same-contract delegates, owned controls and validated completion.",
+      "dependencies": [
+        "capabilities",
+        "context"
+      ],
+      "facets": [
+        "delegation"
+      ]
+    }
+  ],
+  "change_scope": {
+    "classification": "fast_bootstrap_activation_vocabulary",
+    "baseline_source_identity": "sha256:c5ef1ee6a039a451c6cd07e6296c10ce48dc2794daf135a518d055fdbb2fdb81",
+    "baseline_provenance": "Actual clean local main 0510a5e5821489925187b371ab6547f4da95a620; source and review captured before authorized edits on 2026-10-17.",
+    "proposals": [
+      "PROP-01",
+      "PROP-02",
+      "PROP-03",
+      "PROP-04",
+      "PROP-05"
+    ],
+    "changed_contracts": [
+      "OOP-enforcement-autonomy",
+      "OOP-runtime-adoption",
+      "OOP-capability-lifecycle",
+      "OOP-interaction-entry",
+      "OOP-full-install",
+      "OOP-bootstrap-system"
+    ],
+    "preserved_contracts": [
+      "OOP-mandate-authority",
+      "OOP-delegate-governance",
+      "OOP-transitions-routing",
+      "OOP-technology-neutrality",
+      "OOP-canonical-language",
+      "OOP-localized-presentation",
+      "OOP-private-boundary",
+      "OOP-shared-coordination",
+      "OOP-persistent-activation",
+      "OOP-consumer-exclusions",
+      "OOP-migration-distribution",
+      "OOP-free-first",
+      "OOP-repository-bootstrap",
+      "OOP-scoped-credentials",
+      "OOP-canonical-operations",
+      "OOP-organizational-migration",
+      "OOP-organizational-model",
+      "OOP-repository-inventory",
+      "OOP-request-discovery",
+      "OOP-ticket-lifecycle",
+      "OOP-continuity-reserve",
+      "OOP-portable-transfer",
+      "OOP-destination-intake",
+      "OOP-sensitive-transfer",
+      "OOP-handoff-durability",
+      "OOP-asynchronous-recovery",
+      "OOP-state-separation",
+      "OOP-decision-history",
+      "OOP-human-prerequisite",
+      "OOP-physical-organization",
+      "OOP-impact-propagation",
+      "OOP-proportionate-evolution",
+      "OOP-reviewable-changes",
+      "OOP-organizational-coordination",
+      "OOP-effect-verification",
+      "OOP-semantic-ci",
+      "OOP-controlled-delivery",
+      "OOP-temporal-history",
+      "OOP-external-projections",
+      "OOP-evidence-reuse",
+      "OOP-producer-publication",
+      "OOP-producer-acceptance",
+      "OOP-bootstrap-attestation",
+      "OOP-validity-refresh",
+      "OOP-available-context",
+      "OOP-bootstrap-communication",
+      "OOP-minimum-entry",
+      "OOP-continuation-entry",
+      "OOP-progressive-entry",
+      "OOP-portable-final-invariants"
+    ],
+    "summaries": {
+      "OOP-enforcement-autonomy": "Bootstrap self-repair reads back configuration without synthetic hook tests; protected dependent effects remain fail-closed until necessary scoped assurance.",
+      "OOP-runtime-adoption": "ENF-04/05 retain installed assurance before verified activation/checkpoint advancement while allowing install-only candidate status without bootstrap trials.",
+      "OOP-capability-lifecycle": "Producer-reviewed capability selection, shared cumulative dispatch, strongest nonredundant coverage, install/readback only and post-bootstrap evidence reuse/necessary safe assurance. Full suitability remains evidence-bound.",
+      "OOP-interaction-entry": "Bootstrap exclusion explicitly bans active hook exercises while preserving necessary post-bootstrap assurance and existing current-workspace entry governance.",
+      "OOP-full-install": "BOOT-12 configures once without hook tests; BOOT-13 separates INSTALLED_UNVERIFIED technical completion from unchanged full-readiness predicates. Consumer release exclusion retained.",
+      "OOP-bootstrap-system": "SYS-06 defers active installed-path assurance beyond bootstrap, reuses evidence and retains actual effect admission and scoped invalidation."
+    },
+    "reviewer": "Implementing AI semantic review; no independent human/second-model review claimed.",
+    "alignment": "Abstract/Vision/Goal read before edits: bounded reusable controls reduce repeated setup while preserving one canonical operations layer, replaceable AI, Solopreneur proportionality, cross-domain authorized coordination and verification of actual applied state. Tradeoff: native assurance remains pending; no measured organizational or monetary benefit claimed.",
+    "compatibility": "Prior supported profiles retained unchanged; initial engine absence is explicitly supported by additive runtime descriptors. No common/operations data transformation. preserve mapped legacy placements; no destructive relocation.",
+    "documentation_impact": {
+      "README": "CTA-first retained; install-only example and unmeasured benefits",
+      "examples": "Shared entry/recovery and separate preventive path",
+      "CHANGELOG": "Accurate local candidate scope",
+      "maintainer": "Follow-up: FORMALIZE requires per-section overview assessment and necessary updates; historical delivery rules and frozen preimage retained. No additional runtime normative delta.",
+      "tests": "Thirteen new deterministic producer observations",
+      "evidence": "Local candidate only; no native installation"
+    }
+  },
+  "migration_support": {
+    "format": 1,
+    "source_contract": "OOP-migration-distribution",
+    "profiles": [
+      {
+        "fingerprint": "sha256:9bb52974537f7b0dc6f74abdeb6494892adae9eedb503252f0ba5060739152cc",
+        "state_schema": "existing OOP independent adoption and canonical migration records",
+        "predicates": [
+          "current_project_root_identity",
+          "owned_runtime_identity",
+          "canonical_actual_state_interpretable",
+          "no_unknown_partial_effects"
+        ],
+        "requirements": [
+          "oop-three-scope-alignment-v1"
+        ],
+        "read_compatibility": "Verify per-domain actual state under existing canonical policy.",
+        "write_compatibility": "Independently verify authority and current write compatibility before each effect.",
+        "existing_state_policy": "Preserve/grandfather valid records; unknown or incompatible domains block dependent work.",
+        "scopes": [
+          "common",
+          "runtime",
+          "operations"
+        ],
+        "profile_id": "oop-three-scope-legacy",
+        "state_signature": {
+          "common": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "runtime": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "operations": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          }
+        },
+        "review_evidence": "Reviewed retained declaration from published 7038871c5797e97634c2cc7ef45e16abd96a377c; current actual-state compatibility remains independently verified."
+      },
+      {
+        "fingerprint": "sha256:435460d2e827111e657429f1a6f1560f34df982627683d23bd3b31ceff8466ef",
+        "state_schema": "existing OOP independent adoption and canonical migration records",
+        "predicates": [
+          "current_project_root_identity",
+          "owned_runtime_identity",
+          "canonical_actual_state_interpretable",
+          "no_unknown_partial_effects"
+        ],
+        "requirements": [
+          "oop-three-scope-alignment-v1"
+        ],
+        "read_compatibility": "Verify per-domain actual state under existing canonical policy.",
+        "write_compatibility": "Independently verify authority and current write compatibility before each effect.",
+        "existing_state_policy": "Preserve/grandfather valid records; unknown or incompatible domains block dependent work.",
+        "scopes": [
+          "common",
+          "runtime",
+          "operations"
+        ],
+        "profile_id": "oop-three-scope-published",
+        "state_signature": {
+          "common": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "runtime": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "operations": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          }
+        },
+        "review_evidence": "Reviewed retained declaration from published 7038871c5797e97634c2cc7ef45e16abd96a377c; current actual-state compatibility remains independently verified."
+      },
+      {
+        "fingerprint": "sha256:00b533cf2a1011b280dc584e5216d09589eb0f4ecc3190c28a87228762543374",
+        "state_schema": "existing OOP independent adoption and canonical migration records",
+        "predicates": [
+          "current_project_root_identity",
+          "owned_runtime_identity",
+          "canonical_actual_state_interpretable",
+          "no_unknown_partial_effects"
+        ],
+        "requirements": [
+          "oop-three-scope-alignment-v1"
+        ],
+        "read_compatibility": "Verify per-domain actual state under existing canonical policy.",
+        "write_compatibility": "Independently verify authority and current write compatibility before each effect.",
+        "existing_state_policy": "Preserve/grandfather valid records; unknown or incompatible domains block dependent work.",
+        "scopes": [
+          "common",
+          "runtime",
+          "operations"
+        ],
+        "profile_id": "oop-three-scope-continuity",
+        "state_signature": {
+          "common": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "runtime": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "operations": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          }
+        },
+        "review_evidence": "PROP-04 current source review; existing three-scope shapes and actions retained, with cumulative support and authenticated observation guards."
+      },
+      {
+        "fingerprint": "sha256:924029f1136f281636f8b8c1aa14b3cc4500036e8b83f7a4300c2a530fa043a7",
+        "state_schema": "existing OOP independent adoption and canonical migration records",
+        "predicates": [
+          "current_project_root_identity",
+          "owned_runtime_identity",
+          "canonical_actual_state_interpretable",
+          "no_unknown_partial_effects"
+        ],
+        "requirements": [
+          "oop-three-scope-alignment-v1"
+        ],
+        "read_compatibility": "Verify per-domain actual state under existing canonical policy.",
+        "write_compatibility": "Independently verify authority and current write compatibility before each effect.",
+        "existing_state_policy": "Preserve/grandfather valid records; unknown or incompatible domains block dependent work.",
+        "scopes": [
+          "common",
+          "runtime",
+          "operations"
+        ],
+        "profile_id": "oop-remote-entry-shared-checkout",
+        "state_signature": {
+          "common": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "runtime": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "operations": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          }
+        },
+        "review_evidence": "PROP-01 canonical review: new-install placement and pre-clone ordering only; existing state shapes, mappings and independent three-scope adoption retained."
+      },
+      {
+        "fingerprint": "sha256:6efa3592e2cae307e55f8cf9cb36399042b75e9f6cfc5dee175dc9e745d1bd0e",
+        "state_schema": "existing OOP independent adoption and canonical migration records",
+        "predicates": [
+          "current_project_root_identity",
+          "owned_runtime_identity",
+          "canonical_actual_state_interpretable",
+          "no_unknown_partial_effects"
+        ],
+        "requirements": [
+          "oop-three-scope-alignment-v1"
+        ],
+        "read_compatibility": "Verify per-domain actual state under existing canonical policy.",
+        "write_compatibility": "Independently verify authority and current write compatibility before each effect.",
+        "existing_state_policy": "Preserve/grandfather valid records; unknown or incompatible domains block dependent work.",
+        "scopes": [
+          "common",
+          "runtime",
+          "operations"
+        ],
+        "profile_id": "oop-dist-entry-layout",
+        "state_signature": {
+          "common": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "runtime": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "operations": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          }
+        },
+        "review_evidence": "Explicit user-requested package path rename to dist; prior state shapes, mappings and independent adoption remain supported, with owned entry references realigned when applicable."
+      },
+      {
+        "fingerprint": "sha256:1c2251a57b89b0967c8372fc26ecc021248ed7d4de2194746409f3d961d083ff",
+        "state_schema": "existing OOP independent adoption and canonical migration records",
+        "predicates": [
+          "current_project_root_identity",
+          "owned_runtime_identity",
+          "canonical_actual_state_interpretable",
+          "no_unknown_partial_effects"
+        ],
+        "requirements": [
+          "oop-three-scope-alignment-v1"
+        ],
+        "read_compatibility": "Verify per-domain actual state under existing canonical policy.",
+        "write_compatibility": "Independently verify authority and current write compatibility before each effect.",
+        "existing_state_policy": "Preserve/grandfather valid records; unknown or incompatible domains block dependent work.",
+        "scopes": [
+          "common",
+          "runtime",
+          "operations"
+        ],
+        "profile_id": "oop-language-coworker-bootstrap-v1",
+        "state_signature": {
+          "common": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "runtime": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "operations": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          }
+        },
+        "review_evidence": "PROP-01/02/03 complete source review; same state shapes and existing migration requirements, no data transformation or secret migration. Affected runtime invariants independently reverified."
+      },
+      {
+        "fingerprint": "sha256:69b488097b24770a5cd70699ed9253e85506ca245479f96f9e26d3a7a4b9a345",
+        "state_schema": "existing OOP independent adoption and canonical migration records",
+        "predicates": [
+          "current_project_root_identity",
+          "owned_runtime_identity",
+          "canonical_actual_state_interpretable",
+          "no_unknown_partial_effects"
+        ],
+        "requirements": [
+          "oop-three-scope-alignment-v1"
+        ],
+        "read_compatibility": "Verify per-domain actual state under existing canonical policy.",
+        "write_compatibility": "Independently verify authority and current write compatibility before each effect.",
+        "existing_state_policy": "Preserve/grandfather valid records; unknown or incompatible domains block dependent work.",
+        "scopes": [
+          "common",
+          "runtime",
+          "operations"
+        ],
+        "profile_id": "oop-language-discovery-commit-attribution",
+        "state_signature": {
+          "common": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "runtime": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "operations": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          }
+        },
+        "review_evidence": "PROP-01/02: unchanged common/operations representation, selective runtime gate refresh; preserve historical commits and credentials; future commit checks only."
+      },
+      {
+        "fingerprint": "sha256:544386f0da30c577062e8cd75e53d46ebd12778186d78cc2d9a67895814c8501",
+        "state_schema": "existing OOP independent adoption and canonical migration records",
+        "predicates": [
+          "current_project_root_identity",
+          "owned_runtime_identity",
+          "canonical_actual_state_interpretable",
+          "no_unknown_partial_effects"
+        ],
+        "requirements": [
+          "oop-three-scope-alignment-v1"
+        ],
+        "read_compatibility": "Verify per-domain actual state under existing canonical policy.",
+        "write_compatibility": "Independently verify authority and current write compatibility before each effect.",
+        "existing_state_policy": "Preserve/grandfather valid records; unknown or incompatible domains block dependent work.",
+        "scopes": [
+          "common",
+          "runtime",
+          "operations"
+        ],
+        "profile_id": "oop-primary-language-fixed-worker-v1",
+        "state_signature": {
+          "common": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "runtime": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "operations": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          }
+        },
+        "review_evidence": "PROP-01/02 current source review: no stored data transformation; language resolver and future commit/push controls require independent runtime verification. Historical facts/secure references preserved."
+      },
+      {
+        "fingerprint": "sha256:d36d64998de3db1e855037ffeeeae306238df59a576fd5125736da27b11f25c6",
+        "state_schema": "existing OOP independent adoption and canonical migration records",
+        "predicates": [
+          "current_project_root_identity",
+          "owned_runtime_identity",
+          "canonical_actual_state_interpretable",
+          "no_unknown_partial_effects"
+        ],
+        "requirements": [
+          "oop-three-scope-alignment-v1"
+        ],
+        "read_compatibility": "Verify per-domain actual state under existing canonical policy.",
+        "write_compatibility": "Independently verify authority and current write compatibility before each effect.",
+        "existing_state_policy": "Preserve/grandfather valid records; unknown or incompatible domains block dependent work.",
+        "scopes": [
+          "common",
+          "runtime",
+          "operations"
+        ],
+        "profile_id": "oop-agent-email-v1",
+        "state_signature": {
+          "common": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "runtime": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "operations": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          }
+        },
+        "review_evidence": "PROP-05 explicit user request: fixed future AI attribution email changes to agent@oop.ai. Stored state schemas remain unchanged; independently refresh runtime checks and verify email authorization. Preserve credentials and historical commits."
+      },
+      {
+        "fingerprint": "sha256:c5ef1ee6a039a451c6cd07e6296c10ce48dc2794daf135a518d055fdbb2fdb81",
+        "state_schema": "existing OOP independent adoption and canonical migration records",
+        "predicates": [
+          "current_project_root_identity",
+          "owned_runtime_identity",
+          "canonical_actual_state_interpretable",
+          "no_unknown_partial_effects"
+        ],
+        "requirements": [
+          "oop-three-scope-alignment-v1"
+        ],
+        "read_compatibility": "Verify per-domain actual state under existing canonical policy.",
+        "write_compatibility": "Independently verify authority and current write compatibility before each effect.",
+        "existing_state_policy": "Preserve/grandfather valid records; unknown or incompatible domains block dependent work.",
+        "scopes": [
+          "common",
+          "runtime",
+          "operations"
+        ],
+        "profile_id": "oop-official-enforcement-v1",
+        "state_signature": {
+          "common": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "runtime": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "operations": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          }
+        },
+        "review_evidence": "tools/release-review.json#change_scope; additive ENF-01–06; prior state schemas preserved."
+      },
+      {
+        "fingerprint": "sha256:d78da43259ca7055f761ff6c822e1085c79536137690a32a20f0f5620426d848",
+        "state_schema": "existing OOP independent adoption and canonical migration records",
+        "predicates": [
+          "current_project_root_identity",
+          "owned_runtime_identity",
+          "canonical_actual_state_interpretable",
+          "no_unknown_partial_effects"
+        ],
+        "requirements": [
+          "oop-three-scope-alignment-v1"
+        ],
+        "read_compatibility": "Verify per-domain actual state under existing canonical policy.",
+        "write_compatibility": "Independently verify authority and current write compatibility before each effect.",
+        "existing_state_policy": "Preserve/grandfather valid records; unknown or incompatible domains block dependent work.",
+        "scopes": [
+          "common",
+          "runtime",
+          "operations"
+        ],
+        "profile_id": "oop-fast-bootstrap-v1",
+        "state_signature": {
+          "common": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "runtime": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "operations": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          }
+        },
+        "review_evidence": "Same existing state shapes; install-only configuration is non-authorizing and current assurance remains independently required."
+      }
+    ],
+    "accepted_profiles": [
+      {
+        "fingerprint": "sha256:9bb52974537f7b0dc6f74abdeb6494892adae9eedb503252f0ba5060739152cc",
+        "state_schema": "existing OOP independent adoption and canonical migration records",
+        "predicates": [
+          "current_project_root_identity",
+          "owned_runtime_identity",
+          "canonical_actual_state_interpretable",
+          "no_unknown_partial_effects"
+        ],
+        "requirements": [
+          "oop-three-scope-alignment-v1"
+        ],
+        "read_compatibility": "Verify per-domain actual state under existing canonical policy.",
+        "write_compatibility": "Independently verify authority and current write compatibility before each effect.",
+        "existing_state_policy": "Preserve/grandfather valid records; unknown or incompatible domains block dependent work.",
+        "scopes": [
+          "common",
+          "runtime",
+          "operations"
+        ],
+        "profile_id": "oop-three-scope-legacy",
+        "state_signature": {
+          "common": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "runtime": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "operations": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          }
+        },
+        "review_evidence": "Reviewed retained declaration from published 7038871c5797e97634c2cc7ef45e16abd96a377c; current actual-state compatibility remains independently verified."
+      },
+      {
+        "fingerprint": "sha256:435460d2e827111e657429f1a6f1560f34df982627683d23bd3b31ceff8466ef",
+        "state_schema": "existing OOP independent adoption and canonical migration records",
+        "predicates": [
+          "current_project_root_identity",
+          "owned_runtime_identity",
+          "canonical_actual_state_interpretable",
+          "no_unknown_partial_effects"
+        ],
+        "requirements": [
+          "oop-three-scope-alignment-v1"
+        ],
+        "read_compatibility": "Verify per-domain actual state under existing canonical policy.",
+        "write_compatibility": "Independently verify authority and current write compatibility before each effect.",
+        "existing_state_policy": "Preserve/grandfather valid records; unknown or incompatible domains block dependent work.",
+        "scopes": [
+          "common",
+          "runtime",
+          "operations"
+        ],
+        "profile_id": "oop-three-scope-published",
+        "state_signature": {
+          "common": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "runtime": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "operations": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          }
+        },
+        "review_evidence": "Reviewed retained declaration from published 7038871c5797e97634c2cc7ef45e16abd96a377c; current actual-state compatibility remains independently verified."
+      },
+      {
+        "fingerprint": "sha256:00b533cf2a1011b280dc584e5216d09589eb0f4ecc3190c28a87228762543374",
+        "state_schema": "existing OOP independent adoption and canonical migration records",
+        "predicates": [
+          "current_project_root_identity",
+          "owned_runtime_identity",
+          "canonical_actual_state_interpretable",
+          "no_unknown_partial_effects"
+        ],
+        "requirements": [
+          "oop-three-scope-alignment-v1"
+        ],
+        "read_compatibility": "Verify per-domain actual state under existing canonical policy.",
+        "write_compatibility": "Independently verify authority and current write compatibility before each effect.",
+        "existing_state_policy": "Preserve/grandfather valid records; unknown or incompatible domains block dependent work.",
+        "scopes": [
+          "common",
+          "runtime",
+          "operations"
+        ],
+        "profile_id": "oop-three-scope-continuity",
+        "state_signature": {
+          "common": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "runtime": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "operations": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          }
+        },
+        "review_evidence": "PROP-04 current source review; existing three-scope shapes and actions retained, with cumulative support and authenticated observation guards."
+      },
+      {
+        "fingerprint": "sha256:924029f1136f281636f8b8c1aa14b3cc4500036e8b83f7a4300c2a530fa043a7",
+        "state_schema": "existing OOP independent adoption and canonical migration records",
+        "predicates": [
+          "current_project_root_identity",
+          "owned_runtime_identity",
+          "canonical_actual_state_interpretable",
+          "no_unknown_partial_effects"
+        ],
+        "requirements": [
+          "oop-three-scope-alignment-v1"
+        ],
+        "read_compatibility": "Verify per-domain actual state under existing canonical policy.",
+        "write_compatibility": "Independently verify authority and current write compatibility before each effect.",
+        "existing_state_policy": "Preserve/grandfather valid records; unknown or incompatible domains block dependent work.",
+        "scopes": [
+          "common",
+          "runtime",
+          "operations"
+        ],
+        "profile_id": "oop-remote-entry-shared-checkout",
+        "state_signature": {
+          "common": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "runtime": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "operations": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          }
+        },
+        "review_evidence": "PROP-01 canonical review: new-install placement and pre-clone ordering only; existing state shapes, mappings and independent three-scope adoption retained."
+      },
+      {
+        "fingerprint": "sha256:6efa3592e2cae307e55f8cf9cb36399042b75e9f6cfc5dee175dc9e745d1bd0e",
+        "state_schema": "existing OOP independent adoption and canonical migration records",
+        "predicates": [
+          "current_project_root_identity",
+          "owned_runtime_identity",
+          "canonical_actual_state_interpretable",
+          "no_unknown_partial_effects"
+        ],
+        "requirements": [
+          "oop-three-scope-alignment-v1"
+        ],
+        "read_compatibility": "Verify per-domain actual state under existing canonical policy.",
+        "write_compatibility": "Independently verify authority and current write compatibility before each effect.",
+        "existing_state_policy": "Preserve/grandfather valid records; unknown or incompatible domains block dependent work.",
+        "scopes": [
+          "common",
+          "runtime",
+          "operations"
+        ],
+        "profile_id": "oop-dist-entry-layout",
+        "state_signature": {
+          "common": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "runtime": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "operations": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          }
+        },
+        "review_evidence": "Explicit user-requested package path rename to dist; prior state shapes, mappings and independent adoption remain supported, with owned entry references realigned when applicable."
+      },
+      {
+        "fingerprint": "sha256:1c2251a57b89b0967c8372fc26ecc021248ed7d4de2194746409f3d961d083ff",
+        "state_schema": "existing OOP independent adoption and canonical migration records",
+        "predicates": [
+          "current_project_root_identity",
+          "owned_runtime_identity",
+          "canonical_actual_state_interpretable",
+          "no_unknown_partial_effects"
+        ],
+        "requirements": [
+          "oop-three-scope-alignment-v1"
+        ],
+        "read_compatibility": "Verify per-domain actual state under existing canonical policy.",
+        "write_compatibility": "Independently verify authority and current write compatibility before each effect.",
+        "existing_state_policy": "Preserve/grandfather valid records; unknown or incompatible domains block dependent work.",
+        "scopes": [
+          "common",
+          "runtime",
+          "operations"
+        ],
+        "profile_id": "oop-language-coworker-bootstrap-v1",
+        "state_signature": {
+          "common": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "runtime": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          },
+          "operations": {
+            "state_schema": "existing OOP independent adoption and canonical migration records"
+          }
+        },
+        "review_evidence": "PROP-01/02/03 complete source review; same state shapes and existing migration requirements, no data transformation or secret migration. Affected runtime invariants independently reverified."
+      }
+    ],
+    "withdrawals": [],
+    "review_evidence": "All prior declared profiles retained unchanged. No stored-state transformation. Reconcile affected owned bindings and defer necessary native assurance until after bootstrap before dependent reliance; never advance verified adoption from configuration presence."
+  },
+  "enforcement": {
+    "category": "INTERFACE_CHANGED",
+    "interface": "oop-admission-1",
+    "implementation_identity": "sha256:e9b422d32da274c7e8eae495d3a439ce79f2621c479a8c751b25ce4e2ae7a7da",
+    "contract_identity": "sha256:6d23302021186f7812e8c9292d5d7e1e0f5cdfefd1fb0111a7fb7ddfa4f8f438",
+    "semantic_review": "Reviewed additive activation metadata and install-only outcome. Exact eight-command CLI envelopes/decisions/exits and mandatory full BOOT guards retained. Reference planner uses host-authenticated observations, strongest per-path tier and compatible shared registration; dispatcher accumulates all mandatory failures. Existing wire readers tested; unknown strict metadata parsers remain blocked for review. No native provider integration claimed.",
+    "baseline": "0510a5e5821489925187b371ab6547f4da95a620; source sha256:c5ef1ee6a039a451c6cd07e6296c10ce48dc2794daf135a518d055fdbb2fdb81",
+    "installed_provider": "not_verified",
+    "context_identity": "sha256:90f149ce243c384e7fe877c022555bc40a3ea3d1a5cde3ad94d32a2ade91e270",
+    "source_normalization": "CRLF to LF for producer templates and generated JavaScript; preserve maintained file encoding and layout."
+  },
+  "overview_assessment": {
+    "scope": "User-authorized README and FORMALIZE follow-up; compared with actual pre-follow-up working content, preserving earlier fast-bootstrap implementation.",
+    "runtime_normative_change": false,
+    "runtime_source_identity": "sha256:d78da43259ca7055f761ff6c822e1085c79536137690a32a20f0f5620426d848",
+    "distribution_regeneration": "not_required: same extracted runtime source and unchanged physical runtime locators",
+    "sections": {
+      "Abstract": "Updated: describe activation vocabulary, reference planner/dispatcher, install-only setup and later scoped assurance; retain local-evidence limitations.",
+      "Vision": "Updated: reusable proportionate integration supports replaceable tools while preserving workspace boundaries and evidence.",
+      "Goal": "Updated: evaluate producer tests, consumer installation, runtime protection and measurable setup effort separately; no assumed savings.",
+      "Introduction": "Updated: explain activation mapping/shared dispatch, separate installation from effective protection and preserve authority outside the controller."
+    },
+    "alignment": "Preserves Organization as Code, one operations knowledge layer, proportionate organizational CI/CD, Solopreneur applicability and replaceable external AI; introduces no new runtime obligation, provider promise or measured benefit."
+  }
+}

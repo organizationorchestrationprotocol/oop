@@ -1,0 +1,904 @@
+TAP version 13
+# Subtest: REL-TOOL-015: comparable byte increase below full source rejects readiness (NEG-01)
+ok 1 - REL-TOOL-015: comparable byte increase below full source rejects readiness (NEG-01)
+  ---
+  duration_ms: 1.9961
+  type: 'test'
+  ...
+# Subtest: REL-TOOL-016: equal or lower comparable measurements pass all seven scenarios (POS-01)
+ok 2 - REL-TOOL-016: equal or lower comparable measurements pass all seven scenarios (POS-01)
+  ---
+  duration_ms: 0.5586
+  type: 'test'
+  ...
+# Subtest: REL-TOOL-017: absent unverified mismatched historical evidence never invents PASS (NEG-02)
+ok 3 - REL-TOOL-017: absent unverified mismatched historical evidence never invents PASS (NEG-02)
+  ---
+  duration_ms: 0.9179
+  type: 'test'
+  ...
+# Subtest: REL-TOOL-018: text flags untrusted records and wrong-scope approvals cannot override (NEG-03)
+ok 4 - REL-TOOL-018: text flags untrusted records and wrong-scope approvals cannot override (NEG-03)
+  ---
+  duration_ms: 1.5521
+  type: 'test'
+  ...
+# Subtest: REL-TOOL-019: separately trusted attributable authorized increase has bound disposition (POS-03)
+ok 5 - REL-TOOL-019: separately trusted attributable authorized increase has bound disposition (POS-03)
+  ---
+  duration_ms: 0.4177
+  type: 'test'
+  ...
+# Subtest: REL-TOOL-020: changed semantic workload is incomparable without fake regression or improvement (POS-02)
+ok 6 - REL-TOOL-020: changed semantic workload is incomparable without fake regression or improvement (POS-02)
+  ---
+  duration_ms: 15.7523
+  type: 'test'
+  ...
+# Subtest: REL-TOOL-021: current package checkpoint model validates and tampered identities or incomplete evidence fail (NEG-04)
+ok 7 - REL-TOOL-021: current package checkpoint model validates and tampered identities or incomplete evidence fail (NEG-04)
+  ---
+  duration_ms: 303.117
+  type: 'test'
+  ...
+# Subtest: REL-TOOL-022: actual method identity and exact producer observation inventory remain binding (REG-01)
+ok 8 - REL-TOOL-022: actual method identity and exact producer observation inventory remain binding (REG-01)
+  ---
+  duration_ms: 0.7069
+  type: 'test'
+  ...
+# Subtest: REL-GEN-001: current identity needs only HEAD metadata and never requests ancestry
+ok 9 - REL-GEN-001: current identity needs only HEAD metadata and never requests ancestry
+  ---
+  duration_ms: 1.8672
+  type: 'test'
+  ...
+# Subtest: REL-GEN-002: unborn failed and malformed current identity never certify release
+ok 10 - REL-GEN-002: unborn failed and malformed current identity never certify release
+  ---
+  duration_ms: 0.6334
+  type: 'test'
+  ...
+# Subtest: REL-GEN-003: amended and shallow subject metadata have identical current-content acceptance
+ok 11 - REL-GEN-003: amended and shallow subject metadata have identical current-content acceptance
+  ---
+  duration_ms: 0.2578
+  type: 'test'
+  ...
+# Subtest: REL-GEN-004: committed content rejects tampered missing and dirty inputs and retains stable IDs
+ok 12 - REL-GEN-004: committed content rejects tampered missing and dirty inputs and retains stable IDs
+  ---
+  duration_ms: 1.6991
+  type: 'test'
+  ...
+# Subtest: REL-GEN-005: evidence preflight rejects traversal and partial unsafe plans before mutation
+ok 13 - REL-GEN-005: evidence preflight rejects traversal and partial unsafe plans before mutation
+  ---
+  duration_ms: 10.4503
+  type: 'test'
+  ...
+# Subtest: REL-GEN-006: linked evidence directory is refused without modifying its target
+ok 14 - REL-GEN-006: linked evidence directory is refused without modifying its target
+  ---
+  duration_ms: 4.4657
+  type: 'test'
+  ...
+# Subtest: REL-MIG-001: generated bundle closes source-bound supported profiles and optional common absence
+ok 15 - REL-MIG-001: generated bundle closes source-bound supported profiles and optional common absence
+  ---
+  duration_ms: 4.4688
+  type: 'test'
+  ...
+# Subtest: REL-MIG-002: missing required descriptor never means no-op
+ok 16 - REL-MIG-002: missing required descriptor never means no-op
+  ---
+  duration_ms: 1.1919
+  type: 'test'
+  ...
+# Subtest: REL-MIG-003: traversal unknown path and wrong source binding are rejected
+ok 17 - REL-MIG-003: traversal unknown path and wrong source binding are rejected
+  ---
+  duration_ms: 1.6803
+  type: 'test'
+  ...
+# Subtest: REL-MIG-004: unknown incomplete profile and mismatched action ownership fail closed
+ok 18 - REL-MIG-004: unknown incomplete profile and mismatched action ownership fail closed
+  ---
+  duration_ms: 2.6
+  type: 'test'
+  ...
+# Subtest: REL-MIG-005: rewrite fallback adopts supported actual state without previous commit objects
+ok 19 - REL-MIG-005: rewrite fallback adopts supported actual state without previous commit objects
+  ---
+  duration_ms: 1.2897
+  type: 'test'
+  ...
+# Subtest: REL-MIG-006: unchanged semantic amend reuses evidence without transformation or duplicate publication
+ok 20 - REL-MIG-006: unchanged semantic amend reuses evidence without transformation or duplicate publication
+  ---
+  duration_ms: 0.7227
+  type: 'test'
+  ...
+# Subtest: REL-MIG-007: unsupported profile preserves prior checkpoint and scoped next action
+ok 21 - REL-MIG-007: unsupported profile preserves prior checkpoint and scoped next action
+  ---
+  duration_ms: 0.5338
+  type: 'test'
+  ...
+# Subtest: REL-MIG-008: another runtime checkpoint and another machine common root are not own facts
+ok 22 - REL-MIG-008: another runtime checkpoint and another machine common root are not own facts
+  ---
+  duration_ms: 0.4297
+  type: 'test'
+  ...
+# Subtest: REL-MIG-009: partial applied effect is verified before any replay or checkpoint advance
+ok 23 - REL-MIG-009: partial applied effect is verified before any replay or checkpoint advance
+  ---
+  duration_ms: 15.0449
+  type: 'test'
+  ...
+# Subtest: REL-MIG-010: failed remote publication cannot satisfy no-op canonical communication
+ok 24 - REL-MIG-010: failed remote publication cannot satisfy no-op canonical communication
+  ---
+  duration_ms: 4.3154
+  type: 'test'
+  ...
+# Subtest: REL-MIG-011: advanced operations are reused and never downgraded by intermediate runtime
+ok 25 - REL-MIG-011: advanced operations are reused and never downgraded by intermediate runtime
+  ---
+  duration_ms: 0.3809
+  type: 'test'
+  ...
+# Subtest: REL-MIG-012: lost synthetic CAS grants one effect owner and loser rereconciles actual evidence
+ok 26 - REL-MIG-012: lost synthetic CAS grants one effect owner and loser rereconciles actual evidence
+  ---
+  duration_ms: 0.3723
+  type: 'test'
+  ...
+# Subtest: REL-MIG-013: changed authority and current incompatible writes block affected scope
+ok 27 - REL-MIG-013: changed authority and current incompatible writes block affected scope
+  ---
+  duration_ms: 6.533
+  type: 'test'
+  ...
+# Subtest: REL-MIG-014: same SHA cannot replace context and verified owned effects remain distinct
+ok 28 - REL-MIG-014: same SHA cannot replace context and verified owned effects remain distinct
+  ---
+  duration_ms: 0.4862
+  type: 'test'
+  ...
+# Subtest: REL-MIG-015: offline remote facts and foreign project evidence remain unknown
+ok 29 - REL-MIG-015: offline remote facts and foreign project evidence remain unknown
+  ---
+  duration_ms: 0.2832
+  type: 'test'
+  ...
+# Subtest: REL-MIG-016: isolated real first-parent path inspects GHI LMN OPQ excluding DEF and branch commits
+ok 30 - REL-MIG-016: isolated real first-parent path inspects GHI LMN OPQ excluding DEF and branch commits
+  ---
+  duration_ms: 1338.2279
+  type: 'test'
+  ...
+# Subtest: REL-MIG-017: explicit no-op requires actual facts and migration context is absent from G0
+ok 31 - REL-MIG-017: explicit no-op requires actual facts and migration context is absent from G0
+  ---
+  duration_ms: 0.9043
+  type: 'test'
+  ...
+# Subtest: REL-MIG-018: conflict is not overwritten and known applied evidence is reusable without new effect authority
+ok 32 - REL-MIG-018: conflict is not overwritten and known applied evidence is reusable without new effect authority
+  ---
+  duration_ms: 0.3243
+  type: 'test'
+  ...
+# Subtest: REL-MIG-019: A B C D cumulative support survives multiple unavailable rewritten histories
+ok 33 - REL-MIG-019: A B C D cumulative support survives multiple unavailable rewritten histories
+  ---
+  duration_ms: 1.5842
+  type: 'test'
+  ...
+# Subtest: REL-MIG-020: disappearing profile requires bounded explicit withdrawal against prior evidence
+ok 34 - REL-MIG-020: disappearing profile requires bounded explicit withdrawal against prior evidence
+  ---
+  duration_ms: 0.5449
+  type: 'test'
+  ...
+# Subtest: REL-MIG-021: SHA-only legacy identifies equivalent supported actual state without old objects
+ok 35 - REL-MIG-021: SHA-only legacy identifies equivalent supported actual state without old objects
+  ---
+  duration_ms: 0.2085
+  type: 'test'
+  ...
+# Subtest: REL-MIG-022: missing forged contradictory or ambiguous legacy state never advances checkpoint
+ok 36 - REL-MIG-022: missing forged contradictory or ambiguous legacy state never advances checkpoint
+  ---
+  duration_ms: 7.6005
+  type: 'test'
+  ...
+# Subtest: REL-MIG-023: cumulative profiles retain shared evidence without replay or advanced downgrade
+ok 37 - REL-MIG-023: cumulative profiles retain shared evidence without replay or advanced downgrade
+  ---
+  duration_ms: 0.3374
+  type: 'test'
+  ...
+# Subtest: REL-MIG-024: stable identities guard completeness and source binding cannot be silently changed
+ok 38 - REL-MIG-024: stable identities guard completeness and source binding cannot be silently changed
+  ---
+  duration_ms: 0.6793
+  type: 'test'
+  ...
+# Subtest: REL-MIG-025: repeated generation is deterministic and preservation claims stay qualified
+ok 39 - REL-MIG-025: repeated generation is deterministic and preservation claims stay qualified
+  ---
+  duration_ms: 0.6703
+  type: 'test'
+  ...
+# Subtest: REL-MIG-026: bare profile or SHA cannot replace authenticated scoped observations
+ok 40 - REL-MIG-026: bare profile or SHA cannot replace authenticated scoped observations
+  ---
+  duration_ms: 0.2191
+  type: 'test'
+  ...
+# Subtest: REL-ORG-001: ORG-01 One human covers product, R&D and Marketing
+ok 41 - REL-ORG-001: ORG-01 One human covers product, R&D and Marketing
+  ---
+  duration_ms: 16.9627
+  type: 'test'
+  ...
+# Subtest: REL-ORG-002: ORG-02 Established company with CEO, directors, board, HR, finance, staff and two sites
+ok 42 - REL-ORG-002: ORG-02 Established company with CEO, directors, board, HR, finance, staff and two sites
+  ---
+  duration_ms: 5.2225
+  type: 'test'
+  ...
+# Subtest: REL-ORG-003: ORG-03 Proposed formation or restructuring
+ok 43 - REL-ORG-003: ORG-03 Proposed formation or restructuring
+  ---
+  duration_ms: 3.0484
+  type: 'test'
+  ...
+# Subtest: REL-ORG-004: ORG-04 Nonprofit with suppliers and physical assets
+ok 44 - REL-ORG-004: ORG-04 Nonprofit with suppliers and physical assets
+  ---
+  duration_ms: 2.0992
+  type: 'test'
+  ...
+# Subtest: REL-ORG-005: ORG-05 Research result affects roadmap, product and Marketing; HR and investors conditional
+ok 45 - REL-ORG-005: ORG-05 Research result affects roadmap, product and Marketing; HR and investors conditional
+  ---
+  duration_ms: 3.6409
+  type: 'test'
+  ...
+# Subtest: REL-ORG-006: ORG-06 Pricing affects tax, margin, catalog and checkout
+ok 46 - REL-ORG-006: ORG-06 Pricing affects tax, margin, catalog and checkout
+  ---
+  duration_ms: 3.3111
+  type: 'test'
+  ...
+# Subtest: REL-ORG-007: ORG-07 Provider changes after partial propagation
+ok 47 - REL-ORG-007: ORG-07 Provider changes after partial propagation
+  ---
+  duration_ms: 5.2881
+  type: 'test'
+  ...
+# Subtest: REL-ORG-008: ORG-08 G0 information and small reversible G1 correction
+ok 48 - REL-ORG-008: ORG-08 G0 information and small reversible G1 correction
+  ---
+  duration_ms: 1.8492
+  type: 'test'
+  ...
+# Subtest: REL-ORG-009: ORG-09 Authorization or capability unavailable for downstream action
+ok 49 - REL-ORG-009: ORG-09 Authorization or capability unavailable for downstream action
+  ---
+  duration_ms: 3.772
+  type: 'test'
+  ...
+# Subtest: REL-TOOL-005: check-current binds material inputs and ignores unrelated files without writes
+ok 50 - REL-TOOL-005: check-current binds material inputs and ignores unrelated files without writes
+  ---
+  duration_ms: 24259.643
+  type: 'test'
+  ...
+# Subtest: REL-TOOL-006: generated file symlink cannot overwrite an external sentinel
+ok 51 - REL-TOOL-006: generated file symlink cannot overwrite an external sentinel
+  ---
+  duration_ms: 3903.458
+  type: 'test'
+  ...
+# Subtest: REL-TOOL-007: module and detail directory links fail before any mutation
+ok 52 - REL-TOOL-007: module and detail directory links fail before any mutation
+  ---
+  duration_ms: 7100.7744
+  type: 'test'
+  ...
+# Subtest: REL-TOOL-008: evidence directory link prevents all earlier distribution writes
+ok 53 - REL-TOOL-008: evidence directory link prevents all earlier distribution writes
+  ---
+  duration_ms: 3760.5037
+  type: 'test'
+  ...
+# Subtest: REL-TOOL-009: unsafe orphan JSON blocks writes and all cleanup
+ok 54 - REL-TOOL-009: unsafe orphan JSON blocks writes and all cleanup
+  ---
+  duration_ms: 3878.615
+  type: 'test'
+  ...
+# Subtest: REL-TOOL-010: incomplete inventory collision and traversal fail before writes
+ok 55 - REL-TOOL-010: incomplete inventory collision and traversal fail before writes
+  ---
+  duration_ms: 3806.4081
+  type: 'test'
+  ...
+# Subtest: REL-TOOL-011: late preflight failure after staging leaves all bytes unchanged
+ok 56 - REL-TOOL-011: late preflight failure after staging leaves all bytes unchanged
+  ---
+  duration_ms: 3533.9227
+  type: 'test'
+  ...
+# Subtest: REL-TOOL-012: isolated generation preserves current reviewed modules and clauses bytes and safe idempotent cleanup
+ok 57 - REL-TOOL-012: isolated generation preserves current reviewed modules and clauses bytes and safe idempotent cleanup
+  ---
+  duration_ms: 4553.3154
+  type: 'test'
+  ...
+# Subtest: REL-TOOL-013: orphan JSON symlink blocks cleanup without following its target
+ok 58 - REL-TOOL-013: orphan JSON symlink blocks cleanup without following its target
+  ---
+  duration_ms: 3762.3538
+  type: 'test'
+  ...
+# Subtest: REL-TOOL-014: evidence output file symlink blocks the complete generation plan
+ok 59 - REL-TOOL-014: evidence output file symlink blocks the complete generation plan
+  ---
+  duration_ms: 3746.7768
+  type: 'test'
+  ...
+# Subtest: REL-TOOL-001: removed or renamed modules lose both old generated artifacts
+ok 60 - REL-TOOL-001: removed or renamed modules lose both old generated artifacts
+  ---
+  duration_ms: 32.8493
+  type: 'test'
+  ...
+# Subtest: REL-TOOL-002: cleanup preserves files outside the generated JSON boundary
+ok 61 - REL-TOOL-002: cleanup preserves files outside the generated JSON boundary
+  ---
+  duration_ms: 12.342
+  type: 'test'
+  ...
+# Subtest: REL-TOOL-003: incomplete generation prevents all orphan deletion
+ok 62 - REL-TOOL-003: incomplete generation prevents all orphan deletion
+  ---
+  duration_ms: 9.9812
+  type: 'test'
+  ...
+# Subtest: REL-TOOL-004: unsafe inventory and empty allocation fail before deletion
+ok 63 - REL-TOOL-004: unsafe inventory and empty allocation fail before deletion
+  ---
+  duration_ms: 9.6589
+  type: 'test'
+  ...
+# Subtest: REL-OBS-001: deterministic closure retains dependency order
+ok 64 - REL-OBS-001: deterministic closure retains dependency order
+  ---
+  duration_ms: 2.3542
+  type: 'test'
+  ...
+# Subtest: REL-OBS-002: unresolved identities and missing dependencies fail
+ok 65 - REL-OBS-002: unresolved identities and missing dependencies fail
+  ---
+  duration_ms: 0.5131
+  type: 'test'
+  ...
+# Subtest: REL-OBS-003: cycles and duplicate module identities fail
+ok 66 - REL-OBS-003: cycles and duplicate module identities fail
+  ---
+  duration_ms: 0.276
+  type: 'test'
+  ...
+# Subtest: REL-OBS-004: action, state, risk, authority and recovery routes join request
+ok 67 - REL-OBS-004: action, state, risk, authority and recovery routes join request
+  ---
+  duration_ms: 0.5736
+  type: 'test'
+  ...
+# Subtest: REL-OBS-005: known informational route stays small
+ok 68 - REL-OBS-005: known informational route stays small
+  ---
+  duration_ms: 0.2075
+  type: 'test'
+  ...
+# Subtest: REL-OBS-006: unknown material classification expands and stays unresolved
+ok 69 - REL-OBS-006: unknown material classification expands and stays unresolved
+  ---
+  duration_ms: 0.1639
+  type: 'test'
+  ...
+# Subtest: REL-OBS-007: unknown selectors and malformed facets fail
+ok 70 - REL-OBS-007: unknown selectors and malformed facets fail
+  ---
+  duration_ms: 0.2284
+  type: 'test'
+  ...
+# Subtest: REL-OBS-008: context assembly is deterministic and deduplicates identities
+ok 71 - REL-OBS-008: context assembly is deterministic and deduplicates identities
+  ---
+  duration_ms: 15.4141
+  type: 'test'
+  ...
+# Subtest: REL-OBS-009: conflicting governing content is rejected
+ok 72 - REL-OBS-009: conflicting governing content is rejected
+  ---
+  duration_ms: 0.436
+  type: 'test'
+  ...
+# Subtest: REL-OBS-010: guard truth, falsehood and uncertainty remain distinct
+ok 73 - REL-OBS-010: guard truth, falsehood and uncertainty remain distinct
+  ---
+  duration_ms: 0.4483
+  type: 'test'
+  ...
+# Subtest: REL-OBS-011: malformed or empty guards are rejected
+ok 74 - REL-OBS-011: malformed or empty guards are rejected
+  ---
+  duration_ms: 1.5336
+  type: 'test'
+  ...
+# Subtest: REL-OBS-012: user confirmation cannot skip actual access observation
+ok 75 - REL-OBS-012: user confirmation cannot skip actual access observation
+  ---
+  duration_ms: 0.2691
+  type: 'test'
+  ...
+# Subtest: REL-OBS-013: readiness transition needs all applicable facts
+ok 76 - REL-OBS-013: readiness transition needs all applicable facts
+  ---
+  duration_ms: 0.3082
+  type: 'test'
+  ...
+# Subtest: REL-OBS-014: recovery requires a fresh observation, not old success
+ok 77 - REL-OBS-014: recovery requires a fresh observation, not old success
+  ---
+  duration_ms: 0.1404
+  type: 'test'
+  ...
+# Subtest: REL-OBS-015: undefined and ambiguous transitions fail
+ok 78 - REL-OBS-015: undefined and ambiguous transitions fail
+  ---
+  duration_ms: 0.2191
+  type: 'test'
+  ...
+# Subtest: REL-OBS-016: invalidation follows only transitive dependent evidence
+ok 79 - REL-OBS-016: invalidation follows only transitive dependent evidence
+  ---
+  duration_ms: 0.2995
+  type: 'test'
+  ...
+# Subtest: REL-OBS-017: reuse cannot cross project, runtime or changed dependencies
+ok 80 - REL-OBS-017: reuse cannot cross project, runtime or changed dependencies
+  ---
+  duration_ms: 0.2314
+  type: 'test'
+  ...
+# Subtest: REL-OBS-018: stale and unobserved checkpoints cannot establish reuse
+ok 81 - REL-OBS-018: stale and unobserved checkpoints cannot establish reuse
+  ---
+  duration_ms: 0.0919
+  type: 'test'
+  ...
+# Subtest: REL-OBS-019: access is tied to the expected runtime credential and adapter
+ok 82 - REL-OBS-019: access is tied to the expected runtime credential and adapter
+  ---
+  duration_ms: 0.2314
+  type: 'test'
+  ...
+# Subtest: REL-OBS-020: read-only or anonymous success cannot prove read/write readiness
+ok 83 - REL-OBS-020: read-only or anonymous success cannot prove read/write readiness
+  ---
+  duration_ms: 0.1156
+  type: 'test'
+  ...
+# Subtest: REL-OBS-021: private visibility is not an access readiness predicate
+ok 84 - REL-OBS-021: private visibility is not an access readiness predicate
+  ---
+  duration_ms: 0.1026
+  type: 'test'
+  ...
+# Subtest: REL-OBS-022: successful final check cannot conceal an earlier failure
+ok 85 - REL-OBS-022: successful final check cannot conceal an earlier failure
+  ---
+  duration_ms: 0.1763
+  type: 'test'
+  ...
+# Subtest: REL-OBS-023: candidates, missing coverage and unperformed checks block readiness
+ok 86 - REL-OBS-023: candidates, missing coverage and unperformed checks block readiness
+  ---
+  duration_ms: 0.1282
+  type: 'test'
+  ...
+# Subtest: REL-OBS-024: measured efficiency regression requires a justified authorized disposition
+ok 87 - REL-OBS-024: measured efficiency regression requires a justified authorized disposition
+  ---
+  duration_ms: 0.0903
+  type: 'test'
+  ...
+# Subtest: REL-OBS-025: candidate catalog never advertises complete production coverage
+ok 88 - REL-OBS-025: candidate catalog never advertises complete production coverage
+  ---
+  duration_ms: 0.0653
+  type: 'test'
+  ...
+# Subtest: REL-OBS-026: producer profile validates the access contract and rejects omissions
+ok 89 - REL-OBS-026: producer profile validates the access contract and rejects omissions
+  ---
+  duration_ms: 2.5227
+  type: 'test'
+  ...
+# Subtest: REL-OBS-027: profile refuses unsupported schema features instead of silently passing
+ok 90 - REL-OBS-027: profile refuses unsupported schema features instead of silently passing
+  ---
+  duration_ms: 0.1827
+  type: 'test'
+  ...
+# Subtest: REL-OBS-028: candidate entry cannot be selected as an installable release
+ok 91 - REL-OBS-028: candidate entry cannot be selected as an installable release
+  ---
+  duration_ms: 0.3769
+  type: 'test'
+  ...
+# Subtest: REL-OBS-029: inherited values cannot establish observed guard facts
+ok 92 - REL-OBS-029: inherited values cannot establish observed guard facts
+  ---
+  duration_ms: 0.1495
+  type: 'test'
+  ...
+# Subtest: REL-OBS-030: malformed module metadata and duplicate states are rejected
+ok 93 - REL-OBS-030: malformed module metadata and duplicate states are rejected
+  ---
+  duration_ms: 0.2572
+  type: 'test'
+  ...
+# Subtest: REL-PKG-001: all source spans reconstructed exactly with no omissions or overlap
+ok 94 - REL-PKG-001: all source spans reconstructed exactly with no omissions or overlap
+  ---
+  duration_ms: 182.5809
+  type: 'test'
+  ...
+# Subtest: REL-PKG-002: every module contract satisfies the restricted versioned schema profile
+ok 95 - REL-PKG-002: every module contract satisfies the restricted versioned schema profile
+  ---
+  duration_ms: 13.492
+  type: 'test'
+  ...
+# Subtest: REL-PKG-003: entry and all route/detail/procedure references resolve locally
+ok 96 - REL-PKG-003: entry and all route/detail/procedure references resolve locally
+  ---
+  duration_ms: 8.9349
+  type: 'test'
+  ...
+# Subtest: REL-PKG-004: complete graph is acyclic and selection order is deterministic
+ok 97 - REL-PKG-004: complete graph is acyclic and selection order is deterministic
+  ---
+  duration_ms: 0.8337
+  type: 'test'
+  ...
+# Subtest: REL-PKG-005: ordinary G0 uses initial closure without provisioning or managed-work modules
+ok 98 - REL-PKG-005: ordinary G0 uses initial closure without provisioning or managed-work modules
+  ---
+  duration_ms: 0.2145
+  type: 'test'
+  ...
+# Subtest: REL-PKG-006: actual effect, risk, authority and recovery facets expand request routing by union
+ok 99 - REL-PKG-006: actual effect, risk, authority and recovery facets expand request routing by union
+  ---
+  duration_ms: 0.232
+  type: 'test'
+  ...
+# Subtest: REL-PKG-007: unknown material scope uses conservative consumer closure and remains unresolved
+ok 100 - REL-PKG-007: unknown material scope uses conservative consumer closure and remains unresolved
+  ---
+  duration_ms: 0.1924
+  type: 'test'
+  ...
+# Subtest: REL-PKG-008: unknown selectors and missing dependencies fail instead of under-routing
+ok 101 - REL-PKG-008: unknown selectors and missing dependencies fail instead of under-routing
+  ---
+  duration_ms: 0.5247
+  type: 'test'
+  ...
+# Subtest: REL-PKG-009: cache avoids duplicate file reads for unchanged applicable context
+ok 102 - REL-PKG-009: cache avoids duplicate file reads for unchanged applicable context
+  ---
+  duration_ms: 9.1537
+  type: 'test'
+  ...
+# Subtest: REL-PKG-010: expansion reads only newly required modules and deduplicates contracts
+ok 103 - REL-PKG-010: expansion reads only newly required modules and deduplicates contracts
+  ---
+  duration_ms: 2.7809
+  type: 'test'
+  ...
+# Subtest: REL-PKG-011: context loss reloads current closure rather than treating history as active context
+ok 104 - REL-PKG-011: context loss reloads current closure rather than treating history as active context
+  ---
+  duration_ms: 1.7984
+  type: 'test'
+  ...
+# Subtest: REL-PKG-012: module retirement prevents a monotonically growing working set
+ok 105 - REL-PKG-012: module retirement prevents a monotonically growing working set
+  ---
+  duration_ms: 2.1162
+  type: 'test'
+  ...
+# Subtest: REL-PKG-013: full install contains all BOOT rows and mandatory dependent governance
+ok 106 - REL-PKG-013: full install contains all BOOT rows and mandatory dependent governance
+  ---
+  duration_ms: 0.4813
+  type: 'test'
+  ...
+# Subtest: REL-PKG-014: positive, negative and unknown BOOT observations have distinct guard outcomes
+ok 107 - REL-PKG-014: positive, negative and unknown BOOT observations have distinct guard outcomes
+  ---
+  duration_ms: 0.3702
+  type: 'test'
+  ...
+# Subtest: REL-PKG-015: user confirmation and command exit alone cannot satisfy access/control/readiness guards
+ok 108 - REL-PKG-015: user confirmation and command exit alone cannot satisfy access/control/readiness guards
+  ---
+  duration_ms: 0.1495
+  type: 'test'
+  ...
+# Subtest: REL-PKG-016: operations readiness verifies scoped runtime credential and both permissions, not visibility
+ok 109 - REL-PKG-016: operations readiness verifies scoped runtime credential and both permissions, not visibility
+  ---
+  duration_ms: 0.1963
+  type: 'test'
+  ...
+# Subtest: REL-PKG-017: source preserves provider uncertainty, manual enrollment and independent signing boundaries
+ok 110 - REL-PKG-017: source preserves provider uncertainty, manual enrollment and independent signing boundaries
+  ---
+  duration_ms: 0.4454
+  type: 'test'
+  ...
+# Subtest: REL-PKG-018: migration and destination routes contain ownership/compatibility/source-target safeguards
+ok 111 - REL-PKG-018: migration and destination routes contain ownership/compatibility/source-target safeguards
+  ---
+  duration_ms: 0.342
+  type: 'test'
+  ...
+# Subtest: REL-PKG-019: bootstrap guard/transition identifiers and dependency order are unambiguous
+ok 112 - REL-PKG-019: bootstrap guard/transition identifiers and dependency order are unambiguous
+  ---
+  duration_ms: 0.2276
+  type: 'test'
+  ...
+# Subtest: REL-PKG-020: partial effects and concrete waiting conditions are required on recovery branches
+ok 113 - REL-PKG-020: partial effects and concrete waiting conditions are required on recovery branches
+  ---
+  duration_ms: 0.1216
+  type: 'test'
+  ...
+# Subtest: REL-PKG-021: changing an adapter invalidates only dependent proofs
+ok 114 - REL-PKG-021: changing an adapter invalidates only dependent proofs
+  ---
+  duration_ms: 0.154
+  type: 'test'
+  ...
+# Subtest: REL-PKG-022: runtime/project adoption evidence is not reusable across ownership boundaries
+ok 115 - REL-PKG-022: runtime/project adoption evidence is not reusable across ownership boundaries
+  ---
+  duration_ms: 0.114
+  type: 'test'
+  ...
+# Subtest: REL-PKG-023: producer module is excluded from ordinary/full-install/recovery/consumer-update routes
+ok 116 - REL-PKG-023: producer module is excluded from ordinary/full-install/recovery/consumer-update routes
+  ---
+  duration_ms: 0.1776
+  type: 'test'
+  ...
+# Subtest: REL-PKG-024: semantic adoption changes have explicit source deltas and scoped migration policy
+ok 117 - REL-PKG-024: semantic adoption changes have explicit source deltas and scoped migration policy
+  ---
+  duration_ms: 0.4063
+  type: 'test'
+  ...
+# Subtest: REL-PKG-025: no consumer procedure schedules maintainer execution or OOP audit operations
+ok 118 - REL-PKG-025: no consumer procedure schedules maintainer execution or OOP audit operations
+  ---
+  duration_ms: 0.2519
+  type: 'test'
+  ...
+# Subtest: REL-PKG-026: language precedence rejects embedded choices and untrusted unknown or expired preferences
+ok 119 - REL-PKG-026: language precedence rejects embedded choices and untrusted unknown or expired preferences
+  ---
+  duration_ms: 2.0945
+  type: 'test'
+  ...
+# Subtest: REL-PKG-027: worker defaults preserve eligible references and never imply repository or provider authority
+ok 120 - REL-PKG-027: worker defaults preserve eligible references and never imply repository or provider authority
+  ---
+  duration_ms: 0.6609
+  type: 'test'
+  ...
+# Subtest: REL-PKG-028: current installed proof and reconciled resume are necessary for bootstrap completion
+ok 121 - REL-PKG-028: current installed proof and reconciled resume are necessary for bootstrap completion
+  ---
+  duration_ms: 0.7782
+  type: 'test'
+  ...
+# Subtest: REL-PKG-029: language discovery is necessary and its result satisfies the actual entry guard
+ok 122 - REL-PKG-029: language discovery is necessary and its result satisfies the actual entry guard
+  ---
+  duration_ms: 0.2064
+  type: 'test'
+  ...
+# Subtest: REL-PKG-030: checked unavailable unsupported and unknown host states permit honest limited fallback
+ok 123 - REL-PKG-030: checked unavailable unsupported and unknown host states permit honest limited fallback
+  ---
+  duration_ms: 0.1415
+  type: 'test'
+  ...
+# Subtest: REL-PKG-031: command and external text cannot fabricate user language and invalidated discovery cannot be reused
+ok 124 - REL-PKG-031: command and external text cannot fabricate user language and invalidated discovery cannot be reused
+  ---
+  duration_ms: 0.1348
+  type: 'test'
+  ...
+# Subtest: REL-PKG-032: every Git effect routes attribution context and bootstrap cannot waive unknown commit disposition
+ok 125 - REL-PKG-032: every Git effect routes attribution context and bootstrap cannot waive unknown commit disposition
+  ---
+  duration_ms: 0.2272
+  type: 'test'
+  ...
+# Subtest: REL-PKG-033: AI commit metadata is checked despite reused human authentication and valid signing
+ok 126 - REL-PKG-033: AI commit metadata is checked despite reused human authentication and valid signing
+  ---
+  duration_ms: 0.6842
+  type: 'test'
+  ...
+# Subtest: REL-PKG-034: incomplete API or inherited provenance and wrong resulting object block dependent effects
+ok 127 - REL-PKG-034: incomplete API or inherited provenance and wrong resulting object block dependent effects
+  ---
+  duration_ms: 0.3184
+  type: 'test'
+  ...
+# Subtest: REL-PKG-035: genuine human authors retain provenance while alternative AI names and emails are rejected
+ok 128 - REL-PKG-035: genuine human authors retain provenance while alternative AI names and emails are rejected
+  ---
+  duration_ms: 0.4133
+  type: 'test'
+  ...
+# Subtest: REL-PKG-036: real disposable Git environment override defeats user.name and actual-object admission refuses publication
+ok 129 - REL-PKG-036: real disposable Git environment override defeats user.name and actual-object admission refuses publication
+  ---
+  duration_ms: 224.6733
+  type: 'test'
+  ...
+# Subtest: REL-ENTRY-001: standalone entry contains exact reviewed pre-clone instructions without local payload reads
+ok 130 - REL-ENTRY-001: standalone entry contains exact reviewed pre-clone instructions without local payload reads
+  ---
+  duration_ms: 18.2831
+  type: 'test'
+  ...
+# Subtest: REL-ENTRY-002: every required observation independently denies or remains unknown without evidence
+ok 131 - REL-ENTRY-002: every required observation independently denies or remains unknown without evidence
+  ---
+  duration_ms: 0.6996
+  type: 'test'
+  ...
+# Subtest: REL-ENTRY-003: pre-clone ordering is acyclic and BOOT-02 cannot rely on later BOOT-05
+ok 132 - REL-ENTRY-003: pre-clone ordering is acyclic and BOOT-02 cannot rely on later BOOT-05
+  ---
+  duration_ms: 0.709
+  type: 'test'
+  ...
+# Subtest: REL-ENTRY-004: missing private protection and foreign or unresolved project facts block supplied startup evidence
+ok 133 - REL-ENTRY-004: missing private protection and foreign or unresolved project facts block supplied startup evidence
+  ---
+  duration_ms: 0.3136
+  type: 'test'
+  ...
+# Subtest: REL-ENTRY-005: reuse and concurrency contract preserves equivalents and rejects uncoordinated acquisition facts
+ok 134 - REL-ENTRY-005: reuse and concurrency contract preserves equivalents and rejects uncoordinated acquisition facts
+  ---
+  duration_ms: 0.2439
+  type: 'test'
+  ...
+# Subtest: REL-ENTRY-006: freshness projection retains clean update and dirty divergent pinned offline and independent-adoption boundaries
+ok 135 - REL-ENTRY-006: freshness projection retains clean update and dirty divergent pinned offline and independent-adoption boundaries
+  ---
+  duration_ms: 0.3736
+  type: 'test'
+  ...
+# Subtest: REL-ENTRY-007: language capability audit-exclusion and full-install handoff remain explicit and guarded
+ok 136 - REL-ENTRY-007: language capability audit-exclusion and full-install handoff remain explicit and guarded
+  ---
+  duration_ms: 0.2982
+  type: 'test'
+  ...
+# Subtest: REL-ENTRY-008: additive format retains existing entry fields and all accepted state profiles without mandatory relocation
+ok 137 - REL-ENTRY-008: additive format retains existing entry fields and all accepted state profiles without mandatory relocation
+  ---
+  duration_ms: 0.7607
+  type: 'test'
+  ...
+# Subtest: REL-ENTRY-009: malformed reviewed preflight sequence fails real generation before writing any artifacts
+ok 138 - REL-ENTRY-009: malformed reviewed preflight sequence fails real generation before writing any artifacts
+  ---
+  duration_ms: 1227.0516
+  type: 'test'
+  ...
+# Subtest: REL-ENTRY-010: README contains exactly the requested GitHub CTA and source references resolve
+ok 139 - REL-ENTRY-010: README contains exactly the requested GitHub CTA and source references resolve
+  ---
+  duration_ms: 8.3374
+  type: 'test'
+  ...
+# Subtest: REL-ROUTE-001: coordination in semantic_propagation
+ok 140 - REL-ROUTE-001: coordination in semantic_propagation
+  ---
+  duration_ms: 14.686
+  type: 'test'
+  ...
+# Subtest: REL-ROUTE-002: coordination in change_set
+ok 141 - REL-ROUTE-002: coordination in change_set
+  ---
+  duration_ms: 2.5859
+  type: 'test'
+  ...
+# Subtest: REL-ROUTE-003: coordination in managed_change
+ok 142 - REL-ROUTE-003: coordination in managed_change
+  ---
+  duration_ms: 4.0943
+  type: 'test'
+  ...
+# Subtest: REL-ROUTE-004: coordination in semantic_propagation+material_effect
+ok 143 - REL-ROUTE-004: coordination in semantic_propagation+material_effect
+  ---
+  duration_ms: 3.0137
+  type: 'test'
+  ...
+# Subtest: REL-ROUTE-005: coordination in material_effect
+ok 144 - REL-ROUTE-005: coordination in material_effect
+  ---
+  duration_ms: 1.4945
+  type: 'test'
+  ...
+# Subtest: REL-ROUTE-006: G0 and small G1 retain exact module closure and payload bytes
+ok 145 - REL-ROUTE-006: G0 and small G1 retain exact module closure and payload bytes
+  ---
+  duration_ms: 11.7241
+  type: 'test'
+  ...
+# Subtest: REL-ROUTE-007: organizational structure and unknown material routing retain boundaries
+ok 146 - REL-ROUTE-007: organizational structure and unknown material routing retain boundaries
+  ---
+  duration_ms: 46.7926
+  type: 'test'
+  ...
+# Subtest: REL-ROUTE-008: complete current reviewed allocation covers each source clause exactly once
+ok 147 - REL-ROUTE-008: complete current reviewed allocation covers each source clause exactly once
+  ---
+  duration_ms: 7.4146
+  type: 'test'
+  ...
+# Subtest: REL-ROUTE-009: changed source allocation dependencies or review record fail closed
+ok 148 - REL-ROUTE-009: changed source allocation dependencies or review record fail closed
+  ---
+  duration_ms: 18.9869
+  type: 'test'
+  ...
+# Subtest: REL-ROUTE-010: missing incomplete and overlapping current allocation fails closed
+ok 149 - REL-ROUTE-010: missing incomplete and overlapping current allocation fails closed
+  ---
+  duration_ms: 20.1234
+  type: 'test'
+  ...
+1..149
+# tests 149
+# suites 0
+# pass 149
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 62430.0171

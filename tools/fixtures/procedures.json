@@ -1,0 +1,22 @@
+{
+  "status": "candidate_fixture",
+  "source_ref": "PROTOCOL.md:BOOT-08, BOOT-10, BOOT-11, SYS-02; complete bootstrap closure not represented",
+  "operations_attachment": {
+    "states": ["credential_prepared", "awaiting_attachment", "access_observed", "operations_ready", "recovering"],
+    "transitions": [
+      {"from": "credential_prepared", "to": "awaiting_attachment", "guard": {"fact": "human_enrollment_required"}},
+      {"from": "credential_prepared", "to": "access_observed", "guard": {"fact": "access_observation_obtained"}},
+      {"from": "awaiting_attachment", "to": "access_observed", "guard": {"fact": "access_observation_obtained"}},
+      {"from": "access_observed", "to": "operations_ready", "guard": {"all": [
+        {"fact": "workspace_matches"}, {"fact": "repository_matches"},
+        {"fact": "credential_matches"}, {"fact": "adapter_matches"},
+        {"fact": "read_verified"}, {"fact": "write_verified"},
+        {"fact": "other_applicable_requirements_satisfied"}
+      ]}},
+      {"from": "access_observed", "to": "recovering", "guard": {"fact": "repair_authorized"}},
+      {"from": "recovering", "to": "access_observed", "guard": {"fact": "fresh_access_observation_obtained"}}
+    ],
+    "resume": "Inspect actual enrollment/access and partial effects; do not blindly replay provider enrollment or repository creation.",
+    "effect_authority": "Each real effect requires current independent authority and installed controls; guard evaluation performs no effect."
+  }
+}

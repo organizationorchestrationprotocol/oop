@@ -1,0 +1,128 @@
+{
+  "format": 1,
+  "scope": "Local reference only; no provider installation or consumer adoption",
+  "baseline_commit": "9e8ff87a096d484ff56c03358019da130a78d97d",
+  "evidence_source": "Inspected tools/enforcement-adapter.cjs and tools/enforcement.test.mjs; current host exposes tools but no verified OOP native registration/dispatch evidence.",
+  "local_reference": {
+    "registration": "none: explicitly local example",
+    "executable": "dist/oop-enforce.js",
+    "interpreter": "Node v24.19.0 bundled runtime",
+    "args": [
+      "pre-effect"
+    ],
+    "stdin": "JSON request, <=1 MiB engine limit",
+    "stdout": "strict oop_admission, <=2 MiB adapter limit",
+    "cwd": "repository root",
+    "env": "inherits invoking host; no added credentials",
+    "permissions": "caller/host responsibility",
+    "timeout_ms": 6000,
+    "stdin_timeout_ms": 5000,
+    "exit_status": {
+      "allow": 0,
+      "deny": 2,
+      "unknown": 3,
+      "error": 4
+    },
+    "failure_propagation": "all non-admissions prevent callback",
+    "covered_path": "guardedEffect callback in disposable fixtures",
+    "alternative_paths": "not covered"
+  },
+  "installed_matrix": {
+    "entry": {
+      "status": "not_verified",
+      "source": "No authoritative installed registration, native dispatch, checkpoint or destination observation available in this execution scope."
+    },
+    "tool_pre_effect": {
+      "status": "not_verified",
+      "source": "No authoritative installed registration, native dispatch, checkpoint or destination observation available in this execution scope."
+    },
+    "tool_post_effect": {
+      "status": "not_verified",
+      "source": "No authoritative installed registration, native dispatch, checkpoint or destination observation available in this execution scope."
+    },
+    "stop_completion": {
+      "status": "not_verified",
+      "source": "No authoritative installed registration, native dispatch, checkpoint or destination observation available in this execution scope."
+    },
+    "delegate": {
+      "status": "not_verified",
+      "source": "No authoritative installed registration, native dispatch, checkpoint or destination observation available in this execution scope."
+    },
+    "timeout": {
+      "status": "not_verified",
+      "source": "No authoritative installed registration, native dispatch, checkpoint or destination observation available in this execution scope."
+    },
+    "missing_hook": {
+      "status": "not_verified",
+      "source": "No authoritative installed registration, native dispatch, checkpoint or destination observation available in this execution scope."
+    },
+    "malformed_or_new_output": {
+      "status": "not_verified",
+      "source": "No authoritative installed registration, native dispatch, checkpoint or destination observation available in this execution scope."
+    },
+    "provenance_mismatch": {
+      "status": "not_verified",
+      "source": "No authoritative installed registration, native dispatch, checkpoint or destination observation available in this execution scope."
+    },
+    "changed_authority": {
+      "status": "not_verified",
+      "source": "No authoritative installed registration, native dispatch, checkpoint or destination observation available in this execution scope."
+    },
+    "disabled_integration": {
+      "status": "not_verified",
+      "source": "No authoritative installed registration, native dispatch, checkpoint or destination observation available in this execution scope."
+    },
+    "crash_recovery": {
+      "status": "not_verified",
+      "source": "No authoritative installed registration, native dispatch, checkpoint or destination observation available in this execution scope."
+    },
+    "exclusive_lock_CAS": {
+      "status": "not_verified",
+      "source": "No authoritative installed registration, native dispatch, checkpoint or destination observation available in this execution scope."
+    },
+    "active_invocation_cleanup": {
+      "status": "not_verified",
+      "source": "No authoritative installed registration, native dispatch, checkpoint or destination observation available in this execution scope."
+    },
+    "cross_runtime_adoption": {
+      "status": "not_verified",
+      "source": "No authoritative installed registration, native dispatch, checkpoint or destination observation available in this execution scope."
+    }
+  },
+  "runtime_ownership": {
+    "active_oop_commit": "not_verified",
+    "workspace_owner": "not_verified",
+    "runtime_owner": "not_verified",
+    "checkpoint_revision": "not_verified",
+    "journal": "not_verified",
+    "active_executable": "not_verified"
+  },
+  "live_allowed": "not_performed",
+  "live_denied_destination_absence": "not_performed",
+  "full_oop": "not_verified",
+  "invalidation": [
+    "engine or expected binding changes",
+    "host registration or executable changes",
+    "authority/scope/revision changes",
+    "permission or timeout changes",
+    "alternate effect path",
+    "expired observation"
+  ],
+  "dependent_blocked": [
+    "installed prevention claims",
+    "consumer adoption/readiness",
+    "durable recovery and cross-runtime claims"
+  ],
+  "independent_completed": [
+    "reference implementation",
+    "producer tests",
+    "local measurements"
+  ],
+  "future_protocol": [
+    "Under separately authorized disposable native scope, observe exact registered invocation and owning runtime/checkpoint.",
+    "Run one allowed write and inspect destination readback; run a denied write and inspect authoritative destination absence.",
+    "Exercise timeout, missing/disabled hook, malformed/new response, provenance and authority changes on every claimed path.",
+    "Observe lock/CAS, phase journal, interrupted activation, active dispatch/checkpoint reconciliation and ongoing users before cleanup.",
+    "For model outcomes, record actual delivered bytes/tokens, provider usage, matched workloads, quality criteria and hook-to-effect duration; report unavailable dimensions as not_measured."
+  ]
+}

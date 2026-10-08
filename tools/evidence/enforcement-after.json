@@ -1,0 +1,340 @@
+{
+  "scope": "Local producer; no provider hook, model delivery or authority authentication",
+  "node": "v24.19.0",
+  "baseline_commit": "0814c90d9e655800ea27de874f15a38469e8771e",
+  "distribution": {
+    "files": 84,
+    "bytes": 680206
+  },
+  "cases": [
+    {
+      "facet": "full_install",
+      "modules": [
+        "core",
+        "workspace",
+        "activation",
+        "capabilities",
+        "history",
+        "intake",
+        "model",
+        "impact",
+        "cost",
+        "repository",
+        "security",
+        "operations",
+        "tickets",
+        "changes",
+        "coordination",
+        "execution",
+        "migration",
+        "migration-distribution",
+        "adoption",
+        "context",
+        "entry",
+        "human",
+        "bootstrap"
+      ],
+      "selected_context_bytes": 332630,
+      "module_reads": 23,
+      "applicable_procedure_bytes": 23780,
+      "migration_projection_bytes": 11399,
+      "selected_total_bytes": 367809,
+      "reference_routing_ms": {
+        "samples": 100,
+        "p50": 0.01269999999999527,
+        "p95": 0.027100000000004343,
+        "p99": 0.16620000000000346
+      },
+      "engine_warm_ms": {
+        "samples": 100,
+        "p50": 0.015600000000006276,
+        "p95": 0.05100000000000193,
+        "p99": 0.39170000000000016
+      },
+      "delivered_tokens": "not_measured",
+      "model_latency": "not_measured",
+      "money": "not_measured"
+    },
+    {
+      "facet": "information",
+      "modules": [
+        "core",
+        "context",
+        "workspace",
+        "entry"
+      ],
+      "selected_context_bytes": 130845,
+      "module_reads": 4,
+      "applicable_procedure_bytes": 0,
+      "migration_projection_bytes": 0,
+      "selected_total_bytes": 130845,
+      "reference_routing_ms": {
+        "samples": 100,
+        "p50": 0.006799999999998363,
+        "p95": 0.011399999999994748,
+        "p99": 0.01850000000000307
+      },
+      "engine_warm_ms": {
+        "samples": 100,
+        "p50": 0.005800000000007799,
+        "p95": 0.01290000000000191,
+        "p99": 0.021100000000004115
+      },
+      "delivered_tokens": "not_measured",
+      "model_latency": "not_measured",
+      "money": "not_measured"
+    },
+    {
+      "facet": "durable_write",
+      "modules": [
+        "core",
+        "context",
+        "coordination",
+        "cost",
+        "workspace",
+        "entry",
+        "execution",
+        "history",
+        "intake",
+        "model",
+        "impact",
+        "repository",
+        "security",
+        "operations",
+        "tickets"
+      ],
+      "selected_context_bytes": 214594,
+      "module_reads": 15,
+      "applicable_procedure_bytes": 0,
+      "migration_projection_bytes": 0,
+      "selected_total_bytes": 214594,
+      "reference_routing_ms": {
+        "samples": 100,
+        "p50": 0.005700000000004479,
+        "p95": 0.018799999999998818,
+        "p99": 0.03530000000000655
+      },
+      "engine_warm_ms": {
+        "samples": 100,
+        "p50": 0.009500000000002728,
+        "p95": 0.022899999999992815,
+        "p99": 0.24620000000000175
+      },
+      "delivered_tokens": "not_measured",
+      "model_latency": "not_measured",
+      "money": "not_measured"
+    },
+    {
+      "facet": "due_update",
+      "modules": [
+        "core",
+        "workspace",
+        "activation",
+        "capabilities",
+        "history",
+        "intake",
+        "model",
+        "impact",
+        "cost",
+        "repository",
+        "security",
+        "operations",
+        "tickets",
+        "changes",
+        "coordination",
+        "execution",
+        "migration",
+        "migration-distribution",
+        "adoption",
+        "context",
+        "entry"
+      ],
+      "selected_context_bytes": 296701,
+      "module_reads": 21,
+      "applicable_procedure_bytes": 1739,
+      "migration_projection_bytes": 11399,
+      "selected_total_bytes": 309839,
+      "reference_routing_ms": {
+        "samples": 100,
+        "p50": 0.006099999999989336,
+        "p95": 0.012000000000000455,
+        "p99": 0.014799999999993929
+      },
+      "engine_warm_ms": {
+        "samples": 100,
+        "p50": 0.011600000000001387,
+        "p95": 0.022900000000007026,
+        "p99": 0.03840000000000998
+      },
+      "delivered_tokens": "not_measured",
+      "model_latency": "not_measured",
+      "money": "not_measured"
+    },
+    {
+      "facet": "context_loss",
+      "modules": [
+        "core",
+        "context",
+        "workspace",
+        "entry",
+        "recovery"
+      ],
+      "selected_context_bytes": 133274,
+      "module_reads": 5,
+      "applicable_procedure_bytes": 1739,
+      "migration_projection_bytes": 0,
+      "selected_total_bytes": 135013,
+      "reference_routing_ms": {
+        "samples": 100,
+        "p50": 0.003299999999995862,
+        "p95": 0.009000000000000341,
+        "p99": 0.06479999999999109
+      },
+      "engine_warm_ms": {
+        "samples": 100,
+        "p50": 0.005099999999998772,
+        "p95": 0.005800000000007799,
+        "p99": 0.013999999999995794
+      },
+      "delivered_tokens": "not_measured",
+      "model_latency": "not_measured",
+      "money": "not_measured"
+    },
+    {
+      "facet": "interrupted_setup",
+      "modules": [
+        "core",
+        "workspace",
+        "activation",
+        "capabilities",
+        "history",
+        "intake",
+        "model",
+        "impact",
+        "cost",
+        "repository",
+        "security",
+        "operations",
+        "tickets",
+        "changes",
+        "coordination",
+        "execution",
+        "migration",
+        "migration-distribution",
+        "adoption",
+        "context",
+        "entry",
+        "human",
+        "bootstrap",
+        "recovery"
+      ],
+      "selected_context_bytes": 335059,
+      "module_reads": 24,
+      "applicable_procedure_bytes": 23780,
+      "migration_projection_bytes": 11399,
+      "selected_total_bytes": 370238,
+      "reference_routing_ms": {
+        "samples": 100,
+        "p50": 0.006100000000003547,
+        "p95": 0.010800000000003251,
+        "p99": 0.020899999999997476
+      },
+      "engine_warm_ms": {
+        "samples": 100,
+        "p50": 0.011400000000008959,
+        "p95": 0.01640000000000441,
+        "p99": 0.04210000000000491
+      },
+      "delivered_tokens": "not_measured",
+      "model_latency": "not_measured",
+      "money": "not_measured"
+    },
+    {
+      "facet": "delegation",
+      "modules": [
+        "core",
+        "workspace",
+        "activation",
+        "capabilities",
+        "context",
+        "delegation",
+        "entry"
+      ],
+      "selected_context_bytes": 165261,
+      "module_reads": 7,
+      "applicable_procedure_bytes": 0,
+      "migration_projection_bytes": 0,
+      "selected_total_bytes": 165261,
+      "reference_routing_ms": {
+        "samples": 100,
+        "p50": 0.0036000000000058208,
+        "p95": 0.012600000000020373,
+        "p99": 0.10230000000001382
+      },
+      "engine_warm_ms": {
+        "samples": 100,
+        "p50": 0.005500000000012051,
+        "p95": 0.006399999999985084,
+        "p99": 0.01850000000001728
+      },
+      "delivered_tokens": "not_measured",
+      "model_latency": "not_measured",
+      "money": "not_measured"
+    },
+    {
+      "facet": "completion",
+      "modules": [
+        "core",
+        "context",
+        "workspace",
+        "entry"
+      ],
+      "selected_context_bytes": 130845,
+      "module_reads": 4,
+      "applicable_procedure_bytes": 0,
+      "migration_projection_bytes": 0,
+      "selected_total_bytes": 130845,
+      "reference_routing_ms": {
+        "samples": 100,
+        "p50": 0.002999999999985903,
+        "p95": 0.003500000000002501,
+        "p99": 0.007100000000008322
+      },
+      "engine_warm_ms": {
+        "samples": 100,
+        "p50": 0.004899999999992133,
+        "p95": 0.0053999999999803094,
+        "p99": 0.015999999999991132
+      },
+      "delivered_tokens": "not_measured",
+      "model_latency": "not_measured",
+      "money": "not_measured"
+    }
+  ],
+  "alternatives": {
+    "Node": "measured",
+    "Bun": "not_available",
+    "Rust": "not_implemented",
+    "WASM": "not_implemented",
+    "Python": "not_implemented"
+  },
+  "test_harness": {
+    "decision": "node:test; existing dependency-free producer stack",
+    "alternative_runner": "not_measured"
+  },
+  "cli_cold_ms": {
+    "samples": 20,
+    "p50": 55.85919999999999,
+    "p95": 59.03539999999998,
+    "p99": 60.12410000000003
+  },
+  "cli_peak_rss_kib": {
+    "samples": 20,
+    "p50": 43208,
+    "p95": 43304,
+    "p99": 43328
+  },
+  "hook_to_effect_ms": "not_measured",
+  "installed_provider": "not_performed",
+  "engine_loaded_bytes": 91991
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "class": "FML-B",
+    "before": "Automatically apply [REPORT](#report) before completion. Include its full numbered proposal list and aggregate verdict inside the entirely English implementation-prompt artifact AND in the localized final user response, including when the list is unchanged.",
+    "after": "Automatically apply [REPORT](#report) before completion. Include its full numbered proposal list and aggregate verdict inside the entirely English implementation prompt, including when the list is unchanged. Complete applicable localized process reporting before returning the prompt; return the complete prompt and end the operation without a subsequent report or footer."
+  },
+  {
+    "class": "FML-B",
+    "before": "Provide the prompt as a downloadable Markdown file named `OOP_<unix_timestamp>_<descriptive_name>.md`, where `<unix_timestamp>` is the number of seconds since the Unix epoch at the time the file is created. All prose in the file MUST be in English, including translated decision material, examples and quotations; preserve technical literals under the rules above. APPLY alone uses the complete English prompt internally without a downloadable artifact. User-facing explanations and REPORT remain in the user's preferred language, with the executor's terminal English commit-message display as an explicitly labeled canonical-text exception.",
+    "after": "Return the complete generated English prompt as the output and then end the operation. Do not create or link a downloadable Markdown file. All prose in the prompt MUST be in English, including translated decision material, examples and quotations; preserve technical literals under the rules above. User-facing explanations and process reporting remain in the user's preferred language before final prompt delivery."
+  },
+  {
+    "class": "FML-A",
+    "before": "Require the executor to complete latest applicable VERIFY and full localized REPORT before its final user-visible action: an accurate localized status label and copyable fenced text block of the exact observed commit message, or the identical proposed/unexecuted message when no commit occurred. Distinguish committed and pushed, committed locally but not pushed, proposed and not executed, and no new commit. Verify the actual message before claiming use; disclose uncertainty. No operation, instruction or additional output follows that terminal display. This ordering preserves all substantive VERIFY/REPORT duties.",
+    "after": "Require the executor to complete latest applicable VERIFY and full localized REPORT with accurate actual execution status. Verify the actual message before claiming use; disclose uncertainty. Do not require terminal commit-message display."
+  },
+  {
+    "class": "FML-C",
+    "before": "The canonical source must always remain completely vendor- and tool-agnostic.",
+    "after": "The canonical source must always remain completely vendor- and tool-agnostic.\n\nEvery generated implementation prompt MUST explicitly require its executor to read and assess the current Abstract, Vision, Goal and Introduction of the canonical source against the final approved changes, and update each section where necessary to keep the overview accurate, coherent and aligned with the resulting implementation and its evidence limits. The prompt MUST require a concise recorded disposition for each of the four sections: updated with a reason, or unchanged with a reason; blanket omission or an instruction merely to consider documentation is insufficient. Preserve the research objectives, explanatory role, vendor/tool neutrality and distinction between intended benefits and measured results. Overview edits MUST NOT introduce, override or weaken runtime obligations; express any necessary normative change in the runtime rules and assess its separate distribution impact. Reassess source locators and producer bindings when overview layout changes, without inventing a runtime semantic delta from explanatory or maintainer-only edits."
+  }
+]

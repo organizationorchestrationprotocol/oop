@@ -1,0 +1,389 @@
+{
+  "baseline_commit": "0814c90d9e655800ea27de874f15a38469e8771e",
+  "current_head": "0814c90d9e655800ea27de874f15a38469e8771e",
+  "scope": "Current local source and producer candidate only",
+  "overview_preserved": false,
+  "clauses": [
+    {
+      "id": "OOP-mandate-authority",
+      "status": "preserved_verbatim",
+      "before": "lines:1-124",
+      "after": "lines:1-124"
+    },
+    {
+      "id": "OOP-enforcement-autonomy",
+      "status": "additive_change",
+      "before": "lines:125-204",
+      "after": "lines:125-212"
+    },
+    {
+      "id": "OOP-delegate-governance",
+      "status": "preserved_verbatim",
+      "before": "lines:205-208",
+      "after": "lines:213-216"
+    },
+    {
+      "id": "OOP-transitions-routing",
+      "status": "preserved_verbatim",
+      "before": "lines:209-283",
+      "after": "lines:217-291"
+    },
+    {
+      "id": "OOP-technology-neutrality",
+      "status": "preserved_verbatim",
+      "before": "lines:284-326",
+      "after": "lines:292-334"
+    },
+    {
+      "id": "OOP-canonical-language",
+      "status": "preserved_verbatim",
+      "before": "lines:327-419",
+      "after": "lines:335-427"
+    },
+    {
+      "id": "OOP-localized-presentation",
+      "status": "preserved_verbatim",
+      "before": "lines:420-461",
+      "after": "lines:428-469"
+    },
+    {
+      "id": "OOP-private-boundary",
+      "status": "preserved_verbatim",
+      "before": "lines:462-518",
+      "after": "lines:470-526"
+    },
+    {
+      "id": "OOP-shared-coordination",
+      "status": "preserved_verbatim",
+      "before": "lines:519-553",
+      "after": "lines:527-561"
+    },
+    {
+      "id": "OOP-persistent-activation",
+      "status": "preserved_verbatim",
+      "before": "lines:554-608",
+      "after": "lines:562-616"
+    },
+    {
+      "id": "OOP-consumer-exclusions",
+      "status": "preserved_verbatim",
+      "before": "lines:609-616",
+      "after": "lines:617-624"
+    },
+    {
+      "id": "OOP-runtime-adoption",
+      "status": "additive_change",
+      "before": "lines:617-695",
+      "after": "lines:625-711"
+    },
+    {
+      "id": "OOP-migration-distribution",
+      "status": "preserved_verbatim",
+      "before": "lines:696-717",
+      "after": "lines:712-733"
+    },
+    {
+      "id": "OOP-capability-lifecycle",
+      "status": "preserved_verbatim",
+      "before": "lines:718-839",
+      "after": "lines:734-855"
+    },
+    {
+      "id": "OOP-free-first",
+      "status": "preserved_verbatim",
+      "before": "lines:840-1013",
+      "after": "lines:856-1029"
+    },
+    {
+      "id": "OOP-repository-bootstrap",
+      "status": "preserved_verbatim",
+      "before": "lines:1014-1065",
+      "after": "lines:1030-1081"
+    },
+    {
+      "id": "OOP-scoped-credentials",
+      "status": "preserved_verbatim",
+      "before": "lines:1066-1118",
+      "after": "lines:1082-1134"
+    },
+    {
+      "id": "OOP-canonical-operations",
+      "status": "preserved_verbatim",
+      "before": "lines:1119-1173",
+      "after": "lines:1135-1189"
+    },
+    {
+      "id": "OOP-organizational-migration",
+      "status": "preserved_verbatim",
+      "before": "lines:1174-1236",
+      "after": "lines:1190-1252"
+    },
+    {
+      "id": "OOP-organizational-model",
+      "status": "preserved_verbatim",
+      "before": "lines:1237-1385",
+      "after": "lines:1253-1401"
+    },
+    {
+      "id": "OOP-repository-inventory",
+      "status": "preserved_verbatim",
+      "before": "lines:1386-1414",
+      "after": "lines:1402-1430"
+    },
+    {
+      "id": "OOP-request-discovery",
+      "status": "preserved_verbatim",
+      "before": "lines:1415-1517",
+      "after": "lines:1431-1533"
+    },
+    {
+      "id": "OOP-ticket-lifecycle",
+      "status": "preserved_verbatim",
+      "before": "lines:1518-1676",
+      "after": "lines:1534-1692"
+    },
+    {
+      "id": "OOP-continuity-reserve",
+      "status": "preserved_verbatim",
+      "before": "lines:1677-1738",
+      "after": "lines:1693-1754"
+    },
+    {
+      "id": "OOP-portable-transfer",
+      "status": "preserved_verbatim",
+      "before": "lines:1739-1905",
+      "after": "lines:1755-1921"
+    },
+    {
+      "id": "OOP-destination-intake",
+      "status": "preserved_verbatim",
+      "before": "lines:1906-1956",
+      "after": "lines:1922-1972"
+    },
+    {
+      "id": "OOP-sensitive-transfer",
+      "status": "preserved_verbatim",
+      "before": "lines:1957-2078",
+      "after": "lines:1973-2094"
+    },
+    {
+      "id": "OOP-handoff-durability",
+      "status": "preserved_verbatim",
+      "before": "lines:2079-2232",
+      "after": "lines:2095-2248"
+    },
+    {
+      "id": "OOP-asynchronous-recovery",
+      "status": "preserved_verbatim",
+      "before": "lines:2233-2269",
+      "after": "lines:2249-2285"
+    },
+    {
+      "id": "OOP-state-separation",
+      "status": "preserved_verbatim",
+      "before": "lines:2270-2305",
+      "after": "lines:2286-2321"
+    },
+    {
+      "id": "OOP-decision-history",
+      "status": "preserved_verbatim",
+      "before": "lines:2306-2325",
+      "after": "lines:2322-2341"
+    },
+    {
+      "id": "OOP-human-prerequisite",
+      "status": "preserved_verbatim",
+      "before": "lines:2326-2355",
+      "after": "lines:2342-2371"
+    },
+    {
+      "id": "OOP-physical-organization",
+      "status": "preserved_verbatim",
+      "before": "lines:2356-2391",
+      "after": "lines:2372-2407"
+    },
+    {
+      "id": "OOP-impact-propagation",
+      "status": "preserved_verbatim",
+      "before": "lines:2392-2538",
+      "after": "lines:2408-2554"
+    },
+    {
+      "id": "OOP-proportionate-evolution",
+      "status": "preserved_verbatim",
+      "before": "lines:2539-2556",
+      "after": "lines:2555-2572"
+    },
+    {
+      "id": "OOP-reviewable-changes",
+      "status": "preserved_verbatim",
+      "before": "lines:2557-2646",
+      "after": "lines:2573-2662"
+    },
+    {
+      "id": "OOP-organizational-coordination",
+      "status": "preserved_verbatim",
+      "before": "lines:2647-2650",
+      "after": "lines:2663-2666"
+    },
+    {
+      "id": "OOP-effect-verification",
+      "status": "preserved_verbatim",
+      "before": "lines:2651-2680",
+      "after": "lines:2667-2696"
+    },
+    {
+      "id": "OOP-semantic-ci",
+      "status": "preserved_verbatim",
+      "before": "lines:2681-2737",
+      "after": "lines:2697-2753"
+    },
+    {
+      "id": "OOP-controlled-delivery",
+      "status": "preserved_verbatim",
+      "before": "lines:2738-2838",
+      "after": "lines:2754-2854"
+    },
+    {
+      "id": "OOP-temporal-history",
+      "status": "preserved_verbatim",
+      "before": "lines:2839-2902",
+      "after": "lines:2855-2918"
+    },
+    {
+      "id": "OOP-external-projections",
+      "status": "preserved_verbatim",
+      "before": "lines:2903-2931",
+      "after": "lines:2919-2947"
+    },
+    {
+      "id": "OOP-evidence-reuse",
+      "status": "preserved_verbatim",
+      "before": "lines:2932-2956",
+      "after": "lines:2948-2972"
+    },
+    {
+      "id": "OOP-producer-publication",
+      "status": "preserved_verbatim",
+      "before": "lines:2957-2960",
+      "after": "lines:2973-2976"
+    },
+    {
+      "id": "OOP-producer-acceptance",
+      "status": "preserved_verbatim",
+      "before": "lines:2961-3027",
+      "after": "lines:2977-3043"
+    },
+    {
+      "id": "OOP-interaction-entry",
+      "status": "preserved_verbatim",
+      "before": "lines:3028-3057",
+      "after": "lines:3044-3073"
+    },
+    {
+      "id": "OOP-full-install",
+      "status": "preserved_verbatim",
+      "before": "lines:3058-3095",
+      "after": "lines:3074-3111"
+    },
+    {
+      "id": "OOP-bootstrap-system",
+      "status": "preserved_verbatim",
+      "before": "lines:3096-3124",
+      "after": "lines:3112-3140"
+    },
+    {
+      "id": "OOP-bootstrap-attestation",
+      "status": "preserved_verbatim",
+      "before": "lines:3125-3130",
+      "after": "lines:3141-3146"
+    },
+    {
+      "id": "OOP-validity-refresh",
+      "status": "preserved_verbatim",
+      "before": "lines:3131-3140",
+      "after": "lines:3147-3156"
+    },
+    {
+      "id": "OOP-available-context",
+      "status": "preserved_verbatim",
+      "before": "lines:3141-3156",
+      "after": "lines:3157-3172"
+    },
+    {
+      "id": "OOP-bootstrap-communication",
+      "status": "preserved_verbatim",
+      "before": "lines:3157-3170",
+      "after": "lines:3173-3186"
+    },
+    {
+      "id": "OOP-minimum-entry",
+      "status": "preserved_verbatim",
+      "before": "lines:3171-3183",
+      "after": "lines:3187-3199"
+    },
+    {
+      "id": "OOP-continuation-entry",
+      "status": "preserved_verbatim",
+      "before": "lines:3184-3187",
+      "after": "lines:3200-3203"
+    },
+    {
+      "id": "OOP-progressive-entry",
+      "status": "preserved_verbatim",
+      "before": "lines:3188-3203",
+      "after": "lines:3204-3219"
+    },
+    {
+      "id": "OOP-portable-final-invariants",
+      "status": "preserved_verbatim",
+      "before": "lines:3204-3256",
+      "after": "lines:3220-3272"
+    }
+  ],
+  "prior_profiles_preserved": 9,
+  "current_profiles": 10,
+  "candidate_validated": true,
+  "producer_observations": {
+    "total": 165,
+    "unique": 165,
+    "passed": 165,
+    "failed": 0,
+    "skipped": 0,
+    "missing": [],
+    "unexpected": []
+  },
+  "maintainer": {
+    "tests": 169,
+    "passed": true
+  },
+  "acceptance_subjects_unchanged": true,
+  "eof_clean": true,
+  "publication": "not_performed",
+  "commit": "not_created",
+  "installed_provider": "not_verified",
+  "real_activation_lock_crash_recovery": "not_verified",
+  "actual_model_delivery_tokens_money": "not_measured",
+  "independent_historical_acceptance": "not_verified",
+  "overview_editorial_update": {
+    "sections": [
+      "Abstract",
+      "Introduction"
+    ],
+    "document_lines": [
+      9,
+      27
+    ],
+    "vision_goal_preserved": true,
+    "runtime_source_unchanged": true,
+    "runtime_locators_unchanged": true,
+    "engine_impact": "UNCHANGED",
+    "derived_regeneration": "not_required",
+    "description": "Approved explanatory additions within existing paragraphs; no canonical normative runtime change.",
+    "acceptance_renewed": true,
+    "independent_document_changes_preserved": [
+      "README.md",
+      "CHANGELOG.md"
+    ]
+  }
+}
