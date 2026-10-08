@@ -1,0 +1,1193 @@
+{
+  "format": 1,
+  "source_identity": "sha256:343a98f258d7b2eefd4abd6fb6b11bdd630fb9a01c32c1918616e5f6201dfac3",
+  "review": {
+    "basis": "Current native reconciliation, authority/provenance boundaries, scoped bookkeeping, outcome reconciliation and continuation contracts reviewed with the existing admission evaluator and ownership requirements. Unchanged clauses retain their complete reviewed allocation.",
+    "preservation": "Complete current clauses retain independent authority, real project outcomes, authentic history and non-authorizing examples; the delimited native activation pointer preserves entry and ownership boundaries.",
+    "formalization": "Structured boundaries refer to complete semantic clauses. They do not decide semantic judgments or manufacture facts. Formal bootstrap guards are necessary checks, not sufficient authorization.",
+    "coreRationale": "Precedence, authority, proportionality, language, consumer exclusions, state separation and evidence invariants apply across routes. Entry/context/workspace add current identity and availability; conditional business modules remain on demand.",
+    "dependencyRationale": "Dependencies are conservative prerequisites from reviewed meaning. Effectful branches add action/security/execution facets even when a request initially seems informational. Context assembly never grants authority.",
+    "limitations": [
+      "Semantic review performed by the producing AI; no independent human/second-model approval claimed.",
+      "No runtime adapter, provider enrollment or consumer installation executed by this package."
+    ]
+  },
+  "spans": [
+    {
+      "id": "OOP-mandate-authority",
+      "start": 1,
+      "end": 89,
+      "module": "core",
+      "content_identity": "sha256:8aa588b76ad13227271aed417884f492fcf71a951968ac7d40a3ccc22abdc547"
+    },
+    {
+      "id": "OOP-enforcement-autonomy",
+      "start": 90,
+      "end": 177,
+      "module": "core",
+      "content_identity": "sha256:66ba2942b793c7b66a994f1f774ed50dd72345943b57347b571ac8c6a616bb93"
+    },
+    {
+      "id": "OOP-delegate-governance",
+      "start": 178,
+      "end": 181,
+      "module": "delegation",
+      "content_identity": "sha256:a84e9889b010f12174b7ad688966b0da5b43e7a9023b584637d3e740729283c0"
+    },
+    {
+      "id": "OOP-transitions-routing",
+      "start": 182,
+      "end": 256,
+      "module": "core",
+      "content_identity": "sha256:94999f7e7f3322b75948ca37a388667839803c5b5f5534182f07f240b1717bd0"
+    },
+    {
+      "id": "OOP-technology-neutrality",
+      "start": 257,
+      "end": 299,
+      "module": "core",
+      "content_identity": "sha256:c58ace48ffa0e5b7de947297ea264083d01906401a832d98479cad9f61518235"
+    },
+    {
+      "id": "OOP-canonical-language",
+      "start": 300,
+      "end": 392,
+      "module": "core",
+      "content_identity": "sha256:d50c27a08def6ff170096ade8c127c3ba025db2faa9fe4af39527f5b6582e5b3"
+    },
+    {
+      "id": "OOP-localized-presentation",
+      "start": 393,
+      "end": 434,
+      "module": "core",
+      "content_identity": "sha256:94ea64837ab8a14d575a3a309cdad9651ad20a804d8089f36cab3a3cb3168378"
+    },
+    {
+      "id": "OOP-private-boundary",
+      "start": 435,
+      "end": 583,
+      "module": "workspace",
+      "content_identity": "sha256:ad4af6cba8e85f5512463b358cdfe5383934d549e6ed1537614edc97c7deb1c3"
+    },
+    {
+      "id": "OOP-shared-coordination",
+      "start": 584,
+      "end": 644,
+      "module": "shared-context",
+      "content_identity": "sha256:510826c69881b7e42a46ee6e183f503305674f3470525154f0c7d252b6be4a4c"
+    },
+    {
+      "id": "OOP-persistent-activation",
+      "start": 645,
+      "end": 699,
+      "module": "activation",
+      "content_identity": "sha256:ede687c1695bd2cabab32d3069c7e8c025b2009c0ca068b9d47d4d3397133848"
+    },
+    {
+      "id": "OOP-consumer-exclusions",
+      "start": 700,
+      "end": 707,
+      "module": "core",
+      "content_identity": "sha256:0aabbd1d0c052922c0d05935a95698ea46e418ebdf38d8dca017a8e29a64014a"
+    },
+    {
+      "id": "OOP-runtime-adoption",
+      "start": 708,
+      "end": 797,
+      "module": "adoption",
+      "content_identity": "sha256:c0f12523f782cd5663e204fa019eb9b31ea52c108b0768d02a8de4d41bf955ea"
+    },
+    {
+      "id": "OOP-migration-distribution",
+      "start": 798,
+      "end": 813,
+      "module": "migration-distribution",
+      "content_identity": "sha256:b53512f34a5d7d5144995f735ae7e5197fa208a1030f2adbbd378a07fe603357"
+    },
+    {
+      "id": "OOP-capability-lifecycle",
+      "start": 814,
+      "end": 1119,
+      "module": "capabilities",
+      "content_identity": "sha256:3e1f4b6c246955084fb9d4369062f95a3e1cf4cf3d5085bf35fadd3c7774c50b"
+    },
+    {
+      "id": "OOP-free-first",
+      "start": 1120,
+      "end": 1293,
+      "module": "cost",
+      "content_identity": "sha256:d982969e4492e17d2d1f9001b80e9bdf18e7ae2efbdac1f25b23114abcbaebc3"
+    },
+    {
+      "id": "OOP-repository-bootstrap",
+      "start": 1294,
+      "end": 1345,
+      "module": "repository",
+      "content_identity": "sha256:f1c2e96b6cebbe193fb6753b54fb02b0c52c70403ea8587e9d0bd32a8ce54f0f"
+    },
+    {
+      "id": "OOP-scoped-credentials",
+      "start": 1346,
+      "end": 1396,
+      "module": "security",
+      "content_identity": "sha256:ac70d276653aa415e2e238afc19fcebc9b5940bb7ecbb0703b26842c86f542ad"
+    },
+    {
+      "id": "OOP-canonical-operations",
+      "start": 1397,
+      "end": 1451,
+      "module": "operations",
+      "content_identity": "sha256:35471d973e0804aadaded1d2073afe3fc192c4f82dc1801674cc974d1502e03d"
+    },
+    {
+      "id": "OOP-organizational-migration",
+      "start": 1452,
+      "end": 1519,
+      "module": "migration",
+      "content_identity": "sha256:3e8889a676fef0e882a80065cfcf5a4b93061b4bbe77b8189764e6ba2759fd63"
+    },
+    {
+      "id": "OOP-organizational-model",
+      "start": 1520,
+      "end": 1668,
+      "module": "model",
+      "content_identity": "sha256:e4aacc5f9e462e3107eb44a4dd5501a0c9ef62731e099d59a1b9117dd52e5a98"
+    },
+    {
+      "id": "OOP-repository-inventory",
+      "start": 1669,
+      "end": 1697,
+      "module": "inventory",
+      "content_identity": "sha256:33e56341484a5d7b7bb1de17e2a102311f87d473516da0dedc9768cb6eeb45cf"
+    },
+    {
+      "id": "OOP-request-discovery",
+      "start": 1698,
+      "end": 1800,
+      "module": "intake",
+      "content_identity": "sha256:09bf56201e307d65ba87d754f248c49d481ad1410a50f2dd56e2a924289c0cb8"
+    },
+    {
+      "id": "OOP-ticket-lifecycle",
+      "start": 1801,
+      "end": 2110,
+      "module": "tickets",
+      "content_identity": "sha256:9bc105b335e3de5c663c0d0cf17e550f5fdc690d37c4ed2f7c5ce9b24b0bb1e9"
+    },
+    {
+      "id": "OOP-continuity-reserve",
+      "start": 2111,
+      "end": 2181,
+      "module": "continuity",
+      "content_identity": "sha256:9f2df28531c417bb95ed9de028fef92b7dfa4b8956af9bb48dcf03062c38b6d2"
+    },
+    {
+      "id": "OOP-portable-transfer",
+      "start": 2182,
+      "end": 2348,
+      "module": "handoff",
+      "content_identity": "sha256:2b3b12a044976e3c01bb80c6451ea002068aca3e665ef058837d26af8cea52a4"
+    },
+    {
+      "id": "OOP-destination-intake",
+      "start": 2349,
+      "end": 2399,
+      "module": "destination",
+      "content_identity": "sha256:e78690a3e3dff8f4a3d35c83e79ca5446bd797d24a1a749177747fa7b4d0ff7b"
+    },
+    {
+      "id": "OOP-sensitive-transfer",
+      "start": 2400,
+      "end": 2521,
+      "module": "secret-transfer",
+      "content_identity": "sha256:5b3c35683f935ed116283557f9a36b3a0476efa0a4fdc62336280cc88addd03a"
+    },
+    {
+      "id": "OOP-handoff-durability",
+      "start": 2522,
+      "end": 2675,
+      "module": "handoff",
+      "content_identity": "sha256:3286993cf40c1333f38b8e3d5fd37514ca03cef3f8bd5c99361cf94cfc65b2ba"
+    },
+    {
+      "id": "OOP-asynchronous-recovery",
+      "start": 2676,
+      "end": 2712,
+      "module": "recovery",
+      "content_identity": "sha256:521812dcbab75868801cbd3ba2d425a82c2637f189dbacde4246d4f439f21df4"
+    },
+    {
+      "id": "OOP-state-separation",
+      "start": 2713,
+      "end": 2748,
+      "module": "core",
+      "content_identity": "sha256:6b74016bd17eaecd303c2612fc084f462cb2c1258385a4c55dcc413a0abb8f94"
+    },
+    {
+      "id": "OOP-decision-history",
+      "start": 2749,
+      "end": 2768,
+      "module": "decisions",
+      "content_identity": "sha256:f3272555bdf4433055fb94b7bff9bc9f8859e253be5b06224ba0038ccccdb124"
+    },
+    {
+      "id": "OOP-human-prerequisite",
+      "start": 2769,
+      "end": 2798,
+      "module": "human",
+      "content_identity": "sha256:f2a3ba118504325722fdd3df503dd469d2f9bdc3437a0a4d2f0317818f77ad56"
+    },
+    {
+      "id": "OOP-physical-organization",
+      "start": 2799,
+      "end": 2834,
+      "module": "physical",
+      "content_identity": "sha256:e5a1b6739cab2fbbdaec9cbe4067ad5ee4c7aae3b596cb50f11217cdea392f73"
+    },
+    {
+      "id": "OOP-impact-propagation",
+      "start": 2835,
+      "end": 2981,
+      "module": "impact",
+      "content_identity": "sha256:a7c1812c0645457bf6e0b780a4871ab02d3260bcac4f5ce7710a122a725828d7"
+    },
+    {
+      "id": "OOP-proportionate-evolution",
+      "start": 2982,
+      "end": 2999,
+      "module": "impact",
+      "content_identity": "sha256:da235e1c92906e97c91ed06e5e7dd2076479fdc367421a97b7b0348b8813c4d7"
+    },
+    {
+      "id": "OOP-reviewable-changes",
+      "start": 3000,
+      "end": 3089,
+      "module": "changes",
+      "content_identity": "sha256:46357f8721d99d739c241176e4542c122afa02b4ac2313efb0af99d1e30bc9ee"
+    },
+    {
+      "id": "OOP-organizational-coordination",
+      "start": 3090,
+      "end": 3093,
+      "module": "coordination",
+      "content_identity": "sha256:53c3b66d55f53429597515697f7de42e6332854f97e8a7dfe87ce86c794f70bb"
+    },
+    {
+      "id": "OOP-effect-verification",
+      "start": 3094,
+      "end": 3123,
+      "module": "execution",
+      "content_identity": "sha256:6c4ecc95c631a0ce8ee2afd2feaf043a9b7cb5b9dcdea4861b611c2f653bb83a"
+    },
+    {
+      "id": "OOP-semantic-ci",
+      "start": 3124,
+      "end": 3180,
+      "module": "ci",
+      "content_identity": "sha256:b9fc433b89ee1e396b683cd19841c8427ebaeb63ee55b0a78720fd3ea9c0c2ed"
+    },
+    {
+      "id": "OOP-controlled-delivery",
+      "start": 3181,
+      "end": 3281,
+      "module": "delivery",
+      "content_identity": "sha256:b4317ee5877bbef6e909dd80fdea87e23242a4e4b1617207c6581f87b920347c"
+    },
+    {
+      "id": "OOP-temporal-history",
+      "start": 3282,
+      "end": 3345,
+      "module": "history",
+      "content_identity": "sha256:9f65a0b1d303d48b0435cc656e2ac3361406453d92dd325c58a565894292bfca"
+    },
+    {
+      "id": "OOP-external-projections",
+      "start": 3346,
+      "end": 3374,
+      "module": "interfaces",
+      "content_identity": "sha256:db58d2737b3c6272a8b8a5894b4d1b5d7d9f6235e4429511a140d62e5a85a68b"
+    },
+    {
+      "id": "OOP-evidence-reuse",
+      "start": 3375,
+      "end": 3399,
+      "module": "core",
+      "content_identity": "sha256:f5cd4566fa3f3ac546d2f703efd809f0f1851748444cfb5461808d402a87907f"
+    },
+    {
+      "id": "OOP-producer-publication",
+      "start": 3400,
+      "end": 3403,
+      "module": "producer",
+      "content_identity": "sha256:f8cf7378c0c7db229dbeb3a31182675b9c0c82fc49b740f9125ba0e88ea8a6f5"
+    },
+    {
+      "id": "OOP-producer-acceptance",
+      "start": 3404,
+      "end": 3472,
+      "module": "producer",
+      "content_identity": "sha256:8d30522fc6e58608be43ed967749fc1efac5074e0adff9333a54851a2d785c39"
+    },
+    {
+      "id": "OOP-interaction-entry",
+      "start": 3473,
+      "end": 3502,
+      "module": "entry",
+      "content_identity": "sha256:4947499baa4e80def02eb4db7bb51267d45f562e24988cd8a884399150381bbb"
+    },
+    {
+      "id": "OOP-full-install",
+      "start": 3503,
+      "end": 3547,
+      "module": "bootstrap",
+      "content_identity": "sha256:0cdc32eba89f69a9854661e353cf9949828f4db37981a40819325cf9b2c6b022"
+    },
+    {
+      "id": "OOP-bootstrap-system",
+      "start": 3548,
+      "end": 3576,
+      "module": "bootstrap",
+      "content_identity": "sha256:8c9c59ab5c2c93fc496f852ddba8fe2d62f9844e8b488cd2cc3463638717622b"
+    },
+    {
+      "id": "OOP-bootstrap-attestation",
+      "start": 3577,
+      "end": 3582,
+      "module": "bootstrap",
+      "content_identity": "sha256:6cc6472205151360eaa2f5d0e1e1345d773fa89191cdd40e745195d18d64b3e1"
+    },
+    {
+      "id": "OOP-validity-refresh",
+      "start": 3583,
+      "end": 3592,
+      "module": "entry",
+      "content_identity": "sha256:726ee2d73dc6b2346c181f4804561066ba280179db92422c5f4b4d0e19df1179"
+    },
+    {
+      "id": "OOP-available-context",
+      "start": 3593,
+      "end": 3621,
+      "module": "context",
+      "content_identity": "sha256:fcfcd30a87b738ff1f0b5645e161838be19f48f946336fcf338cb99998292667"
+    },
+    {
+      "id": "OOP-bootstrap-communication",
+      "start": 3622,
+      "end": 3635,
+      "module": "bootstrap",
+      "content_identity": "sha256:1883fdccdeaa5084dc94a42760a5582b7326865877fce8e37d1d40764b1d78ed"
+    },
+    {
+      "id": "OOP-minimum-entry",
+      "start": 3636,
+      "end": 3648,
+      "module": "entry",
+      "content_identity": "sha256:63a7420afaba601778e0234e17d8a5a2854177ac93b30e2a78f19c19880d33c8"
+    },
+    {
+      "id": "OOP-continuation-entry",
+      "start": 3649,
+      "end": 3652,
+      "module": "destination",
+      "content_identity": "sha256:d758cca419d6366cc00c5daf79c614a6a74314d8ed29fb5ec501b5b326bb4c96"
+    },
+    {
+      "id": "OOP-progressive-entry",
+      "start": 3653,
+      "end": 3668,
+      "module": "entry",
+      "content_identity": "sha256:6a3b466998dd6e2822f8e6a33e329fb36f84270d2a91e11384d74461ac51d46c"
+    },
+    {
+      "id": "OOP-portable-final-invariants",
+      "start": 3669,
+      "end": 3721,
+      "module": "core",
+      "content_identity": "sha256:33777bd6ca291b89d8f4e07c05aa0ef9b33284ae60355eccb2799750d480932e"
+    }
+  ],
+  "modules": [
+    {
+      "id": "core",
+      "purpose": "Canonical precedence, governance, authority, language, evidence and portable continuity invariants.",
+      "dependencies": [],
+      "facets": [
+        "information",
+        "interaction"
+      ]
+    },
+    {
+      "id": "workspace",
+      "purpose": "Current-project private identity, protection, ownership and state isolation.",
+      "dependencies": [
+        "core"
+      ],
+      "facets": [
+        "workspace_identity",
+        "workspace_switch",
+        "private_write"
+      ]
+    },
+    {
+      "id": "shared-context",
+      "purpose": "Scoped private hints, supersession and conflict-safe shared coordination.",
+      "dependencies": [
+        "workspace"
+      ],
+      "facets": [
+        "shared_context"
+      ]
+    },
+    {
+      "id": "activation",
+      "purpose": "Bindings, thin owned activation adapters and version-neutral global discovery.",
+      "dependencies": [
+        "workspace"
+      ],
+      "facets": [
+        "activation",
+        "full_install"
+      ]
+    },
+    {
+      "id": "capabilities",
+      "purpose": "Complete eligible administrative installation, frozen initial package and later-chat wrapper evolution.",
+      "dependencies": [
+        "activation"
+      ],
+      "facets": [
+        "capability_change",
+        "full_install",
+        "installed_probe"
+      ]
+    },
+    {
+      "id": "cost",
+      "purpose": "Free-first selection and justified paid exceptions.",
+      "dependencies": [
+        "core"
+      ],
+      "facets": [
+        "facility_selection",
+        "paid_dependency"
+      ]
+    },
+    {
+      "id": "repository",
+      "purpose": "Provider-neutral scoped discovery, creation, canonical binding and access.",
+      "dependencies": [
+        "workspace",
+        "cost"
+      ],
+      "facets": [
+        "repository_access",
+        "repository_create",
+        "git_commit",
+        "git_publish"
+      ]
+    },
+    {
+      "id": "security",
+      "purpose": "Project-authorized identity, controlled invocation, enrollment and separate access/signing proofs.",
+      "dependencies": [
+        "workspace",
+        "cost"
+      ],
+      "facets": [
+        "identity_sensitive",
+        "credential_change",
+        "sensitive_effect",
+        "git_commit",
+        "git_publish"
+      ]
+    },
+    {
+      "id": "model",
+      "purpose": "Organizational canonical representation, external sources of record and dependency graph.",
+      "dependencies": [
+        "core"
+      ],
+      "facets": [
+        "organizational_model"
+      ]
+    },
+    {
+      "id": "operations",
+      "purpose": "Project canonical operations, foundational intake and publication.",
+      "dependencies": [
+        "repository",
+        "security",
+        "model"
+      ],
+      "facets": [
+        "canonical_read",
+        "canonical_write",
+        "full_install"
+      ]
+    },
+    {
+      "id": "inventory",
+      "purpose": "Relevant repository inventory and retrieval.",
+      "dependencies": [
+        "operations"
+      ],
+      "facets": [
+        "inventory_change"
+      ]
+    },
+    {
+      "id": "intake",
+      "purpose": "Effective-scope discovery and proportionate clarification.",
+      "dependencies": [
+        "core"
+      ],
+      "facets": [
+        "request_intake",
+        "scope_uncertainty"
+      ]
+    },
+    {
+      "id": "impact",
+      "purpose": "Effective scope, causal propagation and proportionate new organizational capabilities.",
+      "dependencies": [
+        "model",
+        "intake"
+      ],
+      "facets": [
+        "managed_change",
+        "scope_expansion",
+        "organizational_evolution",
+        "organizational_model"
+      ]
+    },
+    {
+      "id": "tickets",
+      "purpose": "Managed work, transition guards, durability, notifications and completion.",
+      "dependencies": [
+        "operations",
+        "impact",
+        "history"
+      ],
+      "facets": [
+        "ticket_mutation",
+        "durable_work",
+        "managed_change"
+      ]
+    },
+    {
+      "id": "changes",
+      "purpose": "Reviewable change sets, authorized desired state, application and verification.",
+      "dependencies": [
+        "tickets"
+      ],
+      "facets": [
+        "change_set",
+        "managed_change"
+      ]
+    },
+    {
+      "id": "coordination",
+      "purpose": "Material cross-domain coordination during planning and authorized execution; no inferred authority.",
+      "dependencies": [
+        "core"
+      ],
+      "facets": [
+        "managed_change",
+        "change_set",
+        "semantic_propagation"
+      ]
+    },
+    {
+      "id": "execution",
+      "purpose": "Intended, attempted, observed, applied and verified effects; informed recovery/retry.",
+      "dependencies": [
+        "core",
+        "coordination"
+      ],
+      "facets": [
+        "material_effect",
+        "verification",
+        "retry",
+        "external_effect",
+        "git_commit",
+        "git_publish"
+      ]
+    },
+    {
+      "id": "migration",
+      "purpose": "Shared organizational transformation, read/write compatibility, ownership and concurrency.",
+      "dependencies": [
+        "operations",
+        "changes",
+        "execution"
+      ],
+      "facets": [
+        "version_sensitive",
+        "organizational_migration",
+        "due_update"
+      ]
+    },
+    {
+      "id": "migration-distribution",
+      "purpose": "Optional OOP ancestry and rewrite-safe three-scope technical migration distribution.",
+      "dependencies": [
+        "migration"
+      ],
+      "facets": [
+        "due_update",
+        "adoption_change",
+        "technical_migration"
+      ]
+    },
+    {
+      "id": "adoption",
+      "purpose": "Bounded source freshness, independent runtime checkpoints and optional ordered migration/current-state reconciliation.",
+      "dependencies": [
+        "capabilities",
+        "migration",
+        "migration-distribution"
+      ],
+      "facets": [
+        "due_update",
+        "adoption_change",
+        "full_install"
+      ]
+    },
+    {
+      "id": "continuity",
+      "purpose": "Budget signals, reliable <=15% reserve and destination-independent preparation.",
+      "dependencies": [
+        "core"
+      ],
+      "facets": [
+        "continuity_reserve",
+        "handoff"
+      ]
+    },
+    {
+      "id": "handoff",
+      "purpose": "Portable baseline, access continuity and separately evidenced transfer phases.",
+      "dependencies": [
+        "continuity",
+        "tickets",
+        "repository",
+        "security",
+        "adoption"
+      ],
+      "facets": [
+        "handoff"
+      ]
+    },
+    {
+      "id": "destination",
+      "purpose": "Independent destination intake, resource filtering and source/target firewall.",
+      "dependencies": [
+        "handoff"
+      ],
+      "facets": [
+        "destination_entry"
+      ]
+    },
+    {
+      "id": "secret-transfer",
+      "purpose": "Separate necessary authorized secret transfer; reuse and safe acquisition first.",
+      "dependencies": [
+        "security",
+        "handoff"
+      ],
+      "facets": [
+        "secret_transfer"
+      ]
+    },
+    {
+      "id": "recovery",
+      "purpose": "Resumable activity and verified context reconstruction after interruption.",
+      "dependencies": [
+        "core",
+        "workspace",
+        "context"
+      ],
+      "facets": [
+        "context_loss",
+        "interrupted_setup",
+        "recovery"
+      ]
+    },
+    {
+      "id": "decisions",
+      "purpose": "Durable significant decisions, rationale and related work.",
+      "dependencies": [
+        "operations",
+        "history"
+      ],
+      "facets": [
+        "decision_record"
+      ]
+    },
+    {
+      "id": "human",
+      "purpose": "Actual human-only dependency and automatic verified resumption.",
+      "dependencies": [
+        "core"
+      ],
+      "facets": [
+        "human_dependency"
+      ]
+    },
+    {
+      "id": "physical",
+      "purpose": "Physical-world responsibilities, constraints and observable completion.",
+      "dependencies": [
+        "impact"
+      ],
+      "facets": [
+        "physical_effect"
+      ]
+    },
+    {
+      "id": "ci",
+      "purpose": "Risk-proportionate consistency checks and semantic compilation.",
+      "dependencies": [
+        "changes",
+        "cost"
+      ],
+      "facets": [
+        "change_set",
+        "semantic_propagation"
+      ]
+    },
+    {
+      "id": "delivery",
+      "purpose": "Controlled application, risk gates, compensation and drift.",
+      "dependencies": [
+        "changes",
+        "execution",
+        "ci",
+        "cost"
+      ],
+      "facets": [
+        "deployment",
+        "external_effect",
+        "compensation",
+        "drift"
+      ]
+    },
+    {
+      "id": "history",
+      "purpose": "Causal, non-fabricated temporal reconstruction with evidence reuse.",
+      "dependencies": [
+        "core"
+      ],
+      "facets": [
+        "history_query",
+        "material_event"
+      ]
+    },
+    {
+      "id": "interfaces",
+      "purpose": "Tool-independent external projections over canonical English state.",
+      "dependencies": [
+        "model"
+      ],
+      "facets": [
+        "external_interface"
+      ]
+    },
+    {
+      "id": "producer",
+      "purpose": "Maintainer-only release acceptance, regression, traceability and authorized publication.",
+      "dependencies": [
+        "core"
+      ],
+      "facets": [
+        "oop_maintenance"
+      ]
+    },
+    {
+      "id": "context",
+      "purpose": "Current available action context, selective rehydration and retirement.",
+      "dependencies": [
+        "core"
+      ],
+      "facets": [
+        "context_loss",
+        "route_change",
+        "interaction"
+      ]
+    },
+    {
+      "id": "entry",
+      "purpose": "Conversation and per-message gates plus progressive minimum context.",
+      "dependencies": [
+        "workspace",
+        "context"
+      ],
+      "facets": [
+        "interaction",
+        "information"
+      ]
+    },
+    {
+      "id": "bootstrap",
+      "purpose": "Full listed BOOT procedure with stable step identities, system obligations, scoped attestation and user communication.",
+      "dependencies": [
+        "entry",
+        "activation",
+        "adoption",
+        "operations",
+        "capabilities",
+        "human"
+      ],
+      "facets": [
+        "full_install",
+        "interrupted_setup"
+      ]
+    },
+    {
+      "id": "delegation",
+      "purpose": "Same-contract delegates, owned controls and validated completion.",
+      "dependencies": [
+        "capabilities",
+        "context"
+      ],
+      "facets": [
+        "delegation"
+      ]
+    }
+  ],
+  "enforcement": {
+    "interface": "oop-admission-1",
+    "implementation_identity": "sha256:3ce61b63884e4ee9eef5ffedf7e79235793153a3e2885b6e37ebaf1179be9ce2",
+    "contract_identity": "sha256:9603489c3f5dd334e1f24072557911440cd0a0356fd07c887adc3121a6ea991d",
+    "semantic_review": "Native action receipts bind actual invocation identity to current request, source, declaration and dependencies. Source-referenced agent interpretations remain claims; controller observations and actual host authorization remain separate. The single evaluator checks current factual and interpretive prerequisites. Scoped bookkeeping has no circular completed-adoption requirement. Admission, outcome reconciliation and bounded continuation retain exact correlation and no independent prevention claim against controller/state owners.",
+    "installed_provider": "not_verified",
+    "context_identity": "sha256:6762255c1512f696d3a968c2bf0f5842cc78e5d39e6a6bf697cd0d74f40f7b84",
+    "source_normalization": "CRLF to LF for producer templates and generated JavaScript; preserve maintained file encoding and layout.",
+    "installation_identity": "sha256:e77c6363d237f9b98acfeaaf7915505807b88697b6f8988cfcc942cefcd85ecc",
+    "planner_identity": "sha256:5bd20925471d87ba87ca4270b183ce00db20ed101c4df867ab7b0955a6773e42",
+    "lifecycle_identity": "sha256:d3f0edd7690629e894bfaddc30f2f0557be7ce2385409f4087f97289b77777b9",
+    "adapter_identity": "sha256:9ace9b3234880ed6db76b9cc2c52daac89a4dbc0385d4df9ef6b98717caec85d",
+    "installation_contract_identity": "sha256:efbdc09e9be48ff88c68c3304127c0c24bc99120c412c9438159a403dd2f7a3e",
+    "coordination_identity": "sha256:d792676b2cbc6b4451e8833214e4a324ea1d9a7959934cca1810558e185218c5",
+    "framework_identity": "sha256:0177c7dd97fe9e8d6001d2e6f8524e53fb7df9499e2ed445907ae810b52dbff3",
+    "rendering_identity": "sha256:308062b00b02e099261b842a89b410b264d91884bc3b57b2659960cffb879ad8",
+    "rendering_template_identity": "sha256:24617aa9fcf4af293576228347c187718fb47e7630800515376bff324ea73b98",
+    "declaration_identity": "sha256:b30bdd5d6642fb599bf1dea9b80ee57c3176121211a2f1ea2b60e8a62f9be0b6",
+    "observations_identity": "sha256:c7af43de2492a46d401f6ab51809adf57fb4a29c38f1fd0a6ea7c2b348ad5291",
+    "feedback_identity": "sha256:11341188ac210fba15d70209be9c54eee5c4975a15971ef2ec21b2c9a96b7e90",
+    "action_identity": "sha256:98461bf9f1f6666a7bbad78c1be531adef32553477fbcab739e727ae0eb3d961"
+  },
+  "overview_assessment": {
+    "Abstract": {
+      "disposition": "unchanged",
+      "reason": "The bounded controller, typed interfaces, local mechanisms and field-evaluation limits accurately cover optional semantic guidance and producer inventory."
+    },
+    "Vision": {
+      "disposition": "unchanged",
+      "reason": "One canonical knowledge layer, replaceable runtimes and proportionate cross-domain coordination remain the research purpose; the cache supplies no authority."
+    },
+    "Goal": {
+      "disposition": "unchanged",
+      "reason": "Continuity and lower re-explanation cost remain hypotheses to evaluate; no measured savings or installed efficacy are asserted."
+    },
+    "Introduction": {
+      "disposition": "unchanged",
+      "reason": "Protocol, operations, private execution state and independently governed effects remain correctly separated; session details belong in runtime rules."
+    }
+  },
+  "module_semantics": {
+    "core": {
+      "use": "Always applies: precedence, authority, proportional G0-G4 governance, language, evidence and continuity invariants for every request and effect.",
+      "conditions": "Applies to every route; stronger source-qualified gates win over convenience, memory or tool defaults.",
+      "preconditions": "Current workspace and adopted identity; explicit user authority; governance level classified before material effects.",
+      "postconditions": "No unknown promoted to success; claims backed by actual evidence; user informed in the resolved language."
+    },
+    "workspace": {
+      "use": "Before reading or writing private state, or when the project or working directory changes: establish project identity, private layout and runtime isolation.",
+      "conditions": "Private state belongs to exactly one project/workspace; runtime-owned and common scopes stay separate.",
+      "preconditions": "Discovered project root, protected private root and resolved owned/common locators.",
+      "postconditions": "No cross-project reuse; ambiguous ownership preserved and dependent use blocked."
+    },
+    "shared-context": {
+      "use": "Sharing hints, messages, leases, coordination entries or runtime instructions with other runtimes of the project: use attributable, conflict-safe records.",
+      "conditions": "Shared records are scoped data, never authority; shared instructions project canonical policies; concurrent writers must not lose updates or reuse IDs.",
+      "preconditions": "Same-project binding, provenance, freshness and an exclusive-create or compare-and-swap write primitive.",
+      "postconditions": "Conflicts preserved, material facts promoted to canonical state, expired entries not treated as current."
+    },
+    "activation": {
+      "use": "Opening a bound workspace or repairing the thin activation adapter: rediscover the binding and run the current entry contract without copied rules.",
+      "conditions": "Adapters carry activation pointers only; another runtime adapter is never altered or trusted as proof.",
+      "preconditions": "Persistent workspace binding and current verified entry/bootstrap reference.",
+      "postconditions": "Owned adapter resolves the current binding; stale references self-healed or reported as blockers."
+    },
+    "capabilities": {
+      "use": "Installing, reusing or changing enforcement hooks, adapters or native controls: follow the frozen administrative installation and adapter rules.",
+      "conditions": "One host-native adapter per installation and host; administrative completion, not functionality certification.",
+      "preconditions": "Host environment, selected native shell, validated configuration plan and required native consent.",
+      "postconditions": "Mechanisms installed or reused with direct acknowledgments; real failures halt dependent effects."
+    },
+    "cost": {
+      "use": "Choosing a tool, service, dependency or any action with a monetary or quota cost: prefer adequate free/local options and justify paid ones.",
+      "conditions": "Free-first applies unless security, reliability or authority would be compromised.",
+      "preconditions": "Known alternatives with their setup and recurring costs.",
+      "postconditions": "Selection rationale recorded; no paid dependency without justification and authority."
+    },
+    "repository": {
+      "use": "Discovering, creating, binding or writing a repository, or committing and pushing: resolve provider-neutral scoped access before effects.",
+      "conditions": "Inaccessible is never absent; no duplicate creation after 403, ambiguous 404 or timeout.",
+      "preconditions": "Four-state discovery result, selected credential and verified read/write capability.",
+      "postconditions": "Remote state read back; ref targeting and publication verified, not inferred from command success."
+    },
+    "security": {
+      "use": "Credentials, identities, signing, access rights, or commits and publications carrying an identity: use project-authorized identity and separate proofs.",
+      "conditions": "No ambient or foreign credentials; authentication, write and signature acceptance verified separately.",
+      "preconditions": "Project-scoped credential reference, effective actor and attribution identity.",
+      "postconditions": "No raw secrets persisted; identity and signature of the actual object verified."
+    },
+    "model": {
+      "use": "Representing organizational entities, sources of record or dependencies: keep one canonical English representation with external references.",
+      "conditions": "No fabricated entities; external systems of record are referenced, not duplicated.",
+      "preconditions": "Current canonical model revision and authoritative external references.",
+      "postconditions": "Model changes consistent with the dependency graph and recorded in canonical form."
+    },
+    "operations": {
+      "use": "Reading or writing the canonical operations repository, foundational intake or publication of organizational records.",
+      "conditions": "operations is distinct from project source, the OOP checkout and .priv; four-state discovery applies.",
+      "preconditions": "Resolved operations identity, verified runtime read/write access and expected revision.",
+      "postconditions": "Canonical writes published atomically, read back remotely and attributed correctly."
+    },
+    "inventory": {
+      "use": "Listing, retrieving or updating the inventory of relevant repositories and resources of the organization.",
+      "conditions": "Inventory reflects discovered relevant repositories only; unrelated scanning is avoided.",
+      "preconditions": "Current operations access and repository references.",
+      "postconditions": "Inventory entries current, attributable and non-duplicated."
+    },
+    "intake": {
+      "use": "A request whose meaning, scope or level is uncertain: discover effective scope and ask proportionate clarification before effects.",
+      "conditions": "Clarify only what blocks responsible planning; never stall G0/G1 work with ceremony.",
+      "preconditions": "Received request and known context; open questions identified.",
+      "postconditions": "Effective scope defined, or clarification pending with dependent work blocked."
+    },
+    "impact": {
+      "use": "Work whose consequences may spread to other components, domains or capabilities: determine effective scope and propagate proportionately.",
+      "conditions": "Effective scope can exceed the literal request; new capabilities only when genuinely necessary.",
+      "preconditions": "Classified request, organizational model and dependency information.",
+      "postconditions": "All material consequences identified and dispositioned before completion."
+    },
+    "tickets": {
+      "use": "Work needing durable continuity or managed governance (typically G2+): open or attach a ticket or equivalent item before effects; report each transition.",
+      "conditions": "G0 may stay ephemeral and G1 may use existing issue, PR or Git evidence; G2-G4 need managed facts.",
+      "preconditions": "Classified governance level, effective scope and expected prior ticket state/revision.",
+      "postconditions": "Each creation and transition durably published, read back and reported to the user; completion gate satisfied."
+    },
+    "changes": {
+      "use": "A change to source, configuration or content that must be reviewed and verified: define the change set, apply it, verify it against effective scope.",
+      "conditions": "Desired, approved, applied and verified states stay distinct; scope expansions are re-evaluated.",
+      "preconditions": "Governing work item, reviewable change set and authorization for its scope.",
+      "postconditions": "Applied change verified against success criteria; outstanding effects tracked."
+    },
+    "coordination": {
+      "use": "Planning or executing work affecting several organizational functions: coordinate only materially involved roles, without inferred authority.",
+      "conditions": "Involve necessary roles only; coordination never grants authority to any participant.",
+      "preconditions": "Identified affected domains and their accountable owners.",
+      "postconditions": "Cross-domain dependencies resolved or tracked with responsible owners."
+    },
+    "execution": {
+      "use": "Performing any material effect, retry or verification: track intended, attempted, observed, applied and verified effects separately.",
+      "conditions": "A timeout or exit code is not proof of effect; non-idempotent retries need inspection first.",
+      "preconditions": "Authorized action proposal with expected prior state and verification criteria.",
+      "postconditions": "Actual effects observed and verified; partial effects recorded for informed recovery."
+    },
+    "migration": {
+      "use": "Transforming shared organizational data or changing read/write compatibility: plan ownership, concurrency and verification of the migration.",
+      "conditions": "Organizational migration is separate from runtime adoption and performed once under exclusive authority.",
+      "preconditions": "Canonical revision, actual state interpretation and reader/writer compatibility.",
+      "postconditions": "Migration result verified and canonically recorded without blind replay."
+    },
+    "migration-distribution": {
+      "use": "Adopting a newer OOP distribution carrying technical migrations: apply the three-scope descriptors in order, without assuming ancestry.",
+      "conditions": "Common, runtime and operations scopes reconcile independently; unknown profiles block dependent work.",
+      "preconditions": "Supported profile match from authenticated scope-bound state observations.",
+      "postconditions": "Required descriptors applied and verified; prior adoption retained on failure."
+    },
+    "adoption": {
+      "use": "An OOP update is available or due: check freshness, compatibility and authorization, then adopt independently per runtime.",
+      "conditions": "Discovery or download never adopts rules automatically; peers keep independent checkpoints.",
+      "preconditions": "Observed remote identity, current adopted commit and authorization to adopt.",
+      "postconditions": "Owned checkpoint updated atomically after verification; knowledge realigned."
+    },
+    "continuity": {
+      "use": "Context or compute budget is running low, or work may be interrupted: keep the reserve and prepare destination-independent continuation.",
+      "conditions": "Use the 15% reserve only with reliable comparable measurements; never invent percentages.",
+      "preconditions": "Reliable budget signal and current work state.",
+      "postconditions": "Continuation material prepared before the reserve is exhausted."
+    },
+    "handoff": {
+      "use": "Transferring work to another runtime, model, person or session: prepare a portable baseline and evidence each handoff phase separately.",
+      "conditions": "Preparation is not delivery and delivery is not resumption; no credentials in the package.",
+      "preconditions": "Current work state, access continuity plan and governing work items.",
+      "postconditions": "Each phase evidenced; destination validation pending until observed."
+    },
+    "destination": {
+      "use": "Starting work received through a handoff: perform independent intake, filter resources and keep the source/target firewall.",
+      "conditions": "The destination never inherits source adoption, authority or unchecked claims.",
+      "preconditions": "Own identity, adoption and access verified at the destination.",
+      "postconditions": "First verified action performed before claiming resumption."
+    },
+    "secret-transfer": {
+      "use": "A secret must reach another runtime or person: reuse existing access first and transfer separately only when necessary and authorized.",
+      "conditions": "Secrets never travel inside handoff packages, logs or coordination records.",
+      "preconditions": "Authorized need, recipient identity and a separate secure channel.",
+      "postconditions": "Transfer confirmed without exposing values; references updated."
+    },
+    "recovery": {
+      "use": "Resuming after interruption, crash or context loss: reconstruct verified context and actual effects before continuing.",
+      "conditions": "Summaries are navigation only; never replay non-idempotent work blindly.",
+      "preconditions": "Owned checkpoint, actual effect observations and current freshness.",
+      "postconditions": "Context rehydrated and remaining action re-authorized before dependent effects."
+    },
+    "decisions": {
+      "use": "A significant decision is made or must be recalled: record it durably with rationale and related work.",
+      "conditions": "Record only significant decisions; avoid duplicate records of the same fact.",
+      "preconditions": "Decision content, authority and related work items.",
+      "postconditions": "Decision record published canonically and linked to affected work."
+    },
+    "human": {
+      "use": "Progress depends on an action or decision only a human can provide: state the exact dependency and resume automatically once verified.",
+      "conditions": "Only true human-only dependencies justify waiting; independent safe work continues.",
+      "preconditions": "Proved human-only dependency and persisted scoped checkpoint.",
+      "postconditions": "Prerequisite verified and work resumed without repeated requests."
+    },
+    "physical": {
+      "use": "Work with physical-world responsibilities, constraints or safety: plan observable completion and accountable owners.",
+      "conditions": "Physical effects need observable verification; digital records alone do not prove them.",
+      "preconditions": "Responsible owners, constraints and observation method.",
+      "postconditions": "Completion observed, or explicitly pending with accountable follow-up."
+    },
+    "ci": {
+      "use": "Checking consistency of a change set across dependencies before delivery: run proportionate checks and semantic compilation.",
+      "conditions": "Checks are risk-proportionate and free-first; passing structure is not semantic proof.",
+      "preconditions": "Defined change set and the applicable checks.",
+      "postconditions": "Check results recorded; failures block dependent delivery."
+    },
+    "delivery": {
+      "use": "Deploying or applying an approved change to a controlled environment or external system: apply gates, compensation and drift handling.",
+      "conditions": "Remote transport alone is not G3; material external effects need G3 controls.",
+      "preconditions": "Approved change set, risk gates and compensation plan.",
+      "postconditions": "Applied state verified externally; drift detected and handled."
+    },
+    "history": {
+      "use": "Reconstructing what happened and why, or recording a material event: keep causal, non-fabricated history and reuse evidence.",
+      "conditions": "Never fabricate past times or transitions; reuse evidence by reference.",
+      "preconditions": "Actual event evidence and causal references.",
+      "postconditions": "History reconstructible without duplicate or invented records."
+    },
+    "interfaces": {
+      "use": "Exposing organizational state to external tools or formats: project canonical English state without creating a second source of truth.",
+      "conditions": "External projections are derived views, never authoritative stores.",
+      "preconditions": "Canonical state revision and target interface contract.",
+      "postconditions": "Projection consistent with canonical state and labeled as derived."
+    },
+    "producer": {
+      "use": "Maintaining, testing or publishing the OOP repository itself (maintainer only); never part of consumer routing.",
+      "conditions": "Producer commands and release checks are excluded from every consumer lifecycle.",
+      "preconditions": "Separately authorized maintenance scope.",
+      "postconditions": "Release evidence bound to finalized content; publication verified by readback."
+    },
+    "context": {
+      "use": "Every interaction and before governed effects: keep the needed closure loaded, rehydrate stale context and follow runtime guidance and declaration (R27).",
+      "conditions": "Compaction, route change or identity change invalidates affected context until verified again.",
+      "preconditions": "Current route, closure identities and context integrity state.",
+      "postconditions": "Only valid context reused; stale or missing context rehydrated before dependent effects."
+    },
+    "entry": {
+      "use": "Start of each conversation and each user message: pass the entry and interaction gates, resolve language and load minimum context.",
+      "conditions": "Applies to new, resumed and recovered chats alike; conversation age grants no exemption.",
+      "preconditions": "Workspace binding, adopted identity and resolved presentation language.",
+      "postconditions": "Request classified and applicable closure loaded before substantive work."
+    },
+    "bootstrap": {
+      "use": "Explicit OOP installation or interrupted setup: run the listed BOOT steps with stable identities, scoped attestation and user communication.",
+      "conditions": "Full installation only on explicit intent; ordinary requests use progressive bootstrap.",
+      "preconditions": "Scoped install intent, project identity and protected private root.",
+      "postconditions": "Each step verified or explicitly pending; identity registration published and read back."
+    },
+    "delegation": {
+      "use": "Delegating work to a sub-agent or delegate runtime: apply the same contract, owned controls and validated completion.",
+      "conditions": "Delegates never widen authority; their completion is validated before acceptance.",
+      "preconditions": "Delegate scope, adoption and controls verified.",
+      "postconditions": "Delegated results validated against the same postconditions."
+    }
+  },
+  "migration": {
+    "format": 1,
+    "source_contract": "OOP-migration-distribution",
+    "review_evidence": "Reviewed initial source distribution and independently owned state contracts; no release predecessor or migration effects are asserted.",
+    "previous": null,
+    "current": {
+      "profile_id": "oop-initial-1",
+      "state_schema": "Initial OOP contract: action receipts, revision-bound agent assessments, controller-observed local facts, scoped bookkeeping, deterministic response framing and progress-bound completion.",
+      "predicates": [
+        "current_project_root_identity",
+        "owned_runtime_identity",
+        "canonical_actual_state_interpretable",
+        "no_unknown_partial_effects"
+      ],
+      "scopes": [
+        "common",
+        "runtime",
+        "operations"
+      ],
+      "read_compatibility": "Verify per-domain actual state under existing canonical policy.",
+      "write_compatibility": "Writes require the current adapter readers and current session-state schema; other writers block dependent effects.",
+      "existing_state_policy": "Preserve valid records; unknown or incompatible domains block dependent work.",
+      "state_signature": {
+        "common": {
+          "state_schema": "oop-shared-workspace-1"
+        },
+        "runtime": {
+          "state_schema": "oop-runtime-1"
+        },
+        "operations": {
+          "state_schema": "oop-machine-registry-1"
+        }
+      }
+    },
+    "scopes": {
+      "common": {
+        "disposition": "not_required",
+        "rationale": "The initial distribution has no predecessor; common installation and actual-state reconciliation remain independently required under current authority."
+      },
+      "runtime": {
+        "disposition": "not_required",
+        "rationale": "The initial distribution has no predecessor; runtime installation and actual-state reconciliation remain independently required under current authority."
+      },
+      "operations": {
+        "disposition": "not_required",
+        "rationale": "The initial distribution has no predecessor; operations installation and actual-state reconciliation remain independently required under current authority."
+      }
+    },
+    "enforcement_transition": {
+      "changed": false,
+      "category": "UNCHANGED",
+      "compatibility": "unchanged",
+      "action": "copy-only",
+      "interface": "oop-admission-1",
+      "contact_points": [
+        "entry",
+        "interaction",
+        "pre-effect",
+        "post-effect",
+        "completion",
+        "recovery",
+        "delegate",
+        "probe"
+      ],
+      "before": "No predecessor is declared for the initial distribution.",
+      "after": "The initial controller, registration and adapter contracts define current installation behavior.",
+      "rationale": "Initial installation, independent authorization and real native consent remain required; no historical controller transition is claimed.",
+      "implementation": "producer_local",
+      "installed_provider": "not_verified"
+    }
+  }
+}

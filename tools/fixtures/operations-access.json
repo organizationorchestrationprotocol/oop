@@ -1,0 +1,52 @@
+{
+  "id": "BOOT-11",
+  "source": {
+    "path": "PROTOCOL.md",
+    "locator": "Official CTA adoption and foundational bootstrap / BOOT-11",
+    "content_identity": "sha256:b632e3e0f0e4fedfb7fa5d6c760447b7e73eed20298bba418b6ff4faa51253b0"
+  },
+  "actor": "active consumer runtime",
+  "triggers": [
+    "full_install",
+    "operations_access_revalidation"
+  ],
+  "scope": "current project canonical operations and active runtime adapter/selected prepared credential",
+  "dependencies": [
+    "BOOT-08",
+    "Repository Bootstrap Contract",
+    "SEC-01",
+    "SEC-04"
+  ],
+  "preconditions": [
+    "current_project_identity",
+    "canonical_operations_identity",
+    "selected_project_authorized_credential",
+    "configured_runtime_adapter"
+  ],
+  "actions": [
+    "verify_runtime_credential_read",
+    "verify_runtime_credential_write",
+    "verify_signing_separately_if_required",
+    "repair_authorized_local_adapter_if_needed",
+    "give_precise_public_enrollment_instructions_if_human_action_required",
+    "reverify_after_human_action",
+    "synchronize_without_data_loss"
+  ],
+  "postconditions": [
+    "runtime_credential_read_verified",
+    "runtime_credential_write_verified",
+    "local_changes_and_concurrent_writes_preserved"
+  ],
+  "verification": "Attributable observations or sufficient effective-credential permission inspection through the configured adapter; signing separately where applicable.",
+  "prohibitions": [
+    "private_visibility_check",
+    "anonymous_read_as_credential_proof",
+    "foreign_credential_as_proof",
+    "force_reset_unrelated_repository",
+    "secret_values_in_user_instructions"
+  ],
+  "unknown": "Keep affected read/write readiness unresolved; establish missing facts without claiming success.",
+  "failure": "Preserve actual effects; repair authorized local defects or explain a genuine human/provider dependency.",
+  "recovery": "Await actual human attachment/permission change when necessary, inspect resulting access and reverify before readiness.",
+  "semantic_clause": "| **BOOT-11** | Verify operations access and effective identity before installation. | Verify authenticated read and write, and separately required signing only when applicable, using only the project-authorized machine identity credential files physically present in the current project's common private area, shared by all runtimes of the project and selected in BOOT-08, through the SEC-02 controlled envelope. Independently verify effective principal, configuration origin, controlled adapter, authorization/purpose and exact repository/ref. A genuinely credential-free public read cannot satisfy authenticated operations readiness. Reject another, external-store or ambient principal even on successful access. Preserve machine owner_name/owner_email author/committer metadata and independently legitimate signer requirements for any actual later commit. No generic canonical-files commit or preliminary operations push is required to finish technical installation. Do not invent business facts or create test/empty commits. Repair only within authority; otherwise retain a precise blocker. |"
+}

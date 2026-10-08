@@ -1,0 +1,136 @@
+{
+  "format": 1,
+  "purpose": "AGN-07 release check: named vendors, AI runtimes, host features and files, operating systems, shell and interpreter products, package managers, repository providers, consumer organizations and persons. Producer-only; never distributed.",
+  "terms": [
+    "OpenAI",
+    "Anthropic",
+    "Claude",
+    "Codex",
+    "ChatGPT",
+    "Gemini",
+    "Copilot",
+    "Windsurf",
+    "Mistral",
+    "Llama",
+    "CLAUDE.md",
+    "AGENTS.md",
+    "GEMINI.md",
+    "cursorrules",
+    "copilot-instructions",
+    "Windows",
+    "macOS",
+    "Linux",
+    "Ubuntu",
+    "Debian",
+    "PowerShell",
+    "pwsh",
+    "Bash",
+    "zsh",
+    "cmd.exe",
+    "cygwin",
+    "cygpath",
+    "jq",
+    "Node.js",
+    "Deno",
+    "Python",
+    "npm",
+    "pnpm",
+    "yarn",
+    "winget",
+    "Homebrew",
+    "GitHub",
+    "GitLab",
+    "Bitbucket",
+    "Gitea",
+    "Microsoft",
+    "Google",
+    "Amazon",
+    "AWS",
+    "Azure",
+    "dabotto",
+    "Vasapollo"
+  ],
+  "canonical_locators": [
+    "https://github.com/organizationorchestrationprotocol/oop",
+    "github.com/organizationorchestrationprotocol"
+  ],
+  "exceptions": [
+    {
+      "id": "X5",
+      "reason": "The neutrality release check and its negative controls.",
+      "files": [
+        "tools/neutrality.test.mjs"
+      ],
+      "terms": [
+        "GitHub",
+        "Windows",
+        "Claude"
+      ]
+    },
+    {
+      "id": "X3",
+      "reason": "The controller's execution facility as a labeled conditional example.",
+      "files": [
+        "dist/interfaces.json",
+        "tools/enforcement-contract.mjs",
+        "tools/README.md"
+      ],
+      "terms": [
+        "Node.js"
+      ]
+    },
+    {
+      "id": "X7",
+      "reason": "Program code identifiers of producer tools and the official controller, and their generated evidence.",
+      "files": [
+        "tools/*.mjs",
+        "tools/*.cjs",
+        "tools/fixtures/*.cjs",
+        "dist/oop-enforce.js",
+        "tools/evidence/*"
+      ],
+      "terms": [
+        "Linux",
+        "Windows",
+        "pwsh",
+        "cygpath",
+        "cygwin",
+        "PowerShell",
+        "jq"
+      ]
+    },
+    {
+      "id": "X8",
+      "reason": "The producer's own publication and CI configuration and the tests that verify it.",
+      "files": [
+        ".github/workflows/*",
+        "tools/maintainer-workflow.test.mjs",
+        "tools/current-state.test.mjs",
+        "tools/producer-safety.test.mjs",
+        "tools/acceptance-inputs.mjs",
+        "tools/evidence/*",
+        "tools/current-state.mjs"
+      ],
+      "terms": [
+        "GitHub",
+        "Ubuntu",
+        "Node.js",
+        "Bash",
+        "npm"
+      ]
+    },
+    {
+      "id": "X9",
+      "reason": "Copyright, license and authorship attribution of the canonical work.",
+      "files": [
+        "NOTICE",
+        "LICENSE",
+        "README.md",
+        "PROTOCOL.md"
+      ],
+      "terms": [
+        "Vasapollo"
+      ]
+    }
+  ]
+}

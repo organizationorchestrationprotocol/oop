@@ -1,0 +1,9 @@
+# Local workspace data and dependencies
+.vscode/
+.priv/
+node_modules/
+*.tmp
+
+# Generated verification output; source traceability is part of the distribution.
+tools/evidence/*
+!tools/evidence/release-traceability.json

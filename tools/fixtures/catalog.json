@@ -1,0 +1,18 @@
+{
+  "status": "candidate_fixture",
+  "coverage_complete": false,
+  "facets": {
+    "information": ["core"],
+    "bootstrap": ["bootstrap"],
+    "durable_write": ["operations"],
+    "context_loss": ["recovery"],
+    "due_update": ["recovery"]
+  },
+  "conservative": ["core", "bootstrap", "operations", "recovery"],
+  "modules": [
+    {"id": "core", "dependencies": [], "contracts": [{"id": "AUTHORITY", "semantic_clause": "Fixture boundary: classification and a proposed transition grant no authority.", "source_ref": "PROTOCOL.md:Bounded reasoning, governed effects"}]},
+    {"id": "bootstrap", "dependencies": ["core", "operations"], "contracts": [{"id": "BOOTSTRAP", "semantic_clause": "Fixture routing marker, not the complete BOOT-01 through BOOT-13 contract.", "source_ref": "PROTOCOL.md:Official CTA adoption and foundational bootstrap"}]},
+    {"id": "operations", "dependencies": ["core"], "contracts": [{"id": "OPS-ACCESS", "semantic_clause": "Fixture: distinguish runtime credential read/write evidence from anonymous or foreign access. Other canonical requirements still apply.", "source_ref": "PROTOCOL.md:BOOT-11"}]},
+    {"id": "recovery", "dependencies": ["core"], "contracts": [{"id": "RECOVERY", "semantic_clause": "Fixture: invalidate affected evidence and rehydrate required context; no blind replay or release tests.", "source_ref": "PROTOCOL.md:Canonical context recovery"}]}
+  ]
+}
