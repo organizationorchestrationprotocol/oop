@@ -1,0 +1,26 @@
+{
+  "subject_content_identity": "sha256:241797594b3a0bea20966d83b15dbf5a8c2ec4e54f4a2c285010bb19fe472039",
+  "accepted_subject_unchanged": true,
+  "final_test_total": 430,
+  "unique_test_names": 430,
+  "explicit_observation_ids": 345,
+  "unique_observation_ids": 345,
+  "tests_without_explicit_id": 85,
+  "new_ids": [
+    "REL-ADMIN-019",
+    "REL-ADMIN-020",
+    "REL-ADMIN-021",
+    "REL-ADMIN-022",
+    "REL-ADMIN-023",
+    "REL-ADMIN-024",
+    "REL-ADMIN-025"
+  ],
+  "expected_baseline_failures": [
+    "REL-ADMIN-019",
+    "REL-ADMIN-020",
+    "REL-ADMIN-021"
+  ],
+  "canonical_file_unchanged": true,
+  "release_ready": false,
+  "candidate_validated": true
+}

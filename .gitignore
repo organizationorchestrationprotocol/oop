@@ -1,0 +1,17 @@
+.vscode/
+.priv/
+node_modules/
+*.tmp
+tools/evidence/current-acceptance.json
+tools/evidence/current-tests.tap
+
+tools/evidence/current-migration-tests.tap
+
+tools/evidence/current-alignment-tests.tap
+tools/evidence/current-focused-tests.tap
+
+tools/evidence/current-safety-tests.tap
+
+tools/evidence/current-maintainer-tests.tap
+tools/evidence/genesis-candidate-tests.tap
+tools/evidence/genesis-candidate.json

@@ -1,0 +1,1024 @@
+TAP version 13
+# Subtest: WF-001: commands are unique ordered maintainer-only definitions and directive is present
+ok 1 - WF-001: commands are unique ordered maintainer-only definitions and directive is present
+  ---
+  duration_ms: 2.4801
+  type: 'test'
+  ...
+# Subtest: WF-002: fully translated dossier and zero-change appendix-only/derived-only captures
+ok 2 - WF-002: fully translated dossier and zero-change appendix-only/derived-only captures
+  ---
+  duration_ms: 4.1712
+  type: 'test'
+  ...
+# Subtest: WF-003: ordinary PREPARE captures a download without applying changes
+ok 3 - WF-003: ordinary PREPARE captures a download without applying changes
+  ---
+  duration_ms: 0.9705
+  type: 'test'
+  ...
+# Subtest: WF-004: API capture verifies published branch with exact main base
+ok 4 - WF-004: API capture verifies published branch with exact main base
+  ---
+  duration_ms: 0.4802
+  type: 'test'
+  ...
+# Subtest: WF-005: missing original is disclosed instead of reconstructed
+ok 5 - WF-005: missing original is disclosed instead of reconstructed
+  ---
+  duration_ms: 0.4943
+  type: 'test'
+  ...
+# Subtest: WF-006: unavailable execution remains explicitly incomplete
+ok 6 - WF-006: unavailable execution remains explicitly incomplete
+  ---
+  duration_ms: 0.495
+  type: 'test'
+  ...
+# Subtest: WF-007: unavailable baseline is NOT VERIFIED without invented examples
+ok 7 - WF-007: unavailable baseline is NOT VERIFIED without invented examples
+  ---
+  duration_ms: 0.44
+  type: 'test'
+  ...
+# Subtest: WF-008: exactly two examples per topic bind changed clauses and independent attribution
+ok 8 - WF-008: exactly two examples per topic bind changed clauses and independent attribution
+  ---
+  duration_ms: 1.8277
+  type: 'test'
+  ...
+# Subtest: WF-009: rejects summary substitutes complete translation
+ok 9 - WF-009: rejects summary substitutes complete translation
+  ---
+  duration_ms: 0.403
+  type: 'test'
+  ...
+# Subtest: WF-010: rejects excluded work reactivated
+ok 10 - WF-010: rejects excluded work reactivated
+  ---
+  duration_ms: 1.3558
+  type: 'test'
+  ...
+# Subtest: WF-011: rejects private irrelevant content leaked
+ok 11 - WF-011: rejects private irrelevant content leaked
+  ---
+  duration_ms: 3.3531
+  type: 'test'
+  ...
+# Subtest: WF-012: rejects APPLY downloadable artifact
+ok 12 - WF-012: rejects APPLY downloadable artifact
+  ---
+  duration_ms: 0.5924
+  type: 'test'
+  ...
+# Subtest: WF-013: rejects no actual execution trace
+ok 13 - WF-013: rejects no actual execution trace
+  ---
+  duration_ms: 0.5411
+  type: 'test'
+  ...
+# Subtest: WF-014: rejects local commit before verification
+ok 14 - WF-014: rejects local commit before verification
+  ---
+  duration_ms: 0.5529
+  type: 'test'
+  ...
+# Subtest: WF-015: rejects local push before commit-bound checks
+ok 15 - WF-015: rejects local push before commit-bound checks
+  ---
+  duration_ms: 0.475
+  type: 'test'
+  ...
+# Subtest: WF-016: rejects VERIFY targets main instead of working tree
+ok 16 - WF-016: rejects VERIFY targets main instead of working tree
+  ---
+  duration_ms: 0.5366
+  type: 'test'
+  ...
+# Subtest: WF-017: rejects operation follows final message directive
+ok 17 - WF-017: rejects operation follows final message directive
+  ---
+  duration_ms: 0.3981
+  type: 'test'
+  ...
+# Subtest: WF-018: rejects premature REPORT
+ok 18 - WF-018: rejects premature REPORT
+  ---
+  duration_ms: 1.1444
+  type: 'test'
+  ...
+# Subtest: WF-019: rejects recursive REPORT
+ok 19 - WF-019: rejects recursive REPORT
+  ---
+  duration_ms: 0.7074
+  type: 'test'
+  ...
+# Subtest: WF-020: rejects false success without tools
+ok 20 - WF-020: rejects false success without tools
+  ---
+  duration_ms: 0.6655
+  type: 'test'
+  ...
+# Subtest: WF-021: rejects fabricated examples for zero runtime changes
+ok 21 - WF-021: rejects fabricated examples for zero runtime changes
+  ---
+  duration_ms: 0.5373
+  type: 'test'
+  ...
+# Subtest: WF-022: rejects missing canonical section
+ok 22 - WF-022: rejects missing canonical section
+  ---
+  duration_ms: 0.5264
+  type: 'test'
+  ...
+# Subtest: WF-023: rejects missing terminal report
+ok 23 - WF-023: rejects missing terminal report
+  ---
+  duration_ms: 0.3895
+  type: 'test'
+  ...
+# Subtest: WF-024: API wrong base main writes and missing push/readback are rejected
+ok 24 - WF-024: API wrong base main writes and missing push/readback are rejected
+  ---
+  duration_ms: 1.7965
+  type: 'test'
+  ...
+# Subtest: WF-028: complete Italian mixed and unchanged English prose retain technical literals
+ok 25 - WF-028: complete Italian mixed and unchanged English prose retain technical literals
+  ---
+  duration_ms: 0.463
+  type: 'test'
+  ...
+# Subtest: WF-029: wrong language incomplete translation missing attribution and altered literals fail
+ok 26 - WF-029: wrong language incomplete translation missing attribution and altered literals fail
+  ---
+  duration_ms: 2.3776
+  type: 'test'
+  ...
+# Subtest: WF-030: missing competing stale localized misplaced or preparer-displayed messages fail
+ok 27 - WF-030: missing competing stale localized misplaced or preparer-displayed messages fail
+  ---
+  duration_ms: 3.3518
+  type: 'test'
+  ...
+# Subtest: WF-031: local/API publication and a protected main rejection retain exact observed stages
+ok 28 - WF-031: local/API publication and a protected main rejection retain exact observed stages
+  ---
+  duration_ms: 0.8559
+  type: 'test'
+  ...
+# Subtest: WF-032: stale commit evidence false remote success bypasses or unrelated work fail
+ok 29 - WF-032: stale commit evidence false remote success bypasses or unrelated work fail
+  ---
+  duration_ms: 4.6588
+  type: 'test'
+  ...
+# Subtest: WF-033: no-change APPLY creates no empty commit; denied access remains incomplete
+ok 30 - WF-033: no-change APPLY creates no empty commit; denied access remains incomplete
+  ---
+  duration_ms: 1.5163
+  type: 'test'
+  ...
+# Subtest: WF-034: direct main needs no preflight; authorized force lease rejects stale or unauthorized writes
+ok 31 - WF-034: direct main needs no preflight; authorized force lease rejects stale or unauthorized writes
+  ---
+  duration_ms: 3.3076
+  type: 'test'
+  ...
+# Subtest: WF-035: approved direct-push settings remove gates and enable force while preserving unrelated settings
+ok 32 - WF-035: approved direct-push settings remove gates and enable force while preserving unrelated settings
+  ---
+  duration_ms: 0.9513
+  type: 'test'
+  ...
+# Subtest: WF-036: ordinary prompt execution changes local work without commit authority
+ok 33 - WF-036: ordinary prompt execution changes local work without commit authority
+  ---
+  duration_ms: 1.06
+  type: 'test'
+  ...
+# Subtest: WF-037: inaccurate message blocks commit while retaining work and unchanged proposed message
+ok 34 - WF-037: inaccurate message blocks commit while retaining work and unchanged proposed message
+  ---
+  duration_ms: 1.2925
+  type: 'test'
+  ...
+# Subtest: WF-038: no signing or failed tests preserve work and never invent publication
+ok 35 - WF-038: no signing or failed tests preserve work and never invent publication
+  ---
+  duration_ms: 1.4042
+  type: 'test'
+  ...
+# Subtest: WF-039: final Git message and post-message output or effects cannot silently differ
+ok 36 - WF-039: final Git message and post-message output or effects cannot silently differ
+  ---
+  duration_ms: 2.1495
+  type: 'test'
+  ...
+# Subtest: WF-040: API intermediate candidates are forbidden even when disclosed
+ok 37 - WF-040: API intermediate candidates are forbidden even when disclosed
+  ---
+  duration_ms: 1.6611
+  type: 'test'
+  ...
+# Subtest: WF-041: canonical maintainer source requires embedded message exact use and final ordering
+ok 38 - WF-041: canonical maintainer source requires embedded message exact use and final ordering
+  ---
+  duration_ms: 0.5224
+  type: 'test'
+  ...
+# Subtest: WF-025: post-publication public CI and Node 24 preserve pinned least-privilege execution
+ok 39 - WF-025: post-publication public CI and Node 24 preserve pinned least-privilege execution
+  ---
+  duration_ms: 0.8218
+  type: 'test'
+  ...
+# Subtest: WF-026: actual extracted guard rejects private and unknown; Node assertion rejects wrong major
+ok 40 - WF-026: actual extracted guard rejects private and unknown; Node assertion rejects wrong major
+  ---
+  duration_ms: 222.8902
+  type: 'test'
+  ...
+# Subtest: WF-027: sandbox string mutations detect visibility bypass, missing pins and wrong ordering
+ok 41 - WF-027: sandbox string mutations detect visibility bypass, missing pins and wrong ordering
+  ---
+  duration_ms: 1.8252
+  type: 'test'
+  ...
+# Subtest: FML-001: six unique ordered command definitions
+ok 42 - FML-001: six unique ordered command definitions
+  ---
+  duration_ms: 0.2993
+  type: 'test'
+  ...
+# Subtest: FML-002: complete pinned pre-edit PREPARE without historical lookup
+ok 43 - FML-002: complete pinned pre-edit PREPARE without historical lookup
+  ---
+  duration_ms: 0.4472
+  type: 'test'
+  ...
+# Subtest: FML-003: explicit three-span map permits only two correction classes
+ok 44 - FML-003: explicit three-span map permits only two correction classes
+  ---
+  duration_ms: 0.4245
+  type: 'test'
+  ...
+# Subtest: FML-004: unrelated inherited word mutation fails literal comparison
+ok 45 - FML-004: unrelated inherited word mutation fails literal comparison
+  ---
+  duration_ms: 0.4587
+  type: 'test'
+  ...
+# Subtest: FML-005: FORMALIZE never invokes delegating PREPARE or itself
+ok 46 - FML-005: FORMALIZE never invokes delegating PREPARE or itself
+  ---
+  duration_ms: 0.1126
+  type: 'test'
+  ...
+# Subtest: FML-006: complete prompt return contains dossier message and REPORT without effects
+ok 47 - FML-006: complete prompt return contains dossier message and REPORT without effects
+  ---
+  duration_ms: 0.1621
+  type: 'test'
+  ...
+# Subtest: FML-007: delivery terminates at prompt and no terminal display obligation
+ok 48 - FML-007: delivery terminates at prompt and no terminal display obligation
+  ---
+  duration_ms: 0.0654
+  type: 'test'
+  ...
+# Subtest: FML-008: PREPARE first operative step invokes FORMALIZE exactly once
+ok 49 - FML-008: PREPARE first operative step invokes FORMALIZE exactly once
+  ---
+  duration_ms: 0.131
+  type: 'test'
+  ...
+# Subtest: FML-009: actual saved bytes equal raw output separator and single directive
+ok 50 - FML-009: actual saved bytes equal raw output separator and single directive
+  ---
+  duration_ms: 10.4761
+  type: 'test'
+  ...
+# Subtest: FML-010: actual PREPARE filename path and Unix seconds
+ok 51 - FML-010: actual PREPARE filename path and Unix seconds
+  ---
+  duration_ms: 1.5689
+  type: 'test'
+  ...
+# Subtest: FML-011: PREPARE has no implementation Git effects or message preview
+ok 52 - FML-011: PREPARE has no implementation Git effects or message preview
+  ---
+  duration_ms: 0.4692
+  type: 'test'
+  ...
+# Subtest: FML-012: duplicate or misplaced PREPARE terminal directive fails
+ok 53 - FML-012: duplicate or misplaced PREPARE terminal directive fails
+  ---
+  duration_ms: 1.3998
+  type: 'test'
+  ...
+# Subtest: FML-013: APPLY first operative step invokes FORMALIZE exactly once
+ok 54 - FML-013: APPLY first operative step invokes FORMALIZE exactly once
+  ---
+  duration_ms: 0.0724
+  type: 'test'
+  ...
+# Subtest: FML-014: APPLY exact raw prompt execution rejects changed payload
+ok 55 - FML-014: APPLY exact raw prompt execution rejects changed payload
+  ---
+  duration_ms: 0.6463
+  type: 'test'
+  ...
+# Subtest: FML-015: APPLY cannot save or append PREPARE directive
+ok 56 - FML-015: APPLY cannot save or append PREPARE directive
+  ---
+  duration_ms: 0.3424
+  type: 'test'
+  ...
+# Subtest: FML-016: publication requires an enforced independent inner boundary
+ok 57 - FML-016: publication requires an enforced independent inner boundary
+  ---
+  duration_ms: 0.3937
+  type: 'test'
+  ...
+# Subtest: FML-017: inner execution failure retains work without publication
+ok 58 - FML-017: inner execution failure retains work without publication
+  ---
+  duration_ms: 0.3146
+  type: 'test'
+  ...
+# Subtest: FML-018: explicit outer VERIFY is after execution and before every Git effect
+ok 59 - FML-018: explicit outer VERIFY is after execution and before every Git effect
+  ---
+  duration_ms: 1.8457
+  type: 'test'
+  ...
+# Subtest: FML-019: failed unsupported blocked missing VERIFY prevents publication
+ok 60 - FML-019: failed unsupported blocked missing VERIFY prevents publication
+  ---
+  duration_ms: 0.8199
+  type: 'test'
+  ...
+# Subtest: FML-020: never executed outer VERIFY is rejected
+ok 61 - FML-020: never executed outer VERIFY is rejected
+  ---
+  duration_ms: 0.3147
+  type: 'test'
+  ...
+# Subtest: FML-021: empty approved diff produces no commit or artificial push
+ok 62 - FML-021: empty approved diff produces no commit or artificial push
+  ---
+  duration_ms: 0.2658
+  type: 'test'
+  ...
+# Subtest: FML-022: candidate validation cannot become release_ready
+ok 63 - FML-022: candidate validation cannot become release_ready
+  ---
+  duration_ms: 0.2471
+  type: 'test'
+  ...
+# Subtest: FML-023: exact canonical message mismatch blocks commit
+ok 64 - FML-023: exact canonical message mismatch blocks commit
+  ---
+  duration_ms: 0.2274
+  type: 'test'
+  ...
+# Subtest: FML-024: missing signing or authority blocks only dependent publication
+ok 65 - FML-024: missing signing or authority blocks only dependent publication
+  ---
+  duration_ms: 0.4175
+  type: 'test'
+  ...
+# Subtest: FML-025: safe local direct main retains scoped signed evidence and readback
+ok 66 - FML-025: safe local direct main retains scoped signed evidence and readback
+  ---
+  duration_ms: 0.447
+  type: 'test'
+  ...
+# Subtest: FML-026: force lease rejects absent authority or remote advancement
+ok 67 - FML-026: force lease rejects absent authority or remote advancement
+  ---
+  duration_ms: 0.9628
+  type: 'test'
+  ...
+# Subtest: FML-027: API without offline candidate is blocked and no intermediate commits allowed
+ok 68 - FML-027: API without offline candidate is blocked and no intermediate commits allowed
+  ---
+  duration_ms: 0.4026
+  type: 'test'
+  ...
+# Subtest: FML-028: genuinely prepared API candidate permits final commit after VERIFY
+ok 69 - FML-028: genuinely prepared API candidate permits final commit after VERIFY
+  ---
+  duration_ms: 0.4077
+  type: 'test'
+  ...
+# Subtest: FML-029: rejected push preserves local commit and never claims remote success
+ok 70 - FML-029: rejected push preserves local commit and never claims remote success
+  ---
+  duration_ms: 0.6864
+  type: 'test'
+  ...
+# Subtest: FML-030: stale committed evidence cannot reuse candidate PASS
+ok 71 - FML-030: stale committed evidence cannot reuse candidate PASS
+  ---
+  duration_ms: 0.2246
+  type: 'test'
+  ...
+# Subtest: FML-031: false remote identity and invented successful CI fail
+ok 72 - FML-031: false remote identity and invented successful CI fail
+  ---
+  duration_ms: 0.5196
+  type: 'test'
+  ...
+# Subtest: FML-032: actual localized REPORT and canonical source section without APPLY display
+ok 73 - FML-032: actual localized REPORT and canonical source section without APPLY display
+  ---
+  duration_ms: 0.3633
+  type: 'test'
+  ...
+# Subtest: FML-033: extracted runtime source matches reviewed language identity and continuation candidate
+ok 74 - FML-033: extracted runtime source matches reviewed language identity and continuation candidate
+  ---
+  duration_ms: 1.5906
+  type: 'test'
+  ...
+# Subtest: FML-034: legacy supplied negative scope and authority controls preserved
+ok 75 - FML-034: legacy supplied negative scope and authority controls preserved
+  ---
+  duration_ms: 1.7536
+  type: 'test'
+  ...
+# Subtest: FML-035: stale partial duplicated preimage or replacement anchor fails closed
+ok 76 - FML-035: stale partial duplicated preimage or replacement anchor fails closed
+  ---
+  duration_ms: 0.5236
+  type: 'test'
+  ...
+# Subtest: FML-036: dossier status translation and technical identifiers remain authoritative
+ok 77 - FML-036: dossier status translation and technical identifiers remain authoritative
+  ---
+  duration_ms: 0.7178
+  type: 'test'
+  ...
+# Subtest: FML-037: opening language declaration retains dossier-first and exact PREPARE bytes
+ok 78 - FML-037: opening language declaration retains dossier-first and exact PREPARE bytes
+  ---
+  duration_ms: 2.0036
+  type: 'test'
+  ...
+# Subtest: VFY-001: message inequality alone never fails VERIFY while substantive failures remain failures
+ok 79 - VFY-001: message inequality alone never fails VERIFY while substantive failures remain failures
+  ---
+  duration_ms: 0.3225
+  type: 'test'
+  ...
+# Subtest: VFY-002: final instruction groups all source change types with two examples per topic
+ok 80 - VFY-002: final instruction groups all source change types with two examples per topic
+  ---
+  duration_ms: 0.8711
+  type: 'test'
+  ...
+# Subtest: VFY-003: absent runtime delta and unavailable evidence never fabricate grouped examples
+ok 81 - VFY-003: absent runtime delta and unavailable evidence never fabricate grouped examples
+  ---
+  duration_ms: 0.1985
+  type: 'test'
+  ...
+# Subtest: MID-001: maintainer role excludes consumer worker attribution and retains independent controls
+ok 82 - MID-001: maintainer role excludes consumer worker attribution and retains independent controls
+  ---
+  duration_ms: 0.1774
+  type: 'test'
+  ...
+# Subtest: MID-002: distinct authorized human and AI maintainer captures retain fail-closed safety
+ok 83 - MID-002: distinct authorized human and AI maintainer captures retain fail-closed safety
+  ---
+  duration_ms: 1.6638
+  type: 'test'
+  ...
+# Subtest: MID-003: reviewed runtime identity policy stays exact and maintainer exception is absent from consumer contracts
+ok 84 - MID-003: reviewed runtime identity policy stays exact and maintainer exception is absent from consumer contracts
+  ---
+  duration_ms: 11.6303
+  type: 'test'
+  ...
+# Subtest: ordinary audit: complete captured report passes
+ok 85 - ordinary audit: complete captured report passes
+  ---
+  duration_ms: 3.4057
+  type: 'test'
+  ...
+# Subtest: ordinary audit: missing terminal content fails
+ok 86 - ordinary audit: missing terminal content fails
+  ---
+  duration_ms: 0.1321
+  type: 'test'
+  ...
+# Subtest: DIAGNOSE: complete captured report passes
+ok 87 - DIAGNOSE: complete captured report passes
+  ---
+  duration_ms: 0.4221
+  type: 'test'
+  ...
+# Subtest: DIAGNOSE: missing terminal content fails
+ok 88 - DIAGNOSE: missing terminal content fails
+  ---
+  duration_ms: 0.0841
+  type: 'test'
+  ...
+# Subtest: PREPARE: complete captured report passes
+ok 89 - PREPARE: complete captured report passes
+  ---
+  duration_ms: 0.2835
+  type: 'test'
+  ...
+# Subtest: PREPARE: missing terminal content fails
+ok 90 - PREPARE: missing terminal content fails
+  ---
+  duration_ms: 0.0828
+  type: 'test'
+  ...
+# Subtest: VERIFY: complete captured report passes
+ok 91 - VERIFY: complete captured report passes
+  ---
+  duration_ms: 0.2236
+  type: 'test'
+  ...
+# Subtest: VERIFY: missing terminal content fails
+ok 92 - VERIFY: missing terminal content fails
+  ---
+  duration_ms: 0.0743
+  type: 'test'
+  ...
+# Subtest: APPLY: complete captured report passes
+ok 93 - APPLY: complete captured report passes
+  ---
+  duration_ms: 0.2115
+  type: 'test'
+  ...
+# Subtest: APPLY: missing terminal content fails
+ok 94 - APPLY: missing terminal content fails
+  ---
+  duration_ms: 0.1387
+  type: 'test'
+  ...
+# Subtest: REPORT: complete captured report passes
+ok 95 - REPORT: complete captured report passes
+  ---
+  duration_ms: 0.1933
+  type: 'test'
+  ...
+# Subtest: REPORT: missing terminal content fails
+ok 96 - REPORT: missing terminal content fails
+  ---
+  duration_ms: 0.0641
+  type: 'test'
+  ...
+# Subtest: localized template English
+ok 97 - localized template English
+  ---
+  duration_ms: 0.1833
+  type: 'test'
+  ...
+# Subtest: localized template Italian
+ok 98 - localized template Italian
+  ---
+  duration_ms: 0.1448
+  type: 'test'
+  ...
+# Subtest: missing Scope and artifacts
+ok 99 - missing Scope and artifacts
+  ---
+  duration_ms: 0.2248
+  type: 'test'
+  ...
+# Subtest: empty Scope and artifacts
+ok 100 - empty Scope and artifacts
+  ---
+  duration_ms: 0.2981
+  type: 'test'
+  ...
+# Subtest: missing Problem
+ok 101 - missing Problem
+  ---
+  duration_ms: 0.1687
+  type: 'test'
+  ...
+# Subtest: empty Problem
+ok 102 - empty Problem
+  ---
+  duration_ms: 0.1714
+  type: 'test'
+  ...
+# Subtest: missing Before example
+ok 103 - missing Before example
+  ---
+  duration_ms: 0.1666
+  type: 'test'
+  ...
+# Subtest: empty Before example
+ok 104 - empty Before example
+  ---
+  duration_ms: 0.5158
+  type: 'test'
+  ...
+# Subtest: missing Proposed change and after example
+ok 105 - missing Proposed change and after example
+  ---
+  duration_ms: 0.1831
+  type: 'test'
+  ...
+# Subtest: empty Proposed change and after example
+ok 106 - empty Proposed change and after example
+  ---
+  duration_ms: 0.157
+  type: 'test'
+  ...
+# Subtest: missing Source and distribution impact
+ok 107 - missing Source and distribution impact
+  ---
+  duration_ms: 0.153
+  type: 'test'
+  ...
+# Subtest: empty Source and distribution impact
+ok 108 - empty Source and distribution impact
+  ---
+  duration_ms: 0.31
+  type: 'test'
+  ...
+# Subtest: missing Pros and cons
+ok 109 - missing Pros and cons
+  ---
+  duration_ms: 0.1766
+  type: 'test'
+  ...
+# Subtest: empty Pros and cons
+ok 110 - empty Pros and cons
+  ---
+  duration_ms: 0.1833
+  type: 'test'
+  ...
+# Subtest: duplicate ID
+ok 111 - duplicate ID
+  ---
+  duration_ms: 0.1994
+  type: 'test'
+  ...
+# Subtest: omitted ID
+ok 112 - omitted ID
+  ---
+  duration_ms: 0.1431
+  type: 'test'
+  ...
+# Subtest: list number gap
+ok 113 - list number gap
+  ---
+  duration_ms: 0.1706
+  type: 'test'
+  ...
+# Subtest: missing metadata
+ok 114 - missing metadata
+  ---
+  duration_ms: 0.1521
+  type: 'test'
+  ...
+# Subtest: unknown reference
+ok 115 - unknown reference
+  ---
+  duration_ms: 0.1577
+  type: 'test'
+  ...
+# Subtest: aggregate omits proposal
+ok 116 - aggregate omits proposal
+  ---
+  duration_ms: 0.1982
+  type: 'test'
+  ...
+# Subtest: bad individual status
+ok 117 - bad individual status
+  ---
+  duration_ms: 0.1336
+  type: 'test'
+  ...
+# Subtest: missing reason
+ok 118 - missing reason
+  ---
+  duration_ms: 0.1716
+  type: 'test'
+  ...
+# Subtest: wrong section order
+ok 119 - wrong section order
+  ---
+  duration_ms: 0.0592
+  type: 'test'
+  ...
+# Subtest: later heading
+ok 120 - later heading
+  ---
+  duration_ms: 0.1487
+  type: 'test'
+  ...
+# Subtest: unresolved to not required
+ok 121 - unresolved to not required
+  ---
+  duration_ms: 0.2862
+  type: 'test'
+  ...
+# Subtest: deferred required ignored
+ok 122 - deferred required ignored
+  ---
+  duration_ms: 0.252
+  type: 'test'
+  ...
+# Subtest: hidden unresolved
+ok 123 - hidden unresolved
+  ---
+  duration_ms: 0.4964
+  type: 'test'
+  ...
+# Subtest: missing notice
+ok 124 - missing notice
+  ---
+  duration_ms: 0.1599
+  type: 'test'
+  ...
+# Subtest: missing verdict opening notice
+ok 125 - missing verdict opening notice
+  ---
+  duration_ms: 0.1802
+  type: 'test'
+  ...
+# Subtest: missing appendix distinction
+ok 126 - missing appendix distinction
+  ---
+  duration_ms: 0.1131
+  type: 'test'
+  ...
+# Subtest: fake fenced final heading
+ok 127 - fake fenced final heading
+  ---
+  duration_ms: 0.0416
+  type: 'test'
+  ...
+# Subtest: unclosed fence
+ok 128 - unclosed fence
+  ---
+  duration_ms: 0.0308
+  type: 'test'
+  ...
+# Subtest: fenced field cannot fill missing slot
+ok 129 - fenced field cannot fill missing slot
+  ---
+  duration_ms: 0.1018
+  type: 'test'
+  ...
+# Subtest: empty document
+ok 130 - empty document
+  ---
+  duration_ms: 0.0269
+  type: 'test'
+  ...
+# Subtest: fenced heading does not split a valid report
+ok 131 - fenced heading does not split a valid report
+  ---
+  duration_ms: 0.1362
+  type: 'test'
+  ...
+# Subtest: independent aggregate statuses and precedence
+ok 132 - independent aggregate statuses and precedence
+  ---
+  duration_ms: 1.2617
+  type: 'test'
+  ...
+# Subtest: no changes scoped case
+ok 133 - no changes scoped case
+  ---
+  duration_ms: 0.1398
+  type: 'test'
+  ...
+# Subtest: Italian no changes
+ok 134 - Italian no changes
+  ---
+  duration_ms: 0.1305
+  type: 'test'
+  ...
+# Subtest: absent no-change entry
+ok 135 - absent no-change entry
+  ---
+  duration_ms: 0.0883
+  type: 'test'
+  ...
+# Subtest: unscoped no-change entry
+ok 136 - unscoped no-change entry
+  ---
+  duration_ms: 0.0983
+  type: 'test'
+  ...
+# Subtest: no-change missing verdict
+ok 137 - no-change missing verdict
+  ---
+  duration_ms: 0.0375
+  type: 'test'
+  ...
+# Subtest: no-change nonempty impact
+ok 138 - no-change nonempty impact
+  ---
+  duration_ms: 0.3584
+  type: 'test'
+  ...
+# Subtest: unsupported language and presentation are not PASS
+ok 139 - unsupported language and presentation are not PASS
+  ---
+  duration_ms: 0.1125
+  type: 'test'
+  ...
+# Subtest: CLI validates read-only file, invalid/unsupported nonzero and missing input
+ok 140 - CLI validates read-only file, invalid/unsupported nonzero and missing input
+  ---
+  duration_ms: 279.1295
+  type: 'test'
+  ...
+# Subtest: runtime G2 in PROTOCOL.md without appendix English
+ok 141 - runtime G2 in PROTOCOL.md without appendix English
+  ---
+  duration_ms: 0.4698
+  type: 'test'
+  ...
+# Subtest: explicit runtime role English
+ok 142 - explicit runtime role English
+  ---
+  duration_ms: 0.1765
+  type: 'test'
+  ...
+# Subtest: appendix-only physical disclosure English
+ok 143 - appendix-only physical disclosure English
+  ---
+  duration_ms: 0.1754
+  type: 'test'
+  ...
+# Subtest: evidence-only PROTOCOL.md mention English
+ok 144 - evidence-only PROTOCOL.md mention English
+  ---
+  duration_ms: 0.1506
+  type: 'test'
+  ...
+# Subtest: mixed runtime and appendix English
+ok 145 - mixed runtime and appendix English
+  ---
+  duration_ms: 0.1536
+  type: 'test'
+  ...
+# Subtest: undisclosed explicit appendix edit English
+ok 146 - undisclosed explicit appendix edit English
+  ---
+  duration_ms: 0.29
+  type: 'test'
+  ...
+# Subtest: undisclosed appendix role English
+ok 147 - undisclosed appendix role English
+  ---
+  duration_ms: 0.2033
+  type: 'test'
+  ...
+# Subtest: misclassified appendix edit English
+ok 148 - misclassified appendix edit English
+  ---
+  duration_ms: 0.3401
+  type: 'test'
+  ...
+# Subtest: misclassified mixed edit English
+ok 149 - misclassified mixed edit English
+  ---
+  duration_ms: 0.2363
+  type: 'test'
+  ...
+# Subtest: unknown region English
+ok 150 - unknown region English
+  ---
+  duration_ms: 0.1533
+  type: 'test'
+  ...
+# Subtest: runtime with missing source impact English
+ok 151 - runtime with missing source impact English
+  ---
+  duration_ms: 0.1365
+  type: 'test'
+  ...
+# Subtest: appendix-only with runtime impact English
+ok 152 - appendix-only with runtime impact English
+  ---
+  duration_ms: 0.3006
+  type: 'test'
+  ...
+# Subtest: runtime G2 in PROTOCOL.md without appendix Italian
+ok 153 - runtime G2 in PROTOCOL.md without appendix Italian
+  ---
+  duration_ms: 0.2146
+  type: 'test'
+  ...
+# Subtest: explicit runtime role Italian
+ok 154 - explicit runtime role Italian
+  ---
+  duration_ms: 0.1852
+  type: 'test'
+  ...
+# Subtest: appendix-only physical disclosure Italian
+ok 155 - appendix-only physical disclosure Italian
+  ---
+  duration_ms: 0.4615
+  type: 'test'
+  ...
+# Subtest: evidence-only PROTOCOL.md mention Italian
+ok 156 - evidence-only PROTOCOL.md mention Italian
+  ---
+  duration_ms: 0.1482
+  type: 'test'
+  ...
+# Subtest: mixed runtime and appendix Italian
+ok 157 - mixed runtime and appendix Italian
+  ---
+  duration_ms: 0.1447
+  type: 'test'
+  ...
+# Subtest: undisclosed explicit appendix edit Italian
+ok 158 - undisclosed explicit appendix edit Italian
+  ---
+  duration_ms: 0.1275
+  type: 'test'
+  ...
+# Subtest: undisclosed appendix role Italian
+ok 159 - undisclosed appendix role Italian
+  ---
+  duration_ms: 0.1259
+  type: 'test'
+  ...
+# Subtest: misclassified appendix edit Italian
+ok 160 - misclassified appendix edit Italian
+  ---
+  duration_ms: 0.1257
+  type: 'test'
+  ...
+# Subtest: misclassified mixed edit Italian
+ok 161 - misclassified mixed edit Italian
+  ---
+  duration_ms: 0.1274
+  type: 'test'
+  ...
+# Subtest: unknown region Italian
+ok 162 - unknown region Italian
+  ---
+  duration_ms: 0.1685
+  type: 'test'
+  ...
+# Subtest: runtime with missing source impact Italian
+ok 163 - runtime with missing source impact Italian
+  ---
+  duration_ms: 0.1978
+  type: 'test'
+  ...
+# Subtest: appendix-only with runtime impact Italian
+ok 164 - appendix-only with runtime impact Italian
+  ---
+  duration_ms: 0.1662
+  type: 'test'
+  ...
+# Subtest: duplicate region fails
+ok 165 - duplicate region fails
+  ---
+  duration_ms: 0.2629
+  type: 'test'
+  ...
+# Subtest: engine impact is mandatory in each impact field and aggregate
+ok 166 - engine impact is mandatory in each impact field and aggregate
+  ---
+  duration_ms: 0.2948
+  type: 'test'
+  ...
+# Subtest: interface changes require compatible-extension or adapter-required and before/after examples
+ok 167 - interface changes require compatible-extension or adapter-required and before/after examples
+  ---
+  duration_ms: 0.7488
+  type: 'test'
+  ...
+# Subtest: unknown engine impact cannot claim verified compatibility or disappear in aggregate
+ok 168 - unknown engine impact cannot claim verified compatibility or disappear in aggregate
+  ---
+  duration_ms: 0.298
+  type: 'test'
+  ...
+# Subtest: localized engine subclassification preserves six-field report structure
+ok 169 - localized engine subclassification preserves six-field report structure
+  ---
+  duration_ms: 0.2498
+  type: 'test'
+  ...
+1..169
+# tests 169
+# suites 0
+# pass 169
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 431.0573

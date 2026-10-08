@@ -1,0 +1,423 @@
+{
+  "measured_at": "2026-10-17T13:18:52.770Z",
+  "platform": {
+    "os": "win32",
+    "arch": "x64",
+    "release": "10.0.26300"
+  },
+  "identities": {
+    "tools/enforcement-benchmark.mjs": "sha256:8ccb494c1247651ed006906f4ba0b3a41899d67901f4f00426efda5402a1661a",
+    "dist/oop-enforce.js": "sha256:f15c2debf34ddf2b5bf9391b8132b526a500822421d04617c0c3abce529f1308",
+    "tools/enforcement-adapter.cjs": "sha256:8a552202fc4de1f8b44df03e74c4925467af43cbb187655e9be9ca1857282027"
+  },
+  "method": "20 serial cold CLI probe processes; 100 warm evaluations and reference selections per facet; local wall clock; process peak RSS; no provider/model invocation",
+  "scope": "Local producer; no provider hook, model delivery or authority authentication",
+  "node": "v24.19.0",
+  "baseline_commit": "9e8ff87a096d484ff56c03358019da130a78d97d",
+  "distribution": {
+    "files": 84,
+    "bytes": 683297
+  },
+  "cases": [
+    {
+      "facet": "full_install",
+      "modules": [
+        "core",
+        "workspace",
+        "activation",
+        "capabilities",
+        "history",
+        "intake",
+        "model",
+        "impact",
+        "cost",
+        "repository",
+        "security",
+        "operations",
+        "tickets",
+        "changes",
+        "coordination",
+        "execution",
+        "migration",
+        "migration-distribution",
+        "adoption",
+        "context",
+        "entry",
+        "human",
+        "bootstrap"
+      ],
+      "selected_context_bytes": 332630,
+      "module_reads": 23,
+      "applicable_procedure_bytes": 23780,
+      "migration_projection_bytes": 12012,
+      "selected_total_bytes": 368422,
+      "reference_routing_ms": {
+        "samples": 100,
+        "p50": 0.011899999999997135,
+        "p95": 0.030100000000004457,
+        "p99": 0.263300000000001
+      },
+      "engine_warm_ms": {
+        "samples": 100,
+        "p50": 0.015599999999992065,
+        "p95": 0.05279999999999063,
+        "p99": 0.31919999999999504
+      },
+      "delivered_tokens": "not_measured",
+      "model_latency": "not_measured",
+      "money": "not_measured"
+    },
+    {
+      "facet": "information",
+      "modules": [
+        "core",
+        "context",
+        "workspace",
+        "entry"
+      ],
+      "selected_context_bytes": 130845,
+      "module_reads": 4,
+      "applicable_procedure_bytes": 0,
+      "migration_projection_bytes": 0,
+      "selected_total_bytes": 130845,
+      "reference_routing_ms": {
+        "samples": 100,
+        "p50": 0.007199999999997431,
+        "p95": 0.017699999999990723,
+        "p99": 0.05010000000000048
+      },
+      "engine_warm_ms": {
+        "samples": 100,
+        "p50": 0.005899999999996908,
+        "p95": 0.017899999999997362,
+        "p99": 0.08809999999999718
+      },
+      "delivered_tokens": "not_measured",
+      "model_latency": "not_measured",
+      "money": "not_measured"
+    },
+    {
+      "facet": "durable_write",
+      "modules": [
+        "core",
+        "context",
+        "coordination",
+        "cost",
+        "workspace",
+        "entry",
+        "execution",
+        "history",
+        "intake",
+        "model",
+        "impact",
+        "repository",
+        "security",
+        "operations",
+        "tickets"
+      ],
+      "selected_context_bytes": 214594,
+      "module_reads": 15,
+      "applicable_procedure_bytes": 0,
+      "migration_projection_bytes": 0,
+      "selected_total_bytes": 214594,
+      "reference_routing_ms": {
+        "samples": 100,
+        "p50": 0.005699999999990268,
+        "p95": 0.014899999999997249,
+        "p99": 0.03159999999999741
+      },
+      "engine_warm_ms": {
+        "samples": 100,
+        "p50": 0.008600000000001273,
+        "p95": 0.021000000000000796,
+        "p99": 0.1636000000000024
+      },
+      "delivered_tokens": "not_measured",
+      "model_latency": "not_measured",
+      "money": "not_measured"
+    },
+    {
+      "facet": "due_update",
+      "modules": [
+        "core",
+        "workspace",
+        "activation",
+        "capabilities",
+        "history",
+        "intake",
+        "model",
+        "impact",
+        "cost",
+        "repository",
+        "security",
+        "operations",
+        "tickets",
+        "changes",
+        "coordination",
+        "execution",
+        "migration",
+        "migration-distribution",
+        "adoption",
+        "context",
+        "entry"
+      ],
+      "selected_context_bytes": 296701,
+      "module_reads": 21,
+      "applicable_procedure_bytes": 1739,
+      "migration_projection_bytes": 12012,
+      "selected_total_bytes": 310452,
+      "reference_routing_ms": {
+        "samples": 100,
+        "p50": 0.007199999999997431,
+        "p95": 0.011899999999997135,
+        "p99": 0.013400000000004297
+      },
+      "engine_warm_ms": {
+        "samples": 100,
+        "p50": 0.012500000000017053,
+        "p95": 0.022500000000007958,
+        "p99": 0.03849999999999909
+      },
+      "delivered_tokens": "not_measured",
+      "model_latency": "not_measured",
+      "money": "not_measured"
+    },
+    {
+      "facet": "context_loss",
+      "modules": [
+        "core",
+        "context",
+        "workspace",
+        "entry",
+        "recovery"
+      ],
+      "selected_context_bytes": 133274,
+      "module_reads": 5,
+      "applicable_procedure_bytes": 1739,
+      "migration_projection_bytes": 0,
+      "selected_total_bytes": 135013,
+      "reference_routing_ms": {
+        "samples": 100,
+        "p50": 0.003299999999995862,
+        "p95": 0.0037000000000091404,
+        "p99": 0.008400000000023056
+      },
+      "engine_warm_ms": {
+        "samples": 100,
+        "p50": 0.005200000000002092,
+        "p95": 0.006200000000006867,
+        "p99": 0.016999999999995907
+      },
+      "delivered_tokens": "not_measured",
+      "model_latency": "not_measured",
+      "money": "not_measured"
+    },
+    {
+      "facet": "interrupted_setup",
+      "modules": [
+        "core",
+        "workspace",
+        "activation",
+        "capabilities",
+        "history",
+        "intake",
+        "model",
+        "impact",
+        "cost",
+        "repository",
+        "security",
+        "operations",
+        "tickets",
+        "changes",
+        "coordination",
+        "execution",
+        "migration",
+        "migration-distribution",
+        "adoption",
+        "context",
+        "entry",
+        "human",
+        "bootstrap",
+        "recovery"
+      ],
+      "selected_context_bytes": 335059,
+      "module_reads": 24,
+      "applicable_procedure_bytes": 23780,
+      "migration_projection_bytes": 12012,
+      "selected_total_bytes": 370851,
+      "reference_routing_ms": {
+        "samples": 100,
+        "p50": 0.006000000000000227,
+        "p95": 0.0069000000000016826,
+        "p99": 0.015399999999999636
+      },
+      "engine_warm_ms": {
+        "samples": 100,
+        "p50": 0.012000000000000455,
+        "p95": 0.017500000000012506,
+        "p99": 0.039299999999997226
+      },
+      "delivered_tokens": "not_measured",
+      "model_latency": "not_measured",
+      "money": "not_measured"
+    },
+    {
+      "facet": "delegation",
+      "modules": [
+        "core",
+        "workspace",
+        "activation",
+        "capabilities",
+        "context",
+        "delegation",
+        "entry"
+      ],
+      "selected_context_bytes": 165261,
+      "module_reads": 7,
+      "applicable_procedure_bytes": 0,
+      "migration_projection_bytes": 0,
+      "selected_total_bytes": 165261,
+      "reference_routing_ms": {
+        "samples": 100,
+        "p50": 0.004099999999993997,
+        "p95": 0.0056000000000153705,
+        "p99": 0.012500000000017053
+      },
+      "engine_warm_ms": {
+        "samples": 100,
+        "p50": 0.005699999999990268,
+        "p95": 0.017800000000022465,
+        "p99": 0.0403999999999769
+      },
+      "delivered_tokens": "not_measured",
+      "model_latency": "not_measured",
+      "money": "not_measured"
+    },
+    {
+      "facet": "completion",
+      "modules": [
+        "core",
+        "context",
+        "workspace",
+        "entry"
+      ],
+      "selected_context_bytes": 130845,
+      "module_reads": 4,
+      "applicable_procedure_bytes": 0,
+      "migration_projection_bytes": 0,
+      "selected_total_bytes": 130845,
+      "reference_routing_ms": {
+        "samples": 100,
+        "p50": 0.002899999999982583,
+        "p95": 0.003299999999995862,
+        "p99": 0.004100000000022419
+      },
+      "engine_warm_ms": {
+        "samples": 100,
+        "p50": 0.004500000000007276,
+        "p95": 0.00529999999997699,
+        "p99": 0.007900000000006457
+      },
+      "delivered_tokens": "not_measured",
+      "model_latency": "not_measured",
+      "money": "not_measured"
+    }
+  ],
+  "alternatives": {
+    "Node": "measured",
+    "Bun": "not_available",
+    "Rust": "not_implemented",
+    "WASM": "not_implemented",
+    "Python": "not_implemented"
+  },
+  "test_harness": {
+    "decision": "node:test; existing dependency-free producer stack",
+    "alternative_runner": "not_measured"
+  },
+  "cli_cold_ms": {
+    "samples": 20,
+    "p50": 58.22930000000008,
+    "p95": 61.16769999999997,
+    "p99": 62.81529999999998
+  },
+  "cli_peak_rss_kib": {
+    "samples": 20,
+    "p50": 44056,
+    "p95": 44084,
+    "p99": 44088
+  },
+  "hook_to_effect_ms": "not_measured",
+  "installed_provider": "not_performed",
+  "engine_loaded_bytes": 92630,
+  "comparison": {
+    "frozen_before": {
+      "files": 83,
+      "bytes": 539095
+    },
+    "frozen_published": {
+      "files": 84,
+      "bytes": 680206
+    },
+    "distribution_delta_from_published": 3091,
+    "context_bytes": [
+      {
+        "facet": "full_install",
+        "current": 332630,
+        "before": 327928,
+        "published": 332630
+      },
+      {
+        "facet": "information",
+        "current": 130845,
+        "before": 128310,
+        "published": 130845
+      },
+      {
+        "facet": "durable_write",
+        "current": 214594,
+        "before": 212059,
+        "published": 214594
+      },
+      {
+        "facet": "due_update",
+        "current": 296701,
+        "before": 291999,
+        "published": 296701
+      },
+      {
+        "facet": "context_loss",
+        "current": 133274,
+        "before": 130739,
+        "published": 133274
+      },
+      {
+        "facet": "interrupted_setup",
+        "current": 335059,
+        "before": 330357,
+        "published": 335059
+      },
+      {
+        "facet": "delegation",
+        "current": 165261,
+        "before": 162726,
+        "published": 165261
+      },
+      {
+        "facet": "completion",
+        "current": 130845,
+        "before": 128310,
+        "published": 130845
+      }
+    ],
+    "historical_selected_total": "not_comparable: before lacks selected_total_bytes",
+    "timing_comparison": "Different host observations; no causal speedup conclusion"
+  },
+  "unmeasured": {
+    "delivered_bytes": "not_measured",
+    "tokens": "not_measured",
+    "money": "not_measured",
+    "output_quality": "not_measured",
+    "native_hook_latency": "not_measured",
+    "warm_provider_latency": "not_measured"
+  }
+}

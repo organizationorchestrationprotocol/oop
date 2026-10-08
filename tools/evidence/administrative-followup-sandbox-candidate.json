@@ -1,0 +1,2835 @@
+{
+  "observed_at": "2026-10-21T05:27:34.233Z",
+  "node_version": "v24.19.0",
+  "source_identity": "sha256:dbc3a57afc895f5230fc42195fe6249085b667201644bf02e1a0bca97e4aea52",
+  "source_binding": {
+    "kind": "source_content",
+    "source_identity": "sha256:dbc3a57afc895f5230fc42195fe6249085b667201644bf02e1a0bca97e4aea52"
+  },
+  "evaluated_checkout": {
+    "commit": "fcebd46d451973eab21835a21ec06e98bd276a14",
+    "mode": "current_content",
+    "ref": "main",
+    "working_tree": "modified",
+    "changes": [
+      " M dist/interfaces.json",
+      " M tools/README.md",
+      " M tools/acceptance-inputs.mjs",
+      " M tools/evidence/release-traceability.json",
+      " M tools/generate-release.mjs",
+      " M tools/install-plan.cjs",
+      " M tools/installation-lifecycle.cjs",
+      " M tools/installation-lifecycle.test.mjs",
+      " M tools/release-review.json",
+      "?? tools/evidence/administrative-followup-baseline.tap",
+      "?? tools/evidence/administrative-followup-focused.tap"
+    ]
+  },
+  "subject_content_identity": "sha256:241797594b3a0bea20966d83b15dbf5a8c2ec4e54f4a2c285010bb19fe472039",
+  "identities": {
+    ".github/workflows/producer-tests.yml": "sha256:cf38ea8139a5a1eaf0d871f837cf602b61e1b0b05a25db68377d59dff3a8b197",
+    ".gitignore": "sha256:6a167c3ec6318065a12c54a1675cc4f3559dabad3d433542fe04f13fbbeef9f2",
+    "CHANGELOG.md": "sha256:008517faff13ebd2dce2fbc53226299686185b65c4c392e9b6cd258b68122568",
+    "PROTOCOL.md": "sha256:9fb8d6fda9c70edc09f60a0418d1aac554f3795f497f86a64e0196349d8f8196",
+    "README.md": "sha256:808e28e847113020b98e704dac9fffc0cd72b91d6b74ea21d5b79de2c3787ad2",
+    "dist/details/activation.json": "sha256:e9a3cff713b786e15ad8d039d31e6a518a005260121f2d9e0c099ec1dd5e2881",
+    "dist/details/adoption.json": "sha256:5e58a3618f84e177cad9d2081b6017888623b1a32c66b44f1148c9a1695b588a",
+    "dist/details/bootstrap.json": "sha256:b5e7961c190f7cbfcb0d27556ceabd8bb26de1250672d47f725d6202a899d714",
+    "dist/details/capabilities.json": "sha256:ea68bf7e31a7d564fa50b7b56e1abacd0b0a48c96c7d18cf8e695781569159f2",
+    "dist/details/changes.json": "sha256:8cc715bc8009a0516d3207c007108521ef87f960e8fc75ced4899bf267b767e5",
+    "dist/details/ci.json": "sha256:45b0fee1b0c8740acf1b67eeb4dd36cebb41a771a0ccc3aac4596b84e74b5482",
+    "dist/details/context.json": "sha256:5601b402d527460592c0d13bbc08625234b4569bed53054d2abcd45a36de6f94",
+    "dist/details/continuity.json": "sha256:88fc4165c5970e4c0acf956d5b2f19bc5377b0d714679b55f783feaa11aed5c2",
+    "dist/details/coordination.json": "sha256:482445547a10b85fc88d3fc0d51553fb6a2c543e89cf35ad4e762f6cb6a95bbe",
+    "dist/details/core.json": "sha256:5032d387bbc47840397a057291ffd0399376e1e856305de177492611c2bd63cb",
+    "dist/details/cost.json": "sha256:c8d332bc17c49cb3fc2fa8524e6aaaac5e8b4f9b48ffdd3fc5d9f2eca81242e9",
+    "dist/details/decisions.json": "sha256:c0c7fe148f8d047d908530970cc896a9145e21f2016afee3c5242638a072c67f",
+    "dist/details/delegation.json": "sha256:3c727e825e54d9c603dc284b70b02c3dfdd9244db7647f38adb64717fa1c49bc",
+    "dist/details/delivery.json": "sha256:c1650c7a8b01efdcf72f0bd6e4f813b304f1fb2fa83f68b5116bc064f56409dd",
+    "dist/details/destination.json": "sha256:f3776b854badd18b9bdd5df6821fefe19a95c7856f3a5f538cc80b5235e2a26b",
+    "dist/details/entry.json": "sha256:ea8571c1fbb8be3611ad2d8ffbf8951fd69b71545eb53306b2c2e0d73a04f4c8",
+    "dist/details/execution.json": "sha256:2ff3cb28a4cb23eb7c8f00edd060f84d67f95d6aed1e6ba8b1832fbb2a223bb8",
+    "dist/details/handoff.json": "sha256:4811afd981b59d88304b1930aeb31a20316c4aad63cec1cdbfa0eb20d950af34",
+    "dist/details/history.json": "sha256:7fef0f2dd19eb6054a6da9bc0ecfa8613681b5987160755f278d1763dd10b78f",
+    "dist/details/human.json": "sha256:9b79edab415310ef6e588b9db1b6a65978ba4edb8cb7181a63f96a85c24c0f66",
+    "dist/details/impact.json": "sha256:ca66f82265e9358bde918dd59b053bbb6a4af64e721b8bd3afeaa33f65579684",
+    "dist/details/intake.json": "sha256:1464752437b72f6010ea2a8fdc2738581a9fffb7bb07d2ca03996e9513c085dd",
+    "dist/details/interfaces.json": "sha256:d5773ceed7fd2ea7920ec8b0d6ef4d9522b14b96d5d088bd40d14308ac7f4544",
+    "dist/details/inventory.json": "sha256:fec8e371a7b53250f251ede84f3f141998c6b4bd588ca6585d3b918b43c1822b",
+    "dist/details/migration-distribution.json": "sha256:efccb4e75b544314fd749c8f28714e0a79fa8b189cd6cfb7774a7d351041e505",
+    "dist/details/migration.json": "sha256:c3cfa1c555cd169a7bf2a57356bbc5bce094a0875be3bd9419be13da95b591b2",
+    "dist/details/model.json": "sha256:3b03532bdaa57390be3d8e09a25737d4677cd6ce347352353ec62b04173f9a98",
+    "dist/details/operations.json": "sha256:d29cc63b50653058d05b57bc5bc739a7b9c62bd58088fff1407c09e0b23fd975",
+    "dist/details/physical.json": "sha256:ebf773038643326463e989cf11fd59f89ecc07b1fc34ff92a1a864379b6cf99d",
+    "dist/details/producer.json": "sha256:dd53ad8a2bb68a974e17380a8762cf66f5cf82fe5711f81f4c9fe01bdf1ae84d",
+    "dist/details/recovery.json": "sha256:418c3f58b98653d1b9617d05ca1902061c210ad00cc1574c89bf55b52dd8d297",
+    "dist/details/repository.json": "sha256:d62f3460745806162bdd008e497c4da370b9ec957c127a60df0c5712580292dc",
+    "dist/details/secret-transfer.json": "sha256:ad89ec3911fa2012aac96f6e822404329011cfb8f0508fd03baad7911a887d85",
+    "dist/details/security.json": "sha256:9c478b21860d512094b178a15a748c20727b391a93288c9609187673923b38da",
+    "dist/details/shared-context.json": "sha256:a593de636dd99572bfd5ef88a6a66096388de3b762ec82f24466811637cc9753",
+    "dist/details/tickets.json": "sha256:f68366250a7af5c31244f49b1705166a67391302ffc4257b7e06d3bd76bebd91",
+    "dist/details/workspace.json": "sha256:2605a1d87c1f2ae7b31968dccf211c04b6661aafec50bcc9d2ed75f2bf32894d",
+    "dist/enforcement-install.json": "sha256:395806b0ea8b059531e5a477e8ed172c69243c47a0ce8d7b2f5dd9a05f8a5dfb",
+    "dist/entry.json": "sha256:2fa2c4deb4cfca3202c0bd43a3d402563e9c8eb6522e96008eb26c9db64cf4e2",
+    "dist/interfaces.json": "sha256:a0ca9f2c244e3740ab7f05f68d66357f9a1e3021aaad3cf641a24b8696e88117",
+    "dist/migrations/compatibility.json": "sha256:458304ab8624ec6e6b96f4b4ddd80923c1e1b6763d71889629a1dca48e8559be",
+    "dist/migrations/index.json": "sha256:db3c7127c51981ea4b1d3ed7e4bd4091ebecc62b02eb18a240e717283ab3578b",
+    "dist/migrations/operations.json": "sha256:0ce0d0606376c3c3982b9208db1409da1825a848bf26eacfdbf43dcb0625b263",
+    "dist/migrations/runtime.json": "sha256:76ebe64badeb7aecc9c1188b4193e2a1fcc2b77bd71f0db7634bbfcd648ba6f3",
+    "dist/modules/activation.json": "sha256:61d86f86b0db57c0688bd68e08dfe31018ca47960110b19303523c269baa911c",
+    "dist/modules/adoption.json": "sha256:99377369dbe142e22ad3a72d6320e350e419b93546e85851236ebdfb8a2e115a",
+    "dist/modules/bootstrap.json": "sha256:1b0d74cd4b86ba36da2b52b5b42ee840aeff5e4ac5ec3597325cf71e5d9a7537",
+    "dist/modules/capabilities.json": "sha256:b7eb98d46ba489eda634d6fa9a4c39ce0b75d650855bd51422a4f79c0bab9ecd",
+    "dist/modules/changes.json": "sha256:601cc4bd6792e02ecce07e6d972464a0de0384e498ea10052bf3eec818b4081f",
+    "dist/modules/ci.json": "sha256:bd1f2e66b71634ae618709f467ac5aafbaa2140af105f9e32dc048a73101b264",
+    "dist/modules/context.json": "sha256:ed6862093b2538df15f44df94029d507ac27721617f334fdbccc6b13b52941f3",
+    "dist/modules/continuity.json": "sha256:0a191394c32c90a367f3a8766d5e69ef1df82f39336ded7cb98eb3ee76b4d1f8",
+    "dist/modules/coordination.json": "sha256:cf96328f0c13b2dfbda1c1ae8323a391a42d83b7c5306a8d64f07b13c4742f0b",
+    "dist/modules/core.json": "sha256:5ca9ede3401f38700ba9398b4d6b6aaa5fde4c781b7888fee82e950bf296c9b5",
+    "dist/modules/cost.json": "sha256:1c77bab1ace1714cd5627659ab40e2095b43363f1c7cc61ef1ddc309b98a8f40",
+    "dist/modules/decisions.json": "sha256:a02522ece466cea0455b96454ba82a6ab1c167fe4787888fe82a4047ea3357d3",
+    "dist/modules/delegation.json": "sha256:72160d79335f13cbf2e772ad9d044387adfd2439ddfd3fd3fda2ce7f2a216e62",
+    "dist/modules/delivery.json": "sha256:f209e97f0557f4c179e5b34aafef0e3ed519838eaceb4567bbc5bde8fcf0625c",
+    "dist/modules/destination.json": "sha256:0dd380a4f4f238f1284096e2cb68e45e0ec0c721a781ff61924b48a2226ace7a",
+    "dist/modules/entry.json": "sha256:bca15eed0dddc68374e796866d4a1d0a48b214d6e21d67fe4af4d73292972f27",
+    "dist/modules/execution.json": "sha256:38f454f23640eeffd99b4354e67dbe4bf9ac2653af53c6599ffd9750151474a3",
+    "dist/modules/handoff.json": "sha256:8fb511b3fadfac492bd49cce4284e29c4785fa4f91e2f6a175eb8815ebf9b223",
+    "dist/modules/history.json": "sha256:24ce3fae4cfc406dae7032ceac805089d3315bf6e8ffebef30b4e94796fe0a83",
+    "dist/modules/human.json": "sha256:bb0b8e8d59ae6b578cd45ed62e170e02e3013cf83138fb764e328aa7f15af23c",
+    "dist/modules/impact.json": "sha256:d4f7c4b809a40563b40101dea24901f2b722d1869d94f73a5db2e8253ad0d9ac",
+    "dist/modules/intake.json": "sha256:05537160de3dea3f992261af8b9695d82eb9f266d0e5163788d03e09c0ccc830",
+    "dist/modules/interfaces.json": "sha256:1f1badfe9631f46cc9c1182268306b0613a8ea1b10db656d3cf9b169d4f8965e",
+    "dist/modules/inventory.json": "sha256:7fd5da25879ef0979c8a8affeee3f68d4572e5b4a1044123bbd8cf8beba04a06",
+    "dist/modules/migration-distribution.json": "sha256:89d233f07ca50dd843a7cc94e8e1d9eec73f530501673a0bb28775b817b6f49e",
+    "dist/modules/migration.json": "sha256:97007b8904b16ddeba27610292c700d594bf336439043d3c020707e12bc1b962",
+    "dist/modules/model.json": "sha256:7344c4d95a9dbe6e042434ec97d3123632b221ea844969d6114928c7061872ea",
+    "dist/modules/operations.json": "sha256:f5c1f134f96dd039fedeff65900c6df2503918dad798749cbe04922398522840",
+    "dist/modules/physical.json": "sha256:3b2e007d1cf5f239eec2760b2c5cdb0a98efa86c58d9b9cd35ce2cb87b98c34c",
+    "dist/modules/producer.json": "sha256:c6cbba1f12324adc441b466d57d4f1b065c052407136f25915c54d2d93262e57",
+    "dist/modules/recovery.json": "sha256:3b08c3f559aeca966b80ff77862ee89297fd48a320ed5760a5745f2c6f17c9fe",
+    "dist/modules/repository.json": "sha256:3e19c626055bd3b0ad6abfddac79d8365863731dd59c1193adbda55aceba7cb5",
+    "dist/modules/secret-transfer.json": "sha256:6c8a2524bd0303a5c6a8f5dd9609be311260a5c2dc9defc08c9e3f34bef6bd8d",
+    "dist/modules/security.json": "sha256:add357cecf6a8b2f32d405f40cdbe5c0ca09afb2bd5da3cf36e6274cf4d03630",
+    "dist/modules/shared-context.json": "sha256:109066df0a9fe495484046c325dce2e430e0a218d2d725aee3dc50e6ae80a77f",
+    "dist/modules/tickets.json": "sha256:5daec44d8e8f1d96eb0829ae044e8e8ffa617eb5ab836f909af3010ce9d4a015",
+    "dist/modules/workspace.json": "sha256:b36062ad9de088261ff88540f045221b7d3fa8056e855d405c7d3abf81c9843a",
+    "dist/oop-enforce.js": "sha256:d1ced0279fa1b334fa943e043c12d3ecd4adfa050cad8a0b419b49ba672a50ba",
+    "dist/procedures/bootstrap.json": "sha256:c14dc55ec308366e71c42dd42685772148dc120063f6ec71bfbdabd876301000",
+    "dist/procedures/lifecycle.json": "sha256:020a907f5b7f489dea5c6b657bc5ab0950fc59755907e4a283fc6c648c1b2aae",
+    "dist/routing.json": "sha256:56612599b49d4b02246a3e433962a364fe87528843bea3d5f02882d301cbb2b4",
+    "examples.md": "sha256:5c7a699d24ac88850add49968ebc96dc411fb217cbb14a0c48946740f026d438",
+    "tools/README.md": "sha256:0b0b4467039a3cb5da40e8671d1d6616c031c38fd65268f0aaf4ee48acd469b6",
+    "tools/accept-release.mjs": "sha256:442f68e85b0b36486557e5a2695d22437a1ec72caf6b9eb69bbbd3a9b5915bef",
+    "tools/acceptance-inputs.mjs": "sha256:f2719ded4f7329a67e82c6914dccbf1104396f6f4f6e6ff2090b6a3b42f98ec7",
+    "tools/bootstrap-language.test.mjs": "sha256:a02dd1eda54b6a68fbbbf6c25efb4b1ea7f7dee82e113aa63a875756a105a44b",
+    "tools/candidate/entry.json": "sha256:093d142ba7b330dee175e5bc420c4f8b3278e96537229b85c07b3eb0d38b0337",
+    "tools/candidate/operations-access.json": "sha256:d898704b9d0cb0b7dd96a55a0ccdc91da3fdfe82c74906180886e56a2ef49af3",
+    "tools/efficiency-regression.mjs": "sha256:7a91c41ccc739516fe3e6afd9bc4341f6f344b95539b60889d0eae3c6ea765c0",
+    "tools/efficiency-regression.test.mjs": "sha256:169b92e436843c747276641355671cab20cb73e701f7435ce7814802458ba378",
+    "tools/enforcement-adapter.cjs": "sha256:584e96695fa5ff00339d111a4a2c3b69fe2984df6b9ef2e853915b7c531bdd4e",
+    "tools/enforcement-benchmark.mjs": "sha256:3d46f4713845df67b889b01e200038b6998b0a8ebcb59f0223aab9d2be03582d",
+    "tools/enforcement-contract.mjs": "sha256:bd046577e6a98ceb63e5bfe214fb11036d92014867c14ca1449485262b1793fb",
+    "tools/enforcement-engine.mjs": "sha256:e68ebc2af420935cb3802a0f7dd4b688165ba1609b2e0c1b9c92df14953fa612",
+    "tools/enforcement-install.cjs": "sha256:4bc16f3f91fd66975b2e81d557dc78b7b5c7ece599bf722219cedb08137c7f51",
+    "tools/enforcement.md": "sha256:713e973fca62751d3655de0ebab386cb897284574554e3bb847cee968796557f",
+    "tools/enforcement.test.mjs": "sha256:4561264c739d0e0cebfe322516672faf99709bd34b0fdf54a6d54aaf83d0b48a",
+    "tools/evidence/release-traceability.json": "sha256:b951a77721a664c13f08d4967538a67d4af999fa5309483359801e69cb99f149",
+    "tools/fixtures/catalog.json": "sha256:251f41e860a12bbd54f24e3788670b65f1ca65974cf483539547ccd2bd453184",
+    "tools/fixtures/maintainer/formalize-replacements.json": "sha256:0548c2551cea4759cd047d5072c9fb3c3dfffd1120d4528d3c19ab89005fb0ae",
+    "tools/fixtures/maintainer/prepare-preimage.md": "sha256:3fc29b579b2a4e59037081b6835a0a5c2f2ede846fcc12c494e1c77ba4d01c22",
+    "tools/fixtures/organizational-scenarios.json": "sha256:0a4c98c80f9372f05d7b48f35bfa43706e3632dfc6cf0d4d83f82c43eabe84cb",
+    "tools/fixtures/procedures.json": "sha256:0a6ddca3ccd9d77509af09adc8582782c2f57a0bdb3e53b218769e22f5ddd3a3",
+    "tools/generate-release.mjs": "sha256:17cbd0ead7bc8f6979b2b8bb7f010cd7c17cc0de68a68b166d8a876a0f6387c6",
+    "tools/genesis.mjs": "sha256:9abbedc4c09ce940822322e0a690517121e1e9b8de0ee55f4b449080395a6769",
+    "tools/genesis.test.mjs": "sha256:1013247c813d82eb5f1f3bbb642b4c6702164cf33763b92d3178b6c61412aeb7",
+    "tools/install-plan.cjs": "sha256:d2ced8fe7938a40bf170140bf047ecbe88d6109f1de5e57f4c02cbc65a52112f",
+    "tools/install-plan.test.mjs": "sha256:048e6c0b5b88f71c0b19ba7f8bae45bf85db2188c46a852aab3d1aa1babf3d36",
+    "tools/installation-lifecycle.cjs": "sha256:b5a8e8f4995f1ca1f97ee26641a669dda64098d14eed46750a557aff9d6b3444",
+    "tools/installation-lifecycle.test.mjs": "sha256:db33c81c4f48bb08ab06dd694fc5432f554187511fcb62eec6df4d66bd7fc13d",
+    "tools/installation-regression.mjs": "sha256:3e5a4b8f2668258a2d4e40132c6bb9f76792be883644f5c6541e49989acc7078",
+    "tools/maintainer-report-scenarios.md": "sha256:78132ed45af4cf0c6ed03a5a922b3bf042f592f825cd7edb0429be5bdd68cde2",
+    "tools/maintainer-workflow.test.mjs": "sha256:bffa1aedba7ed792fe54e088db1d526fa93cdea1442071b114e5e4c8c808ecd3",
+    "tools/migration-context.mjs": "sha256:90f149ce243c384e7fe877c022555bc40a3ea3d1a5cde3ad94d32a2ade91e270",
+    "tools/migration-contract.mjs": "sha256:0624c4b38edf3c22fd639ab57f10573f14516176e234f20269fb523312c37017",
+    "tools/migration-contract.test.mjs": "sha256:67ee40a0a0fbfdd4936cb09de63da8964a7d6bc65cf3528bfd180e4aa280443c",
+    "tools/migration-history-fixture.mjs": "sha256:10038298b5ce2be7de41368f6eff38c17528de569dd2f1c2e706cc8fde510ed4",
+    "tools/migration-support.mjs": "sha256:ceec0d5e829433fbd769603b121922213490193efae5ce89d15106f3dec4d971",
+    "tools/organizational-scenarios.test.mjs": "sha256:41f1c678200a511bf342598d66d5d1e550ffb71c2fe0fbf71c0d61efb9d04510",
+    "tools/producer-safety.test.mjs": "sha256:93878639c2295e845545c66336f736b0130583a0fb805b08cc986c12b8258818",
+    "tools/prune-artifacts.mjs": "sha256:99ff2caecfc4aea35a9970f866467a587d2d0f4f9871c97f9d70ab37549d935a",
+    "tools/prune-artifacts.test.mjs": "sha256:d8393258cf3a09f7b8b1ab7c276523890937df282d44386739c60dfd5e348c81",
+    "tools/reference-engine.mjs": "sha256:d814d3cf35f48d9e986d07248344907c9f35ca4d1be57ad0a9ed292c780b82d8",
+    "tools/reference-engine.test.mjs": "sha256:c4945b75685a01efa665b90f060898f4355e5cc392d8e47e14c16e5c3beed5b8",
+    "tools/release-engine.mjs": "sha256:bcd4b9658d8603d6a23925be5fb6a65399b92b781be106da86a0f91b71842adb",
+    "tools/release-plan.mjs": "sha256:544e78bb35e810155b892dc51addb99583fa8ac2c103d4f5b4868e1826c62a40",
+    "tools/release-review.json": "sha256:30750829c7be442475f71557ef484cbb7b4171a5c0ef80f80e6a7cbc4ab2850f",
+    "tools/release.test.mjs": "sha256:c096fbc77933823ac43e57c1c5ea8625109bac9ff7c575ffdab8249e869ee04e",
+    "tools/remote-entry.test.mjs": "sha256:6725fe653c5eb6391549e3fadce9dff28b3f531cb257376be387b2aadac84ef8",
+    "tools/routing-coordination.test.mjs": "sha256:cd960d6eef7222c525db851301b116921fde80efa8dd8971ab1837e7be30f37c",
+    "tools/schema-profile.mjs": "sha256:c016cfc1db6a420b1ba2be8896e54569b3d09ebf47acaae5fb8c8ff100f6a13b",
+    "tools/schemas/contract.schema.json": "sha256:cca425b7e63745157302ef296604eb14a23d4ffdea6ab649eda833de9e1b480c",
+    "tools/schemas/enforcement-install.schema.json": "sha256:ff61bdd4fa8c771edc23aab529079ff92348d6e68ce06ce007536222b4089676",
+    "tools/schemas/migration.schema.json": "sha256:b3c9a9271d22d24099cbebf23cd7a709fdcc0ebf1f67ccb2eea50a35c5d681ee",
+    "tools/validate-maintainer-report.mjs": "sha256:368acf8fc0a7fb78973a4435ce2b046c6c9f0a8aaabc5ee419e62ee69a6a3cde",
+    "tools/validate-maintainer-report.test.mjs": "sha256:8caefadeb878a6aae6e22aad0a00edb4883fa70eac8e4a1a8e0f3918bb69901a"
+  },
+  "report_kind": "precommit_content_candidate",
+  "prior_checkpoint": null,
+  "revision_binding": "Tracked evidence binds content, not its own containing SHA. Current ignored acceptance observes actual HEAD and all current committed subject bytes, independently of ancestry. Candidate validation is never committed acceptance.",
+  "scope": "local producer source/package verification; no installed runtime, provider, cross-runtime, publication or adoption claim",
+  "release_ready": false,
+  "comparative_regression_ready": false,
+  "candidate_validated": false,
+  "committed_source_ready": false,
+  "publication": "not_performed",
+  "runtime_adoption": "not_performed",
+  "checks": {
+    "reviewed_source_allocation": "passed",
+    "source_content_binding": "passed",
+    "local_package_and_reference_tests": "failed",
+    "maintainer_regressions": "failed",
+    "measured_context_bytes": "passed",
+    "frozen_subject": "passed",
+    "frozen_checkout": "passed",
+    "source_regression_gate": "not_verified",
+    "historical_efficiency_evidence": "not_verified",
+    "stable_contract_ids": "not_verified",
+    "rolling_efficiency_regression": "not_verified"
+  },
+  "observation_summary": {
+    "total": 260,
+    "unique": 260,
+    "passed": 248,
+    "failed": 6,
+    "skipped": 6,
+    "missing": [],
+    "unexpected": []
+  },
+  "observations": [
+    {
+      "id": "REL-SETUP-001",
+      "checked": "Italian history and active client outrank English OS with distinct source evidence",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-SETUP-002",
+      "checked": "voluntary current choice overrides continuity and technical commands cannot express preference",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-SETUP-003",
+      "checked": "all six dispositions retain identity and omitted discovery never becomes unavailability",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-SETUP-004",
+      "checked": "stale mismatched and malformed evidence blocks reuse; valid continuity is subordinate to new choice",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-SETUP-005",
+      "checked": "entry contains language contract before checkout without claiming hidden host visibility",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-SETUP-006",
+      "checked": "only matching common-private credential files bind the effective actor; external secure storage is ineligible",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-SETUP-007",
+      "checked": "terminal installation needs every phase and predicate, not unexercised native assurance",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-SETUP-008",
+      "checked": "historical states, pending restart and stale checkpoint cannot auto-promote",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-SETUP-009",
+      "checked": "verified installation record publication follows installation and retains it on failure",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-SETUP-010",
+      "checked": "VCS boundary membership governs minimal exclusions with no non-VCS or duplicate writes",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-SETUP-011",
+      "checked": "isolated actual canonical commit, readback and fixture publication establish new/existing baseline",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "failed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-SETUP-012",
+      "checked": "planner and strict status consumers cannot confuse a plan with installed controls",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-SETUP-013",
+      "checked": "actual isolated VCS boundaries, tracked data and existing ignores determine protection",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "failed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-SETUP-014",
+      "checked": "isolated actual signing is verified when the local signing facility is exposed",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "failed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-SETUP-015",
+      "checked": "format-5 installation_verified transition evaluates every exact requirement without authority",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-SETUP-016",
+      "checked": "format-5 installed transition evaluates every exact requirement without authority",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-SETUP-017",
+      "checked": "invalid bootstrap paths and malformed conditions fail closed across both branches",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-SETUP-018",
+      "checked": "maintainer enforcement inventory refers to the authoritative catalog",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-TOOL-015",
+      "checked": "comparable byte increase below full source rejects readiness (NEG-01)",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-TOOL-016",
+      "checked": "equal or lower comparable measurements pass all seven scenarios (POS-01)",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-TOOL-017",
+      "checked": "absent unverified mismatched historical evidence never invents PASS (NEG-02)",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-TOOL-018",
+      "checked": "text flags untrusted records and wrong-scope approvals cannot override (NEG-03)",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-TOOL-019",
+      "checked": "separately trusted attributable authorized increase has bound disposition (POS-03)",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-TOOL-020",
+      "checked": "changed semantic workload is incomparable without fake regression or improvement (POS-02)",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-TOOL-021",
+      "checked": "current package checkpoint model validates and tampered identities or incomplete evidence fail (NEG-04)",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-TOOL-022",
+      "checked": "actual method identity and exact producer observation inventory remain binding (REG-01)",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-001",
+      "checked": "all eight contact points have explicit non-authorizing or admission behavior",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-002",
+      "checked": "every admission control rejects false, absent, stale and inferred evidence",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-003",
+      "checked": "material scope, resource, authority, revision and runtime changes invalidate evidence",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-004",
+      "checked": "routing exactly preserves reference closure for every facet and conservative unknown",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-005",
+      "checked": "generated mapping covers every complete normative clause without semantic compilation",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-006",
+      "checked": "CLI JSON protocol, negative exits, invalid argv and unknown commands fail closed",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-007",
+      "checked": "bounded input, invalid UTF-8, malformed JSON and parse errors do not leak payload",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-008",
+      "checked": "thin adapter maps malformed, new, inconsistent, timed-out and failed outputs to prevention",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-009",
+      "checked": "actual local adapter allows authorized callback and prevents denied/unknown effects",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-010",
+      "checked": "BOOT guards and prior verified phase are necessary for progress",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-011",
+      "checked": "recovery is scoped to owned journal, actual dispatch and ongoing invocations",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-012",
+      "checked": "migration impact is explicit, consistent and supports no-engine input without losing profiles",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-013",
+      "checked": "stale controller/contract reviews and contradictory impact block generation",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-014",
+      "checked": "standalone artifact is reproducible, source-bound and included in acceptance inventory",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-015",
+      "checked": "alternate cwd and parallel invocations cannot write peer checkpoints or retain snapshots",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-016",
+      "checked": "missing interception, completion evidence, uncertain classification and scope prevent false readiness",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-017",
+      "checked": "independent expected binding and strict response envelope gate admission",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-018",
+      "checked": "callback invocation, pending result, failure and observed readback remain distinct",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-019",
+      "checked": "diagnostic migration retains deployed and absent controllers with bounded dispositions",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-020",
+      "checked": "exact argv reasons survive copied CommonJS and module package contexts",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-021",
+      "checked": "optional reviewed activation entries preserve all eight wire contracts",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-022",
+      "checked": "one compatible registration serves entry plus recovery in source order",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-023",
+      "checked": "strongest per-path coverage precedes deduplication and distinct paths stay covered",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-024",
+      "checked": "observer-only, unsupported, disabled, unauthorized and unknown phases never cover prevention",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-025",
+      "checked": "conflicting or corrupt registration metadata is fail-closed",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-026",
+      "checked": "install/readback fixture has zero hook tests and repeat/restart uses scoped actual readback",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-027",
+      "checked": "installation outcome never advances full BOOT guards or safe G0 routing",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-042",
+      "checked": "removed bootstrap step IDs fail closed and surviving dependencies are keyed by ID",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-028",
+      "checked": "formal assurance requires current installation and enablement; dispatch alone is insufficient",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-029",
+      "checked": "shared dispatch retains every failure despite a later success and handles cancellation",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-030",
+      "checked": "actual controller responses in shared dispatch preserve strict trusted binding and unknown residuals",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-031",
+      "checked": "unchanged known wire readers ignore optional metadata while unknown parsers remain blocked",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-032",
+      "checked": "bootstrap migration verifies formal activation while retaining independent requirements",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-033",
+      "checked": "shared invocation timeout is bounded and recovery precedes dependent admission",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-034",
+      "checked": "every feature requires its reviewed semantic role and blocking guarantee",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-035",
+      "checked": "explicit composite roles share one registration across phases without losing failures",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-036",
+      "checked": "malformed composite metadata and conflicting invocation provenance fail closed",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-037",
+      "checked": "installed assurance needs attributable current coverage beyond legacy flags",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-038",
+      "checked": "diagnostic planning requires scoped host intent after bootstrap and diagnostic semantics",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-039",
+      "checked": "diagnostic plans create no registration actions, readiness or implicit invocation",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-040",
+      "checked": "diagnostic dispatch rechecks trusted intent and preserves unknown non-authorizing wire output",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-041",
+      "checked": "role changes invalidate readback while explicit matching role metadata reuses safely",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-043",
+      "checked": "enabled uninvoked control functions by policy during first installation and re-entry",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-044",
+      "checked": "disabled unregistered foreign or unauthorized controls do not gain functioning status",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-045",
+      "checked": "formal functioning never grants authority or hides an observed real failure",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-046",
+      "checked": "registration or dependency changes require current readback rather than synthetic dispatch",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-GEN-001",
+      "checked": "current identity needs only HEAD metadata and never requests ancestry",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "current_content_and_path_safety"
+    },
+    {
+      "id": "REL-GEN-002",
+      "checked": "unborn failed and malformed current identity never certify release",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "current_content_and_path_safety"
+    },
+    {
+      "id": "REL-GEN-003",
+      "checked": "amended and shallow subject metadata have identical current-content acceptance",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "current_content_and_path_safety"
+    },
+    {
+      "id": "REL-GEN-004",
+      "checked": "committed content rejects tampered missing and dirty inputs and retains stable IDs",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "current_content_and_path_safety"
+    },
+    {
+      "id": "REL-GEN-005",
+      "checked": "evidence preflight rejects traversal and partial unsafe plans before mutation",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "current_content_and_path_safety"
+    },
+    {
+      "id": "REL-GEN-006",
+      "checked": "linked evidence directory is refused without modifying its target",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "skipped",
+      "skip_reason": "Link unavailable: EPERM",
+      "tier": "current_content_and_path_safety"
+    },
+    {
+      "id": "REL-ENF-047",
+      "checked": "complete versioned manifest rejects missing, changed and future semantics",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-048",
+      "checked": "scope derives every feature phase and applicable path without caller omissions",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-049",
+      "checked": "observational, unauthorized, disabled and foreign capabilities cannot prevent effects",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-050",
+      "checked": "strongest prevention and complementary paths precede reuse and registration count",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-051",
+      "checked": "one authenticated multi-role registration shares entry and recovery",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-052",
+      "checked": "current plan is non-authorizing and stale scope or dependencies block BOOT-12",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-053",
+      "checked": "compatible adopted-source replacement reuses native entrypoints with targeted readback",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-054",
+      "checked": "BOOT-12 consumes plan before readback and BOOT-13 retains publication",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-055",
+      "checked": "full Git object IDs preserve exact scoped plan identity and reject other formats",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-056",
+      "checked": "reasoned negative mappings preserve independent bindings without admitting installation",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-057",
+      "checked": "empty inventory is unassessed until host supplies explicit per-need dispositions",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-058",
+      "checked": "planned coverage and authenticated installation readback are distinct from publication",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ENF-059",
+      "checked": "diagnostic observations expire and invalid inventory never manufactures complete mapping",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ADMIN-001",
+      "checked": "AC-01 R01 R03 R10 R11 direct receipts complete with no readback API",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ADMIN-002",
+      "checked": "AC-02 R05 R08 every definition and wrapper precede first approval",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ADMIN-003",
+      "checked": "AC-03 R08 R09 three definitions followed by two known omissions fails freeze",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ADMIN-004",
+      "checked": "AC-04 R07 R08 each required native consent remains independent",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ADMIN-005",
+      "checked": "AC-05 R07 R10 denied consent or real administrative error prevents success",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ADMIN-006",
+      "checked": "AC-06 R03 R09 R10 real restart completes from ordinary acknowledgment",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ADMIN-007",
+      "checked": "AC-07 R01 R02 R12 no semantic coverage or suitability certification",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ADMIN-008",
+      "checked": "AC-08 R13 R14 same installation chat defers after restart or compaction",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ADMIN-009",
+      "checked": "AC-09 R14 R15 R16 later-created authorized safe improvement is admissible",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ADMIN-010",
+      "checked": "AC-10 R08 R15 R16 only genuinely changed native definitions need consent",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ADMIN-011",
+      "checked": "AC-11 R05 R06 R07 all overlapping eligible mechanisms and real incompatibilities",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ADMIN-012",
+      "checked": "AC-12 R06 R09 valid equivalent reuse avoids reinstall or new consent",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ADMIN-013",
+      "checked": "AC-13 R04 R16 R17 ordinary deny unknown and error never execute dependent callback",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ADMIN-014",
+      "checked": "AC-14 R11 R19 legacy receipts promote without invented historical time",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ADMIN-015",
+      "checked": "AC-15 R04 R10 R11 actual record content ref commit and publication stay independent",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ADMIN-016",
+      "checked": "AC-16 R18 R20 transitive old guard schema controller and migration dependencies fail",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ADMIN-017",
+      "checked": "AC-17 R13 R17 initial incompatible wrapper is a real error and cannot be rewritten",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ADMIN-018",
+      "checked": "AC-18 R14 old reopened chat or missing untrusted metadata defers optimization alone",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ADMIN-019",
+      "checked": "F07 unavailable phase completes inventory without claiming coverage",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ADMIN-020",
+      "checked": "F08 expired historical receipts and checkpoints retain first completion",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ADMIN-021",
+      "checked": "F09 only correlated native file-write fulfillment permits optional negatives",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ADMIN-022",
+      "checked": "F07 negative candidate assessments need authority and cannot hide disabled controls",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ADMIN-023",
+      "checked": "F07 absent or contradictory phase evidence stays blocked",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ADMIN-024",
+      "checked": "F08 unknown migrated chronology stays null across ordinary evaluations",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-ADMIN-025",
+      "checked": "F09 capture real isolated writeFile fulfillment without readback or dispatch",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-MIG-001",
+      "checked": "generated bundle closes source-bound supported profiles and optional common absence",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_migration_state_and_disposable_history"
+    },
+    {
+      "id": "REL-MIG-002",
+      "checked": "missing required descriptor never means no-op",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_migration_state_and_disposable_history"
+    },
+    {
+      "id": "REL-MIG-003",
+      "checked": "traversal unknown path and wrong source binding are rejected",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_migration_state_and_disposable_history"
+    },
+    {
+      "id": "REL-MIG-004",
+      "checked": "unknown incomplete profile and mismatched action ownership fail closed",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_migration_state_and_disposable_history"
+    },
+    {
+      "id": "REL-MIG-005",
+      "checked": "rewrite fallback adopts supported actual state without previous commit objects",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_migration_state_and_disposable_history"
+    },
+    {
+      "id": "REL-MIG-006",
+      "checked": "unchanged semantic amend reuses evidence without transformation or duplicate publication",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_migration_state_and_disposable_history"
+    },
+    {
+      "id": "REL-MIG-007",
+      "checked": "unsupported profile preserves prior checkpoint and scoped next action",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_migration_state_and_disposable_history"
+    },
+    {
+      "id": "REL-MIG-008",
+      "checked": "another runtime checkpoint and another machine common root are not own facts",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_migration_state_and_disposable_history"
+    },
+    {
+      "id": "REL-MIG-009",
+      "checked": "partial applied effect is verified before any replay or checkpoint advance",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_migration_state_and_disposable_history"
+    },
+    {
+      "id": "REL-MIG-010",
+      "checked": "failed remote publication cannot satisfy no-op canonical communication",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_migration_state_and_disposable_history"
+    },
+    {
+      "id": "REL-MIG-011",
+      "checked": "advanced operations are reused and never downgraded by intermediate runtime",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_migration_state_and_disposable_history"
+    },
+    {
+      "id": "REL-MIG-012",
+      "checked": "lost synthetic CAS grants one effect owner and loser rereconciles actual evidence",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_migration_state_and_disposable_history"
+    },
+    {
+      "id": "REL-MIG-013",
+      "checked": "changed authority and current incompatible writes block affected scope",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_migration_state_and_disposable_history"
+    },
+    {
+      "id": "REL-MIG-014",
+      "checked": "same SHA cannot replace context and verified owned effects remain distinct",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_migration_state_and_disposable_history"
+    },
+    {
+      "id": "REL-MIG-015",
+      "checked": "offline remote facts and foreign project evidence remain unknown",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_migration_state_and_disposable_history"
+    },
+    {
+      "id": "REL-MIG-016",
+      "checked": "isolated real first-parent path inspects GHI LMN OPQ excluding DEF and branch commits",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "failed",
+      "tier": "synthetic_migration_state_and_disposable_history"
+    },
+    {
+      "id": "REL-MIG-017",
+      "checked": "explicit no-op requires actual facts and migration context is absent from G0",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_migration_state_and_disposable_history"
+    },
+    {
+      "id": "REL-MIG-018",
+      "checked": "conflict is not overwritten and known applied evidence is reusable without new effect authority",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_migration_state_and_disposable_history"
+    },
+    {
+      "id": "REL-MIG-019",
+      "checked": "A B C D cumulative support survives multiple unavailable rewritten histories",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_migration_state_and_disposable_history"
+    },
+    {
+      "id": "REL-MIG-020",
+      "checked": "disappearing profile requires bounded explicit withdrawal against prior evidence",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_migration_state_and_disposable_history"
+    },
+    {
+      "id": "REL-MIG-021",
+      "checked": "SHA-only legacy identifies equivalent supported actual state without old objects",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_migration_state_and_disposable_history"
+    },
+    {
+      "id": "REL-MIG-022",
+      "checked": "missing forged contradictory or ambiguous legacy state never advances checkpoint",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_migration_state_and_disposable_history"
+    },
+    {
+      "id": "REL-MIG-023",
+      "checked": "cumulative profiles retain shared evidence without replay or advanced downgrade",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_migration_state_and_disposable_history"
+    },
+    {
+      "id": "REL-MIG-024",
+      "checked": "stable identities guard completeness and source binding cannot be silently changed",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_migration_state_and_disposable_history"
+    },
+    {
+      "id": "REL-MIG-025",
+      "checked": "repeated generation is deterministic and preservation claims stay qualified",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_migration_state_and_disposable_history"
+    },
+    {
+      "id": "REL-MIG-026",
+      "checked": "bare profile or SHA cannot replace authenticated scoped observations",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_migration_state_and_disposable_history"
+    },
+    {
+      "id": "REL-ORG-001",
+      "checked": "ORG-01 One human covers product, R&D and Marketing",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_organizational_scenario_and_real_package_context"
+    },
+    {
+      "id": "REL-ORG-002",
+      "checked": "ORG-02 Established company with CEO, directors, board, HR, finance, staff and two sites",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_organizational_scenario_and_real_package_context"
+    },
+    {
+      "id": "REL-ORG-003",
+      "checked": "ORG-03 Proposed formation or restructuring",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_organizational_scenario_and_real_package_context"
+    },
+    {
+      "id": "REL-ORG-004",
+      "checked": "ORG-04 Nonprofit with suppliers and physical assets",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_organizational_scenario_and_real_package_context"
+    },
+    {
+      "id": "REL-ORG-005",
+      "checked": "ORG-05 Research result affects roadmap, product and Marketing; HR and investors conditional",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_organizational_scenario_and_real_package_context"
+    },
+    {
+      "id": "REL-ORG-006",
+      "checked": "ORG-06 Pricing affects tax, margin, catalog and checkout",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_organizational_scenario_and_real_package_context"
+    },
+    {
+      "id": "REL-ORG-007",
+      "checked": "ORG-07 Provider changes after partial propagation",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_organizational_scenario_and_real_package_context"
+    },
+    {
+      "id": "REL-ORG-008",
+      "checked": "ORG-08 G0 information and small reversible G1 correction",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_organizational_scenario_and_real_package_context"
+    },
+    {
+      "id": "REL-ORG-009",
+      "checked": "ORG-09 Authorization or capability unavailable for downstream action",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "synthetic_organizational_scenario_and_real_package_context"
+    },
+    {
+      "id": "REL-TOOL-005",
+      "checked": "check-current binds material inputs and ignores unrelated files without writes",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-TOOL-006",
+      "checked": "generated file symlink cannot overwrite an external sentinel",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "skipped",
+      "skip_reason": "Symlink creation unavailable: EPERM",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-TOOL-007",
+      "checked": "module and detail directory links fail before any mutation",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "skipped",
+      "skip_reason": "Symlink creation unavailable: EPERM",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-TOOL-008",
+      "checked": "evidence directory link prevents all earlier distribution writes",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "skipped",
+      "skip_reason": "Symlink creation unavailable: EPERM",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-TOOL-009",
+      "checked": "unsafe orphan JSON blocks writes and all cleanup",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-TOOL-010",
+      "checked": "incomplete inventory collision and traversal fail before writes",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-TOOL-011",
+      "checked": "late preflight failure after staging leaves all bytes unchanged",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-TOOL-012",
+      "checked": "isolated generation preserves current reviewed modules and clauses bytes and safe idempotent cleanup",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "failed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-TOOL-013",
+      "checked": "orphan JSON symlink blocks cleanup without following its target",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "skipped",
+      "skip_reason": "Symlink creation unavailable: EPERM",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-TOOL-014",
+      "checked": "evidence output file symlink blocks the complete generation plan",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "skipped",
+      "skip_reason": "Symlink creation unavailable: EPERM",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-TOOL-001",
+      "checked": "removed or renamed modules lose both old generated artifacts",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-TOOL-002",
+      "checked": "cleanup preserves files outside the generated JSON boundary",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-TOOL-003",
+      "checked": "incomplete generation prevents all orphan deletion",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-TOOL-004",
+      "checked": "unsafe inventory and empty allocation fail before deletion",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-OBS-001",
+      "checked": "deterministic closure retains dependency order",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-OBS-002",
+      "checked": "unresolved identities and missing dependencies fail",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-OBS-003",
+      "checked": "cycles and duplicate module identities fail",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-OBS-004",
+      "checked": "action, state, risk, authority and recovery routes join request",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-OBS-005",
+      "checked": "known informational route stays small",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-OBS-006",
+      "checked": "unknown material classification expands and stays unresolved",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-OBS-007",
+      "checked": "unknown selectors and malformed facets fail",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-OBS-008",
+      "checked": "context assembly is deterministic and deduplicates identities",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-OBS-009",
+      "checked": "conflicting governing content is rejected",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-OBS-010",
+      "checked": "guard truth, falsehood and uncertainty remain distinct",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-OBS-011",
+      "checked": "malformed or empty guards are rejected",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-OBS-012",
+      "checked": "user confirmation cannot skip actual access observation",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-OBS-013",
+      "checked": "readiness transition needs all applicable facts",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-OBS-014",
+      "checked": "recovery requires a fresh observation, not old success",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-OBS-015",
+      "checked": "undefined and ambiguous transitions fail",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-OBS-016",
+      "checked": "invalidation follows only transitive dependent evidence",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-OBS-017",
+      "checked": "reuse cannot cross project, runtime or changed dependencies",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-OBS-018",
+      "checked": "stale and unobserved checkpoints cannot establish reuse",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-OBS-019",
+      "checked": "access is tied to the expected runtime credential and adapter",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-OBS-020",
+      "checked": "read-only or anonymous success cannot prove read/write readiness",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-OBS-021",
+      "checked": "private visibility is not an access readiness predicate",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-OBS-022",
+      "checked": "successful final check cannot conceal an earlier failure",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-OBS-023",
+      "checked": "candidates, missing coverage and unperformed checks block readiness",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-OBS-024",
+      "checked": "measured efficiency regression requires a justified authorized disposition",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-OBS-025",
+      "checked": "candidate catalog never advertises complete production coverage",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-OBS-026",
+      "checked": "producer profile validates the access contract and rejects omissions",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-OBS-027",
+      "checked": "profile refuses unsupported schema features instead of silently passing",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-OBS-028",
+      "checked": "candidate entry cannot be selected as an installable release",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-OBS-029",
+      "checked": "inherited values cannot establish observed guard facts",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-OBS-030",
+      "checked": "malformed module metadata and duplicate states are rejected",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "isolated_producer_mechanism"
+    },
+    {
+      "id": "REL-PKG-001",
+      "checked": "all source spans reconstructed exactly with no omissions or overlap",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-002",
+      "checked": "every module contract satisfies the restricted versioned schema profile",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-003",
+      "checked": "entry and all route/detail/procedure references resolve locally",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-004",
+      "checked": "complete graph is acyclic and selection order is deterministic",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-005",
+      "checked": "ordinary G0 uses initial closure without provisioning or managed-work modules",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-006",
+      "checked": "actual effect, risk, authority and recovery facets expand request routing by union",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-007",
+      "checked": "unknown material scope uses conservative consumer closure and remains unresolved",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-008",
+      "checked": "unknown selectors and missing dependencies fail instead of under-routing",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-009",
+      "checked": "cache avoids duplicate file reads for unchanged applicable context",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-010",
+      "checked": "expansion reads only newly required modules and deduplicates contracts",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-011",
+      "checked": "context loss reloads current closure rather than treating history as active context",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-012",
+      "checked": "module retirement prevents a monotonically growing working set",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-013",
+      "checked": "full install contains all BOOT rows and mandatory dependent governance",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-014",
+      "checked": "positive, negative and unknown BOOT observations have distinct guard outcomes",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-015",
+      "checked": "user confirmation and command exit alone cannot satisfy access/control/readiness guards",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-016",
+      "checked": "operations readiness verifies scoped runtime credential and both permissions, not visibility",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-017",
+      "checked": "source preserves provider uncertainty, manual enrollment and independent signing boundaries",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-018",
+      "checked": "migration and destination routes contain ownership/compatibility/source-target safeguards",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-019",
+      "checked": "bootstrap guard/transition identifiers and dependency order are unambiguous",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-020",
+      "checked": "partial effects and concrete waiting conditions are required on recovery branches",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-021",
+      "checked": "changing an adapter invalidates only dependent proofs",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-022",
+      "checked": "runtime/project adoption evidence is not reusable across ownership boundaries",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-023",
+      "checked": "producer module is excluded from ordinary/full-install/recovery/consumer-update routes",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-024",
+      "checked": "semantic adoption changes have explicit source deltas and scoped migration policy",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-025",
+      "checked": "no consumer procedure schedules maintainer execution or OOP audit operations",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-026",
+      "checked": "language precedence rejects embedded choices and untrusted unknown or expired preferences",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-027",
+      "checked": "worker defaults preserve eligible references and never imply repository or provider authority",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-028",
+      "checked": "current installed proof and reconciled resume are necessary for bootstrap completion",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-029",
+      "checked": "language discovery is necessary and its result satisfies the actual entry guard",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-030",
+      "checked": "checked unavailable unsupported and unknown host states permit honest limited fallback",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-031",
+      "checked": "command and external text cannot fabricate user language and invalidated discovery cannot be reused",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-032",
+      "checked": "every Git effect routes attribution context and bootstrap cannot waive unknown commit disposition",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-033",
+      "checked": "AI commit metadata is checked despite reused human authentication and valid signing",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-034",
+      "checked": "incomplete API or inherited provenance and wrong resulting object block dependent effects",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-035",
+      "checked": "genuine human authors retain provenance while alternative AI names and emails are rejected",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-PKG-036",
+      "checked": "real disposable Git environment override defeats user.name and actual-object admission refuses publication",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "failed",
+      "tier": "real_package_local_read_and_supplied_fact_model"
+    },
+    {
+      "id": "REL-ENTRY-001",
+      "checked": "standalone entry contains exact reviewed pre-clone instructions without local payload reads",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "remote_entry_contract_and_supplied_observations"
+    },
+    {
+      "id": "REL-ENTRY-002",
+      "checked": "every required observation independently denies or remains unknown without evidence",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "remote_entry_contract_and_supplied_observations"
+    },
+    {
+      "id": "REL-ENTRY-003",
+      "checked": "pre-clone ordering is acyclic and acquisition protection precedes BOOT-05 without a cyclic dependency",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "remote_entry_contract_and_supplied_observations"
+    },
+    {
+      "id": "REL-ENTRY-004",
+      "checked": "missing private protection and foreign or unresolved project facts block supplied startup evidence",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "remote_entry_contract_and_supplied_observations"
+    },
+    {
+      "id": "REL-ENTRY-005",
+      "checked": "reuse and concurrency contract preserves equivalents and rejects uncoordinated acquisition facts",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "remote_entry_contract_and_supplied_observations"
+    },
+    {
+      "id": "REL-ENTRY-006",
+      "checked": "freshness projection retains clean update and dirty divergent pinned offline and independent-adoption boundaries",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "remote_entry_contract_and_supplied_observations"
+    },
+    {
+      "id": "REL-ENTRY-007",
+      "checked": "language capability audit-exclusion and full-install handoff remain explicit and guarded",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "remote_entry_contract_and_supplied_observations"
+    },
+    {
+      "id": "REL-ENTRY-008",
+      "checked": "additive format retains existing entry fields and all accepted state profiles without mandatory relocation",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "remote_entry_contract_and_supplied_observations"
+    },
+    {
+      "id": "REL-ENTRY-009",
+      "checked": "malformed reviewed preflight sequence fails real generation before writing any artifacts",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "remote_entry_contract_and_supplied_observations"
+    },
+    {
+      "id": "REL-ENTRY-010",
+      "checked": "README contains exactly the requested GitHub CTA and source references resolve",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "remote_entry_contract_and_supplied_observations"
+    },
+    {
+      "id": "REL-ENTRY-011",
+      "checked": "generated entry and procedure contain exactly the surviving stable IDs and never reuse removed ones",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "remote_entry_contract_and_supplied_observations"
+    },
+    {
+      "id": "REL-ENTRY-012",
+      "checked": "dependencies are explicit by ID, ownership is keyed by ID and removed steps cannot complete bootstrap",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "remote_entry_contract_and_supplied_observations"
+    },
+    {
+      "id": "REL-ENTRY-013",
+      "checked": "no consumer-facing distribution instruction directs reading PROTOCOL.md",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "remote_entry_contract_and_supplied_observations"
+    },
+    {
+      "id": "REL-ENTRY-014",
+      "checked": "BOOT-06 asks once without discovery or inference and accepts only .priv or persisted answers",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "remote_entry_contract_and_supplied_observations"
+    },
+    {
+      "id": "REL-ENTRY-015",
+      "checked": "BOOT-10 makes one consolidated public-only request with conditional signing key and verifies afterwards",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "remote_entry_contract_and_supplied_observations"
+    },
+    {
+      "id": "REL-ENTRY-016",
+      "checked": "BOOT-11 and BOOT-08 rely only on ai-coworker credential files physically in .priv/common",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "remote_entry_contract_and_supplied_observations"
+    },
+    {
+      "id": "REL-ENTRY-017",
+      "checked": "runtime migration marks removed phases obsolete and re-provisions out-of-location credentials without touching them",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "remote_entry_contract_and_supplied_observations"
+    },
+    {
+      "id": "REL-ENTRY-018",
+      "checked": "malformed or missing surviving BOOT rows and reused removed IDs fail real generation before writing",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "remote_entry_contract_and_supplied_observations"
+    },
+    {
+      "id": "REL-ENTRY-019",
+      "checked": "minimal credential purposes and scoped setup authority retain signing and host trust boundaries",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "remote_entry_contract_and_supplied_observations"
+    },
+    {
+      "id": "REL-ROUTE-001",
+      "checked": "coordination in semantic_propagation",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "current_routing_and_allocation"
+    },
+    {
+      "id": "REL-ROUTE-002",
+      "checked": "coordination in change_set",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "current_routing_and_allocation"
+    },
+    {
+      "id": "REL-ROUTE-003",
+      "checked": "coordination in managed_change",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "current_routing_and_allocation"
+    },
+    {
+      "id": "REL-ROUTE-004",
+      "checked": "coordination in semantic_propagation+material_effect",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "current_routing_and_allocation"
+    },
+    {
+      "id": "REL-ROUTE-005",
+      "checked": "coordination in material_effect",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "current_routing_and_allocation"
+    },
+    {
+      "id": "REL-ROUTE-006",
+      "checked": "G0 and small G1 retain exact module closure and payload bytes",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "current_routing_and_allocation"
+    },
+    {
+      "id": "REL-ROUTE-007",
+      "checked": "organizational structure and unknown material routing retain boundaries",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "current_routing_and_allocation"
+    },
+    {
+      "id": "REL-ROUTE-008",
+      "checked": "complete current reviewed allocation covers each source clause exactly once",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "current_routing_and_allocation"
+    },
+    {
+      "id": "REL-ROUTE-009",
+      "checked": "changed source allocation dependencies or review record fail closed",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "current_routing_and_allocation"
+    },
+    {
+      "id": "REL-ROUTE-010",
+      "checked": "missing incomplete and overlapping current allocation fails closed",
+      "expected": "isolated local assertion passes, including applicable negative controls",
+      "actual": "passed",
+      "tier": "current_routing_and_allocation"
+    }
+  ],
+  "measurements": [
+    {
+      "id": "fresh_install",
+      "facet": "full_install",
+      "warm": false,
+      "loss": false,
+      "modules": [
+        "core",
+        "workspace",
+        "activation",
+        "capabilities",
+        "history",
+        "intake",
+        "model",
+        "impact",
+        "cost",
+        "repository",
+        "security",
+        "operations",
+        "tickets",
+        "changes",
+        "coordination",
+        "execution",
+        "migration",
+        "migration-distribution",
+        "adoption",
+        "context",
+        "entry",
+        "human",
+        "bootstrap"
+      ],
+      "baseline_governing_bytes": 399885,
+      "selected_governing_bytes": 396947,
+      "newly_read_module_bytes": 334890,
+      "module_file_reads": 23,
+      "migration_context_encoding": "lossless_migration_context:1; stored JSON unchanged",
+      "engine_loaded_bytes": 96763,
+      "entry_selector_bytes": 22582,
+      "procedure_bytes": 39475,
+      "local_selection_read_assembly_ms": 5.250899999999092,
+      "tokenizer_tokens": "not_measured",
+      "actual_model_calls": "not_measured",
+      "provider_actions": "not_performed",
+      "end_to_end_runtime_duration": "not_measured",
+      "monetary_cost": "not_measured",
+      "user_interventions": "not_measured"
+    },
+    {
+      "id": "enabled_workspace",
+      "facet": "interaction",
+      "warm": true,
+      "loss": false,
+      "modules": [
+        "core",
+        "context",
+        "workspace",
+        "entry"
+      ],
+      "baseline_governing_bytes": 399885,
+      "selected_governing_bytes": 133334,
+      "newly_read_module_bytes": 0,
+      "module_file_reads": 0,
+      "migration_context_encoding": "lossless_migration_context:1; stored JSON unchanged",
+      "engine_loaded_bytes": 96763,
+      "entry_selector_bytes": 22582,
+      "procedure_bytes": 0,
+      "local_selection_read_assembly_ms": 0.08299999999871943,
+      "tokenizer_tokens": "not_measured",
+      "actual_model_calls": "not_measured",
+      "provider_actions": "not_performed",
+      "end_to_end_runtime_duration": "not_measured",
+      "monetary_cost": "not_measured",
+      "user_interventions": "not_measured"
+    },
+    {
+      "id": "ordinary_g0",
+      "facet": "information",
+      "warm": false,
+      "loss": false,
+      "modules": [
+        "core",
+        "context",
+        "workspace",
+        "entry"
+      ],
+      "baseline_governing_bytes": 399885,
+      "selected_governing_bytes": 133334,
+      "newly_read_module_bytes": 110752,
+      "module_file_reads": 4,
+      "migration_context_encoding": "lossless_migration_context:1; stored JSON unchanged",
+      "engine_loaded_bytes": 96763,
+      "entry_selector_bytes": 22582,
+      "procedure_bytes": 0,
+      "local_selection_read_assembly_ms": 1.0142999999952735,
+      "tokenizer_tokens": "not_measured",
+      "actual_model_calls": "not_measured",
+      "provider_actions": "not_performed",
+      "end_to_end_runtime_duration": "not_measured",
+      "monetary_cost": "not_measured",
+      "user_interventions": "not_measured"
+    },
+    {
+      "id": "authorized_durable_write",
+      "facet": "durable_write",
+      "warm": false,
+      "loss": false,
+      "modules": [
+        "core",
+        "context",
+        "coordination",
+        "cost",
+        "workspace",
+        "entry",
+        "execution",
+        "history",
+        "intake",
+        "model",
+        "impact",
+        "repository",
+        "security",
+        "operations",
+        "tickets"
+      ],
+      "baseline_governing_bytes": 399885,
+      "selected_governing_bytes": 222833,
+      "newly_read_module_bytes": 200251,
+      "module_file_reads": 15,
+      "migration_context_encoding": "lossless_migration_context:1; stored JSON unchanged",
+      "engine_loaded_bytes": 96763,
+      "entry_selector_bytes": 22582,
+      "procedure_bytes": 0,
+      "local_selection_read_assembly_ms": 3.369300000005751,
+      "tokenizer_tokens": "not_measured",
+      "actual_model_calls": "not_measured",
+      "provider_actions": "not_performed",
+      "end_to_end_runtime_duration": "not_measured",
+      "monetary_cost": "not_measured",
+      "user_interventions": "not_measured"
+    },
+    {
+      "id": "due_update",
+      "facet": "due_update",
+      "warm": true,
+      "loss": false,
+      "modules": [
+        "core",
+        "workspace",
+        "activation",
+        "capabilities",
+        "history",
+        "intake",
+        "model",
+        "impact",
+        "cost",
+        "repository",
+        "security",
+        "operations",
+        "tickets",
+        "changes",
+        "coordination",
+        "execution",
+        "migration",
+        "migration-distribution",
+        "adoption",
+        "context",
+        "entry"
+      ],
+      "baseline_governing_bytes": 399885,
+      "selected_governing_bytes": 333563,
+      "newly_read_module_bytes": 181210,
+      "module_file_reads": 17,
+      "migration_context_encoding": "lossless_migration_context:1; stored JSON unchanged",
+      "engine_loaded_bytes": 96763,
+      "entry_selector_bytes": 22582,
+      "procedure_bytes": 19019,
+      "local_selection_read_assembly_ms": 2.771099999998114,
+      "tokenizer_tokens": "not_measured",
+      "actual_model_calls": "not_measured",
+      "provider_actions": "not_performed",
+      "end_to_end_runtime_duration": "not_measured",
+      "monetary_cost": "not_measured",
+      "user_interventions": "not_measured"
+    },
+    {
+      "id": "context_loss",
+      "facet": "context_loss",
+      "warm": true,
+      "loss": true,
+      "modules": [
+        "core",
+        "context",
+        "workspace",
+        "entry",
+        "recovery"
+      ],
+      "baseline_governing_bytes": 399885,
+      "selected_governing_bytes": 137716,
+      "newly_read_module_bytes": 113181,
+      "module_file_reads": 5,
+      "migration_context_encoding": "lossless_migration_context:1; stored JSON unchanged",
+      "engine_loaded_bytes": 96763,
+      "entry_selector_bytes": 22582,
+      "procedure_bytes": 1953,
+      "local_selection_read_assembly_ms": 1.5525999999954365,
+      "tokenizer_tokens": "not_measured",
+      "actual_model_calls": "not_measured",
+      "provider_actions": "not_performed",
+      "end_to_end_runtime_duration": "not_measured",
+      "monetary_cost": "not_measured",
+      "user_interventions": "not_measured"
+    },
+    {
+      "id": "interrupted_setup",
+      "facet": "interrupted_setup",
+      "warm": true,
+      "loss": true,
+      "modules": [
+        "core",
+        "workspace",
+        "activation",
+        "capabilities",
+        "history",
+        "intake",
+        "model",
+        "impact",
+        "cost",
+        "repository",
+        "security",
+        "operations",
+        "tickets",
+        "changes",
+        "coordination",
+        "execution",
+        "migration",
+        "migration-distribution",
+        "adoption",
+        "context",
+        "entry",
+        "human",
+        "bootstrap",
+        "recovery"
+      ],
+      "baseline_governing_bytes": 399885,
+      "selected_governing_bytes": 399376,
+      "newly_read_module_bytes": 337319,
+      "module_file_reads": 24,
+      "migration_context_encoding": "lossless_migration_context:1; stored JSON unchanged",
+      "engine_loaded_bytes": 96763,
+      "entry_selector_bytes": 22582,
+      "procedure_bytes": 39475,
+      "local_selection_read_assembly_ms": 4.937000000005355,
+      "tokenizer_tokens": "not_measured",
+      "actual_model_calls": "not_measured",
+      "provider_actions": "not_performed",
+      "end_to_end_runtime_duration": "not_measured",
+      "monetary_cost": "not_measured",
+      "user_interventions": "not_measured"
+    }
+  ],
+  "maintainer_regression_summary": {
+    "tests": 170,
+    "passed": false
+  },
+  "semantic_review": {
+    "reference": "tools/release-review.json",
+    "preservation": "complete reviewed current source, explicit semantic delta and migration support; no independent second semantic reviewer claimed",
+    "change_scope": {
+      "classification": "semantic_change",
+      "baseline_source_identity": "sha256:39105b2534e54d000de7c6e60efe03141746a5dd27736065dc18b71e7c39095d",
+      "baseline_provenance": "Local main HEAD 4772d838dda3034606049b188cc50aa638e05141 observed clean before this package; remote freshness and current provider write permissions not established.",
+      "proposals": [
+        "PROP-01",
+        "PROP-02",
+        "PROP-03",
+        "PROP-04",
+        "PROP-05"
+      ],
+      "changed_contracts": [
+        "OOP-enforcement-autonomy",
+        "OOP-persistent-activation",
+        "OOP-runtime-adoption",
+        "OOP-capability-lifecycle",
+        "OOP-repository-bootstrap",
+        "OOP-producer-acceptance",
+        "OOP-interaction-entry",
+        "OOP-full-install",
+        "OOP-bootstrap-system",
+        "OOP-bootstrap-attestation",
+        "OOP-bootstrap-communication"
+      ],
+      "preserved_contracts": [
+        "OOP-mandate-authority",
+        "OOP-delegate-governance",
+        "OOP-transitions-routing",
+        "OOP-technology-neutrality",
+        "OOP-canonical-language",
+        "OOP-localized-presentation",
+        "OOP-private-boundary",
+        "OOP-shared-coordination",
+        "OOP-consumer-exclusions",
+        "OOP-migration-distribution",
+        "OOP-free-first",
+        "OOP-scoped-credentials",
+        "OOP-canonical-operations",
+        "OOP-organizational-migration",
+        "OOP-organizational-model",
+        "OOP-repository-inventory",
+        "OOP-request-discovery",
+        "OOP-ticket-lifecycle",
+        "OOP-continuity-reserve",
+        "OOP-portable-transfer",
+        "OOP-destination-intake",
+        "OOP-sensitive-transfer",
+        "OOP-handoff-durability",
+        "OOP-asynchronous-recovery",
+        "OOP-state-separation",
+        "OOP-decision-history",
+        "OOP-human-prerequisite",
+        "OOP-physical-organization",
+        "OOP-impact-propagation",
+        "OOP-proportionate-evolution",
+        "OOP-reviewable-changes",
+        "OOP-organizational-coordination",
+        "OOP-effect-verification",
+        "OOP-semantic-ci",
+        "OOP-controlled-delivery",
+        "OOP-temporal-history",
+        "OOP-external-projections",
+        "OOP-evidence-reuse",
+        "OOP-producer-publication",
+        "OOP-validity-refresh",
+        "OOP-available-context",
+        "OOP-minimum-entry",
+        "OOP-continuation-entry",
+        "OOP-progressive-entry",
+        "OOP-portable-final-invariants"
+      ],
+      "summaries": {
+        "OOP-enforcement-autonomy": "R01–R20: finite administrative installation, complete frozen initial package, later-chat wrapper evolution and independent real-effect/publication safeguards.",
+        "OOP-persistent-activation": "R01–R20: finite administrative installation, complete frozen initial package, later-chat wrapper evolution and independent real-effect/publication safeguards.",
+        "OOP-runtime-adoption": "R01–R20: finite administrative installation, complete frozen initial package, later-chat wrapper evolution and independent real-effect/publication safeguards.",
+        "OOP-capability-lifecycle": "R01–R20: finite administrative installation, complete frozen initial package, later-chat wrapper evolution and independent real-effect/publication safeguards.",
+        "OOP-repository-bootstrap": "R01–R20: finite administrative installation, complete frozen initial package, later-chat wrapper evolution and independent real-effect/publication safeguards.",
+        "OOP-producer-acceptance": "R01–R20: finite administrative installation, complete frozen initial package, later-chat wrapper evolution and independent real-effect/publication safeguards.",
+        "OOP-interaction-entry": "R01–R20: finite administrative installation, complete frozen initial package, later-chat wrapper evolution and independent real-effect/publication safeguards.",
+        "OOP-full-install": "R01–R20: finite administrative installation, complete frozen initial package, later-chat wrapper evolution and independent real-effect/publication safeguards.",
+        "OOP-bootstrap-system": "R01–R20: finite administrative installation, complete frozen initial package, later-chat wrapper evolution and independent real-effect/publication safeguards.",
+        "OOP-bootstrap-attestation": "R01–R20: finite administrative installation, complete frozen initial package, later-chat wrapper evolution and independent real-effect/publication safeguards.",
+        "OOP-bootstrap-communication": "R01–R20: finite administrative installation, complete frozen initial package, later-chat wrapper evolution and independent real-effect/publication safeguards."
+      },
+      "reviewer": "Implementing AI read the current full canonical source and reviewed changed clauses, declared consumers and producer regressions; no independent human/second-model approval or installed-native evidence is claimed.",
+      "alignment": "Abstract/Introduction updated. Vision/Goal unchanged: Organization as Code, canonical operations, replaceable AI, human authority and evaluation aims retained.",
+      "compatibility": "Adapter-required: manifest 1 to 2, installation contract 2, bootstrap 4 to 5, installed_enforcement replaces formal_enablement_verified. Eight wire commands/envelope/exits retained. Legacy receipts are reconciled without tests; all prior supported profiles retained; preserve mapped legacy placements without moving them, subject to SEC-01 eligibility.",
+      "documentation_impact": {
+        "README": "Finite administrative completion and preserved native consent; CTA order retained.",
+        "examples": "Replace consumer functional trial instructions with administrative receipts.",
+        "tests": "AC-01–AC-18 through REL-ADMIN-001–018 plus existing producer suites.",
+        "evidence": "Current local candidate only; no native installation, consumer adoption or publication claim."
+      }
+    }
+  },
+  "source_comparison": {
+    "basis": "independent_previous_source_not_verified",
+    "exact_preservation": false
+  },
+  "efficiency_comparison": {
+    "historical_baseline": {
+      "status": "not_verified",
+      "reason": "No previous accepted package checkpoint"
+    },
+    "rolling": {
+      "status": "not_verified",
+      "readiness_allowed": false,
+      "comparable": 0,
+      "results": [
+        {
+          "scenario": "fresh_install",
+          "measurement_basis": "selected governing UTF-8 bytes including entry/selector and applicable procedures",
+          "baseline_evidence": null,
+          "baseline_commit": null,
+          "current_bytes": 396947,
+          "status": "not_comparable",
+          "reason": "No previous accepted package checkpoint",
+          "previous_release_comparison": "NOT VERIFIED"
+        },
+        {
+          "scenario": "enabled_workspace",
+          "measurement_basis": "selected governing UTF-8 bytes including entry/selector and applicable procedures",
+          "baseline_evidence": null,
+          "baseline_commit": null,
+          "current_bytes": 133334,
+          "status": "not_comparable",
+          "reason": "No previous accepted package checkpoint",
+          "previous_release_comparison": "NOT VERIFIED"
+        },
+        {
+          "scenario": "ordinary_g0",
+          "measurement_basis": "selected governing UTF-8 bytes including entry/selector and applicable procedures",
+          "baseline_evidence": null,
+          "baseline_commit": null,
+          "current_bytes": 133334,
+          "status": "not_comparable",
+          "reason": "No previous accepted package checkpoint",
+          "previous_release_comparison": "NOT VERIFIED"
+        },
+        {
+          "scenario": "authorized_durable_write",
+          "measurement_basis": "selected governing UTF-8 bytes including entry/selector and applicable procedures",
+          "baseline_evidence": null,
+          "baseline_commit": null,
+          "current_bytes": 222833,
+          "status": "not_comparable",
+          "reason": "No previous accepted package checkpoint",
+          "previous_release_comparison": "NOT VERIFIED"
+        },
+        {
+          "scenario": "due_update",
+          "measurement_basis": "selected governing UTF-8 bytes including entry/selector and applicable procedures",
+          "baseline_evidence": null,
+          "baseline_commit": null,
+          "current_bytes": 333563,
+          "status": "not_comparable",
+          "reason": "No previous accepted package checkpoint",
+          "previous_release_comparison": "NOT VERIFIED"
+        },
+        {
+          "scenario": "context_loss",
+          "measurement_basis": "selected governing UTF-8 bytes including entry/selector and applicable procedures",
+          "baseline_evidence": null,
+          "baseline_commit": null,
+          "current_bytes": 137716,
+          "status": "not_comparable",
+          "reason": "No previous accepted package checkpoint",
+          "previous_release_comparison": "NOT VERIFIED"
+        },
+        {
+          "scenario": "interrupted_setup",
+          "measurement_basis": "selected governing UTF-8 bytes including entry/selector and applicable procedures",
+          "baseline_evidence": null,
+          "baseline_commit": null,
+          "current_bytes": 399376,
+          "status": "not_comparable",
+          "reason": "No previous accepted package checkpoint",
+          "previous_release_comparison": "NOT VERIFIED"
+        }
+      ],
+      "policy": "Unexplained comparable increases block readiness. Unknown comparability proves neither regression nor improvement and limits comparative readiness until separately reviewed; current conformance remains independent."
+    },
+    "full_current_source_control": "passed"
+  },
+  "comparison_basis": "Same current source fully loaded versus selected closure including entry, selector and applicable procedures. Cold/warm/recovery local measurements; bytes are not tokens or money.",
+  "retained_requirements": [
+    {
+      "id": "OOP-mandate-authority",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:a3b605985f67fc26f75624cf2ad9d809359bee1f07375c992b852496b805e36a",
+      "artifact": "dist/modules/core.json"
+    },
+    {
+      "id": "OOP-enforcement-autonomy",
+      "disposition": "reviewed_semantic_change",
+      "source_identity": "sha256:2ad8889c0045cd005504d14d4f36bff635e2e1497ee0d7fd21626d0fc7115075",
+      "artifact": "dist/modules/core.json"
+    },
+    {
+      "id": "OOP-delegate-governance",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:a84e9889b010f12174b7ad688966b0da5b43e7a9023b584637d3e740729283c0",
+      "artifact": "dist/modules/delegation.json"
+    },
+    {
+      "id": "OOP-transitions-routing",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:acecb4073269a911786e46319f1147315e72a8b8611a7efbcc1770e0a60bbf39",
+      "artifact": "dist/modules/core.json"
+    },
+    {
+      "id": "OOP-technology-neutrality",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:95515e7e499f06a9a1df329ffebf5b7f597bf3ce6253cec58c7595d08d6c66a5",
+      "artifact": "dist/modules/core.json"
+    },
+    {
+      "id": "OOP-canonical-language",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:75a73e3a7bc769a75f74f1430f6f1463661758c244f4ee6e1afd4566f92d459a",
+      "artifact": "dist/modules/core.json"
+    },
+    {
+      "id": "OOP-localized-presentation",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:decb2286cc17b743f6f90e1fb994e298a6ae09aded0fc95d98a2fc97cd5ee134",
+      "artifact": "dist/modules/core.json"
+    },
+    {
+      "id": "OOP-private-boundary",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:f60ac52b04f4e33f70b33afd2ae9e4df74c37ce77fda677e2d42d790fa29fba2",
+      "artifact": "dist/modules/workspace.json"
+    },
+    {
+      "id": "OOP-shared-coordination",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:1462037e78e8652f8faae04cfb0c45b97a41ace28f52e6da48eb820f7c21df81",
+      "artifact": "dist/modules/shared-context.json"
+    },
+    {
+      "id": "OOP-persistent-activation",
+      "disposition": "reviewed_semantic_change",
+      "source_identity": "sha256:dcb456e021be5fe505bfcb8064ce63e85e21a30bcec19aaa353306dd7b3bfcd4",
+      "artifact": "dist/modules/activation.json"
+    },
+    {
+      "id": "OOP-consumer-exclusions",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:0aabbd1d0c052922c0d05935a95698ea46e418ebdf38d8dca017a8e29a64014a",
+      "artifact": "dist/modules/core.json"
+    },
+    {
+      "id": "OOP-runtime-adoption",
+      "disposition": "reviewed_semantic_change",
+      "source_identity": "sha256:327356217430629a89526b2fd26a0c953c989c2e6861dd136917d0b514279ab2",
+      "artifact": "dist/modules/adoption.json"
+    },
+    {
+      "id": "OOP-migration-distribution",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:581deb4c5ccbca78e333eb04f691484d56a715e7a2894122fe7f50c6cd455f7a",
+      "artifact": "dist/modules/migration-distribution.json"
+    },
+    {
+      "id": "OOP-capability-lifecycle",
+      "disposition": "reviewed_semantic_change",
+      "source_identity": "sha256:edbce035720fe34fa33021ae9f1982446aca611195f59ea6e490c9a6c5fd4631",
+      "artifact": "dist/modules/capabilities.json"
+    },
+    {
+      "id": "OOP-free-first",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:d982969e4492e17d2d1f9001b80e9bdf18e7ae2efbdac1f25b23114abcbaebc3",
+      "artifact": "dist/modules/cost.json"
+    },
+    {
+      "id": "OOP-repository-bootstrap",
+      "disposition": "reviewed_semantic_change",
+      "source_identity": "sha256:34e74dfbae550712ed62482d35a7d056ad413ecbc3e65d385b7a476ecbf459fe",
+      "artifact": "dist/modules/repository.json"
+    },
+    {
+      "id": "OOP-scoped-credentials",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:3173743be8ffe155d227e85ac59ad0753fe199428712794368cec906b36e450e",
+      "artifact": "dist/modules/security.json"
+    },
+    {
+      "id": "OOP-canonical-operations",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:9061f5324011e21f1102da483dd3e055980d2ed5108f5fff69dc093892c488ce",
+      "artifact": "dist/modules/operations.json"
+    },
+    {
+      "id": "OOP-organizational-migration",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:88202d8d1f50115946b613437296165aad71b7fb813fd1dcac8a4cc55039aa30",
+      "artifact": "dist/modules/migration.json"
+    },
+    {
+      "id": "OOP-organizational-model",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:e4aacc5f9e462e3107eb44a4dd5501a0c9ef62731e099d59a1b9117dd52e5a98",
+      "artifact": "dist/modules/model.json"
+    },
+    {
+      "id": "OOP-repository-inventory",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:33e56341484a5d7b7bb1de17e2a102311f87d473516da0dedc9768cb6eeb45cf",
+      "artifact": "dist/modules/inventory.json"
+    },
+    {
+      "id": "OOP-request-discovery",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:09bf56201e307d65ba87d754f248c49d481ad1410a50f2dd56e2a924289c0cb8",
+      "artifact": "dist/modules/intake.json"
+    },
+    {
+      "id": "OOP-ticket-lifecycle",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:42c0a486938b80e69f192fb2e0cae581a259564fb6594777983e2c5f17e08a1e",
+      "artifact": "dist/modules/tickets.json"
+    },
+    {
+      "id": "OOP-continuity-reserve",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:179ad734aa0348a6e450a0d2bb3c6d721beeca7183def61c831793af713e0484",
+      "artifact": "dist/modules/continuity.json"
+    },
+    {
+      "id": "OOP-portable-transfer",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:2dc7972ee6a8718a950d53c69f1f91515e7c46535d16041560e4e1a09c4e1741",
+      "artifact": "dist/modules/handoff.json"
+    },
+    {
+      "id": "OOP-destination-intake",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:52d70994c5ec7a5c1008b2f20356e553a39f1af922434c320afb0e7ec525f232",
+      "artifact": "dist/modules/destination.json"
+    },
+    {
+      "id": "OOP-sensitive-transfer",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:a596fec1af41180dc002157a48c91a5e6d9ed41dc635c87f791d570d2505c2b7",
+      "artifact": "dist/modules/secret-transfer.json"
+    },
+    {
+      "id": "OOP-handoff-durability",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:3286993cf40c1333f38b8e3d5fd37514ca03cef3f8bd5c99361cf94cfc65b2ba",
+      "artifact": "dist/modules/handoff.json"
+    },
+    {
+      "id": "OOP-asynchronous-recovery",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:521812dcbab75868801cbd3ba2d425a82c2637f189dbacde4246d4f439f21df4",
+      "artifact": "dist/modules/recovery.json"
+    },
+    {
+      "id": "OOP-state-separation",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:6b74016bd17eaecd303c2612fc084f462cb2c1258385a4c55dcc413a0abb8f94",
+      "artifact": "dist/modules/core.json"
+    },
+    {
+      "id": "OOP-decision-history",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:f3272555bdf4433055fb94b7bff9bc9f8859e253be5b06224ba0038ccccdb124",
+      "artifact": "dist/modules/decisions.json"
+    },
+    {
+      "id": "OOP-human-prerequisite",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:f2a3ba118504325722fdd3df503dd469d2f9bdc3437a0a4d2f0317818f77ad56",
+      "artifact": "dist/modules/human.json"
+    },
+    {
+      "id": "OOP-physical-organization",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:e5a1b6739cab2fbbdaec9cbe4067ad5ee4c7aae3b596cb50f11217cdea392f73",
+      "artifact": "dist/modules/physical.json"
+    },
+    {
+      "id": "OOP-impact-propagation",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:a7c1812c0645457bf6e0b780a4871ab02d3260bcac4f5ce7710a122a725828d7",
+      "artifact": "dist/modules/impact.json"
+    },
+    {
+      "id": "OOP-proportionate-evolution",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:da235e1c92906e97c91ed06e5e7dd2076479fdc367421a97b7b0348b8813c4d7",
+      "artifact": "dist/modules/impact.json"
+    },
+    {
+      "id": "OOP-reviewable-changes",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:46357f8721d99d739c241176e4542c122afa02b4ac2313efb0af99d1e30bc9ee",
+      "artifact": "dist/modules/changes.json"
+    },
+    {
+      "id": "OOP-organizational-coordination",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:53c3b66d55f53429597515697f7de42e6332854f97e8a7dfe87ce86c794f70bb",
+      "artifact": "dist/modules/coordination.json"
+    },
+    {
+      "id": "OOP-effect-verification",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:e0ad495802b4b17b2805141fce6aee185470ada43f8953e9553d89ef7ef79c2e",
+      "artifact": "dist/modules/execution.json"
+    },
+    {
+      "id": "OOP-semantic-ci",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:b9fc433b89ee1e396b683cd19841c8427ebaeb63ee55b0a78720fd3ea9c0c2ed",
+      "artifact": "dist/modules/ci.json"
+    },
+    {
+      "id": "OOP-controlled-delivery",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:b4317ee5877bbef6e909dd80fdea87e23242a4e4b1617207c6581f87b920347c",
+      "artifact": "dist/modules/delivery.json"
+    },
+    {
+      "id": "OOP-temporal-history",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:9f65a0b1d303d48b0435cc656e2ac3361406453d92dd325c58a565894292bfca",
+      "artifact": "dist/modules/history.json"
+    },
+    {
+      "id": "OOP-external-projections",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:4603261b9d26f159e3c5611024335f1b73405bf11aee34e06896a5bac23f1dca",
+      "artifact": "dist/modules/interfaces.json"
+    },
+    {
+      "id": "OOP-evidence-reuse",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:f5cd4566fa3f3ac546d2f703efd809f0f1851748444cfb5461808d402a87907f",
+      "artifact": "dist/modules/core.json"
+    },
+    {
+      "id": "OOP-producer-publication",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:f038b05e1ba1e4a09273c17a06b46e203d9182eb871c48a47ac55ec15c98216f",
+      "artifact": "dist/modules/producer.json"
+    },
+    {
+      "id": "OOP-producer-acceptance",
+      "disposition": "reviewed_semantic_change",
+      "source_identity": "sha256:ad3e087fb04b36799218c30d1d435965070f58e016ee238f40e83d8009a029de",
+      "artifact": "dist/modules/producer.json"
+    },
+    {
+      "id": "OOP-interaction-entry",
+      "disposition": "reviewed_semantic_change",
+      "source_identity": "sha256:a307be8923e0eba6193aa1eb146d93007be3bb950b6eaabd8efe5f07d4b1acea",
+      "artifact": "dist/modules/entry.json"
+    },
+    {
+      "id": "OOP-full-install",
+      "disposition": "reviewed_semantic_change",
+      "source_identity": "sha256:0d83ec6bff60e66fd03f137809fe2c2c8a3ca54e2da373ff94851182d434dd42",
+      "artifact": "dist/modules/bootstrap.json"
+    },
+    {
+      "id": "OOP-bootstrap-system",
+      "disposition": "reviewed_semantic_change",
+      "source_identity": "sha256:7ac1422913c6d3f6499bc7e85a4871afc7aa8788932cc71260b73c3f36117be1",
+      "artifact": "dist/modules/bootstrap.json"
+    },
+    {
+      "id": "OOP-bootstrap-attestation",
+      "disposition": "reviewed_semantic_change",
+      "source_identity": "sha256:95147df24d86bc73d9251906001ac39d9712a06d51d97dece10405d9608ac94a",
+      "artifact": "dist/modules/bootstrap.json"
+    },
+    {
+      "id": "OOP-validity-refresh",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:726ee2d73dc6b2346c181f4804561066ba280179db92422c5f4b4d0e19df1179",
+      "artifact": "dist/modules/entry.json"
+    },
+    {
+      "id": "OOP-available-context",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:ece8f44af3febd2cb09a0141217397a6e789ab9a9fa0f40e078f21b90081e237",
+      "artifact": "dist/modules/context.json"
+    },
+    {
+      "id": "OOP-bootstrap-communication",
+      "disposition": "reviewed_semantic_change",
+      "source_identity": "sha256:106c5e487a09764ad1a5e63b703e43b5f1af0316842eefbe68b3da538b4ca1dc",
+      "artifact": "dist/modules/bootstrap.json"
+    },
+    {
+      "id": "OOP-minimum-entry",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:63a7420afaba601778e0234e17d8a5a2854177ac93b30e2a78f19c19880d33c8",
+      "artifact": "dist/modules/entry.json"
+    },
+    {
+      "id": "OOP-continuation-entry",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:d758cca419d6366cc00c5daf79c614a6a74314d8ed29fb5ec501b5b326bb4c96",
+      "artifact": "dist/modules/destination.json"
+    },
+    {
+      "id": "OOP-progressive-entry",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:6a3b466998dd6e2822f8e6a33e329fb36f84270d2a91e11384d74461ac51d46c",
+      "artifact": "dist/modules/entry.json"
+    },
+    {
+      "id": "OOP-portable-final-invariants",
+      "disposition": "preserved_verbatim",
+      "source_identity": "sha256:33777bd6ca291b89d8f4e07c05aa0ef9b33284ae60355eccb2799750d480932e",
+      "artifact": "dist/modules/core.json"
+    }
+  ],
+  "limitations": {
+    "installed_runtime": "not_performed",
+    "provider_execution": "not_performed",
+    "cross_runtime": "not_performed",
+    "tokens_and_money": "not_measured",
+    "semantic_judgment": "reasoned allocation and exact reconstruction, not formal proof or live enforcement",
+    "skipped_tests": "Skipped mandatory cases block candidate and release readiness",
+    "future_semantic_delta": "Unequal source requires fresh independently grounded delta review, compatibility/migration disposition and regressions; no automatic exemption",
+    "historical_baseline": "Current mutable checkpoints do not establish latest prior provenance; comparative claims require independently supplied content identity and selection evidence"
+  }
+}

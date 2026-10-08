@@ -1,0 +1,270 @@
+{
+  "scope": "Local producer; no provider hook, model delivery or authority authentication",
+  "node": "v24.19.0",
+  "baseline_commit": "0814c90d9e655800ea27de874f15a38469e8771e",
+  "distribution": {
+    "files": 83,
+    "bytes": 539095
+  },
+  "cases": [
+    {
+      "facet": "full_install",
+      "modules": [
+        "core",
+        "workspace",
+        "activation",
+        "capabilities",
+        "history",
+        "intake",
+        "model",
+        "impact",
+        "cost",
+        "repository",
+        "security",
+        "operations",
+        "tickets",
+        "changes",
+        "coordination",
+        "execution",
+        "migration",
+        "migration-distribution",
+        "adoption",
+        "context",
+        "entry",
+        "human",
+        "bootstrap"
+      ],
+      "selected_context_bytes": 327928,
+      "module_reads": 23,
+      "reference_routing_ms": {
+        "samples": 100,
+        "p50": 0.013299999999958345,
+        "p95": 0.038600000000087675,
+        "p99": 0.3286000000000513
+      },
+      "engine_warm_ms": "not_available",
+      "delivered_tokens": "not_measured",
+      "model_latency": "not_measured",
+      "money": "not_measured",
+      "selected_total_bytes_from_commit": 368108
+    },
+    {
+      "facet": "information",
+      "modules": [
+        "core",
+        "context",
+        "workspace",
+        "entry"
+      ],
+      "selected_context_bytes": 128310,
+      "module_reads": 4,
+      "reference_routing_ms": {
+        "samples": 100,
+        "p50": 0.007500000000050022,
+        "p95": 0.012900000000058753,
+        "p99": 0.03550000000007003
+      },
+      "engine_warm_ms": "not_available",
+      "delivered_tokens": "not_measured",
+      "model_latency": "not_measured",
+      "money": "not_measured",
+      "selected_total_bytes_from_commit": 128310
+    },
+    {
+      "facet": "durable_write",
+      "modules": [
+        "core",
+        "context",
+        "coordination",
+        "cost",
+        "workspace",
+        "entry",
+        "execution",
+        "history",
+        "intake",
+        "model",
+        "impact",
+        "repository",
+        "security",
+        "operations",
+        "tickets"
+      ],
+      "selected_context_bytes": 212059,
+      "module_reads": 15,
+      "reference_routing_ms": {
+        "samples": 100,
+        "p50": 0.007000000000061846,
+        "p95": 0.014600000000086766,
+        "p99": 0.0382000000000744
+      },
+      "engine_warm_ms": "not_available",
+      "delivered_tokens": "not_measured",
+      "model_latency": "not_measured",
+      "money": "not_measured",
+      "selected_total_bytes_from_commit": 212059
+    },
+    {
+      "facet": "due_update",
+      "modules": [
+        "core",
+        "workspace",
+        "activation",
+        "capabilities",
+        "history",
+        "intake",
+        "model",
+        "impact",
+        "cost",
+        "repository",
+        "security",
+        "operations",
+        "tickets",
+        "changes",
+        "coordination",
+        "execution",
+        "migration",
+        "migration-distribution",
+        "adoption",
+        "context",
+        "entry"
+      ],
+      "selected_context_bytes": 291999,
+      "module_reads": 21,
+      "reference_routing_ms": {
+        "samples": 100,
+        "p50": 0.006899999999973261,
+        "p95": 0.011999999999943611,
+        "p99": 0.11919999999997799
+      },
+      "engine_warm_ms": "not_available",
+      "delivered_tokens": "not_measured",
+      "model_latency": "not_measured",
+      "money": "not_measured",
+      "selected_total_bytes_from_commit": 310138
+    },
+    {
+      "facet": "context_loss",
+      "modules": [
+        "core",
+        "context",
+        "workspace",
+        "entry",
+        "recovery"
+      ],
+      "selected_context_bytes": 130739,
+      "module_reads": 5,
+      "reference_routing_ms": {
+        "samples": 100,
+        "p50": 0.0036999999999807187,
+        "p95": 0.006099999999946704,
+        "p99": 0.019100000000094042
+      },
+      "engine_warm_ms": "not_available",
+      "delivered_tokens": "not_measured",
+      "model_latency": "not_measured",
+      "money": "not_measured",
+      "selected_total_bytes_from_commit": 132478
+    },
+    {
+      "facet": "interrupted_setup",
+      "modules": [
+        "core",
+        "workspace",
+        "activation",
+        "capabilities",
+        "history",
+        "intake",
+        "model",
+        "impact",
+        "cost",
+        "repository",
+        "security",
+        "operations",
+        "tickets",
+        "changes",
+        "coordination",
+        "execution",
+        "migration",
+        "migration-distribution",
+        "adoption",
+        "context",
+        "entry",
+        "human",
+        "bootstrap",
+        "recovery"
+      ],
+      "selected_context_bytes": 330357,
+      "module_reads": 24,
+      "reference_routing_ms": {
+        "samples": 100,
+        "p50": 0.006399999999985084,
+        "p95": 0.009900000000016007,
+        "p99": 0.01999999999998181
+      },
+      "engine_warm_ms": "not_available",
+      "delivered_tokens": "not_measured",
+      "model_latency": "not_measured",
+      "money": "not_measured",
+      "selected_total_bytes_from_commit": 370537
+    },
+    {
+      "facet": "delegation",
+      "modules": [
+        "core",
+        "workspace",
+        "activation",
+        "capabilities",
+        "context",
+        "delegation",
+        "entry"
+      ],
+      "selected_context_bytes": 162726,
+      "module_reads": 7,
+      "reference_routing_ms": {
+        "samples": 100,
+        "p50": 0.0036000000000058208,
+        "p95": 0.005600000000072214,
+        "p99": 0.023199999999974352
+      },
+      "engine_warm_ms": "not_available",
+      "delivered_tokens": "not_measured",
+      "model_latency": "not_measured",
+      "money": "not_measured",
+      "selected_total_bytes_from_commit": 162726
+    },
+    {
+      "facet": "completion",
+      "modules": [
+        "core",
+        "context",
+        "workspace",
+        "entry"
+      ],
+      "selected_context_bytes": 128310,
+      "module_reads": 4,
+      "reference_routing_ms": {
+        "samples": 100,
+        "p50": 0.00329999999996744,
+        "p95": 0.004800000000045657,
+        "p99": 0.010499999999979082
+      },
+      "engine_warm_ms": "not_available",
+      "delivered_tokens": "not_measured",
+      "model_latency": "not_measured",
+      "money": "not_measured",
+      "selected_total_bytes_from_commit": 128310
+    }
+  ],
+  "alternatives": {
+    "Node": "measured",
+    "Bun": "not_available",
+    "Rust": "not_implemented",
+    "WASM": "not_implemented",
+    "Python": "not_implemented"
+  },
+  "test_harness": {
+    "decision": "node:test; existing dependency-free producer stack",
+    "alternative_runner": "not_measured"
+  },
+  "retrospective_addendum": "Original before-run observations preserved. Procedure/migration bytes added from exact baseline Git objects; no historical timing or provider facts fabricated."
+}

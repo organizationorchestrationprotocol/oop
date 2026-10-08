@@ -1,0 +1,238 @@
+TAP version 13
+# Subtest: REL-ENF-047: complete versioned manifest rejects missing, changed and future semantics
+ok 1 - REL-ENF-047: complete versioned manifest rejects missing, changed and future semantics
+  ---
+  duration_ms: 4.9227
+  type: 'test'
+  ...
+# Subtest: REL-ENF-048: scope derives every feature phase and applicable path without caller omissions
+ok 2 - REL-ENF-048: scope derives every feature phase and applicable path without caller omissions
+  ---
+  duration_ms: 5.405
+  type: 'test'
+  ...
+# Subtest: REL-ENF-049: observational, unauthorized, disabled and foreign capabilities cannot prevent effects
+ok 3 - REL-ENF-049: observational, unauthorized, disabled and foreign capabilities cannot prevent effects
+  ---
+  duration_ms: 3.641
+  type: 'test'
+  ...
+# Subtest: REL-ENF-050: strongest prevention and complementary paths precede reuse and registration count
+ok 4 - REL-ENF-050: strongest prevention and complementary paths precede reuse and registration count
+  ---
+  duration_ms: 0.8767
+  type: 'test'
+  ...
+# Subtest: REL-ENF-051: one authenticated multi-role registration shares entry and recovery
+ok 5 - REL-ENF-051: one authenticated multi-role registration shares entry and recovery
+  ---
+  duration_ms: 0.8926
+  type: 'test'
+  ...
+# Subtest: REL-ENF-052: current plan is non-authorizing and stale scope or dependencies block BOOT-12
+ok 6 - REL-ENF-052: current plan is non-authorizing and stale scope or dependencies block BOOT-12
+  ---
+  duration_ms: 3.064
+  type: 'test'
+  ...
+# Subtest: REL-ENF-053: compatible adopted-source replacement reuses native entrypoints with targeted readback
+ok 7 - REL-ENF-053: compatible adopted-source replacement reuses native entrypoints with targeted readback
+  ---
+  duration_ms: 1.7461
+  type: 'test'
+  ...
+# Subtest: REL-ENF-054: BOOT-12 consumes plan before readback and BOOT-13 retains publication
+ok 8 - REL-ENF-054: BOOT-12 consumes plan before readback and BOOT-13 retains publication
+  ---
+  duration_ms: 0.6687
+  type: 'test'
+  ...
+# Subtest: REL-ENF-055: full Git object IDs preserve exact scoped plan identity and reject other formats
+ok 9 - REL-ENF-055: full Git object IDs preserve exact scoped plan identity and reject other formats
+  ---
+  duration_ms: 2.9142
+  type: 'test'
+  ...
+# Subtest: REL-ENF-056: reasoned negative mappings preserve independent bindings without admitting installation
+ok 10 - REL-ENF-056: reasoned negative mappings preserve independent bindings without admitting installation
+  ---
+  duration_ms: 2.6329
+  type: 'test'
+  ...
+# Subtest: REL-ENF-057: empty inventory is unassessed until host supplies explicit per-need dispositions
+ok 11 - REL-ENF-057: empty inventory is unassessed until host supplies explicit per-need dispositions
+  ---
+  duration_ms: 1.5169
+  type: 'test'
+  ...
+# Subtest: REL-ENF-058: planned coverage and authenticated installation readback are distinct from publication
+ok 12 - REL-ENF-058: planned coverage and authenticated installation readback are distinct from publication
+  ---
+  duration_ms: 7.2831
+  type: 'test'
+  ...
+# Subtest: REL-ENF-059: diagnostic observations expire and invalid inventory never manufactures complete mapping
+ok 13 - REL-ENF-059: diagnostic observations expire and invalid inventory never manufactures complete mapping
+  ---
+  duration_ms: 2.0812
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-001: AC-01 R01 R03 R10 R11 direct receipts complete with no readback API
+ok 14 - REL-ADMIN-001: AC-01 R01 R03 R10 R11 direct receipts complete with no readback API
+  ---
+  duration_ms: 9.792
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-002: AC-02 R05 R08 every definition and wrapper precede first approval
+ok 15 - REL-ADMIN-002: AC-02 R05 R08 every definition and wrapper precede first approval
+  ---
+  duration_ms: 2.4626
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-003: AC-03 R08 R09 three definitions followed by two known omissions fails freeze
+ok 16 - REL-ADMIN-003: AC-03 R08 R09 three definitions followed by two known omissions fails freeze
+  ---
+  duration_ms: 1.5174
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-004: AC-04 R07 R08 each required native consent remains independent
+ok 17 - REL-ADMIN-004: AC-04 R07 R08 each required native consent remains independent
+  ---
+  duration_ms: 1.5523
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-005: AC-05 R07 R10 denied consent or real administrative error prevents success
+ok 18 - REL-ADMIN-005: AC-05 R07 R10 denied consent or real administrative error prevents success
+  ---
+  duration_ms: 2.7459
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-006: AC-06 R03 R09 R10 real restart completes from ordinary acknowledgment
+ok 19 - REL-ADMIN-006: AC-06 R03 R09 R10 real restart completes from ordinary acknowledgment
+  ---
+  duration_ms: 1.0763
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-007: AC-07 R01 R02 R12 no semantic coverage or suitability certification
+ok 20 - REL-ADMIN-007: AC-07 R01 R02 R12 no semantic coverage or suitability certification
+  ---
+  duration_ms: 0.7827
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-008: AC-08 R13 R14 same installation chat defers after restart or compaction
+ok 21 - REL-ADMIN-008: AC-08 R13 R14 same installation chat defers after restart or compaction
+  ---
+  duration_ms: 1.3778
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-009: AC-09 R14 R15 R16 later-created authorized safe improvement is admissible
+ok 22 - REL-ADMIN-009: AC-09 R14 R15 R16 later-created authorized safe improvement is admissible
+  ---
+  duration_ms: 1.115
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-010: AC-10 R08 R15 R16 only genuinely changed native definitions need consent
+ok 23 - REL-ADMIN-010: AC-10 R08 R15 R16 only genuinely changed native definitions need consent
+  ---
+  duration_ms: 0.7915
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-011: AC-11 R05 R06 R07 all overlapping eligible mechanisms and real incompatibilities
+ok 24 - REL-ADMIN-011: AC-11 R05 R06 R07 all overlapping eligible mechanisms and real incompatibilities
+  ---
+  duration_ms: 1.6134
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-012: AC-12 R06 R09 valid equivalent reuse avoids reinstall or new consent
+ok 25 - REL-ADMIN-012: AC-12 R06 R09 valid equivalent reuse avoids reinstall or new consent
+  ---
+  duration_ms: 1.1689
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-013: AC-13 R04 R16 R17 ordinary deny unknown and error never execute dependent callback
+ok 26 - REL-ADMIN-013: AC-13 R04 R16 R17 ordinary deny unknown and error never execute dependent callback
+  ---
+  duration_ms: 150.3177
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-014: AC-14 R11 R19 legacy receipts promote without invented historical time
+ok 27 - REL-ADMIN-014: AC-14 R11 R19 legacy receipts promote without invented historical time
+  ---
+  duration_ms: 3.1562
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-015: AC-15 R04 R10 R11 actual record content ref commit and publication stay independent
+ok 28 - REL-ADMIN-015: AC-15 R04 R10 R11 actual record content ref commit and publication stay independent
+  ---
+  duration_ms: 1.0104
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-016: AC-16 R18 R20 transitive old guard schema controller and migration dependencies fail
+ok 29 - REL-ADMIN-016: AC-16 R18 R20 transitive old guard schema controller and migration dependencies fail
+  ---
+  duration_ms: 44.5472
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-017: AC-17 R13 R17 initial incompatible wrapper is a real error and cannot be rewritten
+ok 30 - REL-ADMIN-017: AC-17 R13 R17 initial incompatible wrapper is a real error and cannot be rewritten
+  ---
+  duration_ms: 1.7821
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-018: AC-18 R14 old reopened chat or missing untrusted metadata defers optimization alone
+ok 31 - REL-ADMIN-018: AC-18 R14 old reopened chat or missing untrusted metadata defers optimization alone
+  ---
+  duration_ms: 1.4885
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-019: F07 unavailable phase completes inventory without claiming coverage
+ok 32 - REL-ADMIN-019: F07 unavailable phase completes inventory without claiming coverage
+  ---
+  duration_ms: 2.9919
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-020: F08 expired historical receipts and checkpoints retain first completion
+ok 33 - REL-ADMIN-020: F08 expired historical receipts and checkpoints retain first completion
+  ---
+  duration_ms: 3.3776
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-021: F09 only correlated native file-write fulfillment permits optional negatives
+ok 34 - REL-ADMIN-021: F09 only correlated native file-write fulfillment permits optional negatives
+  ---
+  duration_ms: 3.9435
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-022: F07 negative candidate assessments need authority and cannot hide disabled controls
+ok 35 - REL-ADMIN-022: F07 negative candidate assessments need authority and cannot hide disabled controls
+  ---
+  duration_ms: 5.139
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-023: F07 absent or contradictory phase evidence stays blocked
+ok 36 - REL-ADMIN-023: F07 absent or contradictory phase evidence stays blocked
+  ---
+  duration_ms: 1.1252
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-024: F08 unknown migrated chronology stays null across ordinary evaluations
+ok 37 - REL-ADMIN-024: F08 unknown migrated chronology stays null across ordinary evaluations
+  ---
+  duration_ms: 0.8461
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-025: F09 capture real isolated writeFile fulfillment without readback or dispatch
+ok 38 - REL-ADMIN-025: F09 capture real isolated writeFile fulfillment without readback or dispatch
+  ---
+  duration_ms: 9.7151
+  type: 'test'
+  ...
+1..38
+# tests 38
+# suites 0
+# pass 38
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 352.4524

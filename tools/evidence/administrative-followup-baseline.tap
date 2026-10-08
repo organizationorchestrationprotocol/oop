@@ -1,0 +1,196 @@
+TAP version 13
+# Subtest: REL-ADMIN-001: AC-01 R01 R03 R10 R11 direct receipts complete with no readback API
+ok 1 - REL-ADMIN-001: AC-01 R01 R03 R10 R11 direct receipts complete with no readback API
+  ---
+  duration_ms: 16.2413
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-002: AC-02 R05 R08 every definition and wrapper precede first approval
+ok 2 - REL-ADMIN-002: AC-02 R05 R08 every definition and wrapper precede first approval
+  ---
+  duration_ms: 1.8737
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-003: AC-03 R08 R09 three definitions followed by two known omissions fails freeze
+ok 3 - REL-ADMIN-003: AC-03 R08 R09 three definitions followed by two known omissions fails freeze
+  ---
+  duration_ms: 1.3881
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-004: AC-04 R07 R08 each required native consent remains independent
+ok 4 - REL-ADMIN-004: AC-04 R07 R08 each required native consent remains independent
+  ---
+  duration_ms: 1.1498
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-005: AC-05 R07 R10 denied consent or real administrative error prevents success
+ok 5 - REL-ADMIN-005: AC-05 R07 R10 denied consent or real administrative error prevents success
+  ---
+  duration_ms: 1.722
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-006: AC-06 R03 R09 R10 real restart completes from ordinary acknowledgment
+ok 6 - REL-ADMIN-006: AC-06 R03 R09 R10 real restart completes from ordinary acknowledgment
+  ---
+  duration_ms: 0.9451
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-007: AC-07 R01 R02 R12 no semantic coverage or suitability certification
+ok 7 - REL-ADMIN-007: AC-07 R01 R02 R12 no semantic coverage or suitability certification
+  ---
+  duration_ms: 0.7165
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-008: AC-08 R13 R14 same installation chat defers after restart or compaction
+ok 8 - REL-ADMIN-008: AC-08 R13 R14 same installation chat defers after restart or compaction
+  ---
+  duration_ms: 1.2199
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-009: AC-09 R14 R15 R16 later-created authorized safe improvement is admissible
+ok 9 - REL-ADMIN-009: AC-09 R14 R15 R16 later-created authorized safe improvement is admissible
+  ---
+  duration_ms: 0.7132
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-010: AC-10 R08 R15 R16 only genuinely changed native definitions need consent
+ok 10 - REL-ADMIN-010: AC-10 R08 R15 R16 only genuinely changed native definitions need consent
+  ---
+  duration_ms: 0.9372
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-011: AC-11 R05 R06 R07 all overlapping eligible mechanisms and real incompatibilities
+ok 11 - REL-ADMIN-011: AC-11 R05 R06 R07 all overlapping eligible mechanisms and real incompatibilities
+  ---
+  duration_ms: 1.4008
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-012: AC-12 R06 R09 valid equivalent reuse avoids reinstall or new consent
+ok 12 - REL-ADMIN-012: AC-12 R06 R09 valid equivalent reuse avoids reinstall or new consent
+  ---
+  duration_ms: 1.1273
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-013: AC-13 R04 R16 R17 ordinary deny unknown and error never execute dependent callback
+ok 13 - REL-ADMIN-013: AC-13 R04 R16 R17 ordinary deny unknown and error never execute dependent callback
+  ---
+  duration_ms: 149.8651
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-014: AC-14 R11 R19 legacy receipts promote without invented historical time
+ok 14 - REL-ADMIN-014: AC-14 R11 R19 legacy receipts promote without invented historical time
+  ---
+  duration_ms: 6.9006
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-015: AC-15 R04 R10 R11 actual record content ref commit and publication stay independent
+ok 15 - REL-ADMIN-015: AC-15 R04 R10 R11 actual record content ref commit and publication stay independent
+  ---
+  duration_ms: 1.201
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-016: AC-16 R18 R20 transitive old guard schema controller and migration dependencies fail
+ok 16 - REL-ADMIN-016: AC-16 R18 R20 transitive old guard schema controller and migration dependencies fail
+  ---
+  duration_ms: 46.4007
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-017: AC-17 R13 R17 initial incompatible wrapper is a real error and cannot be rewritten
+ok 17 - REL-ADMIN-017: AC-17 R13 R17 initial incompatible wrapper is a real error and cannot be rewritten
+  ---
+  duration_ms: 1.2547
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-018: AC-18 R14 old reopened chat or missing untrusted metadata defers optimization alone
+ok 18 - REL-ADMIN-018: AC-18 R14 old reopened chat or missing untrusted metadata defers optimization alone
+  ---
+  duration_ms: 0.8727
+  type: 'test'
+  ...
+# Subtest: REL-ADMIN-019: F07 unavailable phase completes inventory without claiming coverage
+not ok 19 - REL-ADMIN-019: F07 unavailable phase completes inventory without claiming coverage
+  ---
+  duration_ms: 1.3682
+  type: 'test'
+  location: 'C:\\Users\\marco\\Documents\\Projects\\organization-orchestration-protocol\\tools\\installation-lifecycle.test.mjs:220:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    false !== true
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/marco/Documents/Projects/organization-orchestration-protocol/tools/installation-lifecycle.test.mjs:227:47)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: REL-ADMIN-020: F08 expired historical receipts and checkpoints retain first completion
+not ok 20 - REL-ADMIN-020: F08 expired historical receipts and checkpoints retain first completion
+  ---
+  duration_ms: 0.9331
+  type: 'test'
+  location: 'C:\\Users\\marco\\Documents\\Projects\\organization-orchestration-protocol\\tools\\installation-lifecycle.test.mjs:234:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    false !== true
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/marco/Documents/Projects/organization-orchestration-protocol/tools/installation-lifecycle.test.mjs:237:10)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: REL-ADMIN-021: F09 only correlated native file-write fulfillment permits optional negatives
+not ok 21 - REL-ADMIN-021: F09 only correlated native file-write fulfillment permits optional negatives
+  ---
+  duration_ms: 0.8057
+  type: 'test'
+  location: 'C:\\Users\\marco\\Documents\\Projects\\organization-orchestration-protocol\\tools\\installation-lifecycle.test.mjs:246:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    false !== true
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/marco/Documents/Projects/organization-orchestration-protocol/tools/installation-lifecycle.test.mjs:251:10)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+1..21
+# tests 21
+# suites 0
+# pass 18
+# fail 3
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 349.2666

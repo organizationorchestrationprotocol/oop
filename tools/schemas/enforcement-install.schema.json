@@ -1,0 +1,580 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:oop:enforcement-install:4",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "type",
+    "controller_interface",
+    "source_binding",
+    "adoption",
+    "features",
+    "source_contracts",
+    "bridge",
+    "installation",
+    "content_identity"
+  ],
+  "properties": {
+    "format": {
+      "const": 4
+    },
+    "type": {
+      "const": "oop_enforcement_install_profile"
+    },
+    "controller_interface": {
+      "const": "oop-admission-1"
+    },
+    "source_binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "source_identity"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_identity": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "adoption": {
+      "type": "string",
+      "minLength": 1
+    },
+    "features": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "feature",
+          "purpose",
+          "phases",
+          "required_semantics",
+          "capability_classes",
+          "required_coverage",
+          "input_mapping",
+          "output_mapping",
+          "shareability",
+          "fallback",
+          "verification",
+          "source_refs"
+        ],
+        "properties": {
+          "feature": {
+            "type": "string",
+            "minLength": 1
+          },
+          "purpose": {
+            "type": "string",
+            "minLength": 1
+          },
+          "phases": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required_semantics": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "role",
+              "blocking_required"
+            ],
+            "properties": {
+              "role": {
+                "type": "string",
+                "minLength": 1
+              },
+              "blocking_required": {
+                "type": "boolean"
+              }
+            }
+          },
+          "capability_classes": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required_coverage": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "phases",
+              "paths",
+              "applicability",
+              "minimum_tier",
+              "complementary_paths"
+            ],
+            "properties": {
+              "phases": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "paths": {
+                "type": "string",
+                "minLength": 1
+              },
+              "applicability": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minimum_tier": {
+                "const": 0
+              },
+              "complementary_paths": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "input_mapping": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "schema_ref",
+              "format",
+              "command",
+              "fields",
+              "facts",
+              "correlation",
+              "unknown"
+            ],
+            "properties": {
+              "schema_ref": {
+                "type": "string",
+                "minLength": 1
+              },
+              "format": {
+                "const": 1
+              },
+              "command": {
+                "type": "string",
+                "minLength": 1
+              },
+              "fields": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "facts": {
+                "type": "string",
+                "minLength": 1
+              },
+              "correlation": {
+                "type": "string",
+                "minLength": 1
+              },
+              "unknown": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "output_mapping": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "schema_ref",
+              "type",
+              "correlation",
+              "exit_statuses",
+              "allow",
+              "failure",
+              "veto",
+              "timeout"
+            ],
+            "properties": {
+              "schema_ref": {
+                "type": "string",
+                "minLength": 1
+              },
+              "type": {
+                "type": "string",
+                "minLength": 1
+              },
+              "correlation": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "exit_statuses": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "allow",
+                  "deny",
+                  "unknown",
+                  "error"
+                ],
+                "properties": {
+                  "allow": {
+                    "const": 0
+                  },
+                  "deny": {
+                    "const": 2
+                  },
+                  "unknown": {
+                    "const": 3
+                  },
+                  "error": {
+                    "const": 4
+                  }
+                }
+              },
+              "allow": {
+                "type": "string",
+                "minLength": 1
+              },
+              "failure": {
+                "type": "string",
+                "minLength": 1
+              },
+              "veto": {
+                "type": "string",
+                "minLength": 1
+              },
+              "timeout": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "shareability": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "required_equal",
+              "required_per_feature",
+              "selection"
+            ],
+            "properties": {
+              "required_equal": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required_per_feature": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "selection": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "fallback": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "unknown",
+              "unsupported",
+              "unauthorized",
+              "independent_work",
+              "diagnostics"
+            ],
+            "properties": {
+              "unknown": {
+                "type": "string",
+                "minLength": 1
+              },
+              "unsupported": {
+                "type": "string",
+                "minLength": 1
+              },
+              "unauthorized": {
+                "type": "string",
+                "minLength": 1
+              },
+              "independent_work": {
+                "type": "string",
+                "minLength": 1
+              },
+              "diagnostics": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "verification": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "basis",
+              "active_hook_tests",
+              "required",
+              "invalidation",
+              "assurance"
+            ],
+            "properties": {
+              "basis": {
+                "type": "string",
+                "minLength": 1
+              },
+              "active_hook_tests": {
+                "const": 0
+              },
+              "required": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "invalidation": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "assurance": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "source_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    },
+    "source_contracts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "artifact",
+          "source"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "artifact": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "path",
+              "locator",
+              "content_identity"
+            ],
+            "properties": {
+              "path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "locator": {
+                "type": "string",
+                "minLength": 1
+              },
+              "content_identity": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "bridge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ownership",
+        "policy",
+        "language",
+        "cardinality",
+        "implementation_language_rule",
+        "delegated_bridge_logic",
+        "controller_invocation",
+        "filename_pattern",
+        "extension_rule",
+        "location_template",
+        "location_rules",
+        "language_rules",
+        "clause_pointer_resolution",
+        "templates",
+        "validation_command",
+        "host_native_shell_definition",
+        "checkpoint_fields",
+        "configuration",
+        "compatible_update",
+        "incompatible_update",
+        "installation_rules"
+      ],
+      "properties": {
+        "ownership": {
+          "const": "runtime"
+        },
+        "policy": {
+          "const": "invoke_adopted_controller_without_reimplementing_norms"
+        },
+        "compatible_update": {
+          "const": "preserve_native_entrypoint_permissions_and_events"
+        },
+        "incompatible_update": {
+          "const": "targeted_authorized_reconciliation"
+        },
+        "language": {
+          "const": "host_native_shell"
+        },
+        "cardinality": {
+          "const": "one_active_per_installation_workspace_host"
+        },
+        "configuration": {
+          "const": "official_version_host_documentation_and_minimum_scope"
+        },
+        "implementation_language_rule": {
+          "const": "all_adaptation_and_orchestration_logic_in_selected_host_native_shell"
+        },
+        "delegated_bridge_logic": {
+          "const": false
+        },
+        "controller_invocation": {
+          "const": "official_controller_execution_facility_via_stdin_stdout"
+        },
+        "filename_pattern": {
+          "const": "oop-enforce-bridge.<ext>"
+        },
+        "extension_rule": {
+          "const": "documented_default_extension_of_selected_shell_lowercase"
+        },
+        "location_template": {
+          "const": "<project-private-root>/tools/<runtime-class>/<installation-uid>/adapters/oop-enforce-bridge.<ext>"
+        },
+        "location_rules": {
+          "const": [
+            "modules/workspace.json#R02",
+            "modules/capabilities.json#R25"
+          ]
+        },
+        "language_rules": {
+          "const": [
+            "modules/capabilities.json#R21"
+          ]
+        },
+        "clause_pointer_resolution": {
+          "const": "Resolve fragment through module clause_index to a complete source-qualified contract and exact heading; missing or ambiguous targets block dependent work."
+        },
+        "templates": {
+          "const": {
+            "powershell": "templates/oop-enforce-bridge.ps1",
+            "posix-sh": "templates/oop-enforce-bridge.sh"
+          }
+        },
+        "validation_command": {
+          "const": "validate-configuration"
+        },
+        "host_native_shell_definition": {
+          "const": "Supplied by or officially supported as native for the actual operating system launching enforcement; a general-purpose interpreter is not a shell merely because it executes commands."
+        },
+        "checkpoint_fields": {
+          "const": [
+            "host_execution_environment",
+            "selected_shell",
+            "selected_shell_version",
+            "selected_shell_support_basis",
+            "extension",
+            "extension_source",
+            "bridge_entrypoint",
+            "bridge_location_mapping",
+            "validation_result"
+          ]
+        },
+        "installation_rules": {
+          "const": [
+            "modules/capabilities.json#R26"
+          ]
+        }
+      }
+    },
+    "installation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "plan",
+        "acknowledgment",
+        "coverage_reassessment",
+        "active_hook_tests",
+        "technical_step",
+        "publication_step"
+      ],
+      "properties": {
+        "plan": {
+          "type": "string",
+          "minLength": 1
+        },
+        "coverage_reassessment": {
+          "type": "boolean"
+        },
+        "active_hook_tests": {
+          "const": 0
+        },
+        "technical_step": {
+          "type": "string",
+          "minLength": 1
+        },
+        "publication_step": {
+          "type": "string",
+          "minLength": 1
+        },
+        "acknowledgment": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "content_identity": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}
