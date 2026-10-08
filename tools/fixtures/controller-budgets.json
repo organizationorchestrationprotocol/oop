@@ -1,0 +1,22 @@
+{
+  "format": 1,
+  "purpose": "Producer UTF-8 byte ceilings for actual executions of the self-contained controller. Bytes are not tokens or money; new size requires explained reviewed budgets.",
+  "scenarios": {
+    "native_instruction": {
+      "max_bytes": 700
+    },
+    "native_response_file": {
+      "max_bytes": 42000
+    },
+    "record_accepted": {
+      "max_bytes": 46000
+    },
+    "record_rejected": {
+      "max_bytes": 46500
+    },
+    "snapshot": {
+      "max_bytes": 46000
+    }
+  },
+  "basis": "Disposable deep-path fixture: native instruction 561 bytes, complete persisted response 37295 bytes, accepted record 40300 bytes, rejected record 40612 bytes, snapshot 40015 bytes. Complete common procedures, embedded layers/tool guidance and state-aware semantic routing are measured together; no external definition file exists. Ceilings allow bounded path variation without claiming token or monetary savings."
+}
