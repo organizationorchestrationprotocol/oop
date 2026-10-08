@@ -1,0 +1,363 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:oop:derived:migration:1",
+  "type": "object",
+  "required": [
+    "format",
+    "source_identity",
+    "source_contract"
+  ],
+  "properties": {
+    "format": {
+      "const": 1
+    },
+    "source_identity": {
+      "type": "string",
+      "minLength": 71
+    },
+    "source_contract": {
+      "const": "OOP-migration-distribution"
+    },
+    "specification_id": {
+      "const": "oop-migration-distribution-v1"
+    },
+    "requirement_ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "dependencies": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "preconditions": {
+      "$ref": "#/$defs/strings"
+    },
+    "postconditions": {
+      "$ref": "#/$defs/strings"
+    },
+    "affected_domains": {
+      "$ref": "#/$defs/strings"
+    },
+    "actions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "scope",
+          "action"
+        ],
+        "properties": {
+          "scope": {
+            "type": "string",
+            "minLength": 1
+          },
+          "action": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "scopes": {
+      "type": "object",
+      "required": [
+        "common",
+        "runtime",
+        "operations"
+      ],
+      "properties": {
+        "common": {
+          "$ref": "#/$defs/disposition"
+        },
+        "runtime": {
+          "$ref": "#/$defs/disposition"
+        },
+        "operations": {
+          "$ref": "#/$defs/disposition"
+        }
+      },
+      "additionalProperties": false
+    },
+    "support_evidence": {
+      "type": "string",
+      "minLength": 1
+    },
+    "support_content_identity": {
+      "type": "string",
+      "minLength": 71
+    },
+    "enforcement": {
+      "type": "object",
+      "required": [
+        "changed",
+        "category",
+        "compatibility",
+        "action",
+        "before",
+        "after",
+        "rationale",
+        "input_states",
+        "preconditions",
+        "actions",
+        "verification",
+        "recovery",
+        "retention"
+      ],
+      "properties": {
+        "category": {
+          "type": "string",
+          "minLength": 1
+        },
+        "compatibility": {
+          "type": "string",
+          "minLength": 1
+        },
+        "action": {
+          "type": "string",
+          "minLength": 1
+        },
+        "before": {
+          "type": "string",
+          "minLength": 1
+        },
+        "after": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": true
+    },
+    "previous": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "current": {
+      "$ref": "#/$defs/profile"
+    },
+    "step": {
+      "type": "object",
+      "required": [
+        "from",
+        "to"
+      ],
+      "properties": {
+        "from": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "to": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "strings": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "disposition": {
+      "type": "object",
+      "required": [
+        "disposition"
+      ],
+      "properties": {
+        "disposition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "descriptor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "next_action": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "administrativeInstallationState": {
+      "type": "object",
+      "required": [
+        "format",
+        "status",
+        "installed_enforcement",
+        "installation_complete",
+        "installation_chat_id",
+        "installation_completed_at",
+        "recognized_at"
+      ],
+      "properties": {
+        "format": {
+          "const": 1
+        },
+        "status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "installed_enforcement": {
+          "type": "boolean"
+        },
+        "installation_complete": {
+          "type": "boolean"
+        },
+        "installation_chat_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "installation_completed_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "recognized_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      },
+      "additionalProperties": true
+    },
+    "profile": {
+      "type": "object",
+      "required": [
+        "state_schema",
+        "predicates",
+        "read_compatibility",
+        "write_compatibility",
+        "existing_state_policy",
+        "scopes",
+        "profile_id",
+        "state_signature"
+      ],
+      "properties": {
+        "state_schema": {
+          "type": "string",
+          "minLength": 1
+        },
+        "predicates": {
+          "$ref": "#/$defs/strings"
+        },
+        "read_compatibility": {
+          "type": "string",
+          "minLength": 1
+        },
+        "write_compatibility": {
+          "type": "string",
+          "minLength": 1
+        },
+        "existing_state_policy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scopes": {
+          "type": "array",
+          "uniqueItems": true,
+          "minItems": 3,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "profile_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "state_signature": {
+          "type": "object",
+          "required": [
+            "common",
+            "runtime",
+            "operations"
+          ],
+          "properties": {
+            "common": {
+              "type": "object",
+              "required": [
+                "state_schema"
+              ],
+              "properties": {
+                "state_schema": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "additionalProperties": false
+            },
+            "runtime": {
+              "type": "object",
+              "required": [
+                "state_schema"
+              ],
+              "properties": {
+                "state_schema": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "additionalProperties": false
+            },
+            "operations": {
+              "type": "object",
+              "required": [
+                "state_schema"
+              ],
+              "properties": {
+                "state_schema": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
