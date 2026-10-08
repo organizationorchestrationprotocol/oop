@@ -1,0 +1,25 @@
+{
+  "format": 1,
+  "purpose": "PROP-09 producer budgets in UTF-8 bytes for actual executions of the distributed controller in a disposable workspace. Bytes are not tokens or money; an increase over a budget fails acceptance until it is explained and the budget is reviewed.",
+  "scenarios": {
+    "native_instruction": {
+      "max_bytes": 850
+    },
+    "native_response_file": {
+      "max_bytes": 11000
+    },
+    "record_accepted": {
+      "max_bytes": 12300
+    },
+    "record_rejected": {
+      "max_bytes": 12600
+    },
+    "snapshot": {
+      "max_bytes": 11000
+    },
+    "procedure_definition": {
+      "max_bytes": 14000
+    }
+  },
+  "basis": "Disposable fixture with deep absolute installation paths: native instruction 747 bytes, factored native response 10186 bytes, immutable definition 12646 bytes, accepted record 11896 bytes, rejected record 12208 bytes, snapshot 10544 bytes. Dedicated guidance availability and plan/schema procedures explain the reviewed increment. Static schema references remain in the reused definition. Native response excludes separately measured immutable definition bytes; first-acquisition closure and reused delivery are assessed independently. Limits allow bounded path variation without claiming token savings."
+}
