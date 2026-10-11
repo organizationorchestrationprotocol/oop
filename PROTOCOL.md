@@ -3153,7 +3153,7 @@ Always respond in the user's preferred language.
 
 All repository paths below are relative to the repository root. The organizational protocol above is the [canonical normative source](PROTOCOL.md); this appendix contains repository maintenance instructions. Local producer tools and evidence live in `tools/`; maintainer commands are defined in the [DIAGNOSE](#diagnose), [PREPARE](#prepare) and [VERIFY](#verify) sections below.
 
-The maintainer can invoke `DIAGNOSE`, `PREPARE` or `VERIFY` as an uppercase command. Execute only the corresponding section, using the relevant input from the conversation; reading this file does not invoke these commands. If the reader has been instructed to act as maintainer of this repository, follow all applicable technical audit instructions below after reading the root README, unless the user has selected a specific command or expressly limited the task. Preserve the user's authorized scope; reading this appendix does not authorize commits, pushes or unrelated changes.
+The maintainer can invoke `DIAGNOSE`, `PREPARE` or `VERIFY` as an uppercase command. Execute only the corresponding section, using the relevant input from the conversation; reading this file does not invoke these commands. If the reader has been instructed to act as maintainer of this repository, follow all applicable technical audit instructions below after reading the root README, unless the user has selected a specific command or expressly limited the task. Command selection limits the work, but MUST NOT waive the proposal-list and final change-impact verdict requirements in §8 for reports of completed analysis, diagnosis or verification. `PREPARE` MUST carry that same complete list and verdict into its implementation prompt; if it adds or revises proposals, it MUST also present the updated list and verdict to the user. Preserve the user's authorized scope; reading this appendix does not authorize commits, pushes or unrelated changes.
 
 Act as the **maintainer and final technical auditor** of **Organization Orchestration Protocol (OOP)**:
 
@@ -3428,7 +3428,7 @@ The verdict applies to **the declared scope**: for example, `producer package`, 
 
 Write in a **practical, concise, evidence-based manner, with comprehensive check coverage**. Use exactly these sections:
 
-**Mandatory output requirement:** You MUST include the final **Proposed Changes** section defined below. The audit response is incomplete without it. You MUST NOT omit it, replace it with a table or a reference to another section, or defer it to a later response. Concision and cost reduction MUST NOT remove required suggestions or fields. Translate the section title and field labels into the user's preferred language when responding.
+**Mandatory completion gate:** Every completed maintainer analysis, `DIAGNOSE` or `VERIFY` report MUST include **Proposed Changes**, followed by **Final Change-Impact Verdict**, as defined below. A scoped command need not reproduce the full audit format, but MUST satisfy both requirements within its actual scope. These sections are required even when no P0/P1 defects or no justified changes are found. You MUST NOT omit them, substitute a table, summary, attachment or cross-reference, postpone them, or ask the user to request them separately. Brevity, cost reduction, a positive verdict, prior discussion and command selection are not exemptions. Translate user-facing titles and labels into the user's preferred language. Progress updates are not completed reports.
 
 #### Verdict
 
@@ -3470,32 +3470,41 @@ Confirm **once** the selected verdict, its scope, and the **objective conditions
 
 #### Proposed Changes
 
-You MUST end the audit report with a **bulleted list of all proposed fixes and improvements** arising from the analysis, including the errors, defects, and improvement opportunities identified. Include mandatory fixes AND justified improvements that are safe to defer; a lack of P0/P1 findings does not permit omission of other proposed changes. Consolidate overlapping suggestions and reference their finding IDs and priority/disposition so this list remains consistent with the findings and the single corrective package. Every proposed change elsewhere in the report MUST appear in this list or be explicitly mapped to a consolidated item.
+Provide one **numbered list of every proposed fix and justified improvement** arising from the analysis, including mandatory fixes and deferrable improvements. Consolidate shared causes without losing distinct changes. Give each item a stable proposal ID (`PROP-01`, `PROP-02`, ...), the related finding IDs, priority and disposition. Every recommendation elsewhere in the report MUST map to an item; rejected false positives are not proposals. Keep the list consistent with the findings and the single corrective package.
 
-Each suggestion MUST be a separate top-level bullet containing ALL SIX of the following explicitly labeled fields. A suggestion missing any field is incomplete:
+Each numbered proposal MUST contain these **six explicitly labeled fields**, with concise, self-contained content:
 
-- **Audience and artifact:** identify whether the proposed change concerns human-facing documentation, maintainer documentation, AI runtime instructions/contracts, or documentation for users of the runtime. Include all applicable categories; for changes to code, tests, or evidence, name the artifact and its intended audience explicitly.
-- **Proposed change:** a brief, concise, complete description of what you would change and why, identifying the affected files or sections.
-- **Canonical source change:** explicitly state whether the proposal requires changing the canonical `PROTOCOL.md`, and explain why or why not. If this cannot be determined from the available evidence, state the uncertainty and what is needed to resolve it.
-- **Distribution regeneration:** separately state whether the proposal requires regenerating the derived distribution, and explain why or why not. Do not assume that a producer/tooling or documentation change requires regeneration. If this cannot be determined, state the uncertainty and what is needed to resolve it.
-- **Strengths and weaknesses:** briefly explain the expected benefits and the relevant drawbacks, costs, limitations, or tradeoffs. Distinguish measured outcomes from expectations.
-- **Practical examples:** provide concise, concrete examples showing how the proposed change would affect an actual maintenance task, runtime behavior, or user interaction.
+1. **Scope and artifacts:** identify all applicable spheres: `maintainer`, `runtime`, `documentation`, `human user`. Name the affected files/sections and audience; distinguish maintainer tools/tests/evidence, runtime instructions/contracts, human-facing documentation and actions required of a human.
+2. **Problem:** briefly describe the defect or improvement opportunity and its practical consequence, with the evidence reference or a clearly labeled hypothesis.
+3. **Before example:** give a small concrete scenario or excerpt that demonstrates the current problem. Label illustrative examples as such; do not present them as executed tests.
+4. **Proposed change and after example:** explain the minimum change and show the corrected wording or behavior in the same scenario. Include enough detail to assess whether it solves the problem without weakening established constraints.
+5. **Source and distribution impact:** state separately **canonical normative source: REQUIRED / NOT REQUIRED / UNDETERMINED** and **derived distribution regeneration: REQUIRED / NOT REQUIRED / UNDETERMINED**, each with a reason. Distinguish an edit to the maintainer appendix inside `PROTOCOL.md` from a change to canonical organizational norms. Name any appendix-only file edit explicitly. Producer, documentation or evidence edits do not automatically require regeneration; assess affected derivation and bindings. For `UNDETERMINED`, identify the missing evidence and the check needed to decide.
+6. **Pros and cons:** state expected benefits AND relevant drawbacks, costs, limitations or tradeoffs. Distinguish measured results from expectations; if no material drawback is identified within the assessed scope, say so with that scope.
 
-Use this structure for EVERY suggestion, filling in the actual content rather than reproducing placeholders:
+Use this template for each item, replacing every placeholder with actual content:
 
-- **[Finding ID(s), priority/disposition] Suggestion title**
-  - **Audience and artifact:** applicable audience categories and affected files or sections.
-  - **Proposed change:** what you would change and why.
-  - **Canonical source change:** required or not required, with the reason; explicitly identify any unresolved uncertainty.
-  - **Distribution regeneration:** required or not required, with the reason; explicitly identify any unresolved uncertainty.
-  - **Strengths and weaknesses:** expected benefits AND drawbacks, costs, limitations, or tradeoffs; explicitly state when none are identified within the assessed scope.
-  - **Practical examples:** at least one concrete example showing the current problem and the expected behavior or wording after the change. Label illustrative scenarios as examples, not executed tests.
+1. **PROP-01 — Title [finding IDs; priority; disposition]**
+   - **Scope and artifacts:** spheres, audience, files/sections.
+   - **Problem:** concise description, consequence and evidence.
+   - **Before example:** concrete current scenario or wording.
+   - **Proposed change and after example:** minimum change and corresponding corrected scenario or wording.
+   - **Source and distribution impact:** canonical normative source: status + reason; appendix-only edit, if applicable; derived distribution regeneration: status + reason; unresolved evidence/check, if applicable.
+   - **Pros and cons:** benefits; drawbacks/costs/limits.
 
-If ANY proposal requires changing the canonical source and/or regenerating the distribution, you MUST prominently disclose this in a bold notice at the beginning of the Verdict and immediately before the proposed-change bullets. Identify the affected proposal IDs, which operation each requires, and why. Do not leave this information buried inside individual bullets. Translate the notice into the user's preferred language.
+Number items consecutively. Preserve proposal IDs when referring to them elsewhere. Keep examples brief but sufficient to understand both the problem and the correction without rereading the report. Do not manufacture suggestions to fill the list. If no changes are justified, include one numbered entry saying **No changes proposed**, with the verified scope and limitations; the six proposal fields do not apply to this explicit empty-list case.
 
-Keep each suggestion easy to evaluate without rereading the full report. Use plain language and concise but complete descriptions. Preserve the established project constraints and do not introduce unsupported recommendations merely to populate the list. If no changes are justified, you MUST still include this section with a bullet stating that no changes are proposed and explaining the verified scope and relevant limitations; do not invent suggestions or claim an absolute absence of defects.
+If ANY proposal requires a canonical normative source change or distribution regeneration, include a **bold impact notice** at the beginning of the audit's Verdict (when present) and immediately before the numbered list. Name the proposal IDs, required operations and reasons. If an operation remains undetermined, the notice MUST disclose that uncertainty rather than imply no impact.
 
-**Final response completeness check:** Before sending the report, you MUST check that this final section is present, every proposed change is accounted for, and every suggestion includes all six labeled fields and at least one practical example. Verify that each canonical-source and distribution-regeneration disposition includes its reason and that the prominent notices are present whenever either operation is required by any proposal. If any check fails, complete the missing content BEFORE sending the response. You MUST NOT present the audit report as complete or ask the user to request the missing list separately. Any required commit/push status statement may follow this section.
+#### Final Change-Impact Verdict
+
+After the complete numbered list, you MUST provide an explicit aggregate verdict for **applying all listed proposals**, including deferrable ones. Report both operations independently, even when neither is required:
+
+- **Canonical normative source change:** REQUIRED / NOT REQUIRED / UNDETERMINED — proposal IDs and concise reason.
+- **Derived distribution regeneration:** REQUIRED / NOT REQUIRED / UNDETERMINED — proposal IDs and concise reason. This concerns the distributed runtime instructions/contracts, not proof that installed consumer runtimes have been updated.
+
+For each operation: use `REQUIRED` if any proposal requires it, otherwise `UNDETERMINED` if any proposal's impact is unresolved, otherwise `NOT REQUIRED`. A `REQUIRED` aggregate MUST still identify other unresolved impacts. With no proposals, both statuses are `NOT REQUIRED` for the empty package, without implying repository readiness. Identify appendix-only `PROTOCOL.md` edits separately so the verdict cannot conceal a physical file change. This verdict supplements the freeze decision; it does not authorize implementation, regeneration, commit, push or publication.
+
+**Final response completeness gate:** Before sending a completed report, check that (a) both sections are present in order; (b) every recommendation maps to a numbered proposal with a stable ID; (c) every proposal has all six fields, concrete before/after examples and separate reasoned source/regeneration statuses; (d) required or unresolved impact notices are present; and (e) the aggregate verdict follows the per-proposal statuses. If ANY check fails, the report is incomplete: repair it BEFORE sending. You MUST NOT claim completion, deliver only the freeze verdict, or defer missing content to another turn. If evidence is unavailable, report the limitation and `UNDETERMINED` impact in the required structure. Any required commit/push status statement may follow the verdict. These are mandatory maintainer instructions; a prose completeness check MUST NOT be represented as deterministic enforcement of an AI runtime.
 
 ### 9. Concluding Rule
 
