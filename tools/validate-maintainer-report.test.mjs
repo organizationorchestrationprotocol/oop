@@ -13,7 +13,7 @@ function fixture({ italian = false, source = 'NOT REQUIRED', distribution = 'NOT
   const src = italian ? 'Fonte normativa canonica' : 'Canonical normative source';
   const dst = italian ? 'Rigenerazione della distribuzione derivata' : 'Derived distribution regeneration';
   const prop = (number, a, b) => `${number}. **PROP-0${number} — Capture complete reports [F-0${number}; P1; ${number === 2 ? 'SAFE TO DEFER' : 'IMPLEMENTED'}]**
-   - **${labels[0]}:** maintainer, documentation, human user; PROTOCOL.md and local reports.
+   - **${labels[0]}:** maintainer, documentation, human user; edit the maintainer appendix in PROTOCOL.md and local reports.
    - **${labels[1]}:** Earlier report omitted fields; inspect captured sample F-0${number}.
    - **${labels[2]}:** Illustrative: VERIFY stopped at a verdict without proposals.
    - **${labels[3]}:** Add REPORT; the same VERIFY now includes numbered proposals and final impact.
@@ -97,3 +97,33 @@ test('CLI validates read-only file, invalid/unsupported nonzero and missing inpu
   assert.equal(spawnSync(process.execPath,['tools/validate-maintainer-report.mjs']).status,1);
  } finally { rmSync(directory,{recursive:true,force:true}); }
 });
+
+function regionFixture({ italian = false, region, runtime = false, appendix = false, disclosure = appendix } = {}) {
+ const labels = italian ? it : en;
+ let report = fixture({ italian, source: runtime ? 'REQUIRED' : 'NOT REQUIRED', distribution: runtime ? 'REQUIRED' : 'NOT REQUIRED' });
+ const scope = runtime ? 'runtime; PROTOCOL.md G2 rules' : appendix ? 'maintainer; PROTOCOL.md' : 'maintainer; validator.mjs; PROTOCOL.md is evidence only';
+ const after = runtime ? 'Change G2 rules: the same authorized action now receives the revised runtime guard.' : 'Correct the validator: the same complete evidence report passes.';
+ report = report.replace(/(\*\*(?:Scope and artifacts|Ambito e artefatti):\*\*)[^\n]*/, '$1 ' + scope)
+  .replace(/(\*\*(?:Proposed change and after example|Modifica proposta ed esempio dopo):\*\*)[^\n]*/, '$1 ' + after + (appendix ? (italian ? ' Modifica appendice maintainer in PROTOCOL.md.' : ' Edit the maintainer appendix in PROTOCOL.md.') : ''))
+  .replace('maintainer appendix edit REQUIRED;', (region ? (italian ? 'Regione modificata: ' : 'Edited region: ') + region + '; ' : '') + (disclosure ? (italian ? 'Modifica fisica appendice maintainer PROTOCOL.md: REQUIRED;' : 'Physical maintainer appendix PROTOCOL.md edit: REQUIRED;') : ''));
+ return report;
+}
+for (const italian of [false, true]) {
+ for (const [name, options] of [
+  ['runtime G2 in PROTOCOL.md without appendix', {runtime:true}],
+  ['explicit runtime role', {runtime:true,region:'runtime-only'}],
+  ['appendix-only physical disclosure', {appendix:true,region:'maintainer-appendix-only'}],
+  ['evidence-only PROTOCOL.md mention', {region:'reference-only'}],
+  ['mixed runtime and appendix', {runtime:true,appendix:true,region:'runtime+maintainer-appendix'}],
+ ]) test(name + (italian ? ' Italian' : ' English'), () => assert.equal(validateReport(regionFixture({italian,...options})).status,'PASS'));
+ for (const [name, options] of [
+  ['undisclosed explicit appendix edit', {appendix:true,disclosure:false}],
+  ['undisclosed appendix role', {region:'maintainer-appendix-only'}],
+  ['misclassified appendix edit', {appendix:true,region:'reference-only'}],
+  ['misclassified mixed edit', {runtime:true,appendix:true,region:'runtime-only'}],
+  ['unknown region', {region:'elsewhere'}],
+  ['runtime with missing source impact', {region:'runtime-only'}],
+  ['appendix-only with runtime impact', {runtime:true,appendix:true,region:'maintainer-appendix-only'}],
+ ]) test(name + (italian ? ' Italian' : ' English'), () => assert.equal(validateReport(regionFixture({italian,...options})).status,'FAIL'));
+}
+test('duplicate region fails', () => assert.equal(validateReport(regionFixture({region:'reference-only; Edited region: runtime-only'})).status,'FAIL'));

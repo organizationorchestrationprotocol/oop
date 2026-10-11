@@ -1,0 +1,65 @@
+{
+  "format": 1,
+  "id": "OOP-PATH-MIGRATION-001",
+  "scope": "Exactly three reviewed path-reference lines; not unchanged source and not a general substitution rule",
+  "baseline": {
+    "commit": "39d0c6141701d38121944db109e0f1b851dd9511",
+    "path": "PROMPT.md",
+    "source_identity": "sha256:8b05b2f38f8d51a9a4bf6abfff6f48799a4b2628e1b92592907f36fdeea74881"
+  },
+  "target": {
+    "commit": "c4d2fee4f7ab67e1085312fbbc4ee7c31802e672",
+    "path": "PROTOCOL.md",
+    "source_identity": "sha256:898433ac36432129a5b30ce17493efc0197c0b635dd074e8164f3da18a50dc93"
+  },
+  "checkpoint": {
+    "commit": "c4d2fee4f7ab67e1085312fbbc4ee7c31802e672",
+    "path": "tools/evidence/release-acceptance.json",
+    "content_identity": "sha256:8236a5dab67b00fcea312eef966be3e2cdbe967a388ce6b8a59475e23c411913"
+  },
+  "review": {
+    "commit": "c4d2fee4f7ab67e1085312fbbc4ee7c31802e672",
+    "path": "tools/release-review.json",
+    "content_identity": "sha256:bd318879fcd4b5d3650cd88760764158415a16b0077eb943eb523a7b518040be",
+    "authorization_basis": "All original source wording, scope, exceptions, tables, examples and normative convention are retained after CRLF-to-LF normalization, except for the owner-authorized PROMPT.md to PROTOCOL.md and dist/ to distribution/ path substitutions. Examples retain their non-authorizing status.",
+    "limitations": [
+      "Semantic review performed by the producing AI; no independent human/second-model approval claimed.",
+      "No runtime adapter, provider enrollment or consumer installation executed by this package."
+    ]
+  },
+  "traceability": {
+    "commit": "daf96af7f111378bdb56b748379dda2b32a12bf1",
+    "path": "tools/evidence/release-traceability.json",
+    "content_identity": "sha256:c4c26fb0296f9bfe956f139f8540a4e57803e464781c953af841eb248424a1f2",
+    "source_commit": "ec886fdc5994281d3d54d411bc7c0d0a81ad4612"
+  },
+  "normalization": "protocolSource historical/current extraction; CRLF to LF only within extracted text",
+  "changes": [
+    {
+      "extracted_line": 568,
+      "baseline_document_line": 568,
+      "target_document_line": 568,
+      "old": "Each AI tool MUST use the full Git commit object ID of the configured OOP repository revision as its protocol identity. Record the canonical repository reference and selected branch or ref alongside the commit ID; a branch name, tag, semantic version, abbreviated hash or file digest alone is insufficient. `PROMPT.md` at that commit is the canonical specification. References throughout this specification to an adopted OOP version or protocol content identity use this commit identity; explicit semantic version labels remain supplementary compatibility/release information. Artifact and enforcement-mechanism digests still identify their own contents. An OOP distribution manifest is neither required nor a source of version or synchronization authority. This Git requirement applies to identification of the OOP repository, not to the organization's repositories or sources of record.",
+      "new": "Each AI tool MUST use the full Git commit object ID of the configured OOP repository revision as its protocol identity. Record the canonical repository reference and selected branch or ref alongside the commit ID; a branch name, tag, semantic version, abbreviated hash or file digest alone is insufficient. `PROTOCOL.md` at that commit is the canonical specification. References throughout this specification to an adopted OOP version or protocol content identity use this commit identity; explicit semantic version labels remain supplementary compatibility/release information. Artifact and enforcement-mechanism digests still identify their own contents. An OOP distribution manifest is neither required nor a source of version or synchronization authority. This Git requirement applies to identification of the OOP repository, not to the organization's repositories or sources of record.",
+      "clause": "OOP-runtime-adoption"
+    },
+    {
+      "extracted_line": 588,
+      "baseline_document_line": 588,
+      "target_document_line": 588,
+      "old": "After completing the daily freshness gate, including reuse of shared same-day evidence or an explicitly recorded offline result, the active runtime must re-enter section 28, Bootstrap, in `PROMPT.md` at its verified adopted commit before substantive organizational work. Reuse the completed freshness result; re-entry must not trigger another fetch, retry a blocked check, recreate existing infrastructure, or repeat completed effects. Compare the observed remote commit, local checkout commit and runtime's own adopted commit checkpoint, then follow BOOT-04 and the applicable compatibility, authorization and ordered migration gates.",
+      "new": "After completing the daily freshness gate, including reuse of shared same-day evidence or an explicitly recorded offline result, the active runtime must re-enter section 28, Bootstrap, in `PROTOCOL.md` at its verified adopted commit before substantive organizational work. Reuse the completed freshness result; re-entry must not trigger another fetch, retry a blocked check, recreate existing infrastructure, or repeat completed effects. Compare the observed remote commit, local checkout commit and runtime's own adopted commit checkpoint, then follow BOOT-04 and the applicable compatibility, authorization and ordered migration gates.",
+      "clause": "OOP-runtime-adoption"
+    },
+    {
+      "extracted_line": 2874,
+      "baseline_document_line": 2874,
+      "target_document_line": 2874,
+      "old": "REL-02 — A ready release MUST have a non-empty directly discoverable machine-oriented entry contract identifying the supported lifecycle routes, minimum initial context, bootstrap procedure and compact selector through exact package-relative references. The intended common entry is `dist/entry.json`; a minimal `dist/START.md` or native adapter MAY point to it where direct discovery needs text. Such a pointer contains activation instructions only, never duplicated protocol rules. Maintainers MUST update the official installation instruction and applicable owned adapters only when that entry and its required closure satisfy release acceptance. Empty, placeholder, candidate, missing or dangling entries MUST NOT be presented as ready or become the official install destination. Existing candidate artifacts remain explicitly non-ready; an empty legacy entry is not successful distribution. Entry identifies executable context, not an OOP version manifest: Git repository/ref/full commit remains protocol identity. Avoid self-referential commit/digest requirements; producer evidence binds the stabilized source/artifacts without inventing a future containing commit.",
+      "new": "REL-02 — A ready release MUST have a non-empty directly discoverable machine-oriented entry contract identifying the supported lifecycle routes, minimum initial context, bootstrap procedure and compact selector through exact package-relative references. The intended common entry is `distribution/entry.json`; a minimal `distribution/START.md` or native adapter MAY point to it where direct discovery needs text. Such a pointer contains activation instructions only, never duplicated protocol rules. Maintainers MUST update the official installation instruction and applicable owned adapters only when that entry and its required closure satisfy release acceptance. Empty, placeholder, candidate, missing or dangling entries MUST NOT be presented as ready or become the official install destination. Existing candidate artifacts remain explicitly non-ready; an empty legacy entry is not successful distribution. Entry identifies executable context, not an OOP version manifest: Git repository/ref/full commit remains protocol identity. Avoid self-referential commit/digest requirements; producer evidence binds the stabilized source/artifacts without inventing a future containing commit.",
+      "clause": "OOP-producer-acceptance"
+    }
+  ],
+  "disposition": "Canonical filename and package-relative path relocation only. Full old/new lines preserve authority, commit identity, daily freshness, bootstrap, release readiness and consumer boundaries. Existing references follow the relocated canonical source and package. No new runtime requirement, permission or automatic consumer migration.",
+  "verification": "Full extracted-source comparison and pinned review/trace allocation; migration regressions plus existing 69 local observations and seven measured scenarios. No independent human semantic approval, provider execution, publication authenticity or consumer adoption claimed."
+}

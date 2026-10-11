@@ -15,6 +15,7 @@ export const inputs = [
   'tools/fixtures/catalog.json', 'tools/fixtures/procedures.json',
   'tools/candidate/operations-access.json', 'tools/candidate/entry.json',
   'tools/acceptance-inputs.mjs', 'tools/producer-safety.test.mjs',
+  'tools/source-transition.mjs', 'tools/source-transition.test.mjs', 'tools/reviewed-source-transition.json',
   '.github/workflows/producer-tests.yml',
 ];
 export const testFiles = ['tools/reference-engine.test.mjs', 'tools/release.test.mjs', 'tools/prune-artifacts.test.mjs', 'tools/producer-safety.test.mjs'];
@@ -74,4 +75,12 @@ export function protocolSourceLocator(start, end, document) {
   protocolSource(document);
   const offset = document.replace(/\r\n/g, '\n').split('\n').indexOf('# Rules for the runtime');
   return `lines:${start <= 2 ? start : start + offset}-${end <= 2 ? end : end + offset}`;
+}
+
+// Validate the fixed producer inventory independently of report/migration suites.
+export function completeProducerObservations(run, observations) {
+  const ids = observations.map(item => item.id);
+  return run.status === 0 && ids.length === expectedObservations.length && new Set(ids).size === ids.length &&
+    expectedObservations.every(id => ids.includes(id)) && observations.every(item => item.actual === 'passed') &&
+    /^# fail 0$/m.test(run.stdout) && new RegExp(`^# tests ${expectedObservations.length}$`, 'm').test(run.stdout);
 }

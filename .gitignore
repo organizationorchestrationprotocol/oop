@@ -4,3 +4,5 @@ node_modules/
 *.tmp
 tools/evidence/current-acceptance.json
 tools/evidence/current-tests.tap
+
+tools/evidence/current-migration-tests.tap

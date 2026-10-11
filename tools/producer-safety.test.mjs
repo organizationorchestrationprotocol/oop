@@ -58,7 +58,14 @@ test('REL-TOOL-005: check-current binds material inputs and ignores unrelated fi
   writeFileSync(join(root, 'tools/evidence/current-tests.tap'), 'unchanged evidence sentinel\n');
   const gitBefore = bytes(root, '.git');
   assert.equal(run(root, 'accept-release.mjs', ['--check-current']).status, 0);
-  for (const input of ['tools/fixtures/catalog.json', 'tools/fixtures/procedures.json', 'tools/schema-profile.mjs', 'tools/candidate/operations-access.json']) {
+  for (const bad of [{...report, release_ready:false}, {...report, evaluated_checkout:{commit:'0'.repeat(40)}}, {release_ready:true,source_snapshot_commit:commit,identities:report.identities}]) {
+    writeFileSync(path, JSON.stringify(bad));
+    const before = bytes(root);
+    assert.notEqual(run(root, 'accept-release.mjs', ['--check-current']).status, 0);
+    assert.deepEqual(bytes(root), before);
+  }
+  writeFileSync(path, JSON.stringify(report));
+  for (const input of ['tools/fixtures/catalog.json', 'tools/fixtures/procedures.json', 'tools/schema-profile.mjs', 'tools/candidate/operations-access.json', 'tools/reviewed-source-transition.json', 'tools/source-transition.mjs']) {
     const original = readFileSync(join(root, input));
     writeFileSync(join(root, input), Buffer.concat([original, Buffer.from('\n')]));
     const before = bytes(root);

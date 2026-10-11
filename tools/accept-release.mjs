@@ -5,7 +5,8 @@ import { createHash } from 'node:crypto';
 import { performance } from 'node:perf_hooks';
 import { fileURLToPath } from 'node:url';
 import { contextSession,select,readJSON } from './release-engine.mjs';
-import { subjects as subjectPaths, identify as identifyInputs, testFiles, expectedObservations, protocolSource } from './acceptance-inputs.mjs';
+import { subjects as subjectPaths, identify as identifyInputs, testFiles, expectedObservations, protocolSource, completeProducerObservations } from './acceptance-inputs.mjs';
+import { reviewedSourceTransition } from './source-transition.mjs';
 const root=fileURLToPath(new URL('../',import.meta.url));
 const hash=x=>`sha256:${createHash('sha256').update(x).digest('hex')}`;
 const text=path=>readFileSync(new URL(`../${path}`,import.meta.url),'utf8');
@@ -68,20 +69,30 @@ const observationSummary={total:observations.length,unique:new Set(observationId
   passed:observations.filter(x=>x.actual==='passed').length,failed:observations.filter(x=>x.actual==='failed').length,
   skipped:observations.filter(x=>x.actual==='skipped').length,
   missing:expectedObservations.filter(id=>!observationIds.includes(id)),unexpected:observationIds.filter(id=>!expectedObservations.includes(id))};
-const testPassed=run.status===0 && observationSummary.total===observationSummary.unique &&
-  !observationSummary.missing.length && !observationSummary.unexpected.length &&
-  observations.every(x=>x.actual==='passed') && /^# fail 0$/m.test(run.stdout) &&
-  new RegExp(`^# tests ${expectedObservations.length}$`,'m').test(run.stdout);
+const testPassed=completeProducerObservations(run, observations);
 let previous=git(['show',`${baselineCommit}:PROTOCOL.md`]);
 if(previous.status!==0) previous=git(['show',`${baselineCommit}:PROMPT.md`]);
 const priorSourceEqual=previous.status===0&&protocolSource(previous.stdout,{historical:true})===source;
+const transitionRecord=json('tools/reviewed-source-transition.json');
+const sourceMigration=priorSourceEqual ? {status:'not_applicable',basis:'exact_source_preservation'} : reviewedSourceTransition({
+  record:transitionRecord,baselineCommit,checkpoint:packageBaseline,
+  previous:previous.status===0?protocolSource(previous.stdout,{historical:true}):'',source,
+  review:json('tools/release-review.json'),trace,
+  readObject:(commit,path)=>{const result=git(['show',`${commit}:${path}`]);if(result.status!==0)throw new Error('Missing immutable transition evidence');return result.stdout;},
+  targetIsAncestor:git(['merge-base','--is-ancestor',transitionRecord.target.commit,evaluatedCheckout.commit]).status===0,
+});
+// Distinct regression suite/TAP, never REL-* observations or consumer conformance.
+const migrationRun=spawnSync(process.execPath,['--test','--test-reporter=tap','tools/source-transition.test.mjs'],
+  {cwd:root,encoding:'utf8',maxBuffer:2*1024*1024});
+const migrationTestsPassed=migrationRun.status===0 && /^# tests 25$/m.test(migrationRun.stdout) && /^# fail 0$/m.test(migrationRun.stdout) && /^# skipped 0$/m.test(migrationRun.stdout);
+const sourceGate=priorSourceEqual || sourceMigration.status==='passed';
 // This fixed checkpoint predates the directory rename.
 const priorProof=git(['show',`${initialBaseline}:maintainer/evidence/local-validation.json`]);
 if(priorProof.status!==0)throw new Error('No attributable preceding source validation checkpoint; establish a reviewed regression basis first');
 const baselineProof=JSON.parse(priorProof.stdout);
 const baselineIdentified=baselineProof.observations.length===30 && baselineProof.source_preservation_check.actual==='passed';
-// This generation is derived-only. A changed canonical source needs explicit semantic
-// delta/regression work; it must not be auto-approved as an empty-delta generation.
+// Exact preservation and the reviewed historical bridge have distinct bases.
+// Every other source delta still requires explicit review/regression work.
 // Baseline coverage is explicitly source/fixture only, never a previously complete distribution/live release.
 const overhead=Buffer.byteLength(text('distribution/entry.json'))+Buffer.byteLength(text('distribution/routing.json'));
 const scenarios=[
@@ -116,10 +127,11 @@ for(const item of measurements){
 const identities=identify(subjects());
 const subjectUnchanged=JSON.stringify(identities)===JSON.stringify(frozenIdentities);
 const noByteRegression=measurements.every(x=>x.selected_governing_bytes<=x.baseline_governing_bytes);
-const checks={source_preservation:priorSourceEqual?'passed':'failed',preceding_source_checkpoint:baselineIdentified?'passed':'failed',
+const checks={source_preservation:priorSourceEqual?'passed':'not_identical',
+  source_regression_gate:sourceGate?'passed':'failed',source_migration_regressions:migrationTestsPassed?'passed':'failed',preceding_source_checkpoint:baselineIdentified?'passed':'failed',
   local_package_and_reference_tests:testPassed?'passed':'failed',measured_context_bytes:noByteRegression?'passed':'failed',
   frozen_subject:subjectUnchanged?'passed':'failed',frozen_checkout:JSON.stringify(checkout())===JSON.stringify(evaluatedCheckout)?'passed':'failed'};
-const accepted=Object.values(checks).every(x=>x==='passed');
+const accepted=sourceGate && Object.entries(checks).filter(([key])=>key!=='source_preservation').every(([,status])=>status==='passed');
 const report={
   observed_at:new Date().toISOString(),node_version:process.version,
   source_identity:hash(source),source_snapshot_commit:trace.source_snapshot_commit,
@@ -129,14 +141,16 @@ const report={
   revision_binding:'evaluated_checkout identifies HEAD at execution; identities bind the actual files including any working-tree changes. source_snapshot_commit identifies generator provenance only. A committed report cannot embed its own containing commit; rerun acceptance after commit and use --check-current for current HEAD.',
   scope:'producer-prepared technology-neutral derived distribution; no installed-runtime/provider/cross-runtime readiness claim',
   release_ready:accepted,publication:'not_performed_for_generated_package',runtime_adoption:'not_performed',checks,identities,
-  semantic_review:{result:'reasoned_complete_allocation_with_verbatim_source_preservation',reference:'tools/release-review.json',
+  source_comparison:{basis:priorSourceEqual?'exact_source_preservation':sourceMigration.status==='passed'?'reviewed_historical_path_transition':'unreviewed_source_delta',exact_preservation:priorSourceEqual,reviewed_transition:sourceMigration},
+  migration_regression_summary:{passed:migrationTestsPassed,tests:Number(migrationRun.stdout.match(/^# tests (\d+)$/m)?.[1]??0),failed:Number(migrationRun.stdout.match(/^# fail (\d+)$/m)?.[1]??0),skipped:Number(migrationRun.stdout.match(/^# skipped (\d+)$/m)?.[1]??0)},
+  semantic_review:{result:priorSourceEqual?'reasoned_complete_allocation_with_verbatim_source_preservation':sourceMigration.status==='passed'?'reasoned_complete_allocation_with_reviewed_historical_path_transition':'source_delta_not_verified',reference:'tools/release-review.json',
     evidence_strength:'source reasoning plus exact reconstruction; independent reviewer and live prevention not claimed'},
   rolling_baseline:{commit:baselineCommit,source_identity:hash(protocolSource(previous.stdout,{historical:true})),
     package_checkpoint:packageBaseline?{commit:packageBaseline.recordCommit,content_identity:packageBaseline.identity}:null,
     provenance:packageBaseline?'Latest committed accepted producer-package report':'Committed local-validation.json and local-tests.tap: 30 prior reference observations and retained-source check; current push remote identity separately observed.',
     verified_scope:packageBaseline?packageBaseline.report.scope:'preceding committed canonical source retention and reference mechanisms only; not a complete previous distribution or installed integration',
-    selection_basis:'Latest committed accepted package when available; otherwise initial preceding source checkpoint. This derived-only acceptance requires identical canonical source.',
-    normative_deltas:[],classification:'generated_derived_only',full_previous_distribution:packageBaseline?'identified_checkpoint':'none_available_first_complete_export',
+    selection_basis:'Latest committed accepted package when available; otherwise initial preceding source checkpoint. Exact preservation or the single pinned reviewed historical transition is required.',
+    normative_deltas:sourceMigration.status==='passed'?sourceMigration.changes:[],classification:priorSourceEqual?'generated_derived_only':sourceMigration.status==='passed'?'reviewed_historical_path_transition':'unreviewed_source_delta',full_previous_distribution:packageBaseline?'identified_checkpoint':'none_available_first_complete_export',
     limits:'No historical full release/integration verification is invented. These results establish current export preservation and local mechanisms only.'},
   observation_summary:observationSummary,observations,measurements,
   comparison_basis:'Same canonical source fully loaded versus selected real package closure including entry/selector and applicable procedure bytes. Cold/warm/recovery local harness; not a product end-to-end benchmark.',
@@ -152,7 +166,8 @@ const report={
     generator_application:'Preflight covers preexisting unsafe paths only; no concurrent adversarial path-change protection or multi-file atomicity. Apply I/O failure can leave partial effects; reconcile before rerunning.',
     skipped_tests:'Explicitly recorded as skipped, never PASS; any missing, failed or skipped expected observation blocks release_ready.'},
 };
+if(!snapshot)writeFileSync(new URL('./evidence/current-migration-tests.tap',import.meta.url),migrationRun.stdout);
 writeFileSync(new URL(`./evidence/${tapPath}`,import.meta.url),run.stdout);
 writeFileSync(new URL(`./evidence/${reportPath}`,import.meta.url),JSON.stringify(report,null,2)+'\n');
-if(!accepted){process.stderr.write(JSON.stringify(checks)+'\n'+run.stderr);process.exitCode=1;}
+if(!accepted){process.stderr.write(JSON.stringify(checks)+'\n'+run.stderr+migrationRun.stderr);process.exitCode=1;}
 else process.stdout.write(`Producer package accepted: ${observations.length} local observations, seven real-package scenarios; consumer integration and publication not claimed.\n`);

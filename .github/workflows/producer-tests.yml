@@ -15,10 +15,15 @@ jobs:
         with:
           persist-credentials: false
           fetch-depth: 0
+      - name: Validate maintainer REPORT structure
+        run: node --test tools/validate-maintainer-report.test.mjs
+      - name: Validate reviewed historical source transition
+        run: node --test tools/source-transition.test.mjs
       - name: Validate current producer package and checkout
         run: |
           node --version
-          node tools/accept-release.mjs || { status=$?; cat tools/evidence/current-tests.tap; exit "$status"; }
+          node tools/accept-release.mjs || { status=$?; cat tools/evidence/current-tests.tap; cat tools/evidence/current-migration-tests.tap; exit "$status"; }
           node tools/accept-release.mjs --check-current
           cat tools/evidence/current-tests.tap
+          cat tools/evidence/current-migration-tests.tap
           git diff --exit-code

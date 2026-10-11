@@ -88,7 +88,27 @@ export function validateReport(markdown) {
     const field = fields.find(field => equal(field.label, locale.fields[4]));
     if (field) {
       for (const dimension of ['source', 'distribution']) statuses[dimension].push(impact(field.content, dimension, id));
-      if (/PROTOCOL\.md/i.test(content) && !/appendix|appendice/i.test(field.content)) errors.push(`${id}: physical maintainer appendix edit must be distinguished`);
+      // Filenames establish neither edited region nor intent. Optional explicit roles
+      // and the bounded affirmative edit profile below describe captured declarations.
+      const roleLines = clean(field.content).split(/\n|;/).map(part => part.replace(/^\s*-\s*/, '').trim());
+      const roles = roleLines.filter(part => /^(?:Edited region|Regione modificata):/i.test(part));
+      const role = roles[0]?.split(':').slice(1).join(':').trim().toLowerCase();
+      const allowed = ['runtime-only', 'maintainer-appendix-only', 'runtime+maintainer-appendix', 'reference-only'];
+      if (roles.length > 1 || (roles.length && !allowed.includes(role))) errors.push(`${id}: invalid or duplicate edited region`);
+      const editFields = fields.filter(item => equal(item.label, locale.fields[0]) || equal(item.label, locale.fields[3]));
+      const explicitEdit = editFields.some(item => /\b(?:edit|modify|update|change|add|remove|modificare|modifica|aggiornare|aggiorna|aggiungere|aggiunge|rimuovere|rimuove)\s+(?:(?:the|il|la|l')\s*)?(?:maintainer appendix|appendice (?:del |per il )?maintainer)\b/i.test(clean(item.content)));
+      const appendixRole = role === 'maintainer-appendix-only' || role === 'runtime+maintainer-appendix';
+      // Retain clear legacy disclosure, but require a positive edit classification.
+      const disclosed = /(?:maintainer appendix|appendice (?:del |per il )?maintainer)[^;\n]*\bREQUIRED\b/i.test(clean(field.content)) &&
+        !/(?:maintainer appendix|appendice (?:del |per il )?maintainer)[^;\n]*\b(?:NOT REQUIRED|UNDETERMINED)\b/i.test(clean(field.content));
+      if ((explicitEdit || appendixRole) && !disclosed) errors.push(`${id}: physical maintainer appendix edit must be distinguished`);
+      if ((explicitEdit || disclosed) && roles.length && !appendixRole) errors.push(`${id}: edited region contradicts declared appendix edit`);
+      if (role === 'maintainer-appendix-only' || role === 'reference-only') {
+        if (statuses.source.at(-1) !== 'NOT REQUIRED' || statuses.distribution.at(-1) !== 'NOT REQUIRED') errors.push(`${id}: edited region contradicts normative impacts`);
+      }
+      if (role === 'runtime-only' || role === 'runtime+maintainer-appendix') {
+        if (statuses.source.at(-1) !== 'REQUIRED') errors.push(`${id}: runtime edit requires normative source impact`);
+      }
     }
   }
   const verdict = lines.slice(v[0].index + 1).join('\n');
