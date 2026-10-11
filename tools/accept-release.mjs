@@ -74,7 +74,7 @@ const testPassed=run.status===0 && observationSummary.total===observationSummary
   new RegExp(`^# tests ${expectedObservations.length}$`,'m').test(run.stdout);
 let previous=git(['show',`${baselineCommit}:PROTOCOL.md`]);
 if(previous.status!==0) previous=git(['show',`${baselineCommit}:PROMPT.md`]);
-const priorSourceEqual=previous.status===0&&protocolSource(previous.stdout)===source;
+const priorSourceEqual=previous.status===0&&protocolSource(previous.stdout,{historical:true})===source;
 // This fixed checkpoint predates the directory rename.
 const priorProof=git(['show',`${initialBaseline}:maintainer/evidence/local-validation.json`]);
 if(priorProof.status!==0)throw new Error('No attributable preceding source validation checkpoint; establish a reviewed regression basis first');
@@ -131,7 +131,7 @@ const report={
   release_ready:accepted,publication:'not_performed_for_generated_package',runtime_adoption:'not_performed',checks,identities,
   semantic_review:{result:'reasoned_complete_allocation_with_verbatim_source_preservation',reference:'tools/release-review.json',
     evidence_strength:'source reasoning plus exact reconstruction; independent reviewer and live prevention not claimed'},
-  rolling_baseline:{commit:baselineCommit,source_identity:hash(protocolSource(previous.stdout)),
+  rolling_baseline:{commit:baselineCommit,source_identity:hash(protocolSource(previous.stdout,{historical:true})),
     package_checkpoint:packageBaseline?{commit:packageBaseline.recordCommit,content_identity:packageBaseline.identity}:null,
     provenance:packageBaseline?'Latest committed accepted producer-package report':'Committed local-validation.json and local-tests.tap: 30 prior reference observations and retained-source check; current push remote identity separately observed.',
     verified_scope:packageBaseline?packageBaseline.report.scope:'preceding committed canonical source retention and reference mechanisms only; not a complete previous distribution or installed integration',

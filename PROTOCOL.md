@@ -1,5 +1,44 @@
 # Cross-Tool Organization Orchestration Protocol
 
+**Author:** Ing. Marco Vasapollo — [marco.vasapollo@outlook.com](mailto:marco.vasapollo@outlook.com)
+
+## Abstract
+
+Organization Orchestration Protocol (OOP) is a vendor-neutral specification for managing durable organizational work with replaceable AI tools. It defines how compatible runtimes preserve authoritative knowledge, decisions, permissions, work state and evidence outside individual conversations. OOP combines proportionate governance, selective access to current instructions, verifiable execution and resumable continuity. It applies to companies, non-profit organizations, independent professionals and autonomous projects, including activities with physical-world responsibilities.
+
+Within software engineering research and development, OOP investigates **Organization as Code**: representing organizational knowledge, responsibilities, dependencies and change lifecycles as versioned, inspectable and reconstructible artifacts. A single logical canonical source of digital organizational knowledge, `operations`, uses **CI/CD mechanisms and available automations to coordinate and synchronize the entire organization** across its relevant domains, retaining authoritative references to external systems of record rather than duplicating their authority. Organizational CI checks the consistency and dependencies of proposed changes against that shared knowledge; organizational CD coordinates their authorized propagation, reconciles affected operational state and verifies the resulting alignment. This architecture places **AI as an external tool**, replaceable without making any model, provider or AI service an indispensable organizational core. It supports the **Solopreneur** as well as larger organizations: when a task requires it, shared knowledge and explicit dependencies connect research and development, marketing, human resources and investor communication through purposeful synergy, communication and collaboration. The functions named here are a simplified, non-exhaustive illustration; coordination and synchronization apply to every organizational domain that the effective task affects. The research proposition is that these mechanisms can improve continuity, coordination and execution reliability; their effectiveness and costs require empirical evaluation.
+
+## Vision
+
+An organization should retain its knowledge, identity and ability to operate when an AI session ends, a model changes or a provider becomes unavailable. AI tools should contribute as replaceable workers within a durable, portable organization whose authority and continuity remain under human control.
+
+The research vision is an organization whose structure and evolution can be studied as an engineered system. Organization as Code establishes an explicit representation; one canonical digital knowledge layer uses CI/CD mechanisms and available automations to coordinate dependencies, propagate authorized changes and synchronize the relevant organizational state; replaceable external AI tools can then operate on that foundation under established authority. This allows a Solopreneur to combine functions without inventing unnecessary departments, and allows larger organizations to coordinate existing functions through the same principles. Task-relevant synergy, communication and collaboration carry a research result into product development, marketing, personnel planning and investor communication when its dependencies require those activities. Organizational CI/CD is the coordination and synchronization lifecycle connecting these functions to their common digital knowledge, including consistency checks, delivery, observation and reconciliation of actual state. Synchronization respects each domain's authority, privacy and physical constraints; it need not mean simultaneous changes or unrestricted automatic execution. The intended outcome is a portable organizational architecture that remains understandable and usable by humans and replacement tools even when an AI service is unavailable; that property requires verification in actual adoption scenarios.
+
+## Goal
+
+Enable capable, authorized AI runtimes to contribute to long-lived organizational work safely, efficiently and with verifiable outcomes. Reduce repeated explanations, duplicated effort, loss of context and avoidable rework while preserving security, accountable decisions and reliable handoff. Prefer adequate existing, local and free solutions, with governance proportionate to the actual effects and risks of the work.
+
+The software engineering R&D goal is to specify, prototype and evaluate this architecture in the same causal sequence: represent the organization as code; establish one canonical source of digital organizational knowledge; use CI/CD mechanisms and available automations to coordinate and synchronize all domains affected by the effective task; and integrate AI as a replaceable external tool within that lifecycle through to verified applied state. Evaluation should include Solopreneur and multi-function organizational scenarios spanning R&D, marketing, human resources and investor communication, as a simplified, non-exhaustive example, with scope-appropriate authority, privacy and human responsibility. It should assess how canonical changes identify dependencies, initiate applicable checks and authorized synchronization, enable task-relevant synergy, communication and collaboration, and detect or reconcile divergence across functions. Research questions concern knowledge consistency, continuity after AI replacement or unavailability, collaboration across functions, change traceability, recovery and the cost of governance. Reproducible scenarios should distinguish structural conformance, isolated tests and installed integration evidence, measuring outcomes such as reconstruction time, duplicated effort, detected inconsistencies, verification coverage and resource consumption against declared baselines. These are evaluation objectives, not claims of demonstrated effectiveness, autonomy, commercial return or mandatory infrastructure.
+
+## Introduction
+
+AI conversations can help produce useful results, but conversation history alone is an unreliable foundation for ongoing organizational work. Decisions, responsibilities, access conditions and unfinished activities need durable sources that another authorized human or AI can inspect and use.
+
+OOP separates the protocol's rules from the organization's canonical knowledge and operational state in `operations`, and from private project and runtime coordination in `.priv`. The active runtime identifies its project, obtains the applicable current rules, checks its capabilities and authority, performs authorized work and records verified outcomes and continuation needs. Controls and verification depend on the capabilities actually available in the execution environment; a specification or distributed contract alone does not establish installed enforcement.
+
+### Illustrative coordination and synchronization scenarios
+
+These brief, non-exhaustive scenarios illustrate the intended use of available CI/CD mechanisms and automations, not demonstrated integrations. In each case, shared knowledge identifies the affected domains; only authorized effects proceed, and unresolved differences remain tracked.
+
+- **Research result:** a validated result changes the product roadmap; CI checks launch, staffing and investor-message dependencies; CD coordinates the authorized updates across R&D, marketing, human resources and investor communication; verification checks their consistency with the revised roadmap.
+- **Price change:** an approved price changes in canonical knowledge; CI checks margin, tax and contractual constraints; CD synchronizes the applicable catalog, checkout and sales material; verification checks displayed prices and a permitted test transaction.
+- **Supplier delay:** an observed delay updates canonical delivery expectations; CI identifies production, inventory and customer commitments affected; CD coordinates an authorized revised plan and relevant notifications; verification checks actual schedules and tracked customer follow-up.
+- **New employee:** an approved start and role enter canonical knowledge; CI checks responsibilities, budget and access eligibility; CD coordinates authorized onboarding, accounts and payroll instructions; verification checks scoped access and responsible owners' confirmation of readiness.
+
+This overview is explanatory. The two sections below define the applicable rules for runtimes using OOP and for maintainers of this repository.
+
+# Rules for the runtime
+
 ## 1. Mandate
 
 ### Normative conventions
@@ -3143,11 +3182,13 @@ The AI must adapt to the organization.
 
 The organization must not depend on the AI.
 
-<!-- OOP:MAINTAINER-APPENDIX -->
-
-## Repository maintainer instructions
+# Rules for the maintainer
 
 Always respond in the user's preferred language.
+
+**Required document structure:** `PROTOCOL.md` MUST always contain exactly one `# Rules for the runtime` heading and exactly one `# Rules for the maintainer` heading, in that order, using precisely this English text, capitalization and Markdown level. The first section contains the organizational protocol; the second contains repository maintenance rules. Do not remove, rename, translate, duplicate or reorder either heading. Keep the document title, author attribution and explanatory overview before the runtime section and all maintainer-only instructions in the maintainer section. The overview MUST NOT introduce, modify or override operational requirements; those belong in the applicable rules section. Verify this structure before generation or acceptance; an invalid structure MUST block those operations. These headings do not grant authority or waive any requirement within either section.
+
+**Mandatory research-purpose alignment:** Before resolving a problem, proposing a fix or addition, modifying the canonical source, or generating the distribution, the maintainer MUST read the current Abstract, Vision and Goal and assess the planned work against them. Preserve their connected objectives: Organization as Code; one canonical source of digital organizational knowledge with authoritative external references, using CI/CD mechanisms and available automations to coordinate and synchronize every domain affected by the task; AI as a replaceable external tool rather than an indispensable core; Solopreneur applicability; task-relevant synergy, communication and collaboration across organizational functions; and proportionate CI/CD as the coordination and synchronization lifecycle through verified applied state, not merely a final software delivery stage. R&D, marketing, human resources and investor communication are a simplified, non-exhaustive example; preserve applicability to all relevant organizational domains. For each proposal or coordinated change package, record a concise alignment rationale and any conflict, uncertainty or expected tradeoff in the existing proposal/impact evidence; do not require a separate repetitive report for every file. Missing assessment or an unresolved conflict MUST block the affected recommendation, source change or generation until resolved within the user's authorized scope. The overview guides research purpose and maintenance choices; it neither overrides runtime requirements nor supplies new permissions. If fulfilling an objective requires a normative change, express it explicitly in the runtime rules and review its impact before derivation. The maintainer MUST also keep README explanations consistent with these texts, using accessible commercial positioning and clearly labeling potential benefits and speculative opportunities as expectations requiring validation. Passing structural tests or generating artifacts alone does not establish this semantic alignment or empirical effectiveness.
 
 > **Purpose:** Operational instructions for the AI tasked with auditing **the OOP repository in the role of maintainer**. This appendix applies only to maintenance of this repository. It is not a consumer bootstrap instruction or a new organizational protocol requirement, and it must not be incorporated into the consumer distribution.
 

@@ -17,17 +17,41 @@ const includes=(selected,...ids)=>ids.every(id=>selected.modules.includes(id));
 const sha=x=>`sha256:${createHash('sha256').update(x).digest('hex')}`;
 
 test('REL-PKG-001: all source spans reconstructed exactly with no omissions or overlap',()=>{
-  const marker = '<!-- OOP:MAINTAINER-APPENDIX -->';
-  const appendix = '\n\n' + marker + '\n\n## Repository maintainer instructions\nMaintainer-only instructions.';
-  assert.equal(protocolSource('normative' + appendix), 'normative');
-  assert.equal(protocolSource('changed normative' + appendix), 'changed normative');
-  assert.throws(() => protocolSource('normative' + appendix + appendix), /duplicate/);
-  assert.throws(() => protocolSource('normative\n\n## Repository maintainer instructions\n'), /missing/);
-  assert.throws(() => protocolSource('normative\n\n' + marker + '\nWrong heading'), /Malformed/);
+  const title = '# Cross-Tool Organization Orchestration Protocol\n\n';
+  const runtime = '# Rules for the runtime';
+  const maintainer = '# Rules for the maintainer';
+  const document = title + runtime + '\n\nnormative\n\n' + maintainer + '\n\nMaintainer-only instructions.';
+  assert.equal(protocolSource(document), title + 'normative');
+  assert.equal(protocolSource(document.replace('normative','changed normative')), title + 'changed normative');
+  assert.equal(protocolSource(document.replace(/\n/g,'\r\n')), title + 'normative');
+  const overview = '**Author:** Example author\n\n## Abstract\n\nExplanatory overview.\n\n';
+  assert.equal(protocolSource(document.replace(runtime,overview + runtime)), title + 'normative');
+  assert.equal(protocolSource(document.replace(runtime,overview.replace('Explanatory overview.','Revised overview.') + runtime)), title + 'normative');
+  for (const heading of [runtime, maintainer]) {
+    assert.throws(() => protocolSource(document.replace(heading,'')), /Missing/);
+    assert.throws(() => protocolSource(document.replace(heading,heading.toUpperCase())), /Missing/);
+    assert.throws(() => protocolSource(document.replace(heading,'#' + heading)), /Missing/);
+    assert.throws(() => protocolSource(document + '\n\n' + heading + '\n'), /duplicate/);
+    assert.throws(() => protocolSource(document.replace(heading,''),{historical:true}), /Missing/);
+  }
+  assert.throws(() => protocolSource(title + maintainer + '\n\nmaintenance\n\n' + runtime + '\n\nnormative'), /Malformed/);
+  assert.throws(() => protocolSource(document.replace('normative','')), /Empty/);
+  assert.throws(() => protocolSource(document.replace('Maintainer-only instructions.','')), /Malformed/);
+  const legacy = title + 'normative\n\n<!-- OOP:MAINTAINER-APPENDIX -->\n\n## Repository maintainer instructions\nMaintenance';
+  assert.throws(() => protocolSource(legacy), /Missing/);
+  assert.equal(protocolSource(legacy,{historical:true}), title + 'normative');
+  assert.equal(protocolSource(title + 'normative',{historical:true}), title + 'normative');
+  assert.throws(() => protocolSource(legacy + legacy,{historical:true}), /duplicate/);
+  assert.throws(() => protocolSource(legacy.replace('<!-- OOP:MAINTAINER-APPENDIX -->\n\n',''),{historical:true}), /missing/);
 
   let next=1;const texts=[];
   for(const item of trace.clauses){assert.equal(item.start,next);next=item.end+1;
     const clause=readJSON(`modules/${item.module}.json`).contracts.find(x=>x.id===item.contract);
+    const [,start,end] = /^lines:(\d+)-(\d+)$/.exec(clause.source.locator);
+    const locatedLines = read('PROTOCOL.md').replace(/\r\n/g,'\n').split('\n').slice(Number(start)-1,Number(end));
+    const runtimeHeading = locatedLines.indexOf('# Rules for the runtime');
+    const located = runtimeHeading === -1 ? locatedLines : [...locatedLines.slice(0,2),...locatedLines.slice(runtimeHeading+2)];
+    assert.equal(located.join('\n'),clause.semantic_clause);
     assert.equal(clause.semantic_clause,sourceLines.slice(item.start-1,item.end).join('\n'));
     assert.equal(sha(clause.semantic_clause),item.content_identity);texts.push(clause.semantic_clause);}
   assert.equal(next-1,sourceLines.length);assert.equal(texts.join('\n'),source);

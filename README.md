@@ -18,9 +18,26 @@ It becomes useful when AI work stops being only a conversation and starts becomi
 
 OOP is a vendor-neutral operating protocol telling capable AI tools how to work on a long-lived project in a durable, verifiable and resumable way. It applies to companies, non-profits, independent professionals and autonomous projects.
 
+**Build a business that keeps its knowledge as your tools change.** OOP explores **Organization as Code**: your goals, responsibilities, decisions and work become versioned information that people and compatible tools can inspect and continue. `operations` provides one canonical source of digital organizational knowledge, including references to authoritative systems you already use. That shared source uses **CI/CD mechanisms and available automations to coordinate and synchronize the whole organization**, following the domains affected by each task. From that foundation, **AI is an external tool** you can replace; your organization retains its knowledge and authority when a model or AI service is replaced or unavailable.
+
+**For the Solopreneur:** bring product research, development, marketing, personnel needs and investor communication into one coherent picture, even when you wear several hats yourself. When a task needs several functions, OOP connects their dependencies so they can communicate, collaborate and create useful synergy. Coordination stays proportionate: a product description need not create departments or trigger an investor update.
+
+**Change once, coordinate the consequences.** OOP uses **CI/CD** beyond software delivery to connect shared digital knowledge with the organization's actual work. CI checks a proposed change and identifies dependencies and inconsistencies. CD coordinates authorized updates, task-relevant communication and collaboration, then checks whether affected functions and systems agree with the canonical plan. Available automations can support these steps; approvals, human responsibilities and real-world constraints still govern execution. CI/CD here does not require a hosted pipeline or make every activity an automated deployment.
+
+These short examples illustrate the proposed coordination model, not installed integrations. R&D, marketing, personnel and investor communication are one simplified example among many:
+
+- **A research result changes the roadmap:** check launch, staffing and investor-message dependencies; coordinate approved product, marketing, personnel and investor updates; verify that they reflect the same roadmap.
+- **You change a price:** check margin, tax and contract constraints; synchronize the authorized catalog, checkout and sales material; verify displayed prices and a permitted test transaction.
+- **A supplier slips a delivery:** check stock, production and customer commitments; coordinate the revised plan and authorized notifications; verify schedules and track customer follow-up.
+- **Someone joins the team:** check role, budget and access eligibility; coordinate approved onboarding, accounts and payroll instructions; verify scoped access and readiness with the responsible owners.
+
+Only the functions required by the task participate. Synchronization may involve staged updates and human actions; unfinished differences remain visible and tracked. The commercial hypothesis is less manual chasing, fewer inconsistent promises and more useful synergy from the same shared knowledge.
+
 **The 60-second explanation:** You tell the AI what you want. OOP provides rules and reference artifacts that help it determine which project it is in, which rules matter, what it may change, what must be verified and what must be preserved so another AI can continue later.
 
-**Where time and money may be saved:** OOP reduces organizational friction and avoidable AI-work cost. It can reduce time spent re-explaining a project, duplicated work across sessions or tools, mistakes from lost or stale context, avoidable rollback and rework, and human time spent reconstructing decisions, responsibilities and current state. Keeping work portable reduces dependence on one AI vendor. Free-First / Zero-Cost Convergence can also avoid unnecessary SaaS and cloud spending; OOP does not directly generate profit or guarantee savings.
+**Where time and money may be saved:** OOP aims to reduce organizational friction and avoidable AI-work cost. It may reduce time spent re-explaining a project, duplicated work across sessions or tools, mistakes from lost or stale context, avoidable rollback and rework, and human time spent reconstructing decisions, responsibilities and current state. Keeping work portable can reduce dependence on one AI vendor. Free-First / Zero-Cost Convergence can also avoid unnecessary SaaS and cloud spending; OOP does not directly generate profit or guarantee savings.
+
+**The commercial opportunity to explore:** a Solopreneur could spend more time developing an offer, reaching customers and delivering value if less effort goes into reconstructing context and reconciling disconnected work. A growing organization could reuse the same knowledge across R&D, marketing, human resources and investor relations, potentially shortening handoffs and reducing conflicting messages. These are business hypotheses to test in practice; their value depends on adoption effort, actual integrations and measured results. OOP is a software engineering research and development project with a proposed path to commercial value.
 
 OOP prefers capabilities you already have, local tools and free/open infrastructure before introducing paid services. It asks only for unavoidable meaningful decisions, remembers valid approvals for their exact scope and resumes authorized work after checking your answer. You do not need to choose cryptographic algorithms or automation internals; required identity and safety checks still apply. Real-world time and cost savings require observation.
 
@@ -69,6 +86,8 @@ The detailed [Where truth lives](#where-truth-lives) table below distinguishes t
 **Company:** "Launch a commercial offering." OOP helps a capable AI account for relevant work, dependencies, approvals, authorized execution and verification instead of treating the request as one isolated task.
 
 **Independent professional:** "Deliver this client engagement." Decisions, deliverables, blockers and verified progress remain reconstructible across sessions.
+
+**Solopreneur:** "Turn this prototype into a marketable offer." Link the research evidence and product work to the positioning, launch material and any relevant personnel or investor communication. Shared knowledge helps keep the offer coherent while AI tools remain replaceable. A shorter path to market is a potential benefit to evaluate.
 
 **Independent project:** "Turn this idea into a usable product." Process and infrastructure stay proportionate while the project preserves durable work state.
 
@@ -130,7 +149,7 @@ A successful command does not automatically prove the desired outcome. Evidence 
 | Project consumer `.priv` | Private technical coordination for one project/workspace; authorized runtimes share only within that verified scope |
 | Runtime-specific `.priv` | Tool-specific execution data and independent adoption checkpoints |
 
-`operations` is the organization's documentary and operational brain. It contains tool-independent knowledge and state, or references to authoritative sources of record. It supports analysis, decisions and authorized execution with verified outcomes. Tool integrations, secrets and runtime configuration stay private. Free, open, local and portable solutions are preferred when adequate.
+`operations` is the organization's documentary and operational brain: one logical canonical source of organizational knowledge and coordination across all relevant functions. It contains tool-independent knowledge and state, or canonical references to authoritative external sources of record; it does not require copying every business record into one repository. It supports analysis, decisions and authorized execution with verified outcomes. Runtime caches and chat history do not become competing knowledge authorities. Tool integrations, secrets and runtime configuration stay private. Free, open, local and portable solutions are preferred when adequate.
 
 ### Project isolation and every-interaction governance
 
@@ -254,6 +273,8 @@ The instruction above requests full setup: the AI prepares private local state, 
 
 [PROTOCOL.md](PROTOCOL.md) is the **Canonical Normative Prompt** and single source of organizational norms. Read it completely before normative changes, including tables, examples, exceptions and unnumbered material.
 
+Before resolving problems, proposing additions, changing the source or generating the distribution, follow the appendix's mandatory alignment assessment against the current Abstract, Vision and Goal. Preserve the research purpose and keep this README's commercial explanations consistent with it; potential savings, faster delivery and business opportunities remain hypotheses until evaluated. The overview provides purpose, while the applicable rules establish operational requirements and authority.
+
 Normative edits start in the source. Derive Core and on-demand modules from complete semantic analysis, with no fixed parser, heading-to-module table or required programming runtime. Reassess module/schema sets, dependencies, routing, bidirectional traceability, migration, validation and permanent regression coverage.
 
 Canonical REL-01–REL-11 require an AI-first distribution: typed JSON contracts, a non-empty entry, compact semantic routing and dependency closure, explicit lifecycle transitions, selective context/reuse, applicable local controls and measured maintainer acceptance. Human-oriented release readability must not increase consumer cost or latency; required user explanations and organizational history remain. Performance improvements are measurements, not assumptions about serialization. Consumer bootstrap never validates the OOP repository or executes release tests.
@@ -264,9 +285,9 @@ Reuse valid freshness evidence during bounded upstream synchronization; preserve
 
 ### Maintainer commands
 
-The [repository maintainer appendix in PROTOCOL.md](PROTOCOL.md#repository-maintainer-instructions) contains the complete technical audit instructions and commands available to the repository maintainer:
+The [repository maintainer appendix in PROTOCOL.md](PROTOCOL.md#rules-for-the-maintainer) contains the complete technical audit instructions and commands available to the repository maintainer:
 
-- [Technical audit](PROTOCOL.md#repository-maintainer-instructions): read-only repository audit and consolidated corrective recommendations, to be executed after reading this file if you have been instructed to act as maintainer of this repository.
+- [Technical audit](PROTOCOL.md#rules-for-the-maintainer): read-only repository audit and consolidated corrective recommendations, to be executed after reading this file if you have been instructed to act as maintainer of this repository.
 - [DIAGNOSE](PROTOCOL.md#diagnose): analyze requests or problems and propose changes.
 - [PREPARE](PROTOCOL.md#prepare): turn recommendations into an implementation prompt.
 - [VERIFY](PROTOCOL.md#verify): check implementation and regressions.

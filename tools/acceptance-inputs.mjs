@@ -31,9 +31,30 @@ export function subjects(root) {
 export const identify = (root, paths) => Object.fromEntries(paths.map(path => [path,
   `sha256:${createHash('sha256').update(readFileSync(join(root, path))).digest('hex')}`]));
 
-// Explicit role-scoped appendix: excluded from normative source, included in file identities.
-export function protocolSource(text) {
+// Current document structure is mandatory. Historical parsing is read-only compatibility.
+export function protocolSource(text, { historical = false } = {}) {
   const normalized = text.replace(/\r\n/g, '\n');
+  const runtime = '# Rules for the runtime';
+  const maintainer = '# Rules for the maintainer';
+  const lines = normalized.split('\n');
+  const runtimeCount = lines.filter(line => line === runtime).length;
+  const maintainerCount = lines.filter(line => line === maintainer).length;
+  if (runtimeCount || maintainerCount || !historical) {
+    if (runtimeCount !== 1 || maintainerCount !== 1) throw new Error('Missing or duplicate required role heading');
+    const title = '# Cross-Tool Organization Orchestration Protocol\n\n';
+    const runtimeOffset = normalized.indexOf('\n\n' + runtime + '\n\n');
+    if (!normalized.startsWith(title) || runtimeOffset < title.length - 2) {
+      throw new Error('Malformed runtime section or heading order');
+    }
+    const offset = normalized.indexOf('\n\n' + maintainer + '\n');
+    if (offset < normalized.indexOf(runtime) || !normalized.slice(offset + maintainer.length + 3).trim()) {
+      throw new Error('Malformed maintainer section or heading order');
+    }
+    const source = title + normalized.slice(runtimeOffset + runtime.length + 4, offset);
+    if (!source.slice(source.indexOf('\n\n') + 2).trim()) throw new Error('Empty runtime section');
+    return source;
+  }
+  // Accepted older checkpoints retain their original source representation.
   const token = '<!-- OOP:MAINTAINER-APPENDIX -->';
   const offset = normalized.indexOf(token);
   if (offset === -1) {
@@ -46,4 +67,11 @@ export function protocolSource(text) {
     throw new Error('Malformed or duplicate maintainer appendix boundary');
   }
   return normalized.slice(0, offset - 2);
+}
+
+// Source allocation uses logical lines; published locators name actual document lines.
+export function protocolSourceLocator(start, end, document) {
+  protocolSource(document);
+  const offset = document.replace(/\r\n/g, '\n').split('\n').indexOf('# Rules for the runtime');
+  return `lines:${start <= 2 ? start : start + offset}-${end <= 2 ? end : end + offset}`;
 }

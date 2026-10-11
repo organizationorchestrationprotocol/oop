@@ -7,10 +7,11 @@ import { modules, spans } from './release-plan.mjs';
 import { closure } from './reference-engine.mjs';
 import { validateProfile } from './schema-profile.mjs';
 import { applyArtifacts } from './prune-artifacts.mjs';
-import { protocolSource } from './acceptance-inputs.mjs';
+import { protocolSource, protocolSourceLocator } from './acceptance-inputs.mjs';
 export const root = fileURLToPath(new URL('../', import.meta.url));
 export const hash = value => `sha256:${createHash('sha256').update(value).digest('hex')}`;
-export const source = protocolSource(readFileSync(new URL('../PROTOCOL.md', import.meta.url), 'utf8'));
+const document = readFileSync(new URL('../PROTOCOL.md', import.meta.url), 'utf8');
+export const source = protocolSource(document);
 const review = JSON.parse(readFileSync(new URL('./release-review.json', import.meta.url), 'utf8'));
 if (review.source_identity !== hash(source)) throw new Error('Source changed: complete semantic review and bound span update required');
 if (JSON.stringify(review.spans.map(({content_identity,...x}) => x)) !== JSON.stringify(spans)) throw new Error('Unreviewed allocation change');
@@ -24,7 +25,7 @@ const contracts = spans.map(span => {
   if (hash(text) !== review.spans.find(x=>x.id===span.id)?.content_identity) throw new Error(`Changed reviewed clause: ${span.id}`);
   const module = modules.find(x=>x.id===span.module);
   if (!module) throw new Error('Missing reviewed module');
-  const contract = { id:span.id, source:{path:'PROTOCOL.md',locator:`lines:${span.start}-${span.end}`,content_identity:hash(text)},
+  const contract = { id:span.id, source:{path:'PROTOCOL.md',locator:protocolSourceLocator(span.start,span.end,document),content_identity:hash(text)},
     actor:span.module==='producer'?'maintainer':'source-qualified actor', triggers:module.facets,
     scope:module.purpose, dependencies:module.dependencies, preconditions:['$clause'], actions:['$clause'],
     postconditions:['$clause'], verification:'$clause', prohibitions:['$clause'], unknown:'$clause+core',
@@ -38,7 +39,7 @@ closure(modules,modules.map(x=>x.id));
 const commit = spawnSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'});
 let committed = spawnSync('git',['show','HEAD:PROTOCOL.md'],{cwd:root,encoding:'utf8',maxBuffer:1024*1024});
 if (committed.status !== 0) committed = spawnSync('git',['show','HEAD:PROMPT.md'],{cwd:root,encoding:'utf8',maxBuffer:1024*1024});
-if (commit.status || committed.status || protocolSource(committed.stdout)!==source) throw new Error('Canonical source must be committed before ready distribution generation');
+if (commit.status || committed.status || protocolSource(committed.stdout,{historical:true})!==source) throw new Error('Canonical source must be committed before ready distribution generation');
 const plan = [];
 function save(path,data) {
   const content = JSON.stringify(data)+'\n';
@@ -165,7 +166,7 @@ save('distribution/entry.json',{
   runtime:'Select supported existing mechanisms under canonical authority; this package does not install controls, prove provider access or claim Full OOP runtime governance.',
 });
 save('tools/evidence/release-traceability.json',{
-  source_identity:hash(source),source_snapshot_commit:commit.stdout.trim(),source_normalization:'CRLF to LF only',review_ref:'tools/release-review.json',
+  source_identity:hash(source),source_snapshot_commit:commit.stdout.trim(),source_normalization:'CRLF to LF; explanatory overview and role section headings excluded, document title retained; allocation lines refer to extracted source, contract locators to document lines',review_ref:'tools/release-review.json',
   preservation:'preserved_verbatim',coverage_complete:true,
   clauses:contracts.map(({span,contract})=>({...span,content_identity:contract.source.content_identity,artifact:`distribution/modules/${span.module}.json`,contract:contract.id})),
   modules:indexModules,
