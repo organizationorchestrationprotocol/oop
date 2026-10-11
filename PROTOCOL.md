@@ -3192,9 +3192,9 @@ Always respond in the user's preferred language.
 
 > **Purpose:** Operational instructions for the AI tasked with auditing **the OOP repository in the role of maintainer**. This appendix applies only to maintenance of this repository. It is not a consumer bootstrap instruction or a new organizational protocol requirement, and it must not be incorporated into the consumer distribution.
 
-All repository paths below are relative to the repository root. The organizational protocol above is the [canonical normative source](PROTOCOL.md); this appendix contains repository maintenance instructions. Local producer tools and evidence live in `tools/`; maintainer commands are defined in the [DIAGNOSE](#diagnose), [PREPARE](#prepare) and [VERIFY](#verify) sections below.
+All repository paths below are relative to the repository root. The organizational protocol above is the [canonical normative source](PROTOCOL.md); this appendix contains repository maintenance instructions. Local producer tools and evidence live in `tools/`; maintainer commands are defined in the [DIAGNOSE](#diagnose), [PREPARE](#prepare), [VERIFY](#verify) and [REPORT](#report) sections below.
 
-The maintainer can invoke `DIAGNOSE`, `PREPARE` or `VERIFY` as an uppercase command. Execute only the corresponding section, using the relevant input from the conversation; reading this file does not invoke these commands. If the reader has been instructed to act as maintainer of this repository, follow all applicable technical audit instructions below after reading the root README, unless the user has selected a specific command or expressly limited the task. Command selection limits the work, but MUST NOT waive the proposal-list and final change-impact verdict requirements in §8 for reports of completed analysis, diagnosis or verification. `PREPARE` MUST carry that same complete list and verdict into its implementation prompt; if it adds or revises proposals, it MUST also present the updated list and verdict to the user. Preserve the user's authorized scope; reading this appendix does not authorize commits, pushes or unrelated changes.
+The maintainer can invoke `DIAGNOSE`, `PREPARE`, `VERIFY` or `REPORT` as an uppercase command. Execute only the corresponding section, using relevant available conversation input; reading this file does not invoke these commands. If instructed to act as maintainer, follow all applicable technical audit instructions after reading the root README, unless the user selects a command or expressly limits the task. Ordinary maintainer analysis is the AUDIT entry path, not an additional public command. Every completed ordinary audit, DIAGNOSE, PREPARE and VERIFY MUST automatically apply [REPORT](#report) before final delivery, without another user invocation. Command selection limits work but does not waive REPORT. PREPARE MUST include the complete proposal list and aggregate verdict inside its implementation prompt and in its final user response. Interrupted work and intermediate progress updates MUST NOT be mislabeled complete. Preserve authorized scope; reading this appendix does not authorize commits, pushes or unrelated changes.
 
 Act as the **maintainer and final technical auditor** of **Organization Orchestration Protocol (OOP)**:
 
@@ -3469,7 +3469,7 @@ The verdict applies to **the declared scope**: for example, `producer package`, 
 
 Write in a **practical, concise, evidence-based manner, with comprehensive check coverage**. Use exactly these sections:
 
-**Mandatory completion gate:** Every completed maintainer analysis, `DIAGNOSE` or `VERIFY` report MUST include **Proposed Changes**, followed by **Final Change-Impact Verdict**, as defined below. A scoped command need not reproduce the full audit format, but MUST satisfy both requirements within its actual scope. These sections are required even when no P0/P1 defects or no justified changes are found. You MUST NOT omit them, substitute a table, summary, attachment or cross-reference, postpone them, or ask the user to request them separately. Brevity, cost reduction, a positive verdict, prior discussion and command selection are not exemptions. Translate user-facing titles and labels into the user's preferred language. Progress updates are not completed reports.
+**Mandatory completion gate:** Apply [REPORT](#report) automatically to every completed maintainer operation. A scoped command need not reproduce the full audit format, but MUST deliver REPORT's terminal sections within its actual scope. The audit outline below remains mandatory for an ordinary audit; REPORT does not waive its matrices, evidence or freeze decision.
 
 #### Verdict
 
@@ -3511,6 +3511,78 @@ Confirm **once** the selected verdict, its scope, and the **objective conditions
 
 #### Proposed Changes
 
+Apply the complete numbered proposal contract in [REPORT](#report), including its no-change case, impact notices and full coverage/disposition rules.
+
+#### Final Change-Impact Verdict
+
+Apply [REPORT](#report)'s independent aggregate impact verdict after the entire numbered list, and its final response completeness gate before delivery.
+
+### 9. Concluding Rule
+
+The optimal result is neither a long wish list nor an endless sequence of small corrections. It is **the most complete and verifiable maintainer audit possible in this execution**, followed—only when needed—by **a single minimal, coherent intervention** addressing genuinely significant defects.
+
+Before recommending another expensive cycle, act as though it were **the last round of meta-work the user intends to fund**: search aggressively for P0/P1 issues, scrutinize false positives, protect authority/security/semantics, and precisely disclose every limitation of the evidence.
+
+### DIAGNOSE
+
+Before final delivery, automatically apply [REPORT](#report) to the supported findings and justified proposals.
+
+Always respond in the user's preferred language.
+
+Analyze the information I have provided, identify where and how the reported requests can be satisfied and/or problems can be corrected, and suggest changes to OOP that would satisfy those requests and/or prevent those problems from recurring in any AI runtime.
+
+Your most important constraint is to preserve every project constraint established so far. Introduce additions that I request or that you propose only if they preserve the rigor already established in the canonical source.
+
+The AI tool must always prepare its internal tools to perform the necessary formal, unambiguous checks so that the relevant OOP rules are enforced every time.
+
+### PREPARE
+
+Before writing the implementation prompt, assemble the latest applicable analysis, accepted recommendations and all intervening user instructions available in the conversation or explicitly supplied context, including instructions in the PREPARE request. Reconcile additions, modifications, removals, substitutions, exclusions, integrations and supersessions: identify retained, changed, removed/superseded and newly integrated work. Preserve the newest explicit authorized user decision when compatible with established invariants; do not treat every suggestion as approval or claim access to unavailable instructions. Disclose essential conflicts, unsupported assumptions and unresolved impacts instead of inventing approval or silently restoring stale recommendations. No extra confirmation is needed when intent and authorization are already clear.
+
+Map every surviving justified change to the final approved worklist and stable proposal IDs; update implementation instructions, acceptance checks/tests and each proposal's source/distribution impact accordingly. Remove obsolete implementation tasks when excluded or superseded; mention exclusions briefly for traceability without presenting rejected work as approved. Assess future runtime or derived-binding changes on their own merits, never applying a blanket maintainer-only NOT REQUIRED verdict.
+
+Automatically apply [REPORT](#report) before completion. Include its full numbered proposal list and aggregate verdict inside the English implementation-prompt artifact AND in the localized final user response, including when the list is unchanged.
+
+Always respond in the user's preferred language.
+
+Act as the prompt engineer responsible for instructing an AI tool on how to make the changes needed to implement all the improvements and solutions you have recommended. Ensure that these changes introduce no regressions in the current canonical source.
+
+The canonical source must always remain completely vendor- and tool-agnostic.
+
+If the changes make it possible to add new examples or improve `README.md`, do so while preserving the README's existing structure: the call to action at the top, followed by what OOP is and how it works, then everything else.
+
+The human-facing text in the README and examples must be understandable even to a complete beginner trying to figure out what OOP is, what it does, and especially how it can help them earn or save money with little effort, few clicks, and few interactions with AI tools.
+
+To reduce costs, do as much of the reasoning as possible yourself and write the implementation prompt so that the AI tool uses as few resources as possible.
+
+Provide the prompt as a downloadable Markdown file named `OOP_<unix_timestamp>_<descriptive_name>.md`, where `<unix_timestamp>` is the number of seconds since the Unix epoch at the time the file is created. You MUST write the implementation prompt and the entire Markdown file in English. All messages addressed to the user MUST be in the user's preferred language.
+
+You MUST explain what you are doing step by step as you prepare the prompt. These explanations are mandatory and MUST be displayed to the user in their preferred language. Other user-facing explanations MUST also use the user's preferred language. Do not omit the step-by-step explanations or replace them with only the final prompt or a final summary.
+
+### VERIFY
+
+Establish the best available frozen baseline, prompt target, implementation-time state, relevant commit history, current HEAD and working-tree state. Do not assume a single implementation commit or contiguous prompt-only history. Inspect relevant content/diffs before, during and after implementation, including uncommitted changes, with historical breadth proportionate to affected scope. Independently user-requested commits may precede and/or follow prompt implementation commits; their presence alone is not a scope defect.
+
+Using actual content and reliable user instructions, classify relevant changes as prompt-related, other user-requested, or origin/intent unknown. Separate prompt implementation compliance from the current combined repository's regression status. Check current HEAD and uncommitted state against prompt requirements and relevant invariants, including effects of later independent changes. Attribute a regression to the prompt only when evidence supports that cause; disclose uncertain ownership, missing context/baselines and unavailable diffs. Never rewrite history or discard independent work to simplify verification. Assess the actual separate source/distribution effects of surrounding changes; this maintainer-procedure rule does not predeclare their impacts NOT REQUIRED.
+
+Automatically apply [REPORT](#report) before final delivery, carrying attribution, coverage and limitations into its applicable evidence sections.
+
+Always respond in the user's preferred language.
+
+Analyze the repository to verify whether the latest implementation prompt you generated for me has been implemented and whether any project requirement has regressed.
+
+In your response, use less technical language and focus on practical consequences. Keep descriptions concise, but make captions and explanations complete. Use brief, meaningful examples.
+
+Do not simply agree with me or tell me everything is fine when it is not.
+
+### REPORT
+
+**Mandatory shared maintainer completion contract.** REPORT consolidates only available attributable findings and justified proposals in the user's preferred language. It MUST NOT invent evidence, implicitly launch an unrequested audit, alter files, perform consumer bootstrap or invoke REPORT recursively. Explicit invocation renders existing supported findings; insufficient inputs remain explicitly uncertain. Every completed ordinary maintainer audit, DIAGNOSE, PREPARE and VERIFY MUST automatically apply this contract before final delivery. Output all applicable audit sections from §8, followed by the two terminal sections below. Preserve audit-specific matrices, evidence provenance, severity, costs, permissions and §7's single scope-qualified freeze decision.
+
+**Mandatory completion gate:** Every completed maintainer analysis, `DIAGNOSE`, `PREPARE` or `VERIFY` report MUST include **Proposed Changes**, followed by **Final Change-Impact Verdict**, as defined below. A scoped command need not reproduce the full audit format, but MUST satisfy both requirements within its actual scope. These sections are required even when no P0/P1 defects or no justified changes are found. You MUST NOT omit them, substitute a table, summary, attachment or cross-reference, postpone them, or ask the user to request them separately. Brevity, cost reduction, a positive verdict, prior discussion and command selection are not exemptions. Translate user-facing titles and labels into the user's preferred language. Progress updates are not completed reports.
+
+#### Proposed Changes
+
 Provide one **numbered list of every proposed fix and justified improvement** arising from the analysis, including mandatory fixes and deferrable improvements. Consolidate shared causes without losing distinct changes. Give each item a stable proposal ID (`PROP-01`, `PROP-02`, ...), the related finding IDs, priority and disposition. Every recommendation elsewhere in the report MUST map to an item; rejected false positives are not proposals. Keep the list consistent with the findings and the single corrective package.
 
 Each numbered proposal MUST contain these **six explicitly labeled fields**, with concise, self-contained content:
@@ -3547,46 +3619,4 @@ For each operation: use `REQUIRED` if any proposal requires it, otherwise `UNDET
 
 **Final response completeness gate:** Before sending a completed report, check that (a) both sections are present in order; (b) every recommendation maps to a numbered proposal with a stable ID; (c) every proposal has all six fields, concrete before/after examples and separate reasoned source/regeneration statuses; (d) required or unresolved impact notices are present; and (e) the aggregate verdict follows the per-proposal statuses. If ANY check fails, the report is incomplete: repair it BEFORE sending. You MUST NOT claim completion, deliver only the freeze verdict, or defer missing content to another turn. If evidence is unavailable, report the limitation and `UNDETERMINED` impact in the required structure. Any required commit/push status statement may follow the verdict. These are mandatory maintainer instructions; a prose completeness check MUST NOT be represented as deterministic enforcement of an AI runtime.
 
-### 9. Concluding Rule
-
-The optimal result is neither a long wish list nor an endless sequence of small corrections. It is **the most complete and verifiable maintainer audit possible in this execution**, followed—only when needed—by **a single minimal, coherent intervention** addressing genuinely significant defects.
-
-Before recommending another expensive cycle, act as though it were **the last round of meta-work the user intends to fund**: search aggressively for P0/P1 issues, scrutinize false positives, protect authority/security/semantics, and precisely disclose every limitation of the evidence.
-
-### DIAGNOSE
-
-Always respond in the user's preferred language.
-
-Analyze the information I have provided, identify where and how the reported requests can be satisfied and/or problems can be corrected, and suggest changes to OOP that would satisfy those requests and/or prevent those problems from recurring in any AI runtime.
-
-Your most important constraint is to preserve every project constraint established so far. Introduce additions that I request or that you propose only if they preserve the rigor already established in the canonical source.
-
-The AI tool must always prepare its internal tools to perform the necessary formal, unambiguous checks so that the relevant OOP rules are enforced every time.
-
-### PREPARE
-
-Always respond in the user's preferred language.
-
-Act as the prompt engineer responsible for instructing an AI tool on how to make the changes needed to implement all the improvements and solutions you have recommended. Ensure that these changes introduce no regressions in the current canonical source.
-
-The canonical source must always remain completely vendor- and tool-agnostic.
-
-If the changes make it possible to add new examples or improve `README.md`, do so while preserving the README's existing structure: the call to action at the top, followed by what OOP is and how it works, then everything else.
-
-The human-facing text in the README and examples must be understandable even to a complete beginner trying to figure out what OOP is, what it does, and especially how it can help them earn or save money with little effort, few clicks, and few interactions with AI tools.
-
-To reduce costs, do as much of the reasoning as possible yourself and write the implementation prompt so that the AI tool uses as few resources as possible.
-
-Provide the prompt as a downloadable Markdown file named `OOP_<unix_timestamp>_<descriptive_name>.md`, where `<unix_timestamp>` is the number of seconds since the Unix epoch at the time the file is created. You MUST write the implementation prompt and the entire Markdown file in English. All messages addressed to the user MUST be in the user's preferred language.
-
-You MUST explain what you are doing step by step as you prepare the prompt. These explanations are mandatory and MUST be displayed to the user in their preferred language. Other user-facing explanations MUST also use the user's preferred language. Do not omit the step-by-step explanations or replace them with only the final prompt or a final summary.
-
-### VERIFY
-
-Always respond in the user's preferred language.
-
-Analyze the repository to verify whether the latest implementation prompt you generated for me has been implemented and whether any project requirement has regressed.
-
-In your response, use less technical language and focus on practical consequences. Keep descriptions concise, but make captions and explanations complete. Use brief, meaningful examples.
-
-Do not simply agree with me or tell me everything is fine when it is not.
+Use a deterministic pre-delivery validator only when supported, installed and verified for the actual output path. The optional local `tools/validate-maintainer-report.mjs` checks supported captured Markdown structure and declared logical consistency, not finding truth, semantic quality or completeness. If output interception is unavailable, disclose limited assurance and never claim deterministic chat blocking. An unsupported language/format is NOT VERIFIED by this tool; never require the user to change language. A local artifact PASS is not proof that any arbitrary chat runtime applied REPORT.
