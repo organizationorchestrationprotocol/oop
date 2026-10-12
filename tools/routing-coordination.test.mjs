@@ -5,6 +5,8 @@ import { execFileSync } from 'node:child_process';
 import { select, contextSession, routing } from './release-engine.mjs';
 import { priorReviewedAllocation } from './routing-allocation.mjs';
 import { protocolSource } from './acceptance-inputs.mjs';
+import { route } from './reference-engine.mjs';
+import { modules } from './release-plan.mjs';
 
 const base = '318598e09d702b131dfeb18efcf9a683ea65b831';
 const load = facets => contextSession('routing-test', 'local-reference', 'candidate').load(select({classification:'known',request:facets}));
@@ -39,6 +41,34 @@ test('REL-ROUTE-006: G0 and small G1 retain exact module closure and payload byt
   }
 });
 test('REL-ROUTE-007: organizational structure and unknown material routing retain boundaries', () => {
+  // The routing map, not descriptor-local triggers, controls selection.
+  const prior=JSON.parse(execFileSync('git',['show','dbc434254061169bee40df3f8c97f5a36b33b5eb:distribution/routing.json'],{encoding:'utf8'}));
+  const expected={};
+  for(const module of modules)for(const facet of module.facets)(expected[facet]??=[]).push(module.id);
+  Object.assign(expected,{full_install:['bootstrap'],information:['entry'],interaction:['entry'],
+    local_write:['entry'],durable_write:['tickets','execution'],completion:['entry'],update:['adoption'],
+    context_loss:['recovery','entry'],canonical_write:['operations','execution','history'],continuity_reserve:['handoff']});
+  assert.deepEqual(routing.facets,expected);
+  assert.equal(JSON.stringify(routing.facets),JSON.stringify(prior.facets));
+  assert.equal(routing.modules.length,36);
+  for(const [index,module] of routing.modules.entries()){
+    const {facets,...descriptor}=prior.modules[index];
+    assert.deepEqual(module,descriptor);
+    assert.ok(!Object.hasOwn(module,'facets'));
+    const detail=JSON.parse(readFileSync('distribution/'+module.detail,'utf8'));
+    assert.deepEqual(detail.triggers,modules.find(m=>m.id===module.id).facets);
+  }
+  for(const facts of [
+    ...Object.keys(expected).flatMap(facet=>['request','action','state','risk','authority','recovery']
+      .map(key=>({classification:'known',[key]:[facet]}))),
+    {classification:'known',request:Object.keys(expected)},
+    {classification:'unknown',request:[]},
+  ]){
+    assert.deepEqual(select(facts),select(facts,prior));
+    assert.deepEqual(route(routing.modules,routing,facts),route(prior.modules,prior,facts));
+  }
+  const missing=structuredClone(routing);delete missing.facets.information;
+  assert.throws(()=>select({classification:'known',request:['information']},missing),/Unresolved facet/);
   const model=load(['organizational_model']);
   assert.ok(model.contracts.find(c=>c.id==='OOP-impact-propagation').semantic_clause.includes('Assistance MUST NOT confer human office'));
   const unknown=select({classification:'unknown',request:[]});

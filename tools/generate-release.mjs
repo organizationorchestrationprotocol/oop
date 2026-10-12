@@ -72,7 +72,7 @@ const indexModules = modules.map(module => {
     context_invalidating_conditions:['workspace','runtime','adopted_identity','route','source_content','authority','relevant_state','capability','retention'],
     contracts:selected.map(x=>({id:x.id,source:x.source})),...payload,
   });
-  return {id:module.id,dependencies:module.dependencies,facets:module.facets,context:payload.path,detail:detail.path,detail_identity:detail.content_identity};
+  return {id:module.id,dependencies:module.dependencies,context:payload.path,detail:detail.path,detail_identity:detail.content_identity};
 });
 const facets = {};
 for (const module of modules) for (const facet of module.facets) (facets[facet]??=[]).push(module.id);
