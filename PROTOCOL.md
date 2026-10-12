@@ -2404,6 +2404,8 @@ An external system must be able to determine which original request caused each 
 
 ### Missing organizational capabilities
 
+The runtime MUST model functions, human responsibilities and authority from verified actual organizational facts or an explicitly authorized intended design, keeping intended, approved, applied and verified structure distinct under the existing lifecycle rules. OOP applies equally to a Solopreneur, an organization being established and an existing organization, including nonprofit, digital, hybrid and physical operations. One person MAY cover multiple functions where applicable policy and separation of duties permit; an AI tool MAY assist multiple functions only within independently established capability and authorized scope. Assistance MUST NOT confer human office, decision authority or accountability. The runtime MUST NOT invent unnecessary structures, collapse legitimate existing responsibilities, governing bodies or sites, or bypass their delegated authority, budget limits and required approvals. Organization size, legal form or a function label grants no authority.
+
 When a ticket consequence requires an organizational capability that does not exist, do not ignore the gap and do not arbitrarily assign the work to an unsuitable role.
 
 First determine the **minimum adequate organizational structure** required to introduce the capability.
@@ -2595,6 +2597,8 @@ Git history may suffice for G1 when it durably explains all required semantic fa
 ---
 
 ## 24. Organizational CI/CD
+
+For material organizational changes, the runtime MUST use `operations` and its authoritative source-of-record references to coordinate all and only domains materially affected by `effective_scope` and their direct or indirect dependencies. Organizational CI/CD connects dependency and approval checks to authorized downstream work, including task-relevant communication and collaboration through appropriate available mechanisms and automations, then verifies resulting alignment or retains unresolved consequences under the existing completion and recovery rules. Coordination MUST respect each affected domain's actual ownership, privacy, access, approval, timing and physical-world constraints; identifying a consequence does not authorize its execution. This lifecycle requires neither simultaneous propagation nor a hosted pipeline, new organizational store or indiscriminate automation, and does not expand G0/G1 governance. R&D, product, Marketing, HR and investor communication are conditional, non-exhaustive illustrations, never obligatory participants.
 
 ### Execution and verification lifecycle
 
@@ -3332,6 +3336,8 @@ Compare the complete canonical source against the approved spans in `tools/relea
 - Change sets, organizational CI/semantic compilation, controlled delivery, desired/applied/verified state, drift, compensation, and informed retries (a timeout **does not** imply that no effect occurred).
 - Decision log, causal history and reconstruction over time, nonduplicative record management, and external interfaces.
 
+For changes affecting organizational modeling or coordination, the maintainer MUST assess equal normative applicability with proportionate positive and negative scenarios for combined-function Solopreneurs; established organizations with real humans, boards, delegated budget/approval controls and multiple sites; intended formation or restructuring; nonprofit/hybrid physical operations; task-relevant research-to-product/Marketing coordination with conditional HR/investor involvement; pricing and authoritative external records; interrupted/provider-replaced continuation; lightweight G0/G1 work; and unavailable authorization or capability. Reuse existing maintainer fixtures and evidence, preserving stable test meanings. Check forbidden authority inheritance, fabricated entities, unrelated propagation, blind replay and false applied/verified completion as well as permitted outcomes. This is maintainer change assurance, not a consumer startup workload; source review, derived contracts, synthetic tests, installed-runtime behavior and provider/cross-runtime evidence remain separate.
+
 #### 5.6 Versions, Adoption, Migration, Handoff, and Recovery
 
 - **Full Git commit ID + repository/ref** as the identity of a published OOP revision; do not universally require SemVer, signed tags, a release manifest, or dedicated release commits. Optional requirements depend on an explicitly selected policy.
@@ -3411,6 +3417,8 @@ Recommend corrections only for ambiguities that cause risk, cost, or misundersta
 - Look for redundant full-context loading, excessively conservative routing, duplicated controls, repeated provider scans, reinstallation of unchanged hooks, duplicated reports, and local predicates that unnecessarily require an additional model call.
 - Preserve **Zero-Cost Convergence / Free-First**: no mandatory cloud service, SaaS, pay-per-use API, external telemetry, database, policy engine, or platform without a normative justification and evaluation of adequate free/local alternatives. A free solution is not automatically adequate if it compromises security or reliability.
 - For any optimization, assess **normative equivalence and coverage** first, measured effectiveness second, and cost last. Do not propose compression that drops rules or conditions.
+
+For selected reproducible organizational evaluations, declare source/package versions and identities, scenario setup, actual runtime/tools, controls, baseline and comparison limitations. Compare equivalent effective scope, actor permissions, tooling and verification duties. When reliably observable, collect reconstruction time, duplicate work, detected/missed inconsistencies, applicable verification coverage, model/tool calls, tokens, provider actions, human interventions and monetary/resource/maintenance cost. Unexecuted paths remain NOT PERFORMED/NOT VERIFIED and unavailable metrics remain not_measured; local structural or producer success establishes no measured organizational benefit. Reuse adequate local/free evidence without mandatory paid calls, hosted infrastructure or another organizational store.
 
 #### 5.12 Failure Modes and Negative Boundaries
 

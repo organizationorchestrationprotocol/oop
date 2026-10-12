@@ -203,6 +203,14 @@ If the destination is unavailable, preparation can finish while acceptance and r
 
 **What the user gains:** replacing the AI or ending a session need not mean restarting the organization or losing accountable work state.
 
+## Equal applicability: combined functions and established governance
+
+These are illustrative scenarios, not executed integrations. A Solopreneur can cover product, R&D and Marketing without creating HR, a board or an investor function. A research result that materially changes a launch needs the relevant product and Marketing consequences tracked; unrelated functions are not engaged.
+
+An established company with directors, a board and two sites uses the same protocol. AI can prepare a revised roadmap and support several functions, but cannot substitute a director's decision for a required board or budget approval. Existing responsible humans, site obligations and authoritative finance/HR systems remain in place. Authorized independent work can proceed while the specific approval-dependent action waits.
+
+A nonprofit planning a physical location keeps proposed structure distinct from actual operations. Updating its opening plan proves a document change; it does not prove the site was inspected, equipped or opened. A new or restructured organization must verify authorized actual effects before representing its intended hierarchy as applied.
+
 ## 7. Keep simple work simple
 
 | User prompt | Proportionate response |

@@ -41,7 +41,8 @@ function link(t, target, path, type) {
 }
 function refused(root, base) {
   const before = bytes(root), external = bytes(base, 'external');
-  const result = run(root, 'generate-release.mjs');
+  const mode = JSON.parse(readFileSync(join(root,'distribution/entry.json'),'utf8')).status === 'prepared_worktree_candidate' ? ['--prepare'] : [];
+  const result = run(root, 'generate-release.mjs', mode);
   assert.notEqual(result.status, 0, result.stdout);
   assert.deepEqual(bytes(root), before, result.stderr);
   assert.deepEqual(bytes(base, 'external'), external);
@@ -65,7 +66,7 @@ test('REL-TOOL-005: check-current binds material inputs and ignores unrelated fi
     assert.deepEqual(bytes(root), before);
   }
   writeFileSync(path, JSON.stringify(report));
-  for (const input of ['tools/fixtures/catalog.json', 'tools/fixtures/procedures.json', 'tools/schema-profile.mjs', 'tools/candidate/operations-access.json', 'tools/reviewed-source-transition.json', 'tools/source-transition.mjs']) {
+  for (const input of ['tools/organizational-alignment.json', 'tools/organizational-alignment.mjs', 'tools/organizational-scenarios.test.mjs', 'tools/fixtures/organizational-scenarios.json', 'tools/fixtures/catalog.json', 'tools/fixtures/procedures.json', 'tools/schema-profile.mjs', 'tools/candidate/operations-access.json', 'tools/reviewed-source-transition.json', 'tools/source-transition.mjs']) {
     const original = readFileSync(join(root, input));
     writeFileSync(join(root, input), Buffer.concat([original, Buffer.from('\n')]));
     const before = bytes(root);
@@ -136,11 +137,13 @@ test('REL-TOOL-012: isolated generation preserves 35 modules 54 clauses bytes an
   writeFileSync(join(root, 'distribution/modules/old.json'), '{}');
   writeFileSync(join(root, 'distribution/details/old.json'), '{}');
   writeFileSync(join(root, 'distribution/modules/notes.txt'), 'keep');
-  const first = run(root, 'generate-release.mjs'); assert.equal(first.status, 0, first.stderr);
+  const mode = JSON.parse(readFileSync(join(root,'distribution/entry.json'),'utf8')).status === 'prepared_worktree_candidate' ? ['--prepare'] : [];
+  if (mode.length) assert.notEqual(run(root,'generate-release.mjs').status,0,'Default still refuses uncommitted source');
+  const first = run(root, 'generate-release.mjs', mode); assert.equal(first.status, 0, first.stderr);
   assert.match(first.stdout, /35 modules, 54 lossless contracts/);
   for (const [path, content] of Object.entries(baseline)) {
     const original = JSON.parse(content);
-    if (path === 'distribution/entry.json') { original.source_snapshot.commit = commit; original.source_snapshot.path = 'PROTOCOL.md'; }
+    if (path === 'distribution/entry.json') { original.source_snapshot.commit = commit; original.source_snapshot.path = 'PROTOCOL.md'; original.source_binding.base_commit = commit; }
     if (path === 'distribution/routing.json') original.producer_binding.source_snapshot_commit = commit;
     assert.equal(readFileSync(join(root, path), 'utf8'), JSON.stringify(original) + '\n', path);
   }
@@ -148,12 +151,13 @@ test('REL-TOOL-012: isolated generation preserves 35 modules 54 clauses bytes an
   assert.equal(existsSync(join(root, 'distribution/details/old.json')), false);
   assert.equal(readFileSync(join(root, 'distribution/modules/notes.txt'), 'utf8'), 'keep');
   const after = bytes(root);
-  assert.equal(run(root, 'generate-release.mjs').status, 0);
+  assert.equal(run(root, 'generate-release.mjs', mode).status, 0);
   assert.deepEqual(bytes(root), after);
   rmSync(join(root, 'distribution/details'), { recursive: true });
   rmSync(join(root, 'distribution/procedures'), { recursive: true });
   unlinkSync(join(root, 'tools/evidence/release-traceability.json'));
-  assert.equal(run(root, 'generate-release.mjs').status, 0);
+  const rebuilt = run(root, 'generate-release.mjs', mode);
+  assert.equal(rebuilt.status, 0, rebuilt.stderr);
   assert.deepEqual(bytes(root), after);
 });
 test('REL-TOOL-013: orphan JSON symlink blocks cleanup without following its target', t => {

@@ -22,6 +22,8 @@ OOP is a vendor-neutral operating protocol telling capable AI tools how to work 
 
 **For the Solopreneur:** bring product research, development, marketing, personnel needs and investor communication into one coherent picture, even when you wear several hats yourself. When a task needs several functions, OOP connects their dependencies so they can communicate, collaborate and create useful synergy. Coordination stays proportionate: a product description need not create departments or trigger an investor update.
 
+**For established and new organizations:** the same rules preserve real managers, staff, boards, budget approvals, locations and authoritative business systems. A proposed structure stays a proposal until authorized, applied and verified. One person may cover several functions where policy permits; AI assistance never inherits that person's office or approval power.
+
 **Change once, coordinate the consequences.** OOP uses **CI/CD** beyond software delivery to connect shared digital knowledge with the organization's actual work. CI checks a proposed change and identifies dependencies and inconsistencies. CD coordinates authorized updates, task-relevant communication and collaboration, then checks whether affected functions and systems agree with the canonical plan. Available automations can support these steps; approvals, human responsibilities and real-world constraints still govern execution. CI/CD here does not require a hosted pipeline or make every activity an automated deployment.
 
 These short examples illustrate the proposed coordination model, not installed integrations. R&D, marketing, personnel and investor communication are one simplified example among many:

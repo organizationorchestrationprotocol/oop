@@ -17,8 +17,9 @@ function fixture() {
   return { record: structuredClone(record), baselineCommit: record.baseline.commit,
     checkpoint: { recordCommit: record.checkpoint.commit, identity: record.checkpoint.content_identity },
     previous: protocolSource(objects.get(`${record.baseline.commit}:${record.baseline.path}`), { historical: true }),
-    source: protocolSource(read('PROTOCOL.md')), review: JSON.parse(read('tools/release-review.json')),
-    trace: JSON.parse(read('tools/evidence/release-traceability.json')),
+    source: protocolSource(objects.get(`${record.target.commit}:${record.target.path}`), {historical:true}),
+    review: JSON.parse(objects.get(`${record.review.commit}:${record.review.path}`)),
+    trace: JSON.parse(objects.get(`${record.traceability.commit}:${record.traceability.path}`)),
     readObject: (commit, path) => { const value = objects.get(`${commit}:${path}`); if (value === undefined) throw new Error('Missing immutable object'); return value; },
     targetIsAncestor: true };
 }
@@ -60,7 +61,7 @@ for (const [name, mutate] of [
 
 test('fixed producer inventory rejects duplicate missing failing skipped and historical outcomes', () => {
  const observations=expectedObservations.map(id=>({id,actual:'passed'}));
- const run={status:0,stdout:'# tests 69\n# fail 0\n'};
+ const run={status:0,stdout:`# tests ${expectedObservations.length}\n# fail 0\n`};
  assert.equal(completeProducerObservations(run,observations),true);
  for(const bad of [observations.slice(1),[...observations,observations[0]],observations.map((x,i)=>i===1?observations[0]:x),observations.map((x,i)=>i===0?{...x,actual:'failed'}:x),observations.map((x,i)=>i===0?{...x,actual:'skipped'}:x),observations.map((x,i)=>i===0?{...x,id:'REL-OBS-999'}:x)])assert.equal(completeProducerObservations(run,bad),false);
  assert.equal(completeProducerObservations({status:0,stdout:'# tests 59\n# fail 0\n'},observations),false);

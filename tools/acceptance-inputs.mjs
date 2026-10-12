@@ -17,12 +17,17 @@ export const inputs = [
   'tools/acceptance-inputs.mjs', 'tools/producer-safety.test.mjs',
   'tools/source-transition.mjs', 'tools/source-transition.test.mjs', 'tools/reviewed-source-transition.json',
   '.github/workflows/producer-tests.yml',
+  'tools/organizational-alignment.json', 'tools/organizational-alignment.mjs',
+  'tools/organizational-alignment.test.mjs', 'tools/fixtures/organizational-scenarios.json',
+  'tools/organizational-scenarios.test.mjs',
+  'tools/maintainer-report-scenarios.md',
 ];
-export const testFiles = ['tools/reference-engine.test.mjs', 'tools/release.test.mjs', 'tools/prune-artifacts.test.mjs', 'tools/producer-safety.test.mjs'];
+export const testFiles = ['tools/reference-engine.test.mjs', 'tools/release.test.mjs', 'tools/prune-artifacts.test.mjs', 'tools/producer-safety.test.mjs', 'tools/organizational-scenarios.test.mjs'];
 export const expectedObservations = [
   ...Array.from({ length: 30 }, (_, i) => `REL-OBS-${String(i + 1).padStart(3, '0')}`),
   ...Array.from({ length: 25 }, (_, i) => `REL-PKG-${String(i + 1).padStart(3, '0')}`),
   ...Array.from({ length: 14 }, (_, i) => `REL-TOOL-${String(i + 1).padStart(3, '0')}`),
+  ...Array.from({ length: 9 }, (_, i) => `REL-ORG-${String(i + 1).padStart(3, '0')}`),
 ];
 export function subjects(root) {
   const files = directory => readdirSync(join(root, directory), { withFileTypes: true }).flatMap(item =>

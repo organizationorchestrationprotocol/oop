@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url';
 import { contextSession,select,readJSON } from './release-engine.mjs';
 import { subjects as subjectPaths, identify as identifyInputs, testFiles, expectedObservations, protocolSource, completeProducerObservations } from './acceptance-inputs.mjs';
 import { reviewedSourceTransition } from './source-transition.mjs';
+import { alignmentFromAcceptedBaseline } from './organizational-alignment.mjs';
 const root=fileURLToPath(new URL('../',import.meta.url));
 const hash=x=>`sha256:${createHash('sha256').update(x).digest('hex')}`;
 const text=path=>readFileSync(new URL(`../${path}`,import.meta.url),'utf8');
@@ -59,10 +60,10 @@ const initialBaseline='8de5d1fb6efb865710c7750b65cff2a744a4c239';
 const baselineCommit=packageBaseline?.report.source_snapshot_commit??initialBaseline;
 const run=spawnSync(process.execPath,['--test','--test-reporter=tap',...testFiles],
   {cwd:root,encoding:'utf8',maxBuffer:2*1024*1024});
-const observations=[...run.stdout.matchAll(/^(ok|not ok) \d+ - ((?:REL-OBS|REL-PKG|REL-TOOL)-\d+): (.+?)(?: # (SKIP|TODO)(.*))?$/gm)].map(match=>({
+const observations=[...run.stdout.matchAll(/^(ok|not ok) \d+ - ((?:REL-OBS|REL-PKG|REL-TOOL|REL-ORG)-\d+): (.+?)(?: # (SKIP|TODO)(.*))?$/gm)].map(match=>({
   id:match[2],checked:match[3],expected:'isolated local assertion passes, including applicable designed negative controls',
   actual:match[4]?'skipped':match[1]==='ok'?'passed':'failed',...(match[4]?{skip_reason:match[5].trim()}:{}),
-  tier:match[2].startsWith('REL-PKG')?'real_package_local_read_and_supplied_fact_model':match[2].startsWith('REL-TOOL')?'producer_freshness_and_artifact_safety':'isolated_reference_fixture',
+  tier:match[2].startsWith('REL-ORG')?'synthetic_organizational_scenario_and_real_package_context':match[2].startsWith('REL-PKG')?'real_package_local_read_and_supplied_fact_model':match[2].startsWith('REL-TOOL')?'producer_freshness_and_artifact_safety':'isolated_reference_fixture',
 }));
 const observationIds=observations.map(x=>x.id);
 const observationSummary={total:observations.length,unique:new Set(observationIds).size,
@@ -74,17 +75,28 @@ let previous=git(['show',`${baselineCommit}:PROTOCOL.md`]);
 if(previous.status!==0) previous=git(['show',`${baselineCommit}:PROMPT.md`]);
 const priorSourceEqual=previous.status===0&&protocolSource(previous.stdout,{historical:true})===source;
 const transitionRecord=json('tools/reviewed-source-transition.json');
-const sourceMigration=priorSourceEqual ? {status:'not_applicable',basis:'exact_source_preservation'} : reviewedSourceTransition({
+let sourceMigration=priorSourceEqual ? {status:'not_applicable',basis:'exact_source_preservation'} : reviewedSourceTransition({
   record:transitionRecord,baselineCommit,checkpoint:packageBaseline,
   previous:previous.status===0?protocolSource(previous.stdout,{historical:true}):'',source,
   review:json('tools/release-review.json'),trace,
   readObject:(commit,path)=>{const result=git(['show',`${commit}:${path}`]);if(result.status!==0)throw new Error('Missing immutable transition evidence');return result.stdout;},
   targetIsAncestor:git(['merge-base','--is-ancestor',transitionRecord.target.commit,evaluatedCheckout.commit]).status===0,
 });
+if (!priorSourceEqual && sourceMigration.status !== 'passed') {
+  const alignmentRecord=json('tools/organizational-alignment.json');
+  sourceMigration=alignmentFromAcceptedBaseline({record:alignmentRecord,baselineCommit,checkpoint:packageBaseline,previous:protocolSource(previous.stdout,{historical:true}),source,review:json('tools/release-review.json'),trace,historicalRecord:transitionRecord,
+    readObject:(commit,path)=>{const result=git(['show',`${commit}:${path}`]);if(result.status!==0)throw new Error('Missing immutable alignment evidence');return result.stdout;},
+    baseIsAncestor:git(['merge-base','--is-ancestor',alignmentRecord.base_commit,evaluatedCheckout.commit]).status===0});
+}
 // Distinct regression suite/TAP, never REL-* observations or consumer conformance.
 const migrationRun=spawnSync(process.execPath,['--test','--test-reporter=tap','tools/source-transition.test.mjs'],
   {cwd:root,encoding:'utf8',maxBuffer:2*1024*1024});
 const migrationTestsPassed=migrationRun.status===0 && /^# tests 25$/m.test(migrationRun.stdout) && /^# fail 0$/m.test(migrationRun.stdout) && /^# skipped 0$/m.test(migrationRun.stdout);
+const alignmentRun=spawnSync(process.execPath,['--test','--test-reporter=tap','tools/organizational-alignment.test.mjs'],{cwd:root,encoding:'utf8',maxBuffer:2*1024*1024});
+const alignmentTestsPassed=alignmentRun.status===0 && /^# tests 15$/m.test(alignmentRun.stdout) && /^# fail 0$/m.test(alignmentRun.stdout) && /^# skipped 0$/m.test(alignmentRun.stdout);
+const committedDocument=git(['show',`${evaluatedCheckout.commit}:PROTOCOL.md`]);
+const committedSubject=committedDocument.status===0 && protocolSource(committedDocument.stdout)===source && entrySourceReady();
+function entrySourceReady(){return json('distribution/entry.json').status==='prepared_distribution' && trace.source_binding?.kind!=='reviewed_worktree_candidate';}
 const sourceGate=priorSourceEqual || sourceMigration.status==='passed';
 // This fixed checkpoint predates the directory rename.
 const priorProof=git(['show',`${initialBaseline}:maintainer/evidence/local-validation.json`]);
@@ -128,10 +140,11 @@ const identities=identify(subjects());
 const subjectUnchanged=JSON.stringify(identities)===JSON.stringify(frozenIdentities);
 const noByteRegression=measurements.every(x=>x.selected_governing_bytes<=x.baseline_governing_bytes);
 const checks={source_preservation:priorSourceEqual?'passed':'not_identical',
-  source_regression_gate:sourceGate?'passed':'failed',source_migration_regressions:migrationTestsPassed?'passed':'failed',preceding_source_checkpoint:baselineIdentified?'passed':'failed',
+  source_regression_gate:sourceGate?'passed':'failed',organizational_alignment_regressions:alignmentTestsPassed?'passed':'failed',source_migration_regressions:migrationTestsPassed?'passed':'failed',preceding_source_checkpoint:baselineIdentified?'passed':'failed',
   local_package_and_reference_tests:testPassed?'passed':'failed',measured_context_bytes:noByteRegression?'passed':'failed',
   frozen_subject:subjectUnchanged?'passed':'failed',frozen_checkout:JSON.stringify(checkout())===JSON.stringify(evaluatedCheckout)?'passed':'failed'};
 const accepted=sourceGate && Object.entries(checks).filter(([key])=>key!=='source_preservation').every(([,status])=>status==='passed');
+const releaseAccepted=accepted && committedSubject;
 const report={
   observed_at:new Date().toISOString(),node_version:process.version,
   source_identity:hash(source),source_snapshot_commit:trace.source_snapshot_commit,
@@ -140,24 +153,25 @@ const report={
   report_kind:snapshot?'committed_acceptance_snapshot':'current_checkout_acceptance',
   revision_binding:'evaluated_checkout identifies HEAD at execution; identities bind the actual files including any working-tree changes. source_snapshot_commit identifies generator provenance only. A committed report cannot embed its own containing commit; rerun acceptance after commit and use --check-current for current HEAD.',
   scope:'producer-prepared technology-neutral derived distribution; no installed-runtime/provider/cross-runtime readiness claim',
-  release_ready:accepted,publication:'not_performed_for_generated_package',runtime_adoption:'not_performed',checks,identities,
-  source_comparison:{basis:priorSourceEqual?'exact_source_preservation':sourceMigration.status==='passed'?'reviewed_historical_path_transition':'unreviewed_source_delta',exact_preservation:priorSourceEqual,reviewed_transition:sourceMigration},
+  release_ready:releaseAccepted,candidate_validated:accepted,source_binding:trace.source_binding,committed_source_ready:committedSubject,publication:'not_performed_for_generated_package',runtime_adoption:'not_performed',checks,identities,
+  source_comparison:{basis:priorSourceEqual?'exact_source_preservation':sourceMigration.status==='passed'?sourceMigration.basis:'unreviewed_source_delta',exact_preservation:priorSourceEqual,reviewed_transition:sourceMigration},
+  alignment_regression_summary:{passed:alignmentTestsPassed,tests:Number(alignmentRun.stdout.match(/^# tests (\d+)$/m)?.[1]??0),failed:Number(alignmentRun.stdout.match(/^# fail (\d+)$/m)?.[1]??0),skipped:Number(alignmentRun.stdout.match(/^# skipped (\d+)$/m)?.[1]??0)},
   migration_regression_summary:{passed:migrationTestsPassed,tests:Number(migrationRun.stdout.match(/^# tests (\d+)$/m)?.[1]??0),failed:Number(migrationRun.stdout.match(/^# fail (\d+)$/m)?.[1]??0),skipped:Number(migrationRun.stdout.match(/^# skipped (\d+)$/m)?.[1]??0)},
-  semantic_review:{result:priorSourceEqual?'reasoned_complete_allocation_with_verbatim_source_preservation':sourceMigration.status==='passed'?'reasoned_complete_allocation_with_reviewed_historical_path_transition':'source_delta_not_verified',reference:'tools/release-review.json',
+  semantic_review:{result:priorSourceEqual?'reasoned_complete_allocation_with_verbatim_source_preservation':sourceMigration.status==='passed'?`reasoned_complete_allocation_with_${sourceMigration.basis}`:'source_delta_not_verified',reference:'tools/release-review.json',
     evidence_strength:'source reasoning plus exact reconstruction; independent reviewer and live prevention not claimed'},
   rolling_baseline:{commit:baselineCommit,source_identity:hash(protocolSource(previous.stdout,{historical:true})),
     package_checkpoint:packageBaseline?{commit:packageBaseline.recordCommit,content_identity:packageBaseline.identity}:null,
     provenance:packageBaseline?'Latest committed accepted producer-package report':'Committed local-validation.json and local-tests.tap: 30 prior reference observations and retained-source check; current push remote identity separately observed.',
     verified_scope:packageBaseline?packageBaseline.report.scope:'preceding committed canonical source retention and reference mechanisms only; not a complete previous distribution or installed integration',
-    selection_basis:'Latest committed accepted package when available; otherwise initial preceding source checkpoint. Exact preservation or the single pinned reviewed historical transition is required.',
-    normative_deltas:sourceMigration.status==='passed'?sourceMigration.changes:[],classification:priorSourceEqual?'generated_derived_only':sourceMigration.status==='passed'?'reviewed_historical_path_transition':'unreviewed_source_delta',full_previous_distribution:packageBaseline?'identified_checkpoint':'none_available_first_complete_export',
+    selection_basis:'Latest committed accepted package when available; otherwise initial preceding source checkpoint. Exact preservation, the pinned historical bridge, or that bridge followed by the exact reviewed organizational alignment is required.',
+    normative_deltas:sourceMigration.status==='passed'?sourceMigration.changes:[],classification:priorSourceEqual?'generated_derived_only':sourceMigration.status==='passed'?sourceMigration.basis:'unreviewed_source_delta',full_previous_distribution:packageBaseline?'identified_checkpoint':'none_available_first_complete_export',
     limits:'No historical full release/integration verification is invented. These results establish current export preservation and local mechanisms only.'},
   observation_summary:observationSummary,observations,measurements,
   comparison_basis:'Same canonical source fully loaded versus selected real package closure including entry/selector and applicable procedure bytes. Cold/warm/recovery local harness; not a product end-to-end benchmark.',
-  retained_requirements:trace.clauses.map(x=>({id:x.contract,disposition:'preserved_verbatim',source_identity:x.content_identity,artifact:x.artifact})),
-  impact:{README:'affected: official structured entry after local package acceptance',examples:'affected: actual package and limits',
+  retained_requirements:trace.clauses.map(x=>({id:x.contract,disposition:sourceMigration.changes?.some(delta=>delta.clause===x.contract)?'strengthened_without_incompatibility':'preserved_verbatim',source_identity:x.content_identity,artifact:x.artifact})),
+  impact:{README:'affected: symmetric human governance explanation; original CTA preserved, candidate entry is not release-ready',examples:'affected: actual package and limits',
     maintainer_guidance:'affected: reusable reviewed generation and producer acceptance',schemas:'existing contract profile applied to all source contracts',
-    tests:'25 package checks, 30 retained reference observations, four retained cleanup regressions and ten new producer safety/freshness checks',generated_artifacts:'complete current-source export with explicit semantic bindings',
+    tests:'25 package checks, 30 retained reference observations, four retained cleanup regressions, ten retained producer safety/freshness checks and nine new organizational scenarios',generated_artifacts:'complete current-source export with explicit semantic bindings',
     release_evidence:'current exact subjects, scope-bound verdict and seven measured local scenarios'},
   limitations:{installed_runtime:'not_performed: no native adapter is shipped or claimed installed',provider_execution:'not_performed: no credentials or provider effects used',
     cross_runtime:'not_performed: technology neutrality reviewed, real product interoperability not claimed',
@@ -166,8 +180,10 @@ const report={
     generator_application:'Preflight covers preexisting unsafe paths only; no concurrent adversarial path-change protection or multi-file atomicity. Apply I/O failure can leave partial effects; reconcile before rerunning.',
     skipped_tests:'Explicitly recorded as skipped, never PASS; any missing, failed or skipped expected observation blocks release_ready.'},
 };
+if(!snapshot)writeFileSync(new URL('./evidence/current-alignment-tests.tap',import.meta.url),alignmentRun.stdout);
 if(!snapshot)writeFileSync(new URL('./evidence/current-migration-tests.tap',import.meta.url),migrationRun.stdout);
 writeFileSync(new URL(`./evidence/${tapPath}`,import.meta.url),run.stdout);
 writeFileSync(new URL(`./evidence/${reportPath}`,import.meta.url),JSON.stringify(report,null,2)+'\n');
-if(!accepted){process.stderr.write(JSON.stringify(checks)+'\n'+run.stderr+migrationRun.stderr);process.exitCode=1;}
+if(accepted && !committedSubject) process.stdout.write('Reviewed local candidate validated; committed release acceptance remains pending. No commit or publication performed.\n');
+if(!releaseAccepted){process.stderr.write(JSON.stringify({...checks,committed_source_ready:committedSubject,candidate_validated:accepted})+'\n'+run.stderr+migrationRun.stderr+alignmentRun.stderr);process.exitCode=1;}
 else process.stdout.write(`Producer package accepted: ${observations.length} local observations, seven real-package scenarios; consumer integration and publication not claimed.\n`);

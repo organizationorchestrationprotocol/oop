@@ -1,0 +1,45 @@
+{
+  "format": 1,
+  "id": "OOP-ORGANIZATIONAL-ALIGNMENT-001",
+  "base_commit": "60814ca38e3973925b900bf85d61071f0faa440f",
+  "baseline_source_identity": "sha256:898433ac36432129a5b30ce17493efc0197c0b635dd074e8164f3da18a50dc93",
+  "target_source_identity": "sha256:9bb52974537f7b0dc6f74abdeb6494892adae9eedb503252f0ba5060739152cc",
+  "review_identity": "sha256:cc43f2fdc9b6be22bb06da2e193e4db04b54e6a49a982e3b9a68fd3478639d1a",
+  "changes": [
+    {
+      "id": "SD-ORG-STRUCTURE-001",
+      "clause": "OOP-impact-propagation",
+      "module": "impact",
+      "anchor": "### Missing organizational capabilities\n\n",
+      "text": "The runtime MUST model functions, human responsibilities and authority from verified actual organizational facts or an explicitly authorized intended design, keeping intended, approved, applied and verified structure distinct under the existing lifecycle rules. OOP applies equally to a Solopreneur, an organization being established and an existing organization, including nonprofit, digital, hybrid and physical operations. One person MAY cover multiple functions where applicable policy and separation of duties permit; an AI tool MAY assist multiple functions only within independently established capability and authorized scope. Assistance MUST NOT confer human office, decision authority or accountability. The runtime MUST NOT invent unnecessary structures, collapse legitimate existing responsibilities, governing bodies or sites, or bypass their delegated authority, budget limits and required approvals. Organization size, legal form or a function label grants no authority.\n\n",
+      "rationale": "Sections 1/9/10/19/20/21/22 already define applicability, intake, proportionate capabilities and authority. This addition makes symmetric structural interpretation, human/function distinction and non-inherited AI authority explicit at the capability decision, without mandating departments or duplicating their lifecycle."
+    },
+    {
+      "id": "SD-ORG-COORDINATION-001",
+      "clause": "OOP-effect-verification",
+      "module": "execution",
+      "anchor": "## 24. Organizational CI/CD\n\n",
+      "text": "For material organizational changes, the runtime MUST use `operations` and its authoritative source-of-record references to coordinate all and only domains materially affected by `effective_scope` and their direct or indirect dependencies. Organizational CI/CD connects dependency and approval checks to authorized downstream work, including task-relevant communication and collaboration through appropriate available mechanisms and automations, then verifies resulting alignment or retains unresolved consequences under the existing completion and recovery rules. Coordination MUST respect each affected domain's actual ownership, privacy, access, approval, timing and physical-world constraints; identifying a consequence does not authorize its execution. This lifecycle requires neither simultaneous propagation nor a hosted pipeline, new organizational store or indiscriminate automation, and does not expand G0/G1 governance. R&D, product, Marketing, HR and investor communication are conditional, non-exhaustive illustrations, never obligatory participants.\n\n",
+      "rationale": "Sections 9/10/13/21/23/24 already cover canonical references, causal consequences, approval and verified delivery. This addition explicitly connects them as task-relevant cross-functional coordination through outcomes; existing optional mechanisms and valid pending/blocked dispositions remain controlling."
+    }
+  ],
+  "alignment": "Organization as Code uses one knowledge plane plus authoritative references, proportionate CI/CD through outcomes and replaceable external AI. Symmetric scope preserves real human/physical governance and research hypotheses without new paid facilities.",
+  "migration": {
+    "organizational_state_change": false,
+    "scope": "runtime",
+    "rationale": "No automatic organizational data transformation: preserve existing records. Affected active modeling and coordination must be inspected against clarified invariants before their next material action; any necessary restructuring remains a separately authorized organizational change.",
+    "actions": [
+      {
+        "scope": "runtime",
+        "action": "Refresh affected organizational-model/impact/execution context and inspect relevant structures, authority and outstanding downstream effects before affected work.",
+        "verification": "Verify current facts, applicable authority and disposition of material consequences; missing facts block dependent effects only."
+      }
+    ],
+    "existing_state_policy": "Preserve historical facts; verify affected active state without fabricating prior coverage or rewriting archives. Readers using older semantics require assessment before affected writes.",
+    "recovery": "Preserve previous verified history and actual partial effects; reconcile under existing authority and reverify before resumption."
+  },
+  "limitations": [
+    "Producing-AI semantic review; no independent reviewer or actual runtime enforcement claimed.",
+    "Provider, cross-runtime and empirical organizational benefit NOT VERIFIED."
+  ]
+}

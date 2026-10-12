@@ -165,7 +165,7 @@ test('REL-PKG-023: producer module is excluded from ordinary/full-install/recove
   assert.ok(select(facts(['oop_maintenance'])).modules.includes('producer'));
 });
 test('REL-PKG-024: compatibility descriptor is explicit and generated-only changes do not claim organization transformation',()=>{
-  assert.equal(trace.classification.split(';')[0],'generated_derived_only');assert.equal(trace.migration.organizational_state_change,false);
+  assert.ok(['generated_derived_only','reviewed_organizational_alignment'].includes(trace.classification.split(';')[0]));assert.equal(trace.migration.organizational_state_change,false);
   assert.ok(trace.migration.actions.every(x=>x.scope==='runtime'));assert.ok(trace.migration.recovery);
 });
 test('REL-PKG-025: no consumer procedure schedules maintainer execution or OOP audit operations',()=>{

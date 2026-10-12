@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { modules, spans } from './release-plan.mjs';
+import { organizationalAlignment } from './organizational-alignment.mjs';
 import { closure } from './reference-engine.mjs';
 import { validateProfile } from './schema-profile.mjs';
 import { applyArtifacts } from './prune-artifacts.mjs';
@@ -39,7 +40,16 @@ closure(modules,modules.map(x=>x.id));
 const commit = spawnSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'});
 let committed = spawnSync('git',['show','HEAD:PROTOCOL.md'],{cwd:root,encoding:'utf8',maxBuffer:1024*1024});
 if (committed.status !== 0) committed = spawnSync('git',['show','HEAD:PROMPT.md'],{cwd:root,encoding:'utf8',maxBuffer:1024*1024});
-if (commit.status || committed.status || protocolSource(committed.stdout,{historical:true})!==source) throw new Error('Canonical source must be committed before ready distribution generation');
+const args = process.argv.slice(2);
+if (args.length > 1 || args.some(arg => arg !== '--prepare')) throw new Error('Use --prepare for the exact reviewed worktree candidate, or no arguments for committed source');
+const sourceCommitted = commit.status === 0 && committed.status === 0 && protocolSource(committed.stdout,{historical:true}) === source;
+const alignmentRecord = JSON.parse(readFileSync(new URL('./organizational-alignment.json', import.meta.url), 'utf8'));
+const alignment = organizationalAlignment({record:alignmentRecord, source, review,
+  readObject:(sha,path)=>{const result=spawnSync('git',['show',`${sha}:${path}`],{cwd:root,encoding:'utf8',maxBuffer:2*1024*1024});if(result.status!==0)throw new Error('Missing alignment baseline');return result.stdout;},
+  baseIsAncestor:spawnSync('git',['merge-base','--is-ancestor',alignmentRecord.base_commit,'HEAD'],{cwd:root}).status===0});
+if (!sourceCommitted && (!args.includes('--prepare') || alignment.status !== 'passed')) throw new Error('Canonical source must be committed before ready distribution generation; --prepare permits only the exact reviewed local candidate');
+if (review.semantic_deltas && alignment.status !== 'passed') throw new Error(alignment.reason);
+const sourceBinding = {kind:sourceCommitted?'committed_source':'reviewed_worktree_candidate',base_commit:commit.stdout.trim(),source_identity:hash(source)};
 const plan = [];
 function save(path,data) {
   const content = JSON.stringify(data)+'\n';
@@ -148,7 +158,8 @@ save('distribution/interfaces.json',{
   prohibitions:['raw_secret_values','ambient_foreign_authority','invented_observations','schema_as_truth','release_validation_during_consumer_lifecycle'],
 });
 save('distribution/entry.json',{
-  format:1,protocol:'organization-orchestration-protocol',status:'prepared_distribution',
+  format:1,protocol:'organization-orchestration-protocol',status:sourceCommitted?'prepared_distribution':'prepared_worktree_candidate',
+  source_binding:sourceBinding,
   contract_profile:'urn:oop:derived:contract:1',
   authority:'../PROTOCOL.md is canonical. This is derived operational context; source controls conflicts.',
   version:'Record available repository/ref/full containing Git commit from version metadata. Producer source_snapshot is not runtime adoption or a version manifest.',
@@ -166,12 +177,13 @@ save('distribution/entry.json',{
   runtime:'Select supported existing mechanisms under canonical authority; this package does not install controls, prove provider access or claim Full OOP runtime governance.',
 });
 save('tools/evidence/release-traceability.json',{
-  source_identity:hash(source),source_snapshot_commit:commit.stdout.trim(),source_normalization:'CRLF to LF; explanatory overview and role section headings excluded, document title retained; allocation lines refer to extracted source, contract locators to document lines',review_ref:'tools/release-review.json',
+  source_identity:hash(source),source_snapshot_commit:commit.stdout.trim(),source_binding:sourceBinding,source_normalization:'CRLF to LF; explanatory overview and role section headings excluded, document title retained; allocation lines refer to extracted source, contract locators to document lines',review_ref:'tools/release-review.json',
   preservation:'preserved_verbatim',coverage_complete:true,
   clauses:contracts.map(({span,contract})=>({...span,content_identity:contract.source.content_identity,artifact:`distribution/modules/${span.module}.json`,contract:contract.id})),
   modules:indexModules,
-  classification:'generated_derived_only; canonical source unchanged from committed source snapshot',
-  migration:{organizational_state_change:false,scope:'runtime',rationale:'Initial complete derived distribution of identical canonical semantics; no organizational transformation authorized.',
+  classification:review.semantic_deltas?'reviewed_organizational_alignment':'generated_derived_only; canonical source unchanged from committed source snapshot',
+  ...(review.semantic_deltas?{semantic_deltas:review.semantic_deltas}:{}),
+  migration:review.semantic_deltas?alignmentRecord.migration:{organizational_state_change:false,scope:'runtime',rationale:'Initial complete derived distribution of identical canonical semantics; no organizational transformation authorized.',
     actions:[{scope:'runtime',action:'Resolve the structured entry, evaluate applicability, realign owned pointers and context when this package is adopted.',verification:'Own consumer-local context and installed path evidence; never producer suite.'}],
     existing_state_policy:'Preserve valid organizational history and independently owned checkpoints; canonical migration/adoption rules govern any actual semantic difference.',
     recovery:'Retain prior verified adoption and actual partial effects; repair owned derived references before dependent claims.'},
@@ -182,4 +194,4 @@ const expected = modules.flatMap(module => [`distribution/modules/${module.id}.j
 ]);
 const removed = applyArtifacts(root, plan, expected);
 process.stdout.write(`Removed ${removed.length} orphan module/detail artifacts${removed.length ? ': '+removed.join(', ') : ''}.\n`);
-process.stdout.write(`Generated ${modules.length} modules, ${contracts.length} lossless contracts and BOOT-01–13; producer acceptance still required.\n`);
+process.stdout.write(`Generated ${modules.length} modules, ${contracts.length} lossless contracts and BOOT-01–13; ${sourceBinding.kind}; producer acceptance still required.\n`);

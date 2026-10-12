@@ -6,3 +6,8 @@ tools/evidence/current-acceptance.json
 tools/evidence/current-tests.tap
 
 tools/evidence/current-migration-tests.tap
+
+tools/evidence/current-alignment-tests.tap
+tools/evidence/current-focused-tests.tap
+
+tools/evidence/current-safety-tests.tap
