@@ -130,7 +130,7 @@ test('REL-TOOL-011: late preflight failure after staging leaves all bytes unchan
   assert.throws(() => applyArtifacts(root, plan, plan.map(x => x.path)));
   assert.deepEqual(bytes(root), before);
 });
-test('REL-TOOL-012: isolated generation preserves 35 modules 54 clauses bytes and safe idempotent cleanup', t => {
+test('REL-TOOL-012: isolated generation preserves 36 modules 55 clauses bytes and safe idempotent cleanup', t => {
   const { root } = sandbox(t);
   const baseline = Object.fromEntries(Object.keys(bytes(root, 'distribution')).filter(path => !path.endsWith('/')).map(path => [path, readFileSync(join(root, path), 'utf8')]));
   const commit = spawnSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).stdout.trim();
@@ -140,7 +140,7 @@ test('REL-TOOL-012: isolated generation preserves 35 modules 54 clauses bytes an
   const mode = JSON.parse(readFileSync(join(root,'distribution/entry.json'),'utf8')).status === 'prepared_worktree_candidate' ? ['--prepare'] : [];
   if (mode.length) assert.notEqual(run(root,'generate-release.mjs').status,0,'Default still refuses uncommitted source');
   const first = run(root, 'generate-release.mjs', mode); assert.equal(first.status, 0, first.stderr);
-  assert.match(first.stdout, /35 modules, 54 lossless contracts/);
+  assert.match(first.stdout, /36 modules, 55 lossless contracts/);
   for (const [path, content] of Object.entries(baseline)) {
     const original = JSON.parse(content);
     if (path === 'distribution/entry.json') { original.source_snapshot.commit = commit; original.source_snapshot.path = 'PROTOCOL.md'; original.source_binding.base_commit = commit; }

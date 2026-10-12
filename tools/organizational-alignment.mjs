@@ -2,6 +2,7 @@
 import { createHash } from 'node:crypto';
 import { protocolSource } from './acceptance-inputs.mjs';
 import { reviewedSourceTransition } from './source-transition.mjs';
+import { priorReviewedAllocation } from './routing-allocation.mjs';
 
 const hash = value => `sha256:${createHash('sha256').update(value).digest('hex')}`;
 const recordIdentity = 'sha256:51c98a795ec8785cda7fd678ff5856e3cb98da5096afded15d8177bfce397d05';
@@ -18,7 +19,8 @@ export function organizationalAlignment({ record, source, review, readObject, ba
       expected = expected.replace(change.anchor, change.anchor + change.text);
     }
     require(source === expected && hash(source) === record.target_source_identity, 'Unreviewed runtime delta');
-    require(hash(JSON.stringify(review)) === record.review_identity && review.source_identity === hash(source), 'Unreviewed semantic allocation');
+    const authorizedReview = hash(JSON.stringify(review)) === record.review_identity ? review : priorReviewedAllocation({review, source, readObject});
+    require(hash(JSON.stringify(authorizedReview)) === record.review_identity && review.source_identity === hash(source), 'Unreviewed semantic allocation');
     const lines = source.split('\n');
     let next = 1;
     for (const span of review.spans) {

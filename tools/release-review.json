@@ -259,11 +259,18 @@
       "content_identity": "sha256:46357f8721d99d739c241176e4542c122afa02b4ac2313efb0af99d1e30bc9ee"
     },
     {
-      "id": "OOP-effect-verification",
+      "id": "OOP-organizational-coordination",
       "start": 2560,
+      "end": 2563,
+      "module": "coordination",
+      "content_identity": "sha256:53c3b66d55f53429597515697f7de42e6332854f97e8a7dfe87ce86c794f70bb"
+    },
+    {
+      "id": "OOP-effect-verification",
+      "start": 2564,
       "end": 2593,
       "module": "execution",
-      "content_identity": "sha256:f560c71b84d5f1afdab67509c065e89d6ee0a80ab47bc06fe1705ac7a36f87e5"
+      "content_identity": "sha256:583f02023b84e11197092ef3653c1a974ac4c98e858eae1974d67a4d41796d03"
     },
     {
       "id": "OOP-semantic-ci",
@@ -568,10 +575,23 @@
       ]
     },
     {
+      "id": "coordination",
+      "purpose": "Material cross-domain coordination during planning and authorized execution; no inferred authority.",
+      "dependencies": [
+        "core"
+      ],
+      "facets": [
+        "managed_change",
+        "change_set",
+        "semantic_propagation"
+      ]
+    },
+    {
       "id": "execution",
       "purpose": "Intended, attempted, observed, applied and verified effects; informed recovery/retry.",
       "dependencies": [
-        "core"
+        "core",
+        "coordination"
       ],
       "facets": [
         "material_effect",
@@ -822,13 +842,20 @@
     },
     {
       "id": "SD-ORG-COORDINATION-001",
-      "clause": "OOP-effect-verification",
-      "module": "execution",
+      "clause": "OOP-organizational-coordination",
+      "module": "coordination",
       "rationale": "Sections 9/10/13/21/23/24 already cover canonical references, causal consequences, approval and verified delivery. This addition explicitly connects them as task-relevant cross-functional coordination through outcomes; existing optional mechanisms and valid pending/blocked dispositions remain controlling.",
       "classification": "normative_clarification",
       "content_identity": "sha256:ea81cda46ab772a4fc9e1fd3ccb36284039f780dd15b1a4b979465d124c9392a",
       "retained": "preserved_verbatim_except_reviewed_insertions",
-      "compatibility": "Verify active structures and coordination before their next affected material action; preserve historical records; no blanket data rewrite or newly granted authority."
+      "compatibility": "Verify active structures and coordination before their next affected material action; preserve historical records; no blanket data rewrite or newly granted authority.",
+      "previous_clause": "OOP-effect-verification",
+      "previous_module": "execution"
     }
-  ]
+  ],
+  "routing_allocation": {
+    "id": "RA-COORDINATION-001",
+    "record": "tools/routing-allocation.json",
+    "basis": "Derived-only split of the complete coordination paragraph; all runtime bytes and existing execution safeguards preserved."
+  }
 }

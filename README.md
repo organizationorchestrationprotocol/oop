@@ -291,11 +291,12 @@ The [repository maintainer appendix in PROTOCOL.md](PROTOCOL.md#rules-for-the-ma
 
 - [Technical audit](PROTOCOL.md#rules-for-the-maintainer): read-only repository audit and consolidated corrective recommendations, to be executed after reading this file if you have been instructed to act as maintainer of this repository.
 - [DIAGNOSE](PROTOCOL.md#diagnose): analyze requests or problems and propose changes.
-- [PREPARE](PROTOCOL.md#prepare): reconcile recommendations with subsequent user amendments into an implementation prompt.
-- [VERIFY](PROTOCOL.md#verify): check implementation and current regressions, accounting for independently requested surrounding commits.
+- [PREPARE](PROTOCOL.md#prepare): reconcile recommendations with subsequent user amendments into a downloadable implementation prompt, preserving the original decision dossier and specifying the local/API write path.
+- [VERIFY](PROTOCOL.md#verify): check implementation and current regressions, accounting for independently requested surrounding commits and explaining actual normative source changes with two before/after examples when present.
+- [APPLY](PROTOCOL.md#apply): prepare and execute the reconciled changes in this chat, then run the latest VERIFY; no Markdown download. Local edits remain uncommitted and unpushed; API-only execution publishes a new branch from main.
 - [REPORT](PROTOCOL.md#report): consolidate supported findings using the mandatory complete reporting contract.
 
-Invoke `DIAGNOSE`, `PREPARE`, `VERIFY` or `REPORT` with the relevant input from your chat to execute the corresponding command. The entire maintainer appendix applies when you have been instructed to maintain this repository, subject to your authorized task and scope. The first three commands run only when invoked; they and completed ordinary maintainer audits automatically apply REPORT before final delivery. Direct REPORT renders existing findings without starting a new audit. This appendix is separate from the organizational protocol requirements and consumer lifecycle.
+Invoke `DIAGNOSE`, `PREPARE`, `VERIFY`, `APPLY` or `REPORT` with the relevant input from your chat to execute the corresponding command. The entire maintainer appendix applies when you have been instructed to maintain this repository, subject to your authorized task and scope. The first four commands run only when invoked; they and completed ordinary maintainer audits automatically apply REPORT before final delivery. Direct REPORT renders existing findings without starting a new audit. This appendix is separate from the organizational protocol requirements and consumer lifecycle.
 
 Build scripts, tests, schemas and producer evidence live in [tools](tools/README.md). Maintainer commands follow the [repository maintenance guidance](#for-ai-tools-maintaining-this-repository) and the canonical requirements in [PROTOCOL.md](PROTOCOL.md).
 

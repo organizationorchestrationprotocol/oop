@@ -16,7 +16,7 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
       - name: Validate maintainer REPORT structure
-        run: node --test tools/validate-maintainer-report.test.mjs
+        run: node --test tools/validate-maintainer-report.test.mjs tools/maintainer-workflow.test.mjs
       - name: Validate reviewed historical source transition
         run: node --test tools/source-transition.test.mjs
       - name: Validate current producer package and checkout

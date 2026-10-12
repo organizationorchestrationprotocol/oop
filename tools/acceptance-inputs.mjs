@@ -21,12 +21,14 @@ export const inputs = [
   'tools/organizational-alignment.test.mjs', 'tools/fixtures/organizational-scenarios.json',
   'tools/organizational-scenarios.test.mjs',
   'tools/maintainer-report-scenarios.md',
+  'tools/routing-coordination.test.mjs', 'tools/routing-allocation.mjs', 'tools/routing-allocation.json',
 ];
-export const testFiles = ['tools/reference-engine.test.mjs', 'tools/release.test.mjs', 'tools/prune-artifacts.test.mjs', 'tools/producer-safety.test.mjs', 'tools/organizational-scenarios.test.mjs'];
+export const testFiles = ['tools/reference-engine.test.mjs', 'tools/release.test.mjs', 'tools/prune-artifacts.test.mjs', 'tools/producer-safety.test.mjs', 'tools/organizational-scenarios.test.mjs', 'tools/routing-coordination.test.mjs'];
 export const expectedObservations = [
   ...Array.from({ length: 30 }, (_, i) => `REL-OBS-${String(i + 1).padStart(3, '0')}`),
   ...Array.from({ length: 25 }, (_, i) => `REL-PKG-${String(i + 1).padStart(3, '0')}`),
   ...Array.from({ length: 14 }, (_, i) => `REL-TOOL-${String(i + 1).padStart(3, '0')}`),
+  ...Array.from({ length: 10 }, (_, i) => `REL-ROUTE-${String(i + 1).padStart(3, '0')}`),
   ...Array.from({ length: 9 }, (_, i) => `REL-ORG-${String(i + 1).padStart(3, '0')}`),
 ];
 export function subjects(root) {

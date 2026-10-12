@@ -60,10 +60,10 @@ const initialBaseline='8de5d1fb6efb865710c7750b65cff2a744a4c239';
 const baselineCommit=packageBaseline?.report.source_snapshot_commit??initialBaseline;
 const run=spawnSync(process.execPath,['--test','--test-reporter=tap',...testFiles],
   {cwd:root,encoding:'utf8',maxBuffer:2*1024*1024});
-const observations=[...run.stdout.matchAll(/^(ok|not ok) \d+ - ((?:REL-OBS|REL-PKG|REL-TOOL|REL-ORG)-\d+): (.+?)(?: # (SKIP|TODO)(.*))?$/gm)].map(match=>({
+const observations=[...run.stdout.matchAll(/^(ok|not ok) \d+ - ((?:REL-OBS|REL-PKG|REL-TOOL|REL-ORG|REL-ROUTE)-\d+): (.+?)(?: # (SKIP|TODO)(.*))?$/gm)].map(match=>({
   id:match[2],checked:match[3],expected:'isolated local assertion passes, including applicable designed negative controls',
   actual:match[4]?'skipped':match[1]==='ok'?'passed':'failed',...(match[4]?{skip_reason:match[5].trim()}:{}),
-  tier:match[2].startsWith('REL-ORG')?'synthetic_organizational_scenario_and_real_package_context':match[2].startsWith('REL-PKG')?'real_package_local_read_and_supplied_fact_model':match[2].startsWith('REL-TOOL')?'producer_freshness_and_artifact_safety':'isolated_reference_fixture',
+  tier:match[2].startsWith('REL-ROUTE')?'reviewed_coordination_routing_and_allocation':match[2].startsWith('REL-ORG')?'synthetic_organizational_scenario_and_real_package_context':match[2].startsWith('REL-PKG')?'real_package_local_read_and_supplied_fact_model':match[2].startsWith('REL-TOOL')?'producer_freshness_and_artifact_safety':'isolated_reference_fixture',
 }));
 const observationIds=observations.map(x=>x.id);
 const observationSummary={total:observations.length,unique:new Set(observationIds).size,
@@ -171,7 +171,7 @@ const report={
   retained_requirements:trace.clauses.map(x=>({id:x.contract,disposition:sourceMigration.changes?.some(delta=>delta.clause===x.contract)?'strengthened_without_incompatibility':'preserved_verbatim',source_identity:x.content_identity,artifact:x.artifact})),
   impact:{README:'affected: symmetric human governance explanation; original CTA preserved, candidate entry is not release-ready',examples:'affected: actual package and limits',
     maintainer_guidance:'affected: reusable reviewed generation and producer acceptance',schemas:'existing contract profile applied to all source contracts',
-    tests:'25 package checks, 30 retained reference observations, four retained cleanup regressions, ten retained producer safety/freshness checks and nine new organizational scenarios',generated_artifacts:'complete current-source export with explicit semantic bindings',
+    tests:'25 package checks, 30 retained reference observations, four retained cleanup regressions, ten retained producer safety/freshness checks nine retained organizational scenarios and ten coordination routing/allocation regressions',generated_artifacts:'complete current-source export with explicit semantic bindings',
     release_evidence:'current exact subjects, scope-bound verdict and seven measured local scenarios'},
   limitations:{installed_runtime:'not_performed: no native adapter is shipped or claimed installed',provider_execution:'not_performed: no credentials or provider effects used',
     cross_runtime:'not_performed: technology neutrality reviewed, real product interoperability not claimed',

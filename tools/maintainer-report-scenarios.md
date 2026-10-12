@@ -8,14 +8,14 @@ This maintainer-only checklist records the contract move and reviewable procedur
 | --- | --- | --- |
 | §7 single scoped freeze decision | §7 unchanged; REPORT binds it | Same decisions, evidence qualifications and limits |
 | §8 audit sections through Freeze Decision | §8 retained | Same matrices, counts, costs, provenance and no-fabrication requirements |
-| §8 mandatory terminal coverage | Entry rule and REPORT; §8 direct binding | Ordinary audit and DIAGNOSE/PREPARE/VERIFY completion automatically apply REPORT |
+| §8 mandatory terminal coverage | Entry rule and REPORT; §8 direct binding | Ordinary audit and DIAGNOSE/PREPARE/VERIFY/APPLY completion automatically apply REPORT |
 | §8 numbered complete worklist | REPORT / Proposed Changes | Includes deferred improvements, finding IDs, priority/disposition, deduplication and recommendation mapping |
 | §8 six fields and sample | REPORT / Proposed Changes | Original detailed block moved intact; sole authoritative template |
 | §8 empty-list rule | REPORT / Proposed Changes | One numbered scoped No changes proposed entry; no six placeholder fields |
 | §8 impact notices | REPORT / Proposed Changes | Bold notice at audit Verdict opening and immediately before list; uncertainty disclosed |
 | §8 independent aggregate precedence | REPORT / Final Change-Impact Verdict | All proposals, deferred included; REQUIRED then UNDETERMINED then NOT REQUIRED independently |
 | §8 final completeness gate | REPORT / Final Change-Impact Verdict | Repair before delivery; unavailable evidence stays unknown; prose is not deterministic enforcement |
-| Entry PREPARE artifact requirement | Entry and PREPARE refer to REPORT | Full list and verdict inside English artifact AND localized final response |
+| Entry PREPARE artifact requirement | Entry and PREPARE refer to REPORT | Full list and verdict inside artifact with English operative instructions AND localized final response |
 | §5 audit coverage and §6 severity/disposition | Unchanged | No scope, permission, cost or evidence relaxation |
 
 The alignment review found this package consistent with Abstract/Vision/Goal: durable attributable reports help replaceable tools and human maintainers preserve knowledge and decisions. It changes no organizational authority or operations source boundaries and adds no hosted/paid dependency. The normative runtime extraction and overview are verified separately against the actual pre-edit Git HEAD.
@@ -31,7 +31,7 @@ Each row supplies available context, expected compliant output and a failure bou
 | VERIFY independent commits on both sides | Frozen base O; A is independently user-requested docs work; B/C implement the prompt; D is independently user-requested maintenance. Inspect relevant O→A→B→C→D and working tree. Prompt compliance is judged on B/C and current requirements, while A/D have separate scope/intent attribution. | A/D are automatically prompt scope violations; only B is reviewed; current combined state ignored. | Covered: before/during/after inspection, noncontiguous multi-commit history, independent work and separate current regression status |
 | VERIFY later regression | B/C satisfy REPORT; independent D removes PREPARE's automatic REPORT reference. Current state fails that requirement. Attribute removal to D when its diff proves causality; do not automatically blame B/C. If D's intent is unavailable, record unknown intent separately from observed regression. | Later defect ignored, original implementation blamed without evidence, or user intent inferred from commit message alone. | Covered: current-state invariants, later independent effects, evidence-based cause and explicit unknown attribution |
 
-Direct REPORT uses only existing attributable findings; it creates neither new findings nor an audit and cannot recurse. Interrupted work stays incomplete. Parser route fixtures exercise the same terminal structure under all five entry labels; they do not prove any host automatically invokes a command.
+Direct REPORT uses only existing attributable findings; it creates neither new findings nor an audit and cannot recurse. Interrupted work stays incomplete. Parser route fixtures exercise the same terminal structure under all six entry labels; they do not prove any host automatically invokes a command.
 
 ## Local parser boundary
 
@@ -57,3 +57,25 @@ Source reasoning reviews the following intended outcomes under runtime §§1–3
 | ORG-09 | Missing capability/authority prevents only dependent verified transition | No auto-consent, human power assigned to AI or false completion | REL-ORG-009 |
 
 All unchanged source text is retained exactly through the identity-bound additive-delta test; this is text preservation plus producing-AI semantic review, not proof of actual model behavior. Empirical protocol and metric boundaries are documented in tools/README.md; the existing seven producer comparisons remain separate from organizational research.
+
+
+## PREPARE / VERIFY / APPLY procedure captures
+
+The canonical command order is DIAGNOSE, PREPARE, VERIFY, APPLY, REPORT. APPLY's internal preparation retains all PREPARE content, including the six-field list and independent impact verdict; only its actual final VERIFY supplies the terminal completed user-facing REPORT. Reading the appendix does not invoke APPLY, and REPORT cannot recurse or launch an audit.
+
+| Scenario | Required treatment | Evidence boundary |
+| --- | --- | --- |
+| Italian analysis with headings, table and nested proposals | Preserve exact available original text/order before English operative instructions; reference it explicitly | Synthetic capture comparison, not authentication of real approval |
+| Approved Y replaces X; another suggestion is disapproved | Retain attributed historical text but exclude X and the denied suggestion from executable work | Supplied worklist consistency; semantic reconciliation still reviewed |
+| Partial original or confidential irrelevant remarks | Identify unavailable material without invention; omit unrelated private content | Fixtures use fictional content, not private user data |
+| Safe local checkout, both paths available | Prefer local; inspect latest safe main and preserve dirty/independent changes; no commit/push | Same-session actual tools remain necessary; traces alone do not prove writes |
+| API only | Exact verified main base, new unique branch, readbacks, available checks, commit/push there, verify published branch | No main write, force, PR, merge or release; authenticated authority separately required |
+| Host cannot insert a new chat message | Direct equivalent execution in the same session, with final latest VERIFY | No universal reinjection primitive or installed interceptor claimed |
+| No authorized execution capability | Concrete blocker and incomplete actual result | No successful APPLY inferred from a pasted prompt |
+| APPLY payload ordering | No download; literal latest VERIFY directive last, no later operational instructions | Captured string and trace order only |
+| Two runtime clauses changed | Describe each and give exactly two grounded before/after examples with refs | Illustrations are not execution evidence |
+| Appendix-only or derived-only change | Dedicated canonical section explicitly states zero runtime normative changes; no invented examples | Actual source diff must establish zero |
+| Missing baseline or independent later source change | NOT VERIFIED for inaccessible diff; attribute independent changes separately | Neither parser nor model trace authenticates history |
+| Local working tree or remote published branch | VERIFY checks actual implementation target and then full localized REPORT | No automatic main substitution, premature or recursive REPORT |
+
+WF-001–024 in `maintainer-workflow.test.mjs` are bounded local synthetic capture tests, including mutations that must fail. They exercise actual captured strings/data, not an AI implementation or live API adapter; declared language and supplied before/after references remain declarations. The existing report validator separately checks terminal Markdown completeness. No new consumer workflow or mandatory infrastructure is introduced.

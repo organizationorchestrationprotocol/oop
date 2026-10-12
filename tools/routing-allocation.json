@@ -1,0 +1,40 @@
+{
+  "id": "RA-COORDINATION-001",
+  "baseline_commit": "318598e09d702b131dfeb18efcf9a683ea65b831",
+  "baseline_review_identity": "sha256:cc43f2fdc9b6be22bb06da2e193e4db04b54e6a49a982e3b9a68fd3478639d1a",
+  "target_review_identity": "sha256:c02379c23d7d841330a1ad0a4d8c9e0bb2f1c57b62503f77115759b503e232d9",
+  "source_identity": "sha256:9bb52974537f7b0dc6f74abdeb6494892adae9eedb503252f0ba5060739152cc",
+  "rationale": "The paragraph governs material planning and downstream coordination before effect classification. A dedicated core-dependent module supplies managed_change, change_set and semantic_propagation without loading execution. Execution depends on coordination so all former obligations remain available. Unrelated G0/G1 module closure is unchanged.",
+  "split": {
+    "previous": {
+      "id": "OOP-effect-verification",
+      "start": 2560,
+      "end": 2593,
+      "module": "execution"
+    },
+    "current": [
+      {
+        "id": "OOP-organizational-coordination",
+        "start": 2560,
+        "end": 2563,
+        "module": "coordination"
+      },
+      {
+        "id": "OOP-effect-verification",
+        "start": 2564,
+        "end": 2593,
+        "module": "execution"
+      }
+    ]
+  },
+  "compatibility": "OOP-effect-verification retains its lifecycle meaning and ID; its former introductory coordination paragraph has a new attributable ID. Consumers must resolve current routing/dependency closure and realign cached contracts on adoption; reading the old ID alone is no longer complete context. No organization data transformation, inherited authority or replay is authorized.",
+  "migration": {
+    "organizational_state_change": false,
+    "scope": "runtime",
+    "action": "Refresh selected context and dependency closure under existing adoption/context rules; retain prior verified organizational state and pending effects."
+  },
+  "limitations": [
+    "Producing-AI semantic review, not independent approval.",
+    "Local routing and synthetic guard tests do not establish installed enforcement or provider effects."
+  ]
+}

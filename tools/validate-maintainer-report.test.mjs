@@ -34,7 +34,7 @@ ${notice}${prop(1, source, distribution)}${second ? '\n' + prop(2, unresolved ? 
 `;
 }
 const valid = fixture();
-for (const command of ['ordinary audit','DIAGNOSE','PREPARE','VERIFY','REPORT']) {
+for (const command of ['ordinary audit','DIAGNOSE','PREPARE','VERIFY','APPLY','REPORT']) {
   test(`${command}: complete captured report passes`, () => assert.equal(validateReport(`Operation: ${command}\n\n${valid}`).status,'PASS'));
   test(`${command}: missing terminal content fails`, () => assert.equal(validateReport(valid.split('#### Final')[0]).status,'FAIL'));
 }

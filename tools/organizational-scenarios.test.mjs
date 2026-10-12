@@ -30,8 +30,8 @@ for(const [index,s] of fixture.scenarios.entries())test(`REL-ORG-${String(index+
     assert.ok(structural.includes('governing bodies or sites'));
   }
   if(index===4 || index===5 || index===8){
-    assert.ok(byId.get('OOP-effect-verification').semantic_clause.includes('all and only domains materially affected'));
-    assert.ok(byId.get('OOP-effect-verification').semantic_clause.includes('identifying a consequence does not authorize its execution'));
+    assert.ok(byId.get('OOP-organizational-coordination').semantic_clause.includes('all and only domains materially affected'));
+    assert.ok(byId.get('OOP-organizational-coordination').semantic_clause.includes('identifying a consequence does not authorize its execution'));
   }
   if(index===6){
     const proof={status:'verified',workspace:'synthetic-organization',runtime:'source-runtime',validity_dependencies:['authority'],observed:{authority:'source'}};
