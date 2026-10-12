@@ -8,6 +8,7 @@ import { contextSession,select,readJSON } from './release-engine.mjs';
 import { subjects as subjectPaths, identify as identifyInputs, testFiles, expectedObservations, protocolSource, completeProducerObservations } from './acceptance-inputs.mjs';
 import { reviewedSourceTransition } from './source-transition.mjs';
 import { alignmentFromAcceptedBaseline } from './organizational-alignment.mjs';
+import { verifyPackageBaseline, measurementMethod, effectiveScope, compareEfficiency } from './efficiency-regression.mjs';
 const root=fileURLToPath(new URL('../',import.meta.url));
 const hash=x=>`sha256:${createHash('sha256').update(x).digest('hex')}`;
 const text=path=>readFileSync(new URL(`../${path}`,import.meta.url),'utf8');
@@ -52,7 +53,7 @@ for(const recordCommit of history.stdout.trim().split('\n').filter(Boolean)){
     const result=git(['show',`${recordCommit}:${path}`]);
     if(result.status!==0)continue;
     const report=JSON.parse(result.stdout);
-    if(report.release_ready===true){packageBaseline={recordCommit,report,identity:hash(result.stdout)};break;}
+    if(report.release_ready===true){packageBaseline={recordCommit,path,report,identity:hash(result.stdout)};break;}
   }
   if(packageBaseline)break;
 }
@@ -139,11 +140,33 @@ for(const item of measurements){
 const identities=identify(subjects());
 const subjectUnchanged=JSON.stringify(identities)===JSON.stringify(frozenIdentities);
 const noByteRegression=measurements.every(x=>x.selected_governing_bytes<=x.baseline_governing_bytes);
+const historicalObjects=new Map();
+const efficiencyBaseline=verifyPackageBaseline(packageBaseline,{
+  readObject:(commit,path)=>{
+    const key=`${commit}:${path}`;
+    if(!historicalObjects.has(key)){
+      const result=git(['show',key]);
+      if(result.status!==0)throw new Error(`Missing historical object: ${key}`);
+      historicalObjects.set(key,result.stdout);
+    }
+    return historicalObjects.get(key);
+  },
+  isAncestor:(commit,target=evaluatedCheckout.commit)=>typeof commit==='string' && /^[a-f0-9]{40}$/.test(commit) && git(['merge-base','--is-ancestor',commit,target]).status===0,
+});
+const methodIdentity=measurementMethod(text('tools/accept-release.mjs'),[text('tools/release-engine.mjs'),text('tools/reference-engine.mjs')]);
+const rollingEfficiency=compareEfficiency({baseline:efficiencyBaseline,subjectIdentity:hash(JSON.stringify(identities)),
+  measurements:measurements.map(item=>({...item,method_identity:methodIdentity,
+    scope_identity:effectiveScope(item,id=>json(`distribution/modules/${id}.json`),source,
+      id=>json(`distribution/procedures/${id}.json`))}))});
 const checks={source_preservation:priorSourceEqual?'passed':'not_identical',
   source_regression_gate:sourceGate?'passed':'failed',organizational_alignment_regressions:alignmentTestsPassed?'passed':'failed',source_migration_regressions:migrationTestsPassed?'passed':'failed',preceding_source_checkpoint:baselineIdentified?'passed':'failed',
   local_package_and_reference_tests:testPassed?'passed':'failed',measured_context_bytes:noByteRegression?'passed':'failed',
+  historical_efficiency_evidence:packageBaseline && efficiencyBaseline.status!=='verified'?'failed':efficiencyBaseline.status==='verified'?'passed':'not_verified',
+  rolling_efficiency_regression:rollingEfficiency.status,
   frozen_subject:subjectUnchanged?'passed':'failed',frozen_checkout:JSON.stringify(checkout())===JSON.stringify(evaluatedCheckout)?'passed':'failed'};
-const accepted=sourceGate && Object.entries(checks).filter(([key])=>key!=='source_preservation').every(([,status])=>status==='passed');
+const accepted=sourceGate && rollingEfficiency.readiness_allowed &&
+  Object.entries(checks).filter(([key])=>!['source_preservation','rolling_efficiency_regression','historical_efficiency_evidence'].includes(key)).every(([,status])=>status==='passed') &&
+  checks.historical_efficiency_evidence!=='failed';
 const releaseAccepted=accepted && committedSubject;
 const report={
   observed_at:new Date().toISOString(),node_version:process.version,
@@ -167,11 +190,14 @@ const report={
     normative_deltas:sourceMigration.status==='passed'?sourceMigration.changes:[],classification:priorSourceEqual?'generated_derived_only':sourceMigration.status==='passed'?sourceMigration.basis:'unreviewed_source_delta',full_previous_distribution:packageBaseline?'identified_checkpoint':'none_available_first_complete_export',
     limits:'No historical full release/integration verification is invented. These results establish current export preservation and local mechanisms only.'},
   observation_summary:observationSummary,observations,measurements,
+  efficiency_comparison:{historical_baseline:efficiencyBaseline,rolling:rollingEfficiency,
+    full_current_source_control:noByteRegression?'passed':'failed',
+    authorization:'No trusted regression dispositions supplied; arbitrary explanations cannot override measured regressions.'},
   comparison_basis:'Same canonical source fully loaded versus selected real package closure including entry/selector and applicable procedure bytes. Cold/warm/recovery local harness; not a product end-to-end benchmark.',
   retained_requirements:trace.clauses.map(x=>({id:x.contract,disposition:sourceMigration.changes?.some(delta=>delta.clause===x.contract)?'strengthened_without_incompatibility':'preserved_verbatim',source_identity:x.content_identity,artifact:x.artifact})),
   impact:{README:'affected: symmetric human governance explanation; original CTA preserved, candidate entry is not release-ready',examples:'affected: actual package and limits',
     maintainer_guidance:'affected: reusable reviewed generation and producer acceptance',schemas:'existing contract profile applied to all source contracts',
-    tests:'25 package checks, 30 retained reference observations, four retained cleanup regressions, ten retained producer safety/freshness checks nine retained organizational scenarios and ten coordination routing/allocation regressions',generated_artifacts:'complete current-source export with explicit semantic bindings',
+    tests:'25 package checks, 30 retained reference observations, four retained cleanup regressions, ten retained producer safety/freshness checks nine retained organizational scenarios and ten coordination routing/allocation regressions; eight rolling efficiency regressions',generated_artifacts:'complete current-source export with explicit semantic bindings',
     release_evidence:'current exact subjects, scope-bound verdict and seven measured local scenarios'},
   limitations:{installed_runtime:'not_performed: no native adapter is shipped or claimed installed',provider_execution:'not_performed: no credentials or provider effects used',
     cross_runtime:'not_performed: technology neutrality reviewed, real product interoperability not claimed',
