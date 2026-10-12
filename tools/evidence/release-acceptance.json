@@ -1,37 +1,37 @@
 {
-  "observed_at": "2026-10-10T19:35:04.550Z",
+  "observed_at": "2026-10-12T07:18:25.546Z",
   "node_version": "v23.11.0",
-  "source_identity": "sha256:8b05b2f38f8d51a9a4bf6abfff6f48799a4b2628e1b92592907f36fdeea74881",
-  "source_snapshot_commit": "39d0c6141701d38121944db109e0f1b851dd9511",
+  "source_identity": "sha256:9bb52974537f7b0dc6f74abdeb6494892adae9eedb503252f0ba5060739152cc",
+  "source_snapshot_commit": "f0925e4258a5c9e882eddf765538f86a7183232f",
   "evaluated_checkout": {
-    "commit": "39d0c6141701d38121944db109e0f1b851dd9511",
+    "commit": "f0925e4258a5c9e882eddf765538f86a7183232f",
     "ref": "main",
     "working_tree": "modified",
     "changes": [
-      " M .gitignore",
-      " M CHANGELOG.md",
-      " M build_tools/README.md",
-      " M build_tools/accept-release.mjs",
-      " M build_tools/evidence/release-acceptance.json",
-      " M build_tools/evidence/release-tests.tap",
-      " M build_tools/evidence/release-traceability.json",
-      " M build_tools/generate-release.mjs",
-      " M dist/entry.json",
-      " M dist/routing.json",
-      " M maintenance/PROMPT.md",
-      "?? build_tools/prune-artifacts.mjs",
-      "?? build_tools/prune-artifacts.test.mjs"
+      " M distribution/entry.json",
+      " M distribution/routing.json",
+      " M tools/evidence/release-traceability.json"
     ]
   },
-  "subject_content_identity": "sha256:faba1f0b09412bd9f2af2e0e45e9c2fd373ac4e6ba09acd61e4dcc5107fba0c6",
+  "subject_content_identity": "sha256:acb630f71a27a4b6d0bed39ca5fdc10102bb0a0c20c1bd3bdc87b97f891b9c5a",
   "report_kind": "committed_acceptance_snapshot",
   "revision_binding": "evaluated_checkout identifies HEAD at execution; identities bind the actual files including any working-tree changes. source_snapshot_commit identifies generator provenance only. A committed report cannot embed its own containing commit; rerun acceptance after commit and use --check-current for current HEAD.",
   "scope": "producer-prepared technology-neutral derived distribution; no installed-runtime/provider/cross-runtime readiness claim",
   "release_ready": true,
+  "candidate_validated": true,
+  "source_binding": {
+    "kind": "committed_source",
+    "base_commit": "f0925e4258a5c9e882eddf765538f86a7183232f",
+    "source_identity": "sha256:9bb52974537f7b0dc6f74abdeb6494892adae9eedb503252f0ba5060739152cc"
+  },
+  "committed_source_ready": true,
   "publication": "not_performed_for_generated_package",
   "runtime_adoption": "not_performed",
   "checks": {
-    "source_preservation": "passed",
+    "source_preservation": "not_identical",
+    "source_regression_gate": "passed",
+    "organizational_alignment_regressions": "passed",
+    "source_migration_regressions": "passed",
     "preceding_source_checkpoint": "passed",
     "local_package_and_reference_tests": "passed",
     "measured_context_bytes": "passed",
@@ -39,151 +39,429 @@
     "frozen_checkout": "passed"
   },
   "identities": {
-    ".gitignore": "sha256:9020fe4ab4607c35bec29145bf94d6e6dbc28ad184e0baf5f5c0023b6cf1512e",
-    "CHANGELOG.md": "sha256:cd5a38ce854bc87e301ef6263d4ad5885c5c7ef515b073d6af1323059309700e",
-    "PROMPT.md": "sha256:25ede22c43f81c7292b6a9bd161d76a8198a27f35e75dd993601feadb7b7abcf",
-    "README.md": "sha256:d775dfb89c560c23c75d6efda0782ca599e6bd923e517d7077b36b0f60d7aed0",
-    "build_tools/README.md": "sha256:92505c18d732688bfcab6bf12f1c5bcdef2ecc851358642957977caa3d5608d1",
-    "build_tools/accept-release.mjs": "sha256:04f8d30758758c4abb496601dc73eafe3a2c9f54e4fbd0eba4310eefa203be01",
-    "build_tools/evidence/release-traceability.json": "sha256:9074751511441c4280f02f8ecc192a847eb979693203c24117da70991db41c00",
-    "build_tools/generate-release.mjs": "sha256:e9adbd196a48260fea16e4b480313ccf567a4e86ff4008177bfa9da92060ccb5",
-    "build_tools/prune-artifacts.mjs": "sha256:37b6ece1e081d9e9293c854bcdeb9b344857c43b8f7d6d5e64fc53a5c083bcbe",
-    "build_tools/prune-artifacts.test.mjs": "sha256:d8393258cf3a09f7b8b1ab7c276523890937df282d44386739c60dfd5e348c81",
-    "build_tools/reference-engine.mjs": "sha256:7bfaa9f49632604e36cdca916c8e0403e715fa47d417013235820946f4c66e8c",
-    "build_tools/reference-engine.test.mjs": "sha256:3b81bf1c7e9b0854dbb615f7e4e2a3d17bcf66c234f8cd54f0dedb0c069ca170",
-    "build_tools/release-engine.mjs": "sha256:806736d23fc938046ef654e319dc2fef487dd60b4ad19b730b0f7269bb3ece2b",
-    "build_tools/release-plan.mjs": "sha256:c64307ae3a35b55673992a08593c15920b930bb9421a8ee9290514f04fe186be",
-    "build_tools/release-review.json": "sha256:e3cfd1b863d26d3833cb2b508dfe7e9b0fcab7744c77a5144fc8c45e2063744c",
-    "build_tools/release.test.mjs": "sha256:f1474a8c955beea0d66c8815661164abab74179806adaa9ba968b0bf46515816",
-    "build_tools/schema-profile.mjs": "sha256:2b36de6fa21c01c0c48eeb47d5e794e24d818b9a3f2e3bfbec439c28726182a7",
-    "build_tools/schemas/contract.schema.json": "sha256:515b260a2b62e23213df0c1922e330b4ddec83acb1b004bba75fb7e15c55b698",
-    "dist/details/activation.json": "sha256:3f1b094aa0618e7bcf11821ac18b6179ee2b0d6b94264407220db13f4709ba66",
-    "dist/details/adoption.json": "sha256:9008c2147d52f3dadd10e53baac04631feecaf9c17886d82bb98c9804166df2a",
-    "dist/details/bootstrap.json": "sha256:2f84fd915bdd8c9b908f47ff5c802b6f84af511423e1be088e65a6a3473db601",
-    "dist/details/capabilities.json": "sha256:1604bbb97d6c32fcf6b551b521026d1873b698f9ec821963f191cc7de62b912f",
-    "dist/details/changes.json": "sha256:afc1333798f98645183bc8402adfba861b7fbfe5da7a20d9dbfa07e31cbe1bc2",
-    "dist/details/ci.json": "sha256:ba6d7f996c9a28519b394519418b98b1c0c23fed54656ee1516c57568095af87",
-    "dist/details/context.json": "sha256:237fbb0ad6fad98f8609f91046ea0c4fcb1b26f69ae246b2280185e9c9e10121",
-    "dist/details/continuity.json": "sha256:678cf96699e18eb051478a86628d637172867e909ec58a111f4a216bd272a0e5",
-    "dist/details/core.json": "sha256:1eda73216e83b8656cb949c36f9c4e4a7f54fe42d2faf70e1b30ad78445d90ea",
-    "dist/details/cost.json": "sha256:15e7509597de658292d7c1af1f9c6aa354907d52d08596dd509f414f0253bba2",
-    "dist/details/decisions.json": "sha256:f243ad8c5882c465e611c974d384235c2302e4e4dac9236b95e4b1e74eed31e0",
-    "dist/details/delegation.json": "sha256:54788f75b45cb0a8fece81453c159f6f59681960260052db8f67eee6b61b2e4c",
-    "dist/details/delivery.json": "sha256:c2850021de7e36963f9a0a9405a16cf4a928317d8f3059c84020e2a3fb0d8791",
-    "dist/details/destination.json": "sha256:1923b52ee2c74ad07ba779cac0960f7841f34be6f5964be4f276c7501921b96f",
-    "dist/details/entry.json": "sha256:87b42bff4ae9da90fcad2f459eaf9dba624a04d0724cb6f452c89db91abd219a",
-    "dist/details/execution.json": "sha256:4da127fb71bc84aed3372725556d8c4eb2deb517047219180f20d1952d6cae35",
-    "dist/details/handoff.json": "sha256:d8b08f32f6d655172d532c70a569b434b8d1c717836788b5d9200be55fe33da2",
-    "dist/details/history.json": "sha256:e276e36c7594e9084f5539444761b9d25fe6b465436bad4524a93adce36d7886",
-    "dist/details/human.json": "sha256:cc469701a8c76866961d1bbf5b39b22abbd5c5660051ca6ee7cf3d57fe6c85fb",
-    "dist/details/impact.json": "sha256:b00fe82a6457816a6e761b00b70abaf003995fd4824fa0a43fa7f386e66a96d1",
-    "dist/details/intake.json": "sha256:ed4fc578c4787522eab896258e41821e930f2f4735c97aff18ec1f9112388a7a",
-    "dist/details/interfaces.json": "sha256:2d2eea4ce0b56daf602f29f06de9b2f38fc1fc746eb4b2fa23d0d43df425bb6b",
-    "dist/details/inventory.json": "sha256:e9a31a2f8ab0381dcfe97bcc35693c28c2d55a320ecb5e7ae979acd20bafe3d1",
-    "dist/details/migration.json": "sha256:dfadc5a2a434f2f18ec8d27b5a15d73b7742819996a0ba34e41c303fe7988a76",
-    "dist/details/model.json": "sha256:bb619d065096d0e7534057f5e82376ec55dc31f619ae97b2510955d0bf202b42",
-    "dist/details/operations.json": "sha256:5fe3dcb4bcc862de29921d21ef4b356449121a07477cf835bc8cea5672b4b7c6",
-    "dist/details/physical.json": "sha256:46daead16e979ae948ae74411f163dad59fccf20e320a8ae2b13bfdfd236e4c1",
-    "dist/details/producer.json": "sha256:72a58495041fd0af5073681e96d3d27ad03dbdb8e580b29f6e1e27b6db5f0088",
-    "dist/details/recovery.json": "sha256:961ccf553223ddb2e7fdcda9ccbd69c30fe9ca18345e53975320792e6acc7a3e",
-    "dist/details/repository.json": "sha256:6bc5ef337aeac8711a308284aae81d9ccb2f19e7c46bf1c25fbb2d82b64ecf83",
-    "dist/details/secret-transfer.json": "sha256:ae3827d9e628ff063d78613761f97fb203a6d6c33325c25488b7bb37d9b31de8",
-    "dist/details/security.json": "sha256:d49bdd02e31631ab7a69ad828cab2ffc3f54d79f6a377edbe7edc285dc14462a",
-    "dist/details/shared-context.json": "sha256:e8821cc3ad407dd2665872a0325b5a58d3e86f2e1a59d3b9dffaac93e46c444b",
-    "dist/details/tickets.json": "sha256:181a6c495c51a8bb4c13ad0e0e18b88f34db5af3cb4a5e190c007b9f3c28d41a",
-    "dist/details/workspace.json": "sha256:206e5858d09e129f88173cce5c1b17d479fdf0ff68d4a90ca32a5ab1abd64467",
-    "dist/entry.json": "sha256:c2eb9940ca19717f574363a511b546b3283112144be24298da43fddbf460b481",
-    "dist/interfaces.json": "sha256:7f34ee4f9887c610a4ca96bf7e70852b5f905284cc8c7a2d68ff3dfafcf269d6",
-    "dist/modules/activation.json": "sha256:71d0b034ad42499fb86c5e0e268f0218e986f0d90c310bbf1b63d13f4893f433",
-    "dist/modules/adoption.json": "sha256:747727ef4bd881e601e4b635fda72528153ffa2e6e58837f8373a2ebed549641",
-    "dist/modules/bootstrap.json": "sha256:e06d1a75313e2ae0869cb0511e853f036d115be64df6e53dab0c40ed2170118e",
-    "dist/modules/capabilities.json": "sha256:1dbb158b12768798e4b3a6d80960ebbbecbe04e2d9b6880aaff365137e237750",
-    "dist/modules/changes.json": "sha256:27314e745cd7d4a5fb4938f4b04fee551200355eb86e8c3a730f20c5bbbb0b6f",
-    "dist/modules/ci.json": "sha256:c3ebf5d92270c121853ce1dd9ff998f9e2eca07decdd16ad2ff36e275a631773",
-    "dist/modules/context.json": "sha256:7be40e56be9248e0c561f80fbedf42fef1ec551951501f96f33f04c28a34baf6",
-    "dist/modules/continuity.json": "sha256:d01fadd90ce9a2292ab2b89440213c329ade929fbd6324066ed67b8eb7d5aaa9",
-    "dist/modules/core.json": "sha256:9148e71383fe8ce4cf5498f4ea12ec454b6b1bc65b75e95ffcd09b5e629fa2f7",
-    "dist/modules/cost.json": "sha256:95003c7bd40ed5486ba33c186433300d7a7418239f89a05b9f755ec45d1279a1",
-    "dist/modules/decisions.json": "sha256:e1a1be8ac9e562e3bbca8dff279c7d3d3c6cdcc1bfee0205cbaf8a884d44d1a0",
-    "dist/modules/delegation.json": "sha256:0bfdcf23a3c284c88271059b0996397d17cf3a309e5599d504f8c04dea4d3f4c",
-    "dist/modules/delivery.json": "sha256:a793ed59721a9adeaee959fed6b58044a01cc2a5fa8d1fef038b2396c27a83c0",
-    "dist/modules/destination.json": "sha256:fc49f33430799ef8f4bc4f66e503a2b87c75e30af441d35cd9fed51f0fdb0ddb",
-    "dist/modules/entry.json": "sha256:446dbc86f28b4a8937807ced66a2980989fd516bf39b9a82a1a7eb9cf573a2b9",
-    "dist/modules/execution.json": "sha256:1eab7776845f8c968e216f1dde063ea1f8c647bd30997bf04ebae49de4f15d7f",
-    "dist/modules/handoff.json": "sha256:e15c3518264b9d764b261c08fb1c85a27e6ad78d5428910ad8a9340455d4d690",
-    "dist/modules/history.json": "sha256:747f5607234751c27325659d06b4a1b78c05feba33c3e3d6d4e28686a262d5d9",
-    "dist/modules/human.json": "sha256:3e515f9f2667bd4243b1c0f1012068485a1c26cf2a2e16a12d01f2ada7c9a6f7",
-    "dist/modules/impact.json": "sha256:f64ed0172972425c838ad2b9cf5e4d36bb135159da7954b6436d82df7b02cf2f",
-    "dist/modules/intake.json": "sha256:8dc510c19b96cddd6be7fd3ded6b0e66d199689ed20915e30b1e2b3c5a25faf5",
-    "dist/modules/interfaces.json": "sha256:2c1eebb2f638eb26510e5b159dbf324cddbf8047066ddd4c7ee677e6aa7ced14",
-    "dist/modules/inventory.json": "sha256:cc04fb6ec975b95b0620895f389c036225d6a6ac42baa05bcb2b91beec370319",
-    "dist/modules/migration.json": "sha256:c322d18ad097eb5f91bc713c6020cb102ba1781d1feb55bffc701cc8e2a75475",
-    "dist/modules/model.json": "sha256:35228538104a9d72a8513db9c04c6e524f6caffd55b48b9a8b7679f09cdc2684",
-    "dist/modules/operations.json": "sha256:28e9b1135c4eb58837ccf71966eda5edaa9b7ed67d444845416321a4336563a6",
-    "dist/modules/physical.json": "sha256:45e2c33aaef7db5f1d8eec94f2e49a7db3d20b3abaf8d3daa2e7e749ed496742",
-    "dist/modules/producer.json": "sha256:261b3e3da39663d0edb1c912d753642f9f09d2b8b636944de608679e9d1ec86d",
-    "dist/modules/recovery.json": "sha256:569399c9260d6617858def53d4d0e751622806f5f882bba7bf250e25975f4f6a",
-    "dist/modules/repository.json": "sha256:b5dc9717a852712b776aa0f9cc927578d5a641d159b1e887fec73bd1660f002c",
-    "dist/modules/secret-transfer.json": "sha256:347336b87a5486a0e7c64a34e0010ef44bfccbff54632bd685aa6de1fcf4fa44",
-    "dist/modules/security.json": "sha256:1cc9d358045f707c7b5bf92de2d689d060b4c42b8627bff1b788e89756f7071a",
-    "dist/modules/shared-context.json": "sha256:c06baa4c7295d1f1b4334fb82a3229175f1d9d5d575518de2227d78bb1153406",
-    "dist/modules/tickets.json": "sha256:487172a75671eb4d6ecda3fad791cdcc728a1693e45e1b6a0fe0867d55f403f4",
-    "dist/modules/workspace.json": "sha256:d6192480e2109ccc06f69fe6ebc6ae48f151c0ac0a048d6ca3b590fee5e69747",
-    "dist/procedures/bootstrap.json": "sha256:3ba5048f14733827c41f624a63de8ac0c55cb511ac210e017aec8a26a2d581d3",
-    "dist/procedures/lifecycle.json": "sha256:1ecc49e0ca7b7ad70fff3ee9f29aed46d510e5872a0e9d62f9791f8bdc4743f9",
-    "dist/routing.json": "sha256:98b3bd211ecf9e5b0bc9c12cff8dd55929cba7451f4bd84d127ce968e8c37a21",
-    "examples.md": "sha256:5ef7cb5d84d782361bbd427d26892cbf199a59868d0ebf496b7d88cb641b9554",
-    "maintenance/LIFECYCLE.md": "sha256:dce79240de138b51434b05e4c080f1cd0752e731d457011673a18724f28288a9",
-    "maintenance/PROMPT.md": "sha256:b8c994813430046198ec422a3a66440c041f0c1b41781328addacab6d1da5e90"
+    ".github/workflows/producer-tests.yml": "sha256:0fd1aae08357e0cb204998aef3053b16330bef498e0d27d5132c263bf619c206",
+    ".gitignore": "sha256:92ef0c617979770077062fa7bdb679bb9dfbe44c40967dc2d9a21c3edc0e781e",
+    "CHANGELOG.md": "sha256:d4397d8443dbcd070ba33e46ce27cc655babc00ef687838d7965cb5b6b548bba",
+    "PROTOCOL.md": "sha256:eccd8815afdb39152880cba56dedb29dcdd6605b3803eb98ba099724a9d58626",
+    "README.md": "sha256:bf296b5d7a2e9e99e7e6696ae7a9ef67d52f57797b6b968a9bf71379760bf041",
+    "distribution/details/activation.json": "sha256:2594a79785f145f93c371060b601ec3851c05920b84976e12f5e1399b927df91",
+    "distribution/details/adoption.json": "sha256:2d3008df09f4f79686c4125ab53dda2e9cc69c9e3b7a1a4980ceb4fc51d53f8a",
+    "distribution/details/bootstrap.json": "sha256:51cf8f34e161230af1a4487859e2b84d8ac105c956d9d27f55c4dd7f43400f05",
+    "distribution/details/capabilities.json": "sha256:f676a53aab9fcefab0e1fc686c84bfd91864e58ddba5102fbc93c27daf451a1a",
+    "distribution/details/changes.json": "sha256:96026989a4cf56c92bec1aaa8172b61523b4a6ea66526a6c567923c2f6959a8a",
+    "distribution/details/ci.json": "sha256:5ebe34d4b73d96eb446cb6bf0593ef7d268b99d06f92921a7da5047f52ece909",
+    "distribution/details/context.json": "sha256:1056ce80def74b67060a48653b5a707e969abdc3b9fdffbe5627c7079c0736d4",
+    "distribution/details/continuity.json": "sha256:1b12f63d32b66187c3289d3610a3d8b2e5657e2bcae8abf14c2842d935c0771f",
+    "distribution/details/core.json": "sha256:c6a2949c2c9d2c4bc3dec45705291d83c46dbe652bd449044a16bedd0bee9ba6",
+    "distribution/details/cost.json": "sha256:6b794ff2b1a90c54936610c4ea7d118c3b766b91aa9673e8caa8d226b4628287",
+    "distribution/details/decisions.json": "sha256:5233c3038ceb4b9143b8eeda2b4b6d6e9622b666cb70a4bfa3da8b92a258675c",
+    "distribution/details/delegation.json": "sha256:116b33053300ffd59ddd06b1ac516ae862a0dcd974ec8fe103eeaf051b846246",
+    "distribution/details/delivery.json": "sha256:b25c7987c576c059afabe646df3ae07875009114d57434b27f1618bcff6887b4",
+    "distribution/details/destination.json": "sha256:01432cf41c174389a7ea0be9fc97a140907d34c3d191d239e72f34784c1f197e",
+    "distribution/details/entry.json": "sha256:0806200437ac9964c33c2832b247290b61502ecf07bd698e4277707b63d4a68b",
+    "distribution/details/execution.json": "sha256:32ced6d6cbf7baf4e472640e9a8a1ff033f1d3b0c11057506738ffabb5874531",
+    "distribution/details/handoff.json": "sha256:58ba5acd432546677f68dc700b30cf4d6d2a364ca04f285c476d71e9beffacd9",
+    "distribution/details/history.json": "sha256:492770f6e94a697fba439461f05a8f7f2ebdb3b6a36cd40318ee754b76e5b033",
+    "distribution/details/human.json": "sha256:967b07600dbfac4deb702aaa14327c8cd48ca9c54b488196b6cf8e9418bcc25b",
+    "distribution/details/impact.json": "sha256:b8266f9bb5f6121863e4d92749a4b7276b9b085594cede34abf455bf5273e928",
+    "distribution/details/intake.json": "sha256:bd660d3d7eaef145c7c6f1292bc7fb2f50250e1797cf5856c22181ce411c267d",
+    "distribution/details/interfaces.json": "sha256:9a70b24e959d49b03c66f3891fde2ca5ce414790ef0f9fde3611a67787a31588",
+    "distribution/details/inventory.json": "sha256:06cfd4093bbbbef84c96ad7d7d9b62e176b90791aa0e40ccf5e51b9e582c594a",
+    "distribution/details/migration.json": "sha256:d3562c21abc9391f18ce2ad575c5196fdb3871bb6102e3a5dbdc0adb5e89aa4e",
+    "distribution/details/model.json": "sha256:ae851802b0088555a99f464082d74dfea256074af46f3447fc11e6f05cea3eac",
+    "distribution/details/operations.json": "sha256:42b8b814659fbda8d9e470d8fcdadc219c7521a83706d9838d134a793ef9f347",
+    "distribution/details/physical.json": "sha256:358e0f156e0963eeeecd4b592aa63defb0f2cf382c08a81412f56b72f7bf5ca7",
+    "distribution/details/producer.json": "sha256:0ad294553339e66948554a2cede14e771ceb134acc62e43a6cd97c40a5b91407",
+    "distribution/details/recovery.json": "sha256:177be56a67ac460c918d311ad7166e057ca77f04da6c7b407345e423904e7463",
+    "distribution/details/repository.json": "sha256:e5abd5282a27c9432f60dd7517c6972816c863b13e13800dcfad5df656488ce0",
+    "distribution/details/secret-transfer.json": "sha256:23f79e4a3703a730268ce3379e5aa3091585dfdd71adc1d47a0b8d73fa0d883e",
+    "distribution/details/security.json": "sha256:98ea553b6c98faef651eaf07141f74a3639e4f33253809f29dc7c3709753ede6",
+    "distribution/details/shared-context.json": "sha256:5fdb5cc1d26df819a199fa3028f42ebdc4a84a69f1875424d421bbe3ded9a89b",
+    "distribution/details/tickets.json": "sha256:eb353ac5a65d59f24c09a74b5ed092577e4449d7c12b55d0452bc8061def6b80",
+    "distribution/details/workspace.json": "sha256:f1eee331cceef3022cb2182d94d870977dc2c102b09960361818cc7739e30ba5",
+    "distribution/entry.json": "sha256:8725e135cffd4e6d21f5a1ce19962e557d7a4f5891bf8516fea95f8adfe33109",
+    "distribution/interfaces.json": "sha256:7f34ee4f9887c610a4ca96bf7e70852b5f905284cc8c7a2d68ff3dfafcf269d6",
+    "distribution/modules/activation.json": "sha256:e9647cc67c832f32abaf4b58fd1bb22947aefecdc46880c34aede8edc49d5ed0",
+    "distribution/modules/adoption.json": "sha256:3c07bbd25534e8379b03fa6b14959db8bd8dcd195501ae8fd68b1f19555b5889",
+    "distribution/modules/bootstrap.json": "sha256:8f130140e332b33e3d0cd20bdefedf22b45e69e80c43c7dbbb5bf3f951470870",
+    "distribution/modules/capabilities.json": "sha256:16bd07214392dbe607c4e4770402442871434a268c2fa1eb329ca1a641b098a6",
+    "distribution/modules/changes.json": "sha256:d1ae9bb7c42a82d47f991c04567d25be8a4bd25c267cecb0e40b0039d6b07579",
+    "distribution/modules/ci.json": "sha256:2c296852f9325a23fb4f21aecbaf0b705142a93149613e62a4bedeaf73610112",
+    "distribution/modules/context.json": "sha256:3d7741394c707930a152acd27e3aa83e739c6e669368619363aaf054a82f979e",
+    "distribution/modules/continuity.json": "sha256:08cd89be357493a5832fcbf0493ac4eb87b8969ee4944b6c9b5bdc61962aa5f7",
+    "distribution/modules/core.json": "sha256:0f02686c196722aabb534adbd9a4187bb342aa5ddaaeb47481589d0c8c7ad679",
+    "distribution/modules/cost.json": "sha256:2ee9d9c8cfc5e219c30da4c71fce8030e7ad9a340b20953e18a38f0f142bed66",
+    "distribution/modules/decisions.json": "sha256:2fc22ce27e70e489bfee4e5ae26c64c55719c94344de7c3b1b4a575ccaa49502",
+    "distribution/modules/delegation.json": "sha256:b8ed517b335dc41a7fdab7c2ae56f73a5d3115b6fca6c4826436e2f664de63c9",
+    "distribution/modules/delivery.json": "sha256:b5edcf4f94b25894646a6f167c2affe825a4f2ecc5091d5497d3e6db355c9a16",
+    "distribution/modules/destination.json": "sha256:d9cc44604473f37f7938c62422094c95003bd139dc68d275a83661935a068bbd",
+    "distribution/modules/entry.json": "sha256:010f5684011053ce83ed127aa985f11b52e8dfbb900aea3ee14bb5e6d136034b",
+    "distribution/modules/execution.json": "sha256:713b357fa7bf59135579ecb7f6d3dd859904137c1908ad07e12ae50bc6a4f3e5",
+    "distribution/modules/handoff.json": "sha256:3b577eb9c980b754c213a03dc4cd9b7b860053b349d956730f4d848dfd642be4",
+    "distribution/modules/history.json": "sha256:06997c5c6858e45996c3f98fc868850d1b56928923b9c40312cc42b9d5afc567",
+    "distribution/modules/human.json": "sha256:a12353c95267ac2d5c20fd2430de6b476cbfdfb350c3b70e3877e6d6016429a2",
+    "distribution/modules/impact.json": "sha256:79c03740974bccb174881f988e95f437911dbc36e95f711060beea118f6a1881",
+    "distribution/modules/intake.json": "sha256:cc9dfd5234d2eed225b91c0d5744a094fcaa75e5b9798b7180b9cc17a8cef059",
+    "distribution/modules/interfaces.json": "sha256:2c0e69bb3351e5fbfcb5281c0ec2bad2fab9b899ebeb5c54ce8782233a6bf343",
+    "distribution/modules/inventory.json": "sha256:42024410538835de1bd3a0bfbf3367e5d21ec00d9cf7d6bd8ce2fabf1c21b706",
+    "distribution/modules/migration.json": "sha256:d20916c0dab2895953c23dec1196654b4da7dc43726d665c3822372b300b328c",
+    "distribution/modules/model.json": "sha256:a4fbec14dc497958a913d6f2b514b995721846c2349c13bcfdccabc1624ae939",
+    "distribution/modules/operations.json": "sha256:28129699fba9565e7edfd6ad24189d23740e81e165a1b11eb0e2c146468fcd88",
+    "distribution/modules/physical.json": "sha256:310890673b24bde7a371cae4e6a6e3fb4b981b6d8307912273a8b809c2449c33",
+    "distribution/modules/producer.json": "sha256:f52dcc871096a1d3f3a3fa5e2c264c1197b22f105d78ecb20393e6345cdd1afb",
+    "distribution/modules/recovery.json": "sha256:cfbc54b89fa6c75873e5679813ba43084556bb775f0ecf94a9347bacc1e9884e",
+    "distribution/modules/repository.json": "sha256:ee962c8c0c03babbacd3a3926cf0a44b1bcae60166e09d3ef9d8766624215ec4",
+    "distribution/modules/secret-transfer.json": "sha256:7c5c69bb978489c628d859507592f72a7f9032e2294b9386c5da85fe282567f6",
+    "distribution/modules/security.json": "sha256:8a34bb88ee4dd2829fabd321e2aa00631617a96db90bed89468e8dff180a1c6c",
+    "distribution/modules/shared-context.json": "sha256:4713c26420c8254702171e3d5d17cc0557db8e8e210408711c01b6ce25c42736",
+    "distribution/modules/tickets.json": "sha256:3c68d1ccad4c556478be16a8952a6a54f784159ce5b56a95a09aa9da18ac6aab",
+    "distribution/modules/workspace.json": "sha256:616728595a0025ee8a1b5394918843c7e58c36a1db4f2a43adbc2a36f7361581",
+    "distribution/procedures/bootstrap.json": "sha256:3ba5048f14733827c41f624a63de8ac0c55cb511ac210e017aec8a26a2d581d3",
+    "distribution/procedures/lifecycle.json": "sha256:1ecc49e0ca7b7ad70fff3ee9f29aed46d510e5872a0e9d62f9791f8bdc4743f9",
+    "distribution/routing.json": "sha256:a0cd6ae78716ec76ffcdbede9895b676135bb0647a81d217400c8dd36554c095",
+    "examples.md": "sha256:628238ad05245bd0fb5a5c813f4752f32b92bec85e43d46dbf3ceea5165db5af",
+    "tools/README.md": "sha256:9c0bbe53003e15d47a22ac43b0af38c44a91728917fc94a56924ce679c5ca087",
+    "tools/accept-release.mjs": "sha256:2f0e218bc2f7fc5a1f3c8afc6fa92ed39ae9b860952749296dc9ba024ede5bc6",
+    "tools/acceptance-inputs.mjs": "sha256:05f038ae94a7dc65b88446953419e22c215b4a92a2dd811b6c46bd0565afa300",
+    "tools/candidate/entry.json": "sha256:b42699a4036d67186b36a5a26a4ca9dfe988bf0dad3551cb0e66790748e9d548",
+    "tools/candidate/operations-access.json": "sha256:a10d09b65dbe4d69f6bc4cb53b11d4b0152dfa5cd126d96a5af7db19742229b9",
+    "tools/evidence/release-traceability.json": "sha256:599b8ad68ec37f3ce3dce22765f5f70f7dc206943476637c8c8b23456672f673",
+    "tools/fixtures/catalog.json": "sha256:251f41e860a12bbd54f24e3788670b65f1ca65974cf483539547ccd2bd453184",
+    "tools/fixtures/organizational-scenarios.json": "sha256:ec5b288a13b35e418070d320b6df4211fcfbf37c43eb5f264dd6424ed6d4ebf3",
+    "tools/fixtures/procedures.json": "sha256:0a6ddca3ccd9d77509af09adc8582782c2f57a0bdb3e53b218769e22f5ddd3a3",
+    "tools/generate-release.mjs": "sha256:7ac8365f2df2e644b4b42073d92d65178e7c87eca1776824a9a9b9c31fb2c824",
+    "tools/maintainer-report-scenarios.md": "sha256:7d1576df12d588bdf2a95a9e97ce76d128c632a6309edfa1564eec56d1f345cc",
+    "tools/organizational-alignment.json": "sha256:01e3ac4bbdd13d4c39017addf5a23d785d74b75f1f9fcf7cae6a0be18af20860",
+    "tools/organizational-alignment.mjs": "sha256:456a2b62a5e4b392964bee321fe08988fc658bf1c8810ca1f2631e1121b7a41f",
+    "tools/organizational-alignment.test.mjs": "sha256:d66d1f01c0482e9a0a0ef847ea1af38f353f94708e13e9b42405e25c8cf3b14f",
+    "tools/organizational-scenarios.test.mjs": "sha256:5fd37d9c1b0a57f07abee035f4f3f4956a54fb2bbf9dbe91269d63e80f1b94cb",
+    "tools/producer-safety.test.mjs": "sha256:c8f5b4a056a3c508c93c85600911484d396065604775d77aed7df680f86fd8b8",
+    "tools/prune-artifacts.mjs": "sha256:bcffaf044ccdb21c095f2394da28e597b2ccb865e93aa38056435c3645a5694f",
+    "tools/prune-artifacts.test.mjs": "sha256:62525ce27645fd85447949d0a4a11361d05ac477d42e3c8f95d4e4c4da7dc63e",
+    "tools/reference-engine.mjs": "sha256:7bfaa9f49632604e36cdca916c8e0403e715fa47d417013235820946f4c66e8c",
+    "tools/reference-engine.test.mjs": "sha256:3b81bf1c7e9b0854dbb615f7e4e2a3d17bcf66c234f8cd54f0dedb0c069ca170",
+    "tools/release-engine.mjs": "sha256:2355ba9fbf6e3092bd94d637b890650046cc882cbaca513519c991951a53871f",
+    "tools/release-plan.mjs": "sha256:a3d3f3a50da6af1f4a2aae12d91e3801ac23a45af60b0356da23da645ee11486",
+    "tools/release-review.json": "sha256:5dcddb17b5b7b8b1eb96e48fe46108d383edd95b643274df98bf44de98a8a824",
+    "tools/release.test.mjs": "sha256:6b1f7c9fc911c55e26bf00be98eed3d2e98f545836ff9f0e954f7de678e88c28",
+    "tools/reviewed-source-transition.json": "sha256:94f9eefc9cc24af04a3ef3c4de3bba39557472c49aec991a41482ddef60eb0e0",
+    "tools/schema-profile.mjs": "sha256:2b36de6fa21c01c0c48eeb47d5e794e24d818b9a3f2e3bfbec439c28726182a7",
+    "tools/schemas/contract.schema.json": "sha256:cca425b7e63745157302ef296604eb14a23d4ffdea6ab649eda833de9e1b480c",
+    "tools/source-transition.mjs": "sha256:4a81e2cedf0d86415a5949f740df9e080343d3a077ae99625696c46712ecc073",
+    "tools/source-transition.test.mjs": "sha256:d382c9b2b8b676c79fa2ce32089156a0f723a2b55f3073743541a9f0b64b1e87"
+  },
+  "source_comparison": {
+    "basis": "reviewed_organizational_alignment",
+    "exact_preservation": false,
+    "reviewed_transition": {
+      "status": "passed",
+      "basis": "reviewed_organizational_alignment",
+      "record": "OOP-ORGANIZATIONAL-ALIGNMENT-001",
+      "record_identity": "sha256:51c98a795ec8785cda7fd678ff5856e3cb98da5096afded15d8177bfce397d05",
+      "baseline": "60814ca38e3973925b900bf85d61071f0faa440f",
+      "changes": [
+        {
+          "id": "SD-ORG-STRUCTURE-001",
+          "clause": "OOP-impact-propagation",
+          "module": "impact",
+          "rationale": "Sections 1/9/10/19/20/21/22 already define applicability, intake, proportionate capabilities and authority. This addition makes symmetric structural interpretation, human/function distinction and non-inherited AI authority explicit at the capability decision, without mandating departments or duplicating their lifecycle.",
+          "classification": "normative_clarification",
+          "content_identity": "sha256:9a96bf14fa67fa5a5f3e0630b9933c09f480e811ba2104e1408378b274809bd1",
+          "retained": "preserved_verbatim_except_reviewed_insertions",
+          "compatibility": "Verify active structures and coordination before their next affected material action; preserve historical records; no blanket data rewrite or newly granted authority."
+        },
+        {
+          "id": "SD-ORG-COORDINATION-001",
+          "clause": "OOP-effect-verification",
+          "module": "execution",
+          "rationale": "Sections 9/10/13/21/23/24 already cover canonical references, causal consequences, approval and verified delivery. This addition explicitly connects them as task-relevant cross-functional coordination through outcomes; existing optional mechanisms and valid pending/blocked dispositions remain controlling.",
+          "classification": "normative_clarification",
+          "content_identity": "sha256:ea81cda46ab772a4fc9e1fd3ccb36284039f780dd15b1a4b979465d124c9392a",
+          "retained": "preserved_verbatim_except_reviewed_insertions",
+          "compatibility": "Verify active structures and coordination before their next affected material action; preserve historical records; no blanket data rewrite or newly granted authority."
+        }
+      ],
+      "retained": "All baseline runtime content retained verbatim; two exact additive paragraphs only.",
+      "limitations": [
+        "Producing-AI semantic review; no independent reviewer or actual runtime enforcement claimed.",
+        "Provider, cross-runtime and empirical organizational benefit NOT VERIFIED."
+      ],
+      "prior_accepted_transition": {
+        "status": "passed",
+        "basis": "reviewed_historical_path_transition",
+        "record": "OOP-PATH-MIGRATION-001",
+        "record_identity": "sha256:8aff44bfadf64207603a80e2d9a816ae74732e7bb20ed27f0e64a927e079e4db",
+        "baseline": {
+          "commit": "39d0c6141701d38121944db109e0f1b851dd9511",
+          "path": "PROMPT.md",
+          "source_identity": "sha256:8b05b2f38f8d51a9a4bf6abfff6f48799a4b2628e1b92592907f36fdeea74881"
+        },
+        "target": {
+          "commit": "c4d2fee4f7ab67e1085312fbbc4ee7c31802e672",
+          "path": "PROTOCOL.md",
+          "source_identity": "sha256:898433ac36432129a5b30ce17493efc0197c0b635dd074e8164f3da18a50dc93"
+        },
+        "checkpoint": {
+          "commit": "c4d2fee4f7ab67e1085312fbbc4ee7c31802e672",
+          "path": "tools/evidence/release-acceptance.json",
+          "content_identity": "sha256:8236a5dab67b00fcea312eef966be3e2cdbe967a388ce6b8a59475e23c411913"
+        },
+        "changes": [
+          {
+            "extracted_line": 568,
+            "baseline_document_line": 568,
+            "target_document_line": 568,
+            "old": "Each AI tool MUST use the full Git commit object ID of the configured OOP repository revision as its protocol identity. Record the canonical repository reference and selected branch or ref alongside the commit ID; a branch name, tag, semantic version, abbreviated hash or file digest alone is insufficient. `PROMPT.md` at that commit is the canonical specification. References throughout this specification to an adopted OOP version or protocol content identity use this commit identity; explicit semantic version labels remain supplementary compatibility/release information. Artifact and enforcement-mechanism digests still identify their own contents. An OOP distribution manifest is neither required nor a source of version or synchronization authority. This Git requirement applies to identification of the OOP repository, not to the organization's repositories or sources of record.",
+            "new": "Each AI tool MUST use the full Git commit object ID of the configured OOP repository revision as its protocol identity. Record the canonical repository reference and selected branch or ref alongside the commit ID; a branch name, tag, semantic version, abbreviated hash or file digest alone is insufficient. `PROTOCOL.md` at that commit is the canonical specification. References throughout this specification to an adopted OOP version or protocol content identity use this commit identity; explicit semantic version labels remain supplementary compatibility/release information. Artifact and enforcement-mechanism digests still identify their own contents. An OOP distribution manifest is neither required nor a source of version or synchronization authority. This Git requirement applies to identification of the OOP repository, not to the organization's repositories or sources of record.",
+            "clause": "OOP-runtime-adoption"
+          },
+          {
+            "extracted_line": 588,
+            "baseline_document_line": 588,
+            "target_document_line": 588,
+            "old": "After completing the daily freshness gate, including reuse of shared same-day evidence or an explicitly recorded offline result, the active runtime must re-enter section 28, Bootstrap, in `PROMPT.md` at its verified adopted commit before substantive organizational work. Reuse the completed freshness result; re-entry must not trigger another fetch, retry a blocked check, recreate existing infrastructure, or repeat completed effects. Compare the observed remote commit, local checkout commit and runtime's own adopted commit checkpoint, then follow BOOT-04 and the applicable compatibility, authorization and ordered migration gates.",
+            "new": "After completing the daily freshness gate, including reuse of shared same-day evidence or an explicitly recorded offline result, the active runtime must re-enter section 28, Bootstrap, in `PROTOCOL.md` at its verified adopted commit before substantive organizational work. Reuse the completed freshness result; re-entry must not trigger another fetch, retry a blocked check, recreate existing infrastructure, or repeat completed effects. Compare the observed remote commit, local checkout commit and runtime's own adopted commit checkpoint, then follow BOOT-04 and the applicable compatibility, authorization and ordered migration gates.",
+            "clause": "OOP-runtime-adoption"
+          },
+          {
+            "extracted_line": 2874,
+            "baseline_document_line": 2874,
+            "target_document_line": 2874,
+            "old": "REL-02 — A ready release MUST have a non-empty directly discoverable machine-oriented entry contract identifying the supported lifecycle routes, minimum initial context, bootstrap procedure and compact selector through exact package-relative references. The intended common entry is `dist/entry.json`; a minimal `dist/START.md` or native adapter MAY point to it where direct discovery needs text. Such a pointer contains activation instructions only, never duplicated protocol rules. Maintainers MUST update the official installation instruction and applicable owned adapters only when that entry and its required closure satisfy release acceptance. Empty, placeholder, candidate, missing or dangling entries MUST NOT be presented as ready or become the official install destination. Existing candidate artifacts remain explicitly non-ready; an empty legacy entry is not successful distribution. Entry identifies executable context, not an OOP version manifest: Git repository/ref/full commit remains protocol identity. Avoid self-referential commit/digest requirements; producer evidence binds the stabilized source/artifacts without inventing a future containing commit.",
+            "new": "REL-02 — A ready release MUST have a non-empty directly discoverable machine-oriented entry contract identifying the supported lifecycle routes, minimum initial context, bootstrap procedure and compact selector through exact package-relative references. The intended common entry is `distribution/entry.json`; a minimal `distribution/START.md` or native adapter MAY point to it where direct discovery needs text. Such a pointer contains activation instructions only, never duplicated protocol rules. Maintainers MUST update the official installation instruction and applicable owned adapters only when that entry and its required closure satisfy release acceptance. Empty, placeholder, candidate, missing or dangling entries MUST NOT be presented as ready or become the official install destination. Existing candidate artifacts remain explicitly non-ready; an empty legacy entry is not successful distribution. Entry identifies executable context, not an OOP version manifest: Git repository/ref/full commit remains protocol identity. Avoid self-referential commit/digest requirements; producer evidence binds the stabilized source/artifacts without inventing a future containing commit.",
+            "clause": "OOP-producer-acceptance"
+          }
+        ],
+        "limitations": [
+          "Semantic review performed by the producing AI; no independent human/second-model approval claimed.",
+          "No runtime adapter, provider enrollment or consumer installation executed by this package."
+        ]
+      }
+    }
+  },
+  "alignment_regression_summary": {
+    "passed": true,
+    "tests": 15,
+    "failed": 0,
+    "skipped": 0
+  },
+  "migration_regression_summary": {
+    "passed": true,
+    "tests": 25,
+    "failed": 0,
+    "skipped": 0
   },
   "semantic_review": {
-    "result": "reasoned_complete_allocation_with_verbatim_source_preservation",
-    "reference": "build_tools/release-review.json",
+    "result": "reasoned_complete_allocation_with_reviewed_organizational_alignment",
+    "reference": "tools/release-review.json",
     "evidence_strength": "source reasoning plus exact reconstruction; independent reviewer and live prevention not claimed"
   },
   "rolling_baseline": {
-    "commit": "8de5d1fb6efb865710c7750b65cff2a744a4c239",
+    "commit": "39d0c6141701d38121944db109e0f1b851dd9511",
     "source_identity": "sha256:8b05b2f38f8d51a9a4bf6abfff6f48799a4b2628e1b92592907f36fdeea74881",
     "package_checkpoint": {
-      "commit": "8f04d6e33510d948601528b8a1238c2d6a263d62",
-      "content_identity": "sha256:03ce3daec13c21bf772339a98ec06ad67f29d5a3ab4f00db58b0ebdcbe9b0482"
+      "commit": "c4d2fee4f7ab67e1085312fbbc4ee7c31802e672",
+      "content_identity": "sha256:8236a5dab67b00fcea312eef966be3e2cdbe967a388ce6b8a59475e23c411913"
     },
     "provenance": "Latest committed accepted producer-package report",
     "verified_scope": "producer-prepared technology-neutral derived distribution; no installed-runtime/provider/cross-runtime readiness claim",
-    "selection_basis": "Latest committed accepted package when available; otherwise initial preceding source checkpoint. This derived-only acceptance requires identical canonical source.",
-    "normative_deltas": [],
-    "classification": "generated_derived_only",
+    "selection_basis": "Latest committed accepted package when available; otherwise initial preceding source checkpoint. Exact preservation, the pinned historical bridge, or that bridge followed by the exact reviewed organizational alignment is required.",
+    "normative_deltas": [
+      {
+        "id": "SD-ORG-STRUCTURE-001",
+        "clause": "OOP-impact-propagation",
+        "module": "impact",
+        "rationale": "Sections 1/9/10/19/20/21/22 already define applicability, intake, proportionate capabilities and authority. This addition makes symmetric structural interpretation, human/function distinction and non-inherited AI authority explicit at the capability decision, without mandating departments or duplicating their lifecycle.",
+        "classification": "normative_clarification",
+        "content_identity": "sha256:9a96bf14fa67fa5a5f3e0630b9933c09f480e811ba2104e1408378b274809bd1",
+        "retained": "preserved_verbatim_except_reviewed_insertions",
+        "compatibility": "Verify active structures and coordination before their next affected material action; preserve historical records; no blanket data rewrite or newly granted authority."
+      },
+      {
+        "id": "SD-ORG-COORDINATION-001",
+        "clause": "OOP-effect-verification",
+        "module": "execution",
+        "rationale": "Sections 9/10/13/21/23/24 already cover canonical references, causal consequences, approval and verified delivery. This addition explicitly connects them as task-relevant cross-functional coordination through outcomes; existing optional mechanisms and valid pending/blocked dispositions remain controlling.",
+        "classification": "normative_clarification",
+        "content_identity": "sha256:ea81cda46ab772a4fc9e1fd3ccb36284039f780dd15b1a4b979465d124c9392a",
+        "retained": "preserved_verbatim_except_reviewed_insertions",
+        "compatibility": "Verify active structures and coordination before their next affected material action; preserve historical records; no blanket data rewrite or newly granted authority."
+      }
+    ],
+    "classification": "reviewed_organizational_alignment",
     "full_previous_distribution": "identified_checkpoint",
     "limits": "No historical full release/integration verification is invented. These results establish current export preservation and local mechanisms only."
   },
+  "observation_summary": {
+    "total": 78,
+    "unique": 78,
+    "passed": 78,
+    "failed": 0,
+    "skipped": 0,
+    "missing": [],
+    "unexpected": []
+  },
   "observations": [
+    {
+      "id": "REL-ORG-001",
+      "checked": "ORG-01 One human covers product, R&D and Marketing",
+      "expected": "isolated local assertion passes, including applicable designed negative controls",
+      "actual": "passed",
+      "tier": "synthetic_organizational_scenario_and_real_package_context"
+    },
+    {
+      "id": "REL-ORG-002",
+      "checked": "ORG-02 Established company with CEO, directors, board, HR, finance, staff and two sites",
+      "expected": "isolated local assertion passes, including applicable designed negative controls",
+      "actual": "passed",
+      "tier": "synthetic_organizational_scenario_and_real_package_context"
+    },
+    {
+      "id": "REL-ORG-003",
+      "checked": "ORG-03 Proposed formation or restructuring",
+      "expected": "isolated local assertion passes, including applicable designed negative controls",
+      "actual": "passed",
+      "tier": "synthetic_organizational_scenario_and_real_package_context"
+    },
+    {
+      "id": "REL-ORG-004",
+      "checked": "ORG-04 Nonprofit with suppliers and physical assets",
+      "expected": "isolated local assertion passes, including applicable designed negative controls",
+      "actual": "passed",
+      "tier": "synthetic_organizational_scenario_and_real_package_context"
+    },
+    {
+      "id": "REL-ORG-005",
+      "checked": "ORG-05 Research result affects roadmap, product and Marketing; HR and investors conditional",
+      "expected": "isolated local assertion passes, including applicable designed negative controls",
+      "actual": "passed",
+      "tier": "synthetic_organizational_scenario_and_real_package_context"
+    },
+    {
+      "id": "REL-ORG-006",
+      "checked": "ORG-06 Pricing affects tax, margin, catalog and checkout",
+      "expected": "isolated local assertion passes, including applicable designed negative controls",
+      "actual": "passed",
+      "tier": "synthetic_organizational_scenario_and_real_package_context"
+    },
+    {
+      "id": "REL-ORG-007",
+      "checked": "ORG-07 Provider changes after partial propagation",
+      "expected": "isolated local assertion passes, including applicable designed negative controls",
+      "actual": "passed",
+      "tier": "synthetic_organizational_scenario_and_real_package_context"
+    },
+    {
+      "id": "REL-ORG-008",
+      "checked": "ORG-08 G0 information and small reversible G1 correction",
+      "expected": "isolated local assertion passes, including applicable designed negative controls",
+      "actual": "passed",
+      "tier": "synthetic_organizational_scenario_and_real_package_context"
+    },
+    {
+      "id": "REL-ORG-009",
+      "checked": "ORG-09 Authorization or capability unavailable for downstream action",
+      "expected": "isolated local assertion passes, including applicable designed negative controls",
+      "actual": "passed",
+      "tier": "synthetic_organizational_scenario_and_real_package_context"
+    },
+    {
+      "id": "REL-TOOL-005",
+      "checked": "check-current binds material inputs and ignores unrelated files without writes",
+      "expected": "isolated local assertion passes, including applicable designed negative controls",
+      "actual": "passed",
+      "tier": "producer_freshness_and_artifact_safety"
+    },
+    {
+      "id": "REL-TOOL-006",
+      "checked": "generated file symlink cannot overwrite an external sentinel",
+      "expected": "isolated local assertion passes, including applicable designed negative controls",
+      "actual": "passed",
+      "tier": "producer_freshness_and_artifact_safety"
+    },
+    {
+      "id": "REL-TOOL-007",
+      "checked": "module and detail directory links fail before any mutation",
+      "expected": "isolated local assertion passes, including applicable designed negative controls",
+      "actual": "passed",
+      "tier": "producer_freshness_and_artifact_safety"
+    },
+    {
+      "id": "REL-TOOL-008",
+      "checked": "evidence directory link prevents all earlier distribution writes",
+      "expected": "isolated local assertion passes, including applicable designed negative controls",
+      "actual": "passed",
+      "tier": "producer_freshness_and_artifact_safety"
+    },
+    {
+      "id": "REL-TOOL-009",
+      "checked": "unsafe orphan JSON blocks writes and all cleanup",
+      "expected": "isolated local assertion passes, including applicable designed negative controls",
+      "actual": "passed",
+      "tier": "producer_freshness_and_artifact_safety"
+    },
+    {
+      "id": "REL-TOOL-010",
+      "checked": "incomplete inventory collision and traversal fail before writes",
+      "expected": "isolated local assertion passes, including applicable designed negative controls",
+      "actual": "passed",
+      "tier": "producer_freshness_and_artifact_safety"
+    },
+    {
+      "id": "REL-TOOL-011",
+      "checked": "late preflight failure after staging leaves all bytes unchanged",
+      "expected": "isolated local assertion passes, including applicable designed negative controls",
+      "actual": "passed",
+      "tier": "producer_freshness_and_artifact_safety"
+    },
+    {
+      "id": "REL-TOOL-012",
+      "checked": "isolated generation preserves 35 modules 54 clauses bytes and safe idempotent cleanup",
+      "expected": "isolated local assertion passes, including applicable designed negative controls",
+      "actual": "passed",
+      "tier": "producer_freshness_and_artifact_safety"
+    },
+    {
+      "id": "REL-TOOL-013",
+      "checked": "orphan JSON symlink blocks cleanup without following its target",
+      "expected": "isolated local assertion passes, including applicable designed negative controls",
+      "actual": "passed",
+      "tier": "producer_freshness_and_artifact_safety"
+    },
+    {
+      "id": "REL-TOOL-014",
+      "checked": "evidence output file symlink blocks the complete generation plan",
+      "expected": "isolated local assertion passes, including applicable designed negative controls",
+      "actual": "passed",
+      "tier": "producer_freshness_and_artifact_safety"
+    },
     {
       "id": "REL-TOOL-001",
       "checked": "removed or renamed modules lose both old generated artifacts",
       "expected": "isolated local assertion passes, including applicable designed negative controls",
       "actual": "passed",
-      "tier": "producer_artifact_cleanup"
+      "tier": "producer_freshness_and_artifact_safety"
     },
     {
       "id": "REL-TOOL-002",
       "checked": "cleanup preserves files outside the generated JSON boundary",
       "expected": "isolated local assertion passes, including applicable designed negative controls",
       "actual": "passed",
-      "tier": "producer_artifact_cleanup"
+      "tier": "producer_freshness_and_artifact_safety"
     },
     {
       "id": "REL-TOOL-003",
       "checked": "incomplete generation prevents all orphan deletion",
       "expected": "isolated local assertion passes, including applicable designed negative controls",
       "actual": "passed",
-      "tier": "producer_artifact_cleanup"
+      "tier": "producer_freshness_and_artifact_safety"
     },
     {
       "id": "REL-TOOL-004",
       "checked": "unsafe inventory and empty allocation fail before deletion",
       "expected": "isolated local assertion passes, including applicable designed negative controls",
       "actual": "passed",
-      "tier": "producer_artifact_cleanup"
+      "tier": "producer_freshness_and_artifact_safety"
     },
     {
       "id": "REL-OBS-001",
@@ -600,13 +878,13 @@
         "human",
         "bootstrap"
       ],
-      "baseline_governing_bytes": 335876,
-      "selected_governing_bytes": 310640,
-      "newly_read_module_bytes": 273697,
+      "baseline_governing_bytes": 337948,
+      "selected_governing_bytes": 313048,
+      "newly_read_module_bytes": 275881,
       "module_file_reads": 21,
-      "entry_selector_bytes": 14735,
+      "entry_selector_bytes": 14959,
       "procedure_bytes": 22208,
-      "local_selection_read_assembly_ms": 4.11220000000003,
+      "local_selection_read_assembly_ms": 5.328200000003562,
       "tokenizer_tokens": "not_measured",
       "actual_model_calls": "not_measured",
       "provider_actions": "not_performed",
@@ -625,13 +903,13 @@
         "workspace",
         "entry"
       ],
-      "baseline_governing_bytes": 335876,
-      "selected_governing_bytes": 114964,
+      "baseline_governing_bytes": 337948,
+      "selected_governing_bytes": 115222,
       "newly_read_module_bytes": 0,
       "module_file_reads": 0,
-      "entry_selector_bytes": 14735,
+      "entry_selector_bytes": 14959,
       "procedure_bytes": 0,
-      "local_selection_read_assembly_ms": 0.07770000000004984,
+      "local_selection_read_assembly_ms": 0.06590000000142027,
       "tokenizer_tokens": "not_measured",
       "actual_model_calls": "not_measured",
       "provider_actions": "not_performed",
@@ -650,13 +928,13 @@
         "workspace",
         "entry"
       ],
-      "baseline_governing_bytes": 335876,
-      "selected_governing_bytes": 114964,
-      "newly_read_module_bytes": 100229,
+      "baseline_governing_bytes": 337948,
+      "selected_governing_bytes": 115222,
+      "newly_read_module_bytes": 100263,
       "module_file_reads": 4,
-      "entry_selector_bytes": 14735,
+      "entry_selector_bytes": 14959,
       "procedure_bytes": 0,
-      "local_selection_read_assembly_ms": 0.9089000000000169,
+      "local_selection_read_assembly_ms": 0.6911999999938416,
       "tokenizer_tokens": "not_measured",
       "actual_model_calls": "not_measured",
       "provider_actions": "not_performed",
@@ -685,13 +963,13 @@
         "operations",
         "tickets"
       ],
-      "baseline_governing_bytes": 335876,
-      "selected_governing_bytes": 190869,
-      "newly_read_module_bytes": 176134,
+      "baseline_governing_bytes": 337948,
+      "selected_governing_bytes": 193253,
+      "newly_read_module_bytes": 178294,
       "module_file_reads": 14,
-      "entry_selector_bytes": 14735,
+      "entry_selector_bytes": 14959,
       "procedure_bytes": 0,
-      "local_selection_read_assembly_ms": 2.2357000000000653,
+      "local_selection_read_assembly_ms": 2.078799999995681,
       "tokenizer_tokens": "not_measured",
       "actual_model_calls": "not_measured",
       "provider_actions": "not_performed",
@@ -725,13 +1003,13 @@
         "context",
         "entry"
       ],
-      "baseline_governing_bytes": 335876,
-      "selected_governing_bytes": 264009,
-      "newly_read_module_bytes": 147554,
+      "baseline_governing_bytes": 337948,
+      "selected_governing_bytes": 266407,
+      "newly_read_module_bytes": 149694,
       "module_file_reads": 15,
-      "entry_selector_bytes": 14735,
+      "entry_selector_bytes": 14959,
       "procedure_bytes": 1491,
-      "local_selection_read_assembly_ms": 2.9162999999999784,
+      "local_selection_read_assembly_ms": 1.6288000000058673,
       "tokenizer_tokens": "not_measured",
       "actual_model_calls": "not_measured",
       "provider_actions": "not_performed",
@@ -751,13 +1029,13 @@
         "entry",
         "recovery"
       ],
-      "baseline_governing_bytes": 335876,
-      "selected_governing_bytes": 118949,
-      "newly_read_module_bytes": 102723,
+      "baseline_governing_bytes": 337948,
+      "selected_governing_bytes": 119209,
+      "newly_read_module_bytes": 102759,
       "module_file_reads": 5,
-      "entry_selector_bytes": 14735,
+      "entry_selector_bytes": 14959,
       "procedure_bytes": 1491,
-      "local_selection_read_assembly_ms": 1.042100000000005,
+      "local_selection_read_assembly_ms": 1.0151000000041677,
       "tokenizer_tokens": "not_measured",
       "actual_model_calls": "not_measured",
       "provider_actions": "not_performed",
@@ -794,13 +1072,13 @@
         "bootstrap",
         "recovery"
       ],
-      "baseline_governing_bytes": 335876,
-      "selected_governing_bytes": 313134,
-      "newly_read_module_bytes": 276191,
+      "baseline_governing_bytes": 337948,
+      "selected_governing_bytes": 315544,
+      "newly_read_module_bytes": 278377,
       "module_file_reads": 22,
-      "entry_selector_bytes": 14735,
+      "entry_selector_bytes": 14959,
       "procedure_bytes": 22208,
-      "local_selection_read_assembly_ms": 3.5065000000000737,
+      "local_selection_read_assembly_ms": 2.5948999999964144,
       "tokenizer_tokens": "not_measured",
       "actual_model_calls": "not_measured",
       "provider_actions": "not_performed",
@@ -815,333 +1093,333 @@
       "id": "OOP-mandate-authority",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:a06473e6f677d0c36c0b525627d8d1a5dd163dcd05c3b4a57b994b751d4fef4a",
-      "artifact": "dist/modules/core.json"
+      "artifact": "distribution/modules/core.json"
     },
     {
       "id": "OOP-enforcement-autonomy",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:c51da3e29f7acf69fff207f549be8b96a0d689c2fc3f0973cfe5608d07d8fe29",
-      "artifact": "dist/modules/core.json"
+      "artifact": "distribution/modules/core.json"
     },
     {
       "id": "OOP-delegate-governance",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:a84e9889b010f12174b7ad688966b0da5b43e7a9023b584637d3e740729283c0",
-      "artifact": "dist/modules/delegation.json"
+      "artifact": "distribution/modules/delegation.json"
     },
     {
       "id": "OOP-transitions-routing",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:acecb4073269a911786e46319f1147315e72a8b8611a7efbcc1770e0a60bbf39",
-      "artifact": "dist/modules/core.json"
+      "artifact": "distribution/modules/core.json"
     },
     {
       "id": "OOP-technology-neutrality",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:95515e7e499f06a9a1df329ffebf5b7f597bf3ce6253cec58c7595d08d6c66a5",
-      "artifact": "dist/modules/core.json"
+      "artifact": "distribution/modules/core.json"
     },
     {
       "id": "OOP-canonical-language",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:740e161258aaedcdb88c1c42eed9a5ad3d9d83ad72f5c9e900d4099c4788ba91",
-      "artifact": "dist/modules/core.json"
+      "artifact": "distribution/modules/core.json"
     },
     {
       "id": "OOP-localized-presentation",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:decb2286cc17b743f6f90e1fb994e298a6ae09aded0fc95d98a2fc97cd5ee134",
-      "artifact": "dist/modules/core.json"
+      "artifact": "distribution/modules/core.json"
     },
     {
       "id": "OOP-private-boundary",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:d9421b5eb21ee58531d4fe631786a5d786c6e5fbbb4b77617592404f520bafd4",
-      "artifact": "dist/modules/workspace.json"
+      "artifact": "distribution/modules/workspace.json"
     },
     {
       "id": "OOP-shared-coordination",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:1462037e78e8652f8faae04cfb0c45b97a41ace28f52e6da48eb820f7c21df81",
-      "artifact": "dist/modules/shared-context.json"
+      "artifact": "distribution/modules/shared-context.json"
     },
     {
       "id": "OOP-persistent-activation",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:d51ceec30a01bda012222051b36343e640b230f42c07b9b395ef8a4acf4643d8",
-      "artifact": "dist/modules/activation.json"
+      "artifact": "distribution/modules/activation.json"
     },
     {
       "id": "OOP-consumer-exclusions",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:0aabbd1d0c052922c0d05935a95698ea46e418ebdf38d8dca017a8e29a64014a",
-      "artifact": "dist/modules/core.json"
+      "artifact": "distribution/modules/core.json"
     },
     {
       "id": "OOP-runtime-adoption",
       "disposition": "preserved_verbatim",
-      "source_identity": "sha256:68c804451d2cf49c07f497beaafdbcf906d81f4994423350e1f9b7fde225cce8",
-      "artifact": "dist/modules/adoption.json"
+      "source_identity": "sha256:372bc5af92f301e4ebe8530890bd96c1008a1ff8210e8027a27b45c6beecee94",
+      "artifact": "distribution/modules/adoption.json"
     },
     {
       "id": "OOP-capability-lifecycle",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:47a966adc4ca21b4780adaf89614aa56ddca394ed058aa65e671dfc87a83bd0b",
-      "artifact": "dist/modules/capabilities.json"
+      "artifact": "distribution/modules/capabilities.json"
     },
     {
       "id": "OOP-free-first",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:d982969e4492e17d2d1f9001b80e9bdf18e7ae2efbdac1f25b23114abcbaebc3",
-      "artifact": "dist/modules/cost.json"
+      "artifact": "distribution/modules/cost.json"
     },
     {
       "id": "OOP-repository-bootstrap",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:e1a64c68345fbe37621fee794ee2b8afe6ee16ee23c1e2d93f0dfda7713a2d15",
-      "artifact": "dist/modules/repository.json"
+      "artifact": "distribution/modules/repository.json"
     },
     {
       "id": "OOP-scoped-credentials",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:7df770f63b9ab36d52eb2a9523dfe6804f21438013f34d11abfcf73057c0b7de",
-      "artifact": "dist/modules/security.json"
+      "artifact": "distribution/modules/security.json"
     },
     {
       "id": "OOP-canonical-operations",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:196747a575fb3a9ebca35dd0b91b0e65a48ad21e6bd97d445b559b255aa0777c",
-      "artifact": "dist/modules/operations.json"
+      "artifact": "distribution/modules/operations.json"
     },
     {
       "id": "OOP-organizational-migration",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:88202d8d1f50115946b613437296165aad71b7fb813fd1dcac8a4cc55039aa30",
-      "artifact": "dist/modules/migration.json"
+      "artifact": "distribution/modules/migration.json"
     },
     {
       "id": "OOP-organizational-model",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:e4aacc5f9e462e3107eb44a4dd5501a0c9ef62731e099d59a1b9117dd52e5a98",
-      "artifact": "dist/modules/model.json"
+      "artifact": "distribution/modules/model.json"
     },
     {
       "id": "OOP-repository-inventory",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:33e56341484a5d7b7bb1de17e2a102311f87d473516da0dedc9768cb6eeb45cf",
-      "artifact": "dist/modules/inventory.json"
+      "artifact": "distribution/modules/inventory.json"
     },
     {
       "id": "OOP-request-discovery",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:09bf56201e307d65ba87d754f248c49d481ad1410a50f2dd56e2a924289c0cb8",
-      "artifact": "dist/modules/intake.json"
+      "artifact": "distribution/modules/intake.json"
     },
     {
       "id": "OOP-ticket-lifecycle",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:42c0a486938b80e69f192fb2e0cae581a259564fb6594777983e2c5f17e08a1e",
-      "artifact": "dist/modules/tickets.json"
+      "artifact": "distribution/modules/tickets.json"
     },
     {
       "id": "OOP-continuity-reserve",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:179ad734aa0348a6e450a0d2bb3c6d721beeca7183def61c831793af713e0484",
-      "artifact": "dist/modules/continuity.json"
+      "artifact": "distribution/modules/continuity.json"
     },
     {
       "id": "OOP-portable-transfer",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:2dc7972ee6a8718a950d53c69f1f91515e7c46535d16041560e4e1a09c4e1741",
-      "artifact": "dist/modules/handoff.json"
+      "artifact": "distribution/modules/handoff.json"
     },
     {
       "id": "OOP-destination-intake",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:82f85be6c3b990c8314731838985430225ecd7badabaa3c8de8af8061d33d1aa",
-      "artifact": "dist/modules/destination.json"
+      "artifact": "distribution/modules/destination.json"
     },
     {
       "id": "OOP-sensitive-transfer",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:7588b90fec961cc2c93bf1a0330b15eecdd78aa9b1c58c92255efd264f67e023",
-      "artifact": "dist/modules/secret-transfer.json"
+      "artifact": "distribution/modules/secret-transfer.json"
     },
     {
       "id": "OOP-handoff-durability",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:3286993cf40c1333f38b8e3d5fd37514ca03cef3f8bd5c99361cf94cfc65b2ba",
-      "artifact": "dist/modules/handoff.json"
+      "artifact": "distribution/modules/handoff.json"
     },
     {
       "id": "OOP-asynchronous-recovery",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:521812dcbab75868801cbd3ba2d425a82c2637f189dbacde4246d4f439f21df4",
-      "artifact": "dist/modules/recovery.json"
+      "artifact": "distribution/modules/recovery.json"
     },
     {
       "id": "OOP-state-separation",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:6b74016bd17eaecd303c2612fc084f462cb2c1258385a4c55dcc413a0abb8f94",
-      "artifact": "dist/modules/core.json"
+      "artifact": "distribution/modules/core.json"
     },
     {
       "id": "OOP-decision-history",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:f3272555bdf4433055fb94b7bff9bc9f8859e253be5b06224ba0038ccccdb124",
-      "artifact": "dist/modules/decisions.json"
+      "artifact": "distribution/modules/decisions.json"
     },
     {
       "id": "OOP-human-prerequisite",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:f2a3ba118504325722fdd3df503dd469d2f9bdc3437a0a4d2f0317818f77ad56",
-      "artifact": "dist/modules/human.json"
+      "artifact": "distribution/modules/human.json"
     },
     {
       "id": "OOP-physical-organization",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:e5a1b6739cab2fbbdaec9cbe4067ad5ee4c7aae3b596cb50f11217cdea392f73",
-      "artifact": "dist/modules/physical.json"
+      "artifact": "distribution/modules/physical.json"
     },
     {
       "id": "OOP-impact-propagation",
-      "disposition": "preserved_verbatim",
-      "source_identity": "sha256:80908d954a776e31c75d21f4f423192f681813b0af31c696948c486f7afdd8aa",
-      "artifact": "dist/modules/impact.json"
+      "disposition": "strengthened_without_incompatibility",
+      "source_identity": "sha256:a7c1812c0645457bf6e0b780a4871ab02d3260bcac4f5ce7710a122a725828d7",
+      "artifact": "distribution/modules/impact.json"
     },
     {
       "id": "OOP-proportionate-evolution",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:da235e1c92906e97c91ed06e5e7dd2076479fdc367421a97b7b0348b8813c4d7",
-      "artifact": "dist/modules/impact.json"
+      "artifact": "distribution/modules/impact.json"
     },
     {
       "id": "OOP-reviewable-changes",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:46357f8721d99d739c241176e4542c122afa02b4ac2313efb0af99d1e30bc9ee",
-      "artifact": "dist/modules/changes.json"
+      "artifact": "distribution/modules/changes.json"
     },
     {
       "id": "OOP-effect-verification",
-      "disposition": "preserved_verbatim",
-      "source_identity": "sha256:713053002cdfae2f7f222ec93782d6c3934731fa132d310909fc7f8ecdb211a2",
-      "artifact": "dist/modules/execution.json"
+      "disposition": "strengthened_without_incompatibility",
+      "source_identity": "sha256:f560c71b84d5f1afdab67509c065e89d6ee0a80ab47bc06fe1705ac7a36f87e5",
+      "artifact": "distribution/modules/execution.json"
     },
     {
       "id": "OOP-semantic-ci",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:b9fc433b89ee1e396b683cd19841c8427ebaeb63ee55b0a78720fd3ea9c0c2ed",
-      "artifact": "dist/modules/ci.json"
+      "artifact": "distribution/modules/ci.json"
     },
     {
       "id": "OOP-controlled-delivery",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:b4317ee5877bbef6e909dd80fdea87e23242a4e4b1617207c6581f87b920347c",
-      "artifact": "dist/modules/delivery.json"
+      "artifact": "distribution/modules/delivery.json"
     },
     {
       "id": "OOP-temporal-history",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:9f65a0b1d303d48b0435cc656e2ac3361406453d92dd325c58a565894292bfca",
-      "artifact": "dist/modules/history.json"
+      "artifact": "distribution/modules/history.json"
     },
     {
       "id": "OOP-external-projections",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:4603261b9d26f159e3c5611024335f1b73405bf11aee34e06896a5bac23f1dca",
-      "artifact": "dist/modules/interfaces.json"
+      "artifact": "distribution/modules/interfaces.json"
     },
     {
       "id": "OOP-evidence-reuse",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:f5cd4566fa3f3ac546d2f703efd809f0f1851748444cfb5461808d402a87907f",
-      "artifact": "dist/modules/core.json"
+      "artifact": "distribution/modules/core.json"
     },
     {
       "id": "OOP-producer-publication",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:f038b05e1ba1e4a09273c17a06b46e203d9182eb871c48a47ac55ec15c98216f",
-      "artifact": "dist/modules/producer.json"
+      "artifact": "distribution/modules/producer.json"
     },
     {
       "id": "OOP-producer-acceptance",
       "disposition": "preserved_verbatim",
-      "source_identity": "sha256:6e3e0bc7ab405dcef1bac2ffe974ecf093cfd96f4413b831ff274ec9a03d305f",
-      "artifact": "dist/modules/producer.json"
+      "source_identity": "sha256:697bb47a15b4e45d02064efdcb9c170b5a330e77bff63d1e094b9865078954e3",
+      "artifact": "distribution/modules/producer.json"
     },
     {
       "id": "OOP-interaction-entry",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:58509b2e983e8bab7ed635ac48728c41bd896ba37dc1ba20bb2fcaa86887848f",
-      "artifact": "dist/modules/entry.json"
+      "artifact": "distribution/modules/entry.json"
     },
     {
       "id": "OOP-full-install",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:427f89a0524367d13ad5127cb54f548a26173039ef939a9ac9bdbdebed054d77",
-      "artifact": "dist/modules/bootstrap.json"
+      "artifact": "distribution/modules/bootstrap.json"
     },
     {
       "id": "OOP-bootstrap-system",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:10394bde89836f1f2cdb52315909fc5002ef2ce33c78f494fab06ddc371d1dae",
-      "artifact": "dist/modules/bootstrap.json"
+      "artifact": "distribution/modules/bootstrap.json"
     },
     {
       "id": "OOP-bootstrap-attestation",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:2ffcd8321e2a8811775c5bdccd97b2cc853285b6853f6ca3d0b8ceb4c4574458",
-      "artifact": "dist/modules/bootstrap.json"
+      "artifact": "distribution/modules/bootstrap.json"
     },
     {
       "id": "OOP-validity-refresh",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:8528d888f0d6efea24244eeba1c1a907c753b87444454331920f22c330e257dc",
-      "artifact": "dist/modules/entry.json"
+      "artifact": "distribution/modules/entry.json"
     },
     {
       "id": "OOP-available-context",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:0279b188264b6b524faf4ad32b01839321af083f7e030be9023ec452d5d140c9",
-      "artifact": "dist/modules/context.json"
+      "artifact": "distribution/modules/context.json"
     },
     {
       "id": "OOP-bootstrap-communication",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:1579497bf5f4cdf12fa55d77a9603c338de12b95d625e57e0d3c561af1d6af20",
-      "artifact": "dist/modules/bootstrap.json"
+      "artifact": "distribution/modules/bootstrap.json"
     },
     {
       "id": "OOP-minimum-entry",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:63a7420afaba601778e0234e17d8a5a2854177ac93b30e2a78f19c19880d33c8",
-      "artifact": "dist/modules/entry.json"
+      "artifact": "distribution/modules/entry.json"
     },
     {
       "id": "OOP-continuation-entry",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:d758cca419d6366cc00c5daf79c614a6a74314d8ed29fb5ec501b5b326bb4c96",
-      "artifact": "dist/modules/destination.json"
+      "artifact": "distribution/modules/destination.json"
     },
     {
       "id": "OOP-progressive-entry",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:6a3b466998dd6e2822f8e6a33e329fb36f84270d2a91e11384d74461ac51d46c",
-      "artifact": "dist/modules/entry.json"
+      "artifact": "distribution/modules/entry.json"
     },
     {
       "id": "OOP-portable-final-invariants",
       "disposition": "preserved_verbatim",
       "source_identity": "sha256:cacccef6500d93c3feba865ceadaf6dc6a0e253cc335f0f7a5eecb0d8da833bd",
-      "artifact": "dist/modules/core.json"
+      "artifact": "distribution/modules/core.json"
     }
   ],
   "impact": {
-    "README": "affected: official structured entry after local package acceptance",
+    "README": "affected: symmetric human governance explanation; original CTA preserved, candidate entry is not release-ready",
     "examples": "affected: actual package and limits",
     "maintainer_guidance": "affected: reusable reviewed generation and producer acceptance",
     "schemas": "existing contract profile applied to all source contracts",
-    "tests": "25 package checks, 30 retained reference observations and four producer cleanup regressions",
+    "tests": "25 package checks, 30 retained reference observations, four retained cleanup regressions, ten retained producer safety/freshness checks and nine new organizational scenarios",
     "generated_artifacts": "complete current-source export with explicit semantic bindings",
     "release_evidence": "current exact subjects, scope-bound verdict and seven measured local scenarios"
   },
@@ -1151,6 +1429,8 @@
     "cross_runtime": "not_performed: technology neutrality reviewed, real product interoperability not claimed",
     "general_json_schema": "not_claimed: only declared restricted profile validated",
     "token_or_money_savings": "not_claimed",
-    "formal_semantic_judgment": "not_claimed: source-qualified semantic conditions remain complete clauses"
+    "formal_semantic_judgment": "not_claimed: source-qualified semantic conditions remain complete clauses",
+    "generator_application": "Preflight covers preexisting unsafe paths only; no concurrent adversarial path-change protection or multi-file atomicity. Apply I/O failure can leave partial effects; reconcile before rerunning.",
+    "skipped_tests": "Explicitly recorded as skipped, never PASS; any missing, failed or skipped expected observation blocks release_ready."
   }
 }
