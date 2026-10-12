@@ -82,7 +82,7 @@ facets.local_write=['entry']; facets.durable_write=['tickets','execution'];
 facets.completion=['entry']; facets.update=['adoption']; facets.context_loss=['recovery','entry'];
 facets.canonical_write=['operations','execution','history']; facets.continuity_reserve=['handoff'];
 save('distribution/routing.json',{
-  format:1,algorithm:'union(request,action,state,risk,authority,recovery) -> deterministic dependency closure',
+  format:2,algorithm:'union(request,action,state,risk,authority,recovery) -> deterministic dependency closure',
   producer_binding:{source_identity:hash(source),source_snapshot_commit:commit.stdout.trim(),evidence_ref:'../tools/evidence/release-acceptance.json',consumer_verification:'not_performed'},
   classification:'Semantic effective scope, not keywords, endpoints or automatic level/module table.',
   default:['entry'],modules:indexModules,facets,conservative:modules.filter(x=>x.id!=='producer').map(x=>x.id),

@@ -3,6 +3,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
+import { spawnSync } from 'node:child_process';
+import { runInNewContext } from 'node:vm';
 import { validateReport } from './validate-maintainer-report.mjs';
 
 const protocol=readFileSync(new URL('../PROTOCOL.md',import.meta.url),'utf8').replace(/\r\n/g,'\n');
@@ -134,4 +136,61 @@ for(const [index,[label,mutate]] of [
 ].entries())test(`WF-${String(index+9).padStart(3,'0')}: rejects ${label}`,()=>{const c=fixture();mutate(c);assert.throws(()=>check(c));});
 test('WF-024: API wrong base main writes and missing push/readback are rejected',()=>{
   for(const mutate of [c=>{c.base='b'.repeat(40);},c=>{c.branch='main';c.verifyTarget='main';},c=>{c.events=c.events.filter(x=>x!=='push');},c=>{c.events=c.events.filter(x=>x!=='remote-readback');}]){const c=fixture('APPLY','api');mutate(c);assert.throws(()=>check(c));}
+});
+
+// Bounded raw-workflow profile, not a general YAML parser or provider execution.
+const visibilityGuard=`if [ "$OOP_REPOSITORY_PRIVATE" != 'false' ]; then
+  echo 'OOP producer CI must not report passing checks for non-public repositories.' >&2
+  exit 1
+fi`;
+const majorCheck='if (Number(process.versions.node.split(".")[0]) !== 24) process.exit(1)';
+function workflowProfile(source) {
+  const workflow=source.replace(/\r\n/g,'\n');
+  assert.match(workflow,/^name: Producer tests\non:\n  pull_request:\n  push:\n    branches: \[main\]\npermissions:\n  contents: read\njobs:\n  local-tests:\n    runs-on: ubuntu-24\.04\n    timeout-minutes: 10\n    steps:\n/);
+  assert.equal((workflow.match(/^  [\w-]+:\n/gm)??[]).filter(x=>x==='  local-tests:\n').length,1);
+  assert.ok(!/continue-on-error:|^\s+if:|^\s+name:.*local-tests|secrets\.|upload-artifact|npm\s+(install|ci)/m.test(workflow),'No conditional skip, bypass or added effects');
+  const steps=workflow.split(/^      - /m).slice(1);
+  assert.equal(steps.length,7,'Preserve the three existing test steps');
+  assert.equal(steps[0],`name: Refuse unverified or private visibility\n        env:\n          OOP_REPOSITORY_PRIVATE: $`+`{{ github.event.repository.private }}\n        run: |\n${visibilityGuard.split('\n').map(line=>'          '+line).join('\n')}\n`);
+  assert.equal(steps[1],'uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4\n        with:\n          persist-credentials: false\n          fetch-depth: 0\n');
+  assert.equal(steps[2],"name: Set up Node.js 24\n        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0\n        with:\n          node-version: '24'\n          package-manager-cache: false\n");
+  assert.equal(steps[3],`name: Verify Node.js major\n        run: |\n          node --version\n          node -e '${majorCheck}'\n`);
+  assert.equal(steps[4],'name: Validate maintainer REPORT structure\n        run: node --test tools/validate-maintainer-report.test.mjs tools/maintainer-workflow.test.mjs\n');
+  assert.equal(steps[5],'name: Validate reviewed historical source transition\n        run: node --test tools/source-transition.test.mjs\n');
+  assert.equal(steps[6],`name: Validate current producer package and checkout\n        run: |\n          node --version\n          node tools/accept-release.mjs || { status=$?; cat tools/evidence/current-tests.tap; cat tools/evidence/current-migration-tests.tap; exit "$status"; }\n          node tools/accept-release.mjs --check-current\n          cat tools/evidence/current-tests.tap\n          cat tools/evidence/current-migration-tests.tap\n          git diff --exit-code\n`);
+  return {guard:steps[0].split('        run: |\n')[1].split('\n').filter(Boolean).map(line=>line.slice(10)).join('\n'),
+    major:steps[3].match(/node -e '([^']+)'/)[1]};
+}
+const workflow=()=>readFileSync(new URL('../.github/workflows/producer-tests.yml',import.meta.url),'utf8');
+test('WF-025: required public CI gate and Node 24 preserve pinned least-privilege execution',()=>workflowProfile(workflow()));
+test('WF-026: actual extracted guard rejects private and unknown; Node assertion rejects wrong major',()=>{
+  const scripts=workflowProfile(workflow());
+  const shell=process.platform==='win32'?'C:/Program Files/Git/bin/bash.exe':'/bin/bash';
+  for(const [visibility,status] of [['false',0],['true',1],['',1],['unknown',1],['False',1]]) {
+    const result=spawnSync(shell,['--noprofile','--norc','-c',scripts.guard],{encoding:'utf8',env:{...process.env,OOP_REPOSITORY_PRIVATE:visibility}});
+    assert.equal(result.status,status,result.error?.message??result.stderr);
+    if(status)assert.match(result.stderr,/must not report passing checks/);
+  }
+  for(const version of ['24.19.0','23.11.0','25.0.0']) {
+    let status=0;
+    runInNewContext(scripts.major,{process:{versions:{node:version},exit:code=>{status=code;}}});
+    assert.equal(status,version.startsWith('24.')?0:1);
+  }
+});
+test('WF-027: sandbox string mutations detect visibility bypass, missing pins and wrong ordering',()=>{
+  const source=workflow().replace(/\r\n/g,'\n');
+  for(const mutate of [
+    s=>s.replace('  local-tests:\n','  local-tests:\n    if: github.event.repository.private == false\n'),
+    s=>s.replace('  local-tests:','  renamed-tests:'),
+    s=>s.replace('        env:','        continue-on-error: true\n        env:'),
+    s=>s.replace('      - name: Refuse unverified or private visibility','      - name: Refuse unverified or private visibility\n        if: false'),
+    s=>s.replace('            exit 1','            exit 0'),
+    s=>s.replace("!= 'false'","= 'false'"),
+    s=>s.replace(/      - name: Refuse unverified or private visibility[\s\S]*?(?=      - uses:)/,''),
+    s=>{const steps=s.split(/^      - /m);[steps[1],steps[2]]=[steps[2],steps[1]];return steps.join('      - ');},
+    s=>s.replace('949feb2413d6458794dcd2491c4babbbce0c15c1','v7.1.0'),
+    s=>s.replace("node-version: '24'","node-version: '23'"),
+    s=>s.replace(`          node -e '${majorCheck}'\n`,''),
+    s=>s.replace('package-manager-cache: false','package-manager-cache: true'),
+  ])assert.throws(()=>workflowProfile(mutate(source)));
 });

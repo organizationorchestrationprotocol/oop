@@ -21,6 +21,7 @@ export const inputs = [
   'tools/organizational-alignment.test.mjs', 'tools/fixtures/organizational-scenarios.json',
   'tools/organizational-scenarios.test.mjs',
   'tools/maintainer-report-scenarios.md',
+  'tools/maintainer-workflow.test.mjs', 'tools/validate-maintainer-report.mjs', 'tools/validate-maintainer-report.test.mjs',
   'tools/routing-coordination.test.mjs', 'tools/routing-allocation.mjs', 'tools/routing-allocation.json',
   'tools/efficiency-regression.mjs', 'tools/efficiency-regression.test.mjs',
 ];
