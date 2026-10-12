@@ -1,3 +1,4 @@
+// Temporary publication-gate verification only; do not merge this branch.
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -16,7 +17,7 @@ for (const [index, facets] of [
 ].entries()) test(`REL-ROUTE-${String(index+1).padStart(3,'0')}: coordination in ${facets.join('+')}`, () => {
   const result = load(facets);
   const coordination = result.contracts.find(c => c.id === 'OOP-organizational-coordination');
-  assert.fail('Authorized temporary publication-gate probe: expected failure; do not merge');
+  assert.ok(coordination, 'Material planning needs coordination without an effect facet');
   assert.ok(coordination.semantic_clause.includes('all and only domains materially affected'));
   assert.ok(coordination.semantic_clause.includes('identifying a consequence does not authorize its execution'));
   assert.ok(result.contracts.some(c => c.id === 'OOP-mandate-authority'));
